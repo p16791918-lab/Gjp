@@ -12,8 +12,8 @@ from reportlab.platypus import (
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-pdfmetrics.registerFont(TTFont('NanumGothic', '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
-pdfmetrics.registerFont(TTFont('NanumGothicBold', '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'))
+pdfmetrics.registerFont(TTFont('NanumGothic', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'))
+pdfmetrics.registerFont(TTFont('NanumGothicBold', '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'))
 
 def make_styles():
     return {
