@@ -1,0 +1,459 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import mm
+from reportlab.lib import colors
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import (
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
+    HRFlowable, PageBreak
+)
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+
+pdfmetrics.registerFont(TTFont('NanumGothic', '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
+pdfmetrics.registerFont(TTFont('NanumGothicBold', '/usr/share/fonts/opentype/ipafont-gothic/ipagp.ttf'))
+
+def make_styles():
+    return {
+        'title': ParagraphStyle(
+            'Title', fontName='NanumGothicBold', fontSize=16,
+            textColor=colors.HexColor('#1a1a2e'), spaceAfter=6, spaceBefore=4,
+            leading=22, alignment=1
+        ),
+        'subtitle': ParagraphStyle(
+            'Subtitle', fontName='NanumGothic', fontSize=10,
+            textColor=colors.HexColor('#555555'), spaceAfter=12,
+            leading=14, alignment=1
+        ),
+        'h1': ParagraphStyle(
+            'H1', fontName='NanumGothicBold', fontSize=13,
+            textColor=colors.HexColor('#16213e'), spaceAfter=6, spaceBefore=14,
+            leading=18
+        ),
+        'h2': ParagraphStyle(
+            'H2', fontName='NanumGothicBold', fontSize=11,
+            textColor=colors.HexColor('#0f3460'), spaceAfter=4, spaceBefore=10,
+            leading=16
+        ),
+        'body': ParagraphStyle(
+            'Body', fontName='NanumGothic', fontSize=9,
+            textColor=colors.HexColor('#333333'), spaceAfter=3, spaceBefore=2,
+            leading=14
+        ),
+        'bullet': ParagraphStyle(
+            'Bullet', fontName='NanumGothic', fontSize=9,
+            textColor=colors.HexColor('#333333'), spaceAfter=2, spaceBefore=1,
+            leading=13, leftIndent=12
+        ),
+        'small': ParagraphStyle(
+            'Small', fontName='NanumGothic', fontSize=8,
+            textColor=colors.HexColor('#666666'), spaceAfter=2, leading=12
+        ),
+        'note': ParagraphStyle(
+            'Note', fontName='NanumGothic', fontSize=8.5,
+            textColor=colors.HexColor('#555555'), spaceAfter=4, spaceBefore=4,
+            leading=13, leftIndent=8
+        ),
+    }
+
+
+def build_pdf(output_path):
+    doc = SimpleDocTemplate(
+        output_path, pagesize=A4,
+        rightMargin=18*mm, leftMargin=18*mm,
+        topMargin=18*mm, bottomMargin=18*mm
+    )
+    s = make_styles()
+    story = []
+
+    # ── 표지 ──────────────────────────────────────────────
+    story.append(Spacer(1, 20*mm))
+    story.append(Paragraph('기초의학종합평가 (KAMC)', s['subtitle']))
+    story.append(Paragraph('4교시 빈출 유형 분석', s['title']))
+    story.append(Paragraph('2021 · 2023 · 2024 · 2025년도', s['subtitle']))
+    story.append(Paragraph('병리학 + 기생충학', s['subtitle']))
+    story.append(HRFlowable(width='100%', thickness=2, color=colors.HexColor('#0f3460')))
+    story.append(Spacer(1, 6*mm))
+
+    # ── 섹션 1: 최빈출 병리학 ─────────────────────────────
+    story.append(Paragraph('★★★ 최빈출 유형 — 병리학 (3~4년 연속 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    top_path = [
+        ('1', 'HPV 16형 → 자궁경부 고등급 병터',
+         '2021·2023·2024·2025 (4년)',
+         '자궁경부 고등급편평상피내병터(HSIL)에서 HPV 16·18형 검출\n'
+         '→ 6·11형은 저위험군(오답 선택지로 자주 등장)\n'
+         '→ E6/E7 단백질이 p53·pRB 불활성화 → 세포주기조절이상\n'
+         '※ Koilocyte(공포세포)가 HPV 감염의 조직학적 특징'),
+
+        ('2', 'APC 유전자 → 가족성 선종성 용종증 (FAP)',
+         '2021·2023·2024 (3년)',
+         '대장에 수백 개의 용종 → 대장전절제술\n'
+         '→ APC 유전자 돌연변이 (BRCA1·TP53·KRAS·RB1은 오답)\n'
+         '※ 망막색소상피 비대증(CHRPE) 동반 시 FAP 강력 시사\n'
+         '※ hMLH1·hPMS2 변이 → HNPCC (미스매치복구 결핍, 별도 주제)'),
+
+        ('3', 'GIST → 카할세포(Cajal) + KIT mutation',
+         '2021·2024·2025 (3년)',
+         '위장관 점막하 방추형 세포 종양\n'
+         '→ CD117(c-KIT)·DOG1·CD34 양성 / S100 음성\n'
+         '→ 기원: 카할세포 (신경내분비세포 아님 — 오답 주의)\n'
+         '→ KIT mutation이 가장 흔한 유전자 변화 (APC·KRAS 아님)'),
+
+        ('4', '자궁내막증 → 초콜릿 낭종',
+         '2023·2024·2025 (3년)',
+         '월경 주기와 연관된 골반 통증 + 난임\n'
+         '→ 낭종 내부: 진한 갈색(초콜릿색) 혈성 끈끈한 액체\n'
+         '→ 조직 소견: 자궁내막 유사 선조직 + 헤모시데린 침착 대식세포\n'
+         '※ 기형종·점액낭샘종·자궁내막암과 감별 (오답 선택지)'),
+
+        ('5', 'CMV 감염 → 심장/신장이식 후 십이지장 미란',
+         '2023·2024·2025 (3년)',
+         '면역억제제 복용 중 반복 객혈·장출혈·미란성 병변\n'
+         '→ 감염체: 바이러스(CMV) / 염증 패턴: 세포변성세포증식 염증\n'
+         '→ 조직: 핵내봉입체(owl eye inclusion body) 특징\n'
+         '※ 박테리아-화농성, 곰팡이-육아종성과 구별 (오답 패턴)'),
+
+        ('6', '급성췌장염 → 지방괴사 병리소견',
+         '2021·2024·2025 (3년)',
+         '음주 후 갑작스러운 상복부→등 방사통, 혈청 아밀라제 상승\n'
+         '→ 특징적 병리: 급성염증 + 지방괴사(fat necrosis)\n'
+         '→ 복막의 하얗고 부스러지는 결절 = 비누화(saponification)\n'
+         '※ 췌관확장·섬유화·실질위축은 만성췌장염 소견 (오답)'),
+
+        ('7', 'BRCA1 → 유방암·난소암 가족력',
+         '2023·2024·2025 (3년)',
+         '어머니·이모·언니 유방암 또는 난소암 가족력\n'
+         '→ 권유 검사: BRCA1 (BRCA2도 포함되나 선택지는 BRCA1)\n'
+         '※ ATM·CDH1·NF1·WT1은 오답 선택지로 등장\n'
+         '※ MSH2·MLH1은 HNPCC(대장암 가족력) 관련'),
+    ]
+
+    for no, title, years, desc in top_path:
+        row = [[
+            Paragraph(f'<b>{no}.</b>', s['body']),
+            Paragraph(f'<b>{title}</b>', s['h2']),
+            Paragraph(years, s['small'])
+        ]]
+        t = Table(row, colWidths=[8*mm, 110*mm, 46*mm])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e8f0fe')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+            ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#c0c8e0')),
+        ]))
+        story.append(t)
+        for line in desc.split('\n'):
+            story.append(Paragraph(
+                '• ' + line if not line.startswith('※') else line,
+                s['bullet']
+            ))
+        story.append(Spacer(1, 2*mm))
+
+    # ── 섹션 2: 최빈출 기생충학 ──────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('★★★ 최빈출 유형 — 기생충학 (3~4년 연속 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    top_para = [
+        ('1', '요코가와흡충증 → 섬진강·하동 은어회',
+         '2021·2023·2025 (3년)',
+         '섬진강 유역 은어회 섭취 후 복통·설사\n'
+         '→ 대변검사에서 특징적 충란 확인\n'
+         '→ 치료: 프라지콴텔\n'
+         '※ 간흡충증(민물 생선회, 우상복부 통증, 담관암 유발)과 구별'),
+
+        ('2', '질편모충증 → 거품성 질분비물',
+         '2021·2024·2025 (3년)',
+         '외음부 가려움증 + 크림색·거품이 많은 질분비물\n'
+         '→ 젖은펴바른표본·김자염색에서 편모 가진 영양형 관찰\n'
+         '→ 치료: 메트로니다졸\n'
+         '※ 포낭형이 아닌 영양형이 감염형 (오답 주의)'),
+
+        ('3', '주혈흡충증 → 아프리카 물놀이 + 혈뇨',
+         '2023·2024·2025 (3년)',
+         '아프리카(케냐·탄자니아·말라위 등) 거주/여행 중 물놀이\n'
+         '→ 방광벽 두꺼움, 방광경 궤양·출혈, 혈뇨\n'
+         '→ 혈액검사: 호산구 증가 / 소변검사: 충란 확인\n'
+         '※ 사상충증·요충증·질편모충증은 오답 선택지'),
+
+        ('4', '요충증 → 야간 항문 소양증',
+         '2021·2024·2025 (3년)',
+         '소아, 야간 항문 가려움 + 수면 장애\n'
+         '→ 최적 검사법: 항문주위도말검사 (셀로판테이프법)\n'
+         '→ 치료: 알벤다졸\n'
+         '※ 대변검사는 충란 검출률 낮아 부적합 (오답 주의)'),
+
+        ('5', '삼일열말라리아 → 국내 감염 (연천·파주)',
+         '2021·2023·2025 (3년)',
+         '해외여행 없음, 경기 북부(연천·파주) 거주 군인·주민\n'
+         '→ 48시간(2일) 주기 오한·발열 반복\n'
+         '→ 수면소체(hypnozoite) 재발 방지: 프리마퀸\n'
+         '→ 치료(혈내형): 클로로퀸\n'
+         '※ 열대열말라리아(해외 여행, 불규칙 발열)와 구별'),
+    ]
+
+    for no, title, years, desc in top_para:
+        row = [[
+            Paragraph(f'<b>{no}.</b>', s['body']),
+            Paragraph(f'<b>{title}</b>', s['h2']),
+            Paragraph(years, s['small'])
+        ]]
+        t = Table(row, colWidths=[8*mm, 110*mm, 46*mm])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e8f5e9')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+            ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#a5d6a7')),
+        ]))
+        story.append(t)
+        for line in desc.split('\n'):
+            story.append(Paragraph(
+                '• ' + line if not line.startswith('※') else line,
+                s['bullet']
+            ))
+        story.append(Spacer(1, 2*mm))
+
+    # ── 섹션 3: 준빈출 병리학 ────────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('★★ 준빈출 유형 — 병리학 (2년 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    hdr = ['유형', '핵심 포인트', '출제연도']
+    path_data = [hdr] + [
+        ['다카야스동맥염', '상지 혈압차(30mmHg↑), 왼팔 맥박 소실\n→ 젊은 여성 대동맥 육아종성 혈관염', '2023·2024'],
+        ['쇼그렌증후군', '안구건조+구강건조, 침샘 림프구 침윤\n→ 항SS-A/SS-B 항체 (항Sm·항DNA 아님)', '2023·2024'],
+        ['Interferon-γ', 'T세포 활성화 상층액 → 대식세포 포식 능력 증가\n→ histamine·LTB4·PGE2는 오답', '2023·2024'],
+        ['다발성경화증', 'LFB 염색에서 탈수초 병변(화살표)\n신경증상 반복 호전/악화 → demyelination', '2021·2024'],
+        ['여린X증후군', '46,XX + Xq27.3 CGG 삼염기반복\n정신지체 여아 → fragile X (Turner 아님)', '2021·2024'],
+        ['통풍', '편광현미경 바늘모양 결정체 → 요산염\n엄지발가락 결절 (칼슘피로인산염 아님)', '2021·2024'],
+        ['갑상샘 유두암종', '가는바늘흡인+조직검사, 핵내봉입체\n→ BRAF mutation (EGFR·KRAS 아님)', '2021·2024'],
+        ['Thymoma', '전종격동 종괴 + 중증근무력증\n눈꺼풀 처짐, 오후 악화 패턴', '2024·2025'],
+        ['크롬친화세포종', '부신 수질, 고혈압+두통+발한\n메타네프린 상승, chromaffin 반응 양성', '2024·2025'],
+        ['위암 병기', 'T1a=lamina propria\nT1b=muscularis mucosae / T2=muscularis propria', '2023·2025'],
+        ['Ca²⁺ 세포막 손상', '세포질 Ca²⁺ 증가 → phospholipase·\nprotease·ATPase 활성화 → 세포막 손상', '2023·2025'],
+        ['HER-2/trastuzumab', 'HER-2 gene amplification → trastuzumab 적응\nE-cadherin 음성 = lobular ca (별도 주제)', '2024·2025'],
+        ['알츠하이머병', '해마 위축, 기억력 저하\n→ β-amyloid plaque + neurofibrillary tangle', '2021·2025'],
+    ]
+
+    col_w = [48*mm, 88*mm, 28*mm]
+    t3 = Table(path_data, colWidths=col_w, repeatRows=1)
+    t3.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#0f3460')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f4f6fb')]),
+        ('GRID', (0, 0), (-1, -1), 0.4, colors.HexColor('#c0c8e0')),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 4),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+    ]))
+    story.append(t3)
+
+    # ── 섹션 4: 준빈출 기생충학 ──────────────────────────────
+    story.append(Spacer(1, 6*mm))
+    story.append(Paragraph('★★ 준빈출 유형 — 기생충학 (2년 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    hdr2 = ['유형', '핵심 포인트', '출제연도']
+    para_data = [hdr2] + [
+        ['고충증\n(sparganosis)', '이동하는 피하 덩이(2개월간 위치 변동)\n→ 수술 적출, 길이 10cm 충체', '2023·2025'],
+        ['피부유충이행증', '중남미·동남아 맨발 해변\n→ 고양이구충, 선모양 creeping eruption', '2021·2024'],
+        ['리슈만편모충증', '중동·아프리카, 피부 궤양+가피\n→ 조직 내 2μm 충체, 모래파리 매개', '2023·2024'],
+        ['작은와포자충증', '면역억제 환자, 동남아 여행 후 설사\n→ 변형항산성염색(modified AFB) 양성', '2023·2025'],
+        ['림프사상충증', '인도네시아 등 열대, 발·다리 부종\n→ 미세사상충: 야간(오후 11시~오전 2시) 채혈', '2021·2025'],
+        ['간흡충증', '민물 생선회·낚시 식습관, 우상복부 통증\n→ 담관암 유발 / 프라지콴텔 치료', '2024·2025'],
+        ['이질아메바증', '동남아(캄보디아 등) 여행 후 설사\n→ 대장 궤양, 적혈구 포식 원충 / 메트로니다졸', '2021·2024'],
+    ]
+
+    t4 = Table(para_data, colWidths=col_w, repeatRows=1)
+    t4.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1b5e20')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f1f8e9')]),
+        ('GRID', (0, 0), (-1, -1), 0.4, colors.HexColor('#a5d6a7')),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 4),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+    ]))
+    story.append(t4)
+
+    # ── 섹션 5: 주제별 핵심 정리 ─────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('주제별 핵심 포인트 요약', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    topics = [
+        ('종양 유전자 정리', [
+            'APC → FAP(대장 수백 개 용종) / TP53 → Li-Fraumeni / RB1 → 망막모세포종',
+            'BRAF → 갑상샘 유두암종 / EGFR·KRAS → 폐샘암종 / KIT → GIST',
+            'BRCA1 → 유방·난소암 / MLH1·MSH2 → HNPCC(대장·자궁내막암)',
+            'HER-2 amplification → trastuzumab 적응 (유방 침습관암종)',
+        ]),
+        ('신장 질환 감별', [
+            'IgA 신병증: 상기도감염 직후 혈뇨, 메산지움 IgA 침착',
+            '초승달사구체신염: MPO-ANCA 양성, 급속 진행',
+            'SLE 신염: wire loop, full-house 패턴(IgG·IgA·IgM·C3·C1q)',
+            'Goodpasture: anti-GBM 항체, 폐출혈+신부전, 선형 IgG',
+            '당뇨신병증: 20년 이상 당뇨, 알부민뇨, PAS 염색 기저막 비후',
+        ]),
+        ('면역/염증 반응 정리', [
+            '제1형(즉시형): IgE 매개, 아나필락시스',
+            '제2형(항체매개): Goodpasture, 자가면역용혈빈혈',
+            '제3형(면역복합체): SLE, 감염후사구체신염',
+            '제4형(지연형): 결핵·사르코이드증 육아종, 접촉피부염(목걸이)',
+            'Interferon-γ: 활성화 T세포 → 대식세포 살균력 증가',
+        ]),
+        ('기생충 치료제 정리', [
+            '프라지콴텔: 흡충류(요코가와·간흡충·주혈흡충), 조충류(유구·무구조충)',
+            '알벤다졸: 요충·회충·구충·편충·유구낭미충증',
+            '메트로니다졸: 질편모충·이질아메바·람블편모충',
+            '클로로퀸: 삼일열·열대열 말라리아 혈내형 / 프리마퀸: 수면소체(재발 방지)',
+            '이버멕틴: 분선충·회선사상충·옴',
+        ]),
+        ('지역별 기생충 감별', [
+            '아프리카(케냐·탄자니아): 주혈흡충증(물놀이+혈뇨), 열대열말라리아',
+            '중동(사우디·이란): 리슈만편모충증(피부 궤양)',
+            '동남아(캄보디아·베트남): 이질아메바, 작은와포자충, 요코가와흡충',
+            '인도네시아·필리핀: 림프사상충(야간 채혈), 주혈흡충',
+            '국내(연천·파주): 삼일열말라리아 / 섬진강: 요코가와흡충',
+        ]),
+    ]
+
+    for sec_title, bullets in topics:
+        story.append(Paragraph(sec_title, s['h2']))
+        for b in bullets:
+            story.append(Paragraph('• ' + b, s['bullet']))
+        story.append(Spacer(1, 2*mm))
+
+    # ── 섹션 6: 연도별 출제 현황 ─────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('연도별 출제 현황 매트릭스', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    O = '●'
+    X = ''
+    matrix_hdr = ['주제', '2021', '2023', '2024', '2025', '횟수']
+    matrix = [matrix_hdr,
+        # 병리학
+        ['[병리] HPV 16형 → 자궁경부 병터', O, O, O, O, '4'],
+        ['[병리] APC → FAP (대장 용종)', O, O, O, X, '3'],
+        ['[병리] GIST → 카할세포+KIT', O, X, O, O, '3'],
+        ['[병리] 자궁내막증 → 초콜릿 낭종', X, O, O, O, '3'],
+        ['[병리] BRCA1 → 유방·난소암 가족력', X, O, O, O, '3'],
+        ['[병리] CMV → 이식 후 십이지장 미란', X, O, O, O, '3'],
+        ['[병리] 급성췌장염 → 지방괴사', O, X, O, O, '3'],
+        ['[병리] 다카야스동맥염', X, O, O, X, '2'],
+        ['[병리] 쇼그렌 → 항SS-A/SS-B', X, O, O, X, '2'],
+        ['[병리] Interferon-γ → 대식세포 활성', X, O, O, X, '2'],
+        ['[병리] 다발성경화증 → LFB 탈수초', O, X, O, X, '2'],
+        ['[병리] 여린X증후군 → Xq27.3', O, X, O, X, '2'],
+        ['[병리] 통풍 → 요산염 결정체', O, X, O, X, '2'],
+        ['[병리] 갑상샘 유두암종 → BRAF', O, X, O, X, '2'],
+        ['[병리] Thymoma → 중증근무력증', X, X, O, O, '2'],
+        ['[병리] 크롬친화세포종 → 메타네프린', X, X, O, O, '2'],
+        ['[병리] 위암 병기 → muscularis 구분', X, O, X, O, '2'],
+        ['[병리] Ca²⁺ → 세포막 손상', X, O, X, O, '2'],
+        ['[병리] HER-2 → trastuzumab', X, X, O, O, '2'],
+        ['[병리] 알츠하이머 → β-amyloid+NFT', O, X, X, O, '2'],
+        # 기생충
+        ['[기생충] 요코가와흡충증 → 은어회', O, O, X, O, '3'],
+        ['[기생충] 질편모충증 → 메트로니다졸', O, X, O, O, '3'],
+        ['[기생충] 주혈흡충증 → 아프리카 혈뇨', X, O, O, O, '3'],
+        ['[기생충] 요충증 → 항문주위도말', O, X, O, O, '3'],
+        ['[기생충] 삼일열말라리아 → 국내', O, O, X, O, '3'],
+        ['[기생충] 고충증 → 이동 피하 덩이', X, O, X, O, '2'],
+        ['[기생충] 피부유충이행증 → 고양이구충', O, X, O, X, '2'],
+        ['[기생충] 리슈만편모충증 → 피부 궤양', X, O, O, X, '2'],
+        ['[기생충] 작은와포자충증 → AFB 염색', X, O, X, O, '2'],
+        ['[기생충] 림프사상충 → 야간 채혈', O, X, X, O, '2'],
+        ['[기생충] 간흡충증 → 담관암', X, X, O, O, '2'],
+        ['[기생충] 이질아메바증 → 적혈구 포식', O, X, O, X, '2'],
+    ]
+
+    col_mx = [78*mm, 16*mm, 16*mm, 16*mm, 16*mm, 16*mm]
+    tm = Table(matrix, colWidths=col_mx, repeatRows=1)
+    style_mx = TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#37474f')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ALIGN', (1, 0), (-1, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#b0bec5')),
+        ('LEFTPADDING', (0, 0), (-1, -1), 3),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+    ])
+    # 3년 이상 행 강조
+    for i, row in enumerate(matrix[1:], 1):
+        if row[-1] in ('4', '3'):
+            style_mx.add('BACKGROUND', (0, i), (-1, i), colors.HexColor('#e3f2fd'))
+    tm.setStyle(style_mx)
+    story.append(tm)
+    story.append(Spacer(1, 2*mm))
+    story.append(Paragraph('● = 출제 / 파란 배경 = 3년 이상 출제(최우선 학습)', s['small']))
+
+    # ── 섹션 7: 시험 전략 TIP ─────────────────────────────────
+    story.append(Spacer(1, 6*mm))
+    story.append(HRFlowable(width='100%', thickness=1.5, color=colors.HexColor('#0f3460')))
+    tip_data = [[
+        Paragraph('<b>시험 전략 TIP</b>', s['h2']),
+        Paragraph(
+            '【병리학】 HPV 16형(자궁경부)·APC(FAP)·GIST(카할세포·KIT)·자궁내막증·BRCA1은 '
+            '3년 이상 반복 출제되어 거의 동일한 임상 문구로 나옵니다. '
+            '유전자 문제는 선택지가 BRAF/EGFR/KRAS/TP53/BRCA1 등으로 혼재하므로 '
+            '질환별 대표 유전자를 정확히 암기하세요. '
+            '신장 질환은 조직검사 사진과 면역형광 패턴으로 감별하는 유형이 매년 출제됩니다.\n'
+            '【기생충학】 지역(섬진강=요코가와흡충, 아프리카=주혈흡충, 국내=삼일열말라리아)과 '
+            '치료제(프라지콴텔·알벤다졸·메트로니다졸·프리마퀸)를 연결해 암기하세요. '
+            '요충은 대변검사가 아닌 항문주위도말이 정답임에 주의하세요.',
+            s['note']
+        )
+    ]]
+    tip_t = Table(tip_data, colWidths=[28*mm, 136*mm])
+    tip_t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#fff8e1')),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#f9a825')),
+    ]))
+    story.append(tip_t)
+
+    doc.build(story)
+    print(f'PDF 생성 완료: {output_path}')
+
+
+if __name__ == '__main__':
+    build_pdf('/home/user/Gjp/기종평_4교시_빈출유형_분석.pdf')
