@@ -157,6 +157,74 @@ def build_pdf(output_path):
             ))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 2: 최빈출 기생충학 ──────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('★★★ 최빈출 유형 — 기생충학 (3~4년 연속 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    top_para = [
+        ('1', '요코가와흡충증 → 섬진강·하동 은어회',
+         '2021·2023·2025 (3년)',
+         '섬진강 유역 은어회 섭취 후 복통·설사\n'
+         '→ 대변검사에서 특징적 충란 확인\n'
+         '→ 치료: 프라지콴텔\n'
+         '※ 간흡충증(민물 생선회, 우상복부 통증, 담관암 유발)과 구별'),
+
+        ('2', '질편모충증 → 거품성 질분비물',
+         '2021·2024·2025 (3년)',
+         '외음부 가려움증 + 크림색·거품이 많은 질분비물\n'
+         '→ 젖은펴바른표본·김자염색에서 편모 가진 영양형 관찰\n'
+         '→ 치료: 메트로니다졸\n'
+         '※ 포낭형이 아닌 영양형이 감염형 (오답 주의)'),
+
+        ('3', '주혈흡충증 → 아프리카 물놀이 + 혈뇨',
+         '2023·2024·2025 (3년)',
+         '아프리카(케냐·탄자니아·말라위 등) 거주/여행 중 물놀이\n'
+         '→ 방광벽 두꺼움, 방광경 궤양·출혈, 혈뇨\n'
+         '→ 혈액검사: 호산구 증가 / 소변검사: 충란 확인\n'
+         '※ 사상충증·요충증·질편모충증은 오답 선택지'),
+
+        ('4', '요충증 → 야간 항문 소양증',
+         '2021·2024·2025 (3년)',
+         '소아, 야간 항문 가려움 + 수면 장애\n'
+         '→ 최적 검사법: 항문주위도말검사 (셀로판테이프법)\n'
+         '→ 치료: 알벤다졸\n'
+         '※ 대변검사는 충란 검출률 낮아 부적합 (오답 주의)'),
+
+        ('5', '삼일열말라리아 → 국내 감염 (연천·파주)',
+         '2021·2023·2025 (3년)',
+         '해외여행 없음, 경기 북부(연천·파주) 거주 군인·주민\n'
+         '→ 48시간(2일) 주기 오한·발열 반복\n'
+         '→ 수면소체(hypnozoite) 재발 방지: 프리마퀸\n'
+         '→ 치료(혈내형): 클로로퀸\n'
+         '※ 열대열말라리아(해외 여행, 불규칙 발열)와 구별'),
+    ]
+
+    for no, title, years, desc in top_para:
+        row = [[
+            Paragraph(f'<b>{no}.</b>', s['body']),
+            Paragraph(f'<b>{title}</b>', s['h2']),
+            Paragraph(years, s['small'])
+        ]]
+        t = Table(row, colWidths=[8*mm, 110*mm, 46*mm])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e8f5e9')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+            ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#a5d6a7')),
+        ]))
+        story.append(t)
+        for line in desc.split('\n'):
+            story.append(Paragraph(
+                '• ' + line if not line.startswith('※') else line,
+                s['bullet']
+            ))
+        story.append(Spacer(1, 2*mm))
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
