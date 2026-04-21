@@ -351,6 +351,106 @@ def build_pdf(output_path):
             story.append(Paragraph('• ' + b, s['bullet']))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 6: 연도별 출제 현황 ─────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('연도별 출제 현황 매트릭스', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    O = '●'
+    X = ''
+    matrix_hdr = ['주제', '2021', '2023', '2024', '2025', '횟수']
+    matrix = [matrix_hdr,
+        # 병리학
+        ['[병리] HPV 16형 → 자궁경부 병터', O, O, O, O, '4'],
+        ['[병리] APC → FAP (대장 용종)', O, O, O, X, '3'],
+        ['[병리] GIST → 카할세포+KIT', O, X, O, O, '3'],
+        ['[병리] 자궁내막증 → 초콜릿 낭종', X, O, O, O, '3'],
+        ['[병리] BRCA1 → 유방·난소암 가족력', X, O, O, O, '3'],
+        ['[병리] CMV → 이식 후 십이지장 미란', X, O, O, O, '3'],
+        ['[병리] 급성췌장염 → 지방괴사', O, X, O, O, '3'],
+        ['[병리] 다카야스동맥염', X, O, O, X, '2'],
+        ['[병리] 쇼그렌 → 항SS-A/SS-B', X, O, O, X, '2'],
+        ['[병리] Interferon-γ → 대식세포 활성', X, O, O, X, '2'],
+        ['[병리] 다발성경화증 → LFB 탈수초', O, X, O, X, '2'],
+        ['[병리] 여린X증후군 → Xq27.3', O, X, O, X, '2'],
+        ['[병리] 통풍 → 요산염 결정체', O, X, O, X, '2'],
+        ['[병리] 갑상샘 유두암종 → BRAF', O, X, O, X, '2'],
+        ['[병리] Thymoma → 중증근무력증', X, X, O, O, '2'],
+        ['[병리] 크롬친화세포종 → 메타네프린', X, X, O, O, '2'],
+        ['[병리] 위암 병기 → muscularis 구분', X, O, X, O, '2'],
+        ['[병리] Ca²⁺ → 세포막 손상', X, O, X, O, '2'],
+        ['[병리] HER-2 → trastuzumab', X, X, O, O, '2'],
+        ['[병리] 알츠하이머 → β-amyloid+NFT', O, X, X, O, '2'],
+        # 기생충
+        ['[기생충] 요코가와흡충증 → 은어회', O, O, X, O, '3'],
+        ['[기생충] 질편모충증 → 메트로니다졸', O, X, O, O, '3'],
+        ['[기생충] 주혈흡충증 → 아프리카 혈뇨', X, O, O, O, '3'],
+        ['[기생충] 요충증 → 항문주위도말', O, X, O, O, '3'],
+        ['[기생충] 삼일열말라리아 → 국내', O, O, X, O, '3'],
+        ['[기생충] 고충증 → 이동 피하 덩이', X, O, X, O, '2'],
+        ['[기생충] 피부유충이행증 → 고양이구충', O, X, O, X, '2'],
+        ['[기생충] 리슈만편모충증 → 피부 궤양', X, O, O, X, '2'],
+        ['[기생충] 작은와포자충증 → AFB 염색', X, O, X, O, '2'],
+        ['[기생충] 림프사상충 → 야간 채혈', O, X, X, O, '2'],
+        ['[기생충] 간흡충증 → 담관암', X, X, O, O, '2'],
+        ['[기생충] 이질아메바증 → 적혈구 포식', O, X, O, X, '2'],
+    ]
+
+    col_mx = [78*mm, 16*mm, 16*mm, 16*mm, 16*mm, 16*mm]
+    tm = Table(matrix, colWidths=col_mx, repeatRows=1)
+    style_mx = TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#37474f')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ALIGN', (1, 0), (-1, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#b0bec5')),
+        ('LEFTPADDING', (0, 0), (-1, -1), 3),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+    ])
+    # 3년 이상 행 강조
+    for i, row in enumerate(matrix[1:], 1):
+        if row[-1] in ('4', '3'):
+            style_mx.add('BACKGROUND', (0, i), (-1, i), colors.HexColor('#e3f2fd'))
+    tm.setStyle(style_mx)
+    story.append(tm)
+    story.append(Spacer(1, 2*mm))
+    story.append(Paragraph('● = 출제 / 파란 배경 = 3년 이상 출제(최우선 학습)', s['small']))
+
+    # ── 섹션 7: 시험 전략 TIP ─────────────────────────────────
+    story.append(Spacer(1, 6*mm))
+    story.append(HRFlowable(width='100%', thickness=1.5, color=colors.HexColor('#0f3460')))
+    tip_data = [[
+        Paragraph('<b>시험 전략 TIP</b>', s['h2']),
+        Paragraph(
+            '【병리학】 HPV 16형(자궁경부)·APC(FAP)·GIST(카할세포·KIT)·자궁내막증·BRCA1은 '
+            '3년 이상 반복 출제되어 거의 동일한 임상 문구로 나옵니다. '
+            '유전자 문제는 선택지가 BRAF/EGFR/KRAS/TP53/BRCA1 등으로 혼재하므로 '
+            '질환별 대표 유전자를 정확히 암기하세요. '
+            '신장 질환은 조직검사 사진과 면역형광 패턴으로 감별하는 유형이 매년 출제됩니다.\n'
+            '【기생충학】 지역(섬진강=요코가와흡충, 아프리카=주혈흡충, 국내=삼일열말라리아)과 '
+            '치료제(프라지콴텔·알벤다졸·메트로니다졸·프리마퀸)를 연결해 암기하세요. '
+            '요충은 대변검사가 아닌 항문주위도말이 정답임에 주의하세요.',
+            s['note']
+        )
+    ]]
+    tip_t = Table(tip_data, colWidths=[28*mm, 136*mm])
+    tip_t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#fff8e1')),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#f9a825')),
+    ]))
+    story.append(tip_t)
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
