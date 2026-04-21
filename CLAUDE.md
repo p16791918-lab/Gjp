@@ -110,3 +110,4 @@
   - `make_pdf_3교시.py` — 3교시 (생리학)
 - **개발 브랜치:** `claude/add-confirmation-flow-NC3C6`
 - **원격 저장소:** `p16791918-lab/gjp`
+- **한글 폰트:** NanumGothic (`/usr/share/fonts/truetype/nanum/`) — 없으면 `apt-get install -y fonts-nanum` 먼저 실행
