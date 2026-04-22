@@ -154,6 +154,94 @@ def build_pdf(output_path):
             ))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 2: ★★★ 최빈출 — 세균학·진균학·면역학 ──────────
+    story.append(PageBreak())
+    story.append(Paragraph('★★★ 최빈출 유형 — 세균학·진균학·면역학 (3~4년 연속 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    top_bact = [
+        ('6', '결핵 (M. tuberculosis) — 항산성염색·잠복감염·과민반응',
+         '2021·2023·2024·2025 (4년)',
+         '항산성염색(Ziehl-Neelsen): 세포벽 미콜산(지방산) → 탈색 저항 → 붉은 막대균\n'
+         '잠복결핵: 투베르쿨린 양성 + IGRA 양성 + X선 정상 + 무증상 → 항결핵제 처방\n'
+         '폐 병변: 상엽(apex) 호발, 동공(cavity)·석회화·선상침윤 — 하엽이면 다른 진단\n'
+         '조직 손상 기전: 세포매개성 과민반응 (제4형) — 내독소·외독소가 아님\n'
+         '면역학적 검사: 투베르쿨린 피부반응검사(TST) / 인터페론감마 분비검사(IGRA)\n'
+         '※ "항산성염색 + 상엽 동공 + 식은땀·객혈" → 결핵, 손상기전 = 세포매개성'),
+
+        ('7', 'H. pylori — 위염·궤양·위암',
+         '2021·2023·2025 (3년)',
+         '형태: 그람음성 나선형 막대균, 편모 운동성 (매우 활발)\n'
+         '핵심 효소: 카탈라제(+), 요소분해효소(+) — 요소→암모니아+CO₂ → 알칼리화\n'
+         '독성인자: VacA(공포형성 세포독소), CagA, 단백·지질 분해효소\n'
+         '배양: 미호기성(5% CO₂), 37°C, 5일 이상 → 작은 집락\n'
+         '질환 진행: 위염 → 위십이지장궤양 → 저등급 MALT 림프종 → 위선암\n'
+         '※ Campylobacter와 감별: 둘 다 나선형이지만 Campy=요소분해효소(-)+장염'),
+
+        ('8', 'Legionella pneumophila — 냉각탑·에어로졸',
+         '2023·2024·2025 (3년)',
+         '환경: 냉각탑, 샤워기, 가습기, 월풀 스파 — 인공 수환경에 서식\n'
+         '전파: 에어로졸(비말핵) 흡입 — 사람 간 직접 전파 없음\n'
+         '역학: 고온다습 늦여름·초가을 집단발생, 면역저하자·중장년 남성\n'
+         '배지: BCYE (Buffered Charcoal Yeast Extract) — 시스테인·철 공급 필수\n'
+         '임상: 발열·오한·근육통 → 폐렴 ± 설사·혼돈(레지오넬라증)\n'
+         '※ "냉각탑·가습기 노출 + 폐렴 + BCYE 배지" → Legionella'),
+
+        ('9', 'S. pyogenes 합병증 — 사구체신염·심내막염·성홍열',
+         '2021·2023·2024 (3년)',
+         '급성 사구체신염: GAS 인후염 후 2-3주 → 면역복합체 침착 (제3형 과민반응)\n'
+         '류마티스열: GAS 인후염 후 심장판막 침범 → 추후 심내막염 위험\n'
+         '세균성 심내막염: 류마티스열 과거력 + 치과처치 → viridans group streptococci\n'
+         '성홍열: 발열외독소(erythrogenic toxin) → 딸기혀 + 전신홍반 + 인두통\n'
+         '배양: β용혈, 혈액우무배지 투명 용혈대, 그람양성사슬알균\n'
+         '※ 사구체신염 기전 = 면역복합체 (내독소·외독소 직접 손상 아님)'),
+
+        ('10', '피부사상균증 — KOH 도말·균사 확인',
+         '2021·2024·2025 (3년)',
+         '검사법: KOH 도말 → 각질 용해 → 균사(hyphae)/포자 직접 확인\n'
+         '피부사상균 감별: Trichophyton (대·소분생자), Microsporum (큰 대분생자)\n'
+         'lactophenol cotton blue 염색: 대분생자(검은 화살)+소분생자(빨간 화살)\n'
+         '치료: 스테로이드+항균제 혼합연고 → 악화! (스테로이드가 진균 증식 촉진)\n'
+         'KOH 양성 소견: 실모양 균사(thread-like hyphae)\n'
+         '※ 자낭포자·접합포자·담자포자는 피부사상균의 번식체가 아님 (오답)'),
+
+        ('11', 'Th1 분화 사이토카인 IL-12 / 과민반응 제1형',
+         '2021·2023·2024 / 2021·2024·2025 (각 3년)',
+         '[Th1 분화] 나이브 T세포 → IL-12(수지상세포·대식세포 분비) → Th1\n'
+         '→ Th1 기능: IFN-γ 분비 → 대식세포 활성화 → 세포내 기생세균 제거\n'
+         '→ 화살표 A = IL-12 (매년 동일 그림 패턴으로 출제)\n'
+         '→ 오답: IL-2(증식), IL-4(Th2), IL-17(Th17), IL-23(Th17 유지)\n'
+         '[제1형 과민반응] IgE → 비만세포/호염기구 탈과립 → 히스타민·류코트리엔\n'
+         '→ 임상: 이전 노출 후 재노출 시 즉각 반응 — 두드러기·호흡곤란·저혈압\n'
+         '→ 제2형(항체매개), 제3형(면역복합체), 제4형(지연형 T세포) 구분 필수\n'
+         '※ 아나필락시스 = 제1형 / GAS 사구체신염 = 제3형 / 결핵 TST = 제4형'),
+    ]
+
+    for no, title, years, desc in top_bact:
+        row = [[
+            Paragraph(f'<b>{no}.</b>', s['body']),
+            Paragraph(f'<b>{title}</b>', s['h2']),
+            Paragraph(years, s['small'])
+        ]]
+        t = Table(row, colWidths=[8*mm, 110*mm, 46*mm])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e8f5e9')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+            ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#a5d6a7')),
+        ]))
+        story.append(t)
+        for line in desc.split('\n'):
+            story.append(Paragraph(
+                '• ' + line if not line.startswith('※') and not line.startswith('[') else line,
+                s['bullet']
+            ))
+        story.append(Spacer(1, 2*mm))
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
