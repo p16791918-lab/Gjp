@@ -351,6 +351,120 @@ def build_pdf(output_path):
     ]))
     story.append(t3)
 
+    # ── 섹션 4: 주제별 핵심 정리 ─────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('주제별 핵심 포인트 요약', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    # 바이러스 감별표
+    story.append(Paragraph('바이러스 감별 핵심표', s['h2']))
+    vhdr = ['바이러스', '유전체', '외피', '핵심 감별 포인트']
+    vtable = [vhdr,
+        ['인플루엔자', '분절 ssRNA(−)', 'O', '항원소변이(drift)·대변이(shift), oseltamivir'],
+        ['한탄바이러스', 'ssRNA(−)', 'O', '들쥐 배설물 흡입, 신부전, 추수철'],
+        ['SARS-CoV-2', 'ssRNA(+)', 'O', 'Spike→ACE2 부착, 알코올 감수성'],
+        ['노로바이러스', 'ssRNA(+)', 'X', '해산물 식중독, 대변-구강, 소독제 저항'],
+        ['로타바이러스', 'dsRNA', 'X', '영아 설사, 겨울, 바퀴 모양'],
+        ['수족구(Coxsackie)', 'ssRNA(+)', 'X', '소아 여름, 손발입 수포, 산안정'],
+        ['HSV', 'dsDNA', 'O', '삼차신경절 잠복, 재활성, acyclovir'],
+        ['VZV', 'dsDNA', 'O', '후근신경절 잠복, 대상포진, 50세+ 백신'],
+        ['CMV', 'dsDNA', 'O', '핵내봉입체(올빼미눈), 이식 후, 비정형림프구'],
+        ['EBV', 'dsDNA', 'O', '감염성단핵구증, B세포 감염, 버킷림프종'],
+        ['HPV', 'dsDNA', 'X', 'Koilocytosis, 자궁경부암, 소독제 저항'],
+        ['HIV', 'ssRNA(+)', 'O', 'CD4+↓, 역전사효소, 웨스턴블롯 확진'],
+        ['A형간염', 'ssRNA(+)', 'X', '대변-구강, 급성 간염, 백신 있음'],
+        ['E형간염', 'ssRNA(+)', 'X', '대변-구강, 임산부 중증화 위험'],
+        ['광견병', 'ssRNA(−)', 'O', '개에 물림, 연하장애, Negri 소체'],
+        ['아데노바이러스', 'dsDNA', 'X', '외피 없음, 결막염, 소독제 저항'],
+    ]
+    vt = Table(vtable, colWidths=[30*mm, 24*mm, 12*mm, 98*mm], repeatRows=1)
+    vt.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1a237e')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#e8eaf6')]),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#9fa8da')),
+        ('ALIGN', (1, 0), (2, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 3),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+    ]))
+    story.append(vt)
+    story.append(Spacer(1, 4*mm))
+
+    # 세균 배지·염색 감별표
+    story.append(Paragraph('세균 배지·염색 핵심표', s['h2']))
+    bhdr = ['세균', '배지/염색', '특징적 소견']
+    btable = [bhdr,
+        ['H. influenzae', 'Chocolate agar', 'X인자(hemin)+V인자(NAD) 필수 공급'],
+        ['H. pylori', '미호기성 37°C 5일', '카탈라제(+), 요소분해효소(+), 그람음성 나선형'],
+        ['Legionella', 'BCYE 배지', '시스테인·철 필수, 가늘고 다형성 그람음성막대균'],
+        ['M. tuberculosis', 'Ziehl-Neelsen 항산성염색', '미콜산 → 탈색 저항 → 붉은 막대균'],
+        ['Nocardia', '변형항산성염색', '가지형 균사, 반항산성, TMP-SMX 치료'],
+        ['Cryptococcus', 'India ink 음성염색', '협막 효모, 라텍스 응집검사, 뇌막염'],
+        ['Bordetella', 'Bordet-Gengou', '발작성 기침, 그람음성 짧은 막대균'],
+        ['V. cholerae', 'TCBS agar', '황색 집락(젖당 분해), 쌀뜨물 설사, cAMP↑'],
+        ['Salmonella', 'MacConkey agar', '무색 집락(젖당 비분해), 계란·닭고기 오염원'],
+        ['C. difficile', '선택배지', '항균제 관련 설사, 위막(pseudomembrane)'],
+        ['N. meningitidis', '혈액우무배지', '그람음성쌍알균, 뇌척수액, 협막 다당류 백신'],
+        ['Treponema pallidum', '암시야현미경', '배양 불가, 1기 매독 경성하감 삼출물'],
+    ]
+    bt = Table(btable, colWidths=[36*mm, 38*mm, 90*mm], repeatRows=1)
+    bt.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1b5e20')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f1f8e9')]),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#a5d6a7')),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 3),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+    ]))
+    story.append(bt)
+    story.append(Spacer(1, 4*mm))
+
+    # 면역세포 + 과민반응 정리
+    story.append(Paragraph('면역세포·과민반응 핵심 정리', s['h2']))
+    topics = [
+        ('면역세포 마커 정리', [
+            'NK세포: CD16+CD56+CD3− / MHC I 감소 세포 공격 / ADCC 가능',
+            '수지상세포: MHC II high / 전문항원제시세포 / 미성숙→림프절 이동',
+            '랑게르한스세포: 피부 표피의 수지상세포',
+            'CD4+ T세포(Th1): IFN-γ 분비 → 대식세포 활성화 → 세포내 기생세균 제거',
+            'CD8+ T세포: MHC class I 인식 → 바이러스 감염 세포·종양 세포 직접 살상',
+            '중성구: CD66b+, 세포외그물(NET), 급성염증에서 가장 풍부',
+            '비만세포: IgE 수용체 보유, 탈과립 → 히스타민·류코트리엔 방출',
+        ]),
+        ('과민반응 4형 비교', [
+            '제1형(즉시형): IgE→비만세포 탈과립 → 아나필락시스, 알레르기 (새우, 벌독)',
+            '제2형(항체매개): IgG/IgM → 세포 표면 항원 공격 (수혈부작용, 자가면역용혈빈혈)',
+            '제3형(면역복합체): IgG·IgM 복합체 침착 → SLE, GAS 감염 후 사구체신염',
+            '제4형(지연형): T세포 매개 → 결핵 TST 반응, 접촉피부염, 육아종 형성',
+        ]),
+        ('가을철 발열성 질환 감별', [
+            '한탄바이러스(유행성출혈열): 들쥐 배설물 흡입, 진드기 물림 없음, 신부전·출혈',
+            '쯔쯔가무시병: 진드기(좀진드기), 딱지(eschar), Orientia tsutsugamushi',
+            '렙토스피라증: 들쥐 소변 오염된 물·흙, 상처/점막 침입, 폐출혈·황달',
+            'SFTS: 진드기 매개, 혈소판·백혈구 감소, 간기능 이상, 사람→사람 전파 가능',
+        ]),
+    ]
+    for sec_title, bullets in topics:
+        story.append(Paragraph(sec_title, s['h2']))
+        for b in bullets:
+            story.append(Paragraph('• ' + b, s['bullet']))
+        story.append(Spacer(1, 2*mm))
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
