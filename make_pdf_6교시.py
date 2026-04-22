@@ -553,6 +553,122 @@ def build_pdf(output_path):
             story.append(Paragraph(f'• {pt}', s['bullet']))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 7: 연도별 출제 현황 표 ───────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('연도별 출제 현황 (6교시 약리학)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 3*mm))
+
+    trend_header = ['주제', '2021', '2023', '2024', '2025', '합계']
+    trend_rows = [
+        ['임상시험 단계 구분', '●', '●', '●', '●', '4'],
+        ['용량-반응 곡선 / 길항제', '●', '●', '●', '●', '4'],
+        ['약동학 기초 (PK)', '●', '●', '●', '●', '4'],
+        ['자율신경계 약물', '●', '●', '●', '●', '4'],
+        ['고혈압 약물', '●', '●', '●', '●', '4'],
+        ['항균제 (기전·선택·내성)', '●', '●', '●', '●', '4'],
+        ['혈당강하제 / 인슐린', '●', '●', '●', '●', '4'],
+        ['NSAIDs / COX 억제', '●', '○', '●', '●', '3'],
+        ['항정신병 약물 (EPS·clozapine)', '●', '●', '●', '●', '4'],
+        ['항암제 / MDR / P-gp', '●', '●', '●', '●', '4'],
+        ['나이트로글리세린 / 협심증', '●', '○', '●', '●', '3'],
+        ['약물 이온화 / pH', '○', '●', '●', '●', '3'],
+        ['SSRI / 우울증', '○', '●', '●', '●', '3'],
+        ['결핵 약물 (INH·Rifampin)', '●', '○', '●', '●', '3'],
+        ['이뇨제 (thiazide·loop·spiro)', '●', '●', '●', '●', '4'],
+        ['흡입마취제 (MAC)', '●', '●', '●', '○', '3'],
+        ['알코올 대사 (ALDH)', '○', '●', '●', '●', '3'],
+        ['오피오이드 / 마약성 진통제', '●', '●', '●', '○', '3'],
+        ['와파린 / 항응고제', '○', '●', '●', '●', '3'],
+        ['파킨슨병 (levodopa)', '○', '●', '●', '○', '2'],
+        ['알츠하이머 (donepezil)', '●', '○', '○', '●', '2'],
+        ['헤르페스 (acyclovir)', '○', '●', '●', '○', '2'],
+        ['Statin 근육 부작용', '○', '●', '○', '●', '2'],
+        ['통풍 (allopurinol)', '●', '○', '○', '●', '2'],
+        ['Varenicline 금연', '○', '●', '○', '●', '2'],
+    ]
+
+    trend_data = [trend_header] + trend_rows
+    col_w2 = [68*mm, 18*mm, 18*mm, 18*mm, 18*mm, 14*mm]
+    tbl2 = Table(trend_data, colWidths=col_w2, repeatRows=1)
+
+    ts2 = TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#16213e')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        ('ALIGN', (1, 0), (-1, -1), 'CENTER'),
+        ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 4),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#cccccc')),
+        ('LINEBELOW', (0, 0), (-1, 0), 1.5, colors.HexColor('#16213e')),
+    ])
+    # 4년 출제 행 강조
+    for i, row in enumerate(trend_rows, start=1):
+        if row[-1] == '4':
+            ts2.add('BACKGROUND', (0, i), (-1, i), colors.HexColor('#e3f2fd'))
+        elif row[-1] == '3':
+            ts2.add('BACKGROUND', (0, i), (-1, i), colors.HexColor('#f9fbe7'))
+    tbl2.setStyle(ts2)
+    story.append(tbl2)
+    story.append(Spacer(1, 2*mm))
+    story.append(Paragraph('● 출제  ○ 미출제   파란 배경 = 4년 연속 ★★★  연두 배경 = 3년 ★★★', s['small']))
+
+    # ── 섹션 8: 시험 전략 TIP ─────────────────────────────────
+    story.append(Spacer(1, 6*mm))
+    story.append(Paragraph('시험 전략 TIP', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=2, color=colors.HexColor('#e53935')))
+    story.append(Spacer(1, 3*mm))
+
+    tips = [
+        ('1', '약동학 계산 문제는 반드시 1문항 출제',
+         '공식 3개만 암기: LD=Vd×Css / Css=F×D/(CL×τ) / t½=0.693/k\n'
+         '알코올 = 0차 약동학(직선), 나머지 = 1차(지수 감소)'),
+        ('2', '임상시험 단계 = 매년 1~2문항',
+         '"건강인+안전성" = 1상 / "소수 환자+유효 용량" = 2상\n'
+         '"다수 환자+효능 확증+이중맹검" = 3상'),
+        ('3', '용량-반응 곡선 그래프 문제 = 매년 출제',
+         '경쟁적 길항제: EC50↑, Emax 불변 / 비경쟁적: Emax↓, EC50 불변\n'
+         'BZD vs Barbiturate: BZD=EC50↓(좌이동), Barbiturate=Emax↑'),
+        ('4', '수용체 이름과 약물 연결 반드시 암기',
+         'D2 차단=EPS / α4β2 니코틴=varenicline / β2=ritodrine(자궁), albuterol(천식)\n'
+         'μ 수용체=호흡억제 / GABAA=BZD·바르비투르'),
+        ('5', 'CYP 유도 vs 억제 단골 출제',
+         'Rifampin = 강력 유도 → 와파린 효과↓ (매년 변형 출제)\n'
+         'SSRI = CYP 억제 → 트립탄 병용 시 세로토닌 증후군'),
+        ('6', '부작용 연결 오답 선택지 패턴',
+         'ACEI 마른기침 → 직접 독성 아님, 브라디키닌 축적\n'
+         'Clozapine 무과립구증 → 독성반응(×) → 특이체질성\n'
+         'Isoniazid 신경병증 → Vit B6, Rifampin 와파린↓ → CYP 유도'),
+    ]
+
+    for no, heading, detail in tips:
+        tip_data = [[
+            Paragraph(f'<b>TIP {no}</b>', s['body']),
+            Paragraph(f'<b>{heading}</b>', s['h2']),
+        ]]
+        tip_t = Table(tip_data, colWidths=[16*mm, 148*mm])
+        tip_t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#ffebee')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 6),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 6),
+            ('TOPPADDING', (0, 0), (-1, -1), 4),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+            ('LINEBELOW', (0, 0), (-1, 0), 0.5, colors.HexColor('#ef9a9a')),
+            ('BOX', (0, 0), (-1, 0), 1, colors.HexColor('#e53935')),
+        ]))
+        story.append(tip_t)
+        for line in detail.split('\n'):
+            story.append(Paragraph(f'  → {line}', s['note']))
+        story.append(Spacer(1, 2*mm))
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
