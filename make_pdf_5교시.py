@@ -465,6 +465,104 @@ def build_pdf(output_path):
             story.append(Paragraph('• ' + b, s['bullet']))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 5: 연도별 출제 현황 매트릭스 ───────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('연도별 출제 현황 매트릭스', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    O = '●'
+    matrix_hdr = ['주제', '2021', '2023', '2024', '2025', '횟수']
+    matrix = [matrix_hdr,
+        # ★★★ 바이러스
+        ['[바이러스] 바이러스 감염형태(잠복·불현·지속)', O, O, O, O, '4'],
+        ['[바이러스] 한탄바이러스/유행성출혈열', O, O, O, O, '4'],
+        ['[바이러스] 인플루엔자 항원변이·뉴라민분해효소 억제', O, O, '', O, '3'],
+        ['[바이러스] 노로바이러스 해산물 식중독', O, O, O, '', '3'],
+        ['[바이러스] SARS-CoV-2 spike 부착·백신', '', O, O, O, '3'],
+        # ★★★ 세균·진균·면역
+        ['[세균] 결핵 항산성염색·잠복감염·과민반응', O, O, O, O, '4'],
+        ['[세균] H. pylori 요소분해효소·위염·위암', O, O, '', O, '3'],
+        ['[세균] Legionella 냉각탑·BCYE배지', '', O, O, O, '3'],
+        ['[세균] S. pyogenes 사구체신염·성홍열·심내막염', O, O, O, '', '3'],
+        ['[진균] 피부사상균증 KOH 도말·균사', O, '', O, O, '3'],
+        ['[면역] Th1 분화 IL-12', O, O, O, '', '3'],
+        ['[면역] 제1형 과민반응 IgE·비만세포', O, '', O, O, '3'],
+        # ★★ 준빈출
+        ['[세균] 협막 India ink 음성염색', O, O, '', '', '2'],
+        ['[바이러스] 외피 유무·소독제 감수성', O, O, '', '', '2'],
+        ['[세균] 형질도입 항균제 내성 전파', O, '', '', O, '2'],
+        ['[세균] C. difficile 위막성대장염', O, O, '', '', '2'],
+        ['[세균] 수막알균 협막 다당류 백신', O, '', O, '', '2'],
+        ['[세균] EHEC Shiga-like toxin', '', O, O, '', '2'],
+        ['[세균] Chlamydia trachomatis 봉입체', '', O, O, '', '2'],
+        ['[세균] Salmonella 계란·맥콩키 무색 집락', '', '', O, O, '2'],
+        ['[바이러스] HSV 삼차신경절 잠복감염', O, '', '', O, '2'],
+        ['[진균] Candida albicans 가성균사', O, O, '', '', '2'],
+        ['[바이러스] 수족구병 coxsackievirus', O, '', '', O, '2'],
+        ['[바이러스] HPV 자궁경부암 Koilocytosis', O, '', '', O, '2'],
+        ['[바이러스] A형·E형 간염 대변-구강 경로', O, '', '', O, '2'],
+        ['[바이러스] VZV 대상포진 50세+ 백신', '', O, '', O, '2'],
+        ['[면역] NK세포 CD16+CD56+ ADCC', O, '', '', O, '2'],
+        ['[면역] 수지상세포 전문항원제시세포', '', O, O, '', '2'],
+    ]
+
+    col_mx = [82*mm, 14*mm, 14*mm, 14*mm, 14*mm, 14*mm]
+    tm = Table(matrix, colWidths=col_mx, repeatRows=1)
+    style_mx = TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#37474f')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ALIGN', (1, 0), (-1, -1), 'CENTER'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#b0bec5')),
+        ('LEFTPADDING', (0, 0), (-1, -1), 3),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 3),
+        ('TOPPADDING', (0, 0), (-1, -1), 2),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+    ])
+    for i, row in enumerate(matrix[1:], 1):
+        if row[-1] in ('4', '3'):
+            style_mx.add('BACKGROUND', (0, i), (-1, i), colors.HexColor('#e3f2fd'))
+    tm.setStyle(style_mx)
+    story.append(tm)
+    story.append(Spacer(1, 2*mm))
+    story.append(Paragraph('● = 출제 / 파란 배경 = 3년 이상 출제 (최우선 학습)', s['small']))
+
+    # ── 섹션 6: 시험 전략 TIP ─────────────────────────────────
+    story.append(Spacer(1, 6*mm))
+    story.append(HRFlowable(width='100%', thickness=1.5, color=colors.HexColor('#0f3460')))
+    tip_data = [[
+        Paragraph('<b>시험 전략 TIP</b>', s['h2']),
+        Paragraph(
+            '【바이러스학】 감염형태(잠복·불현·지속·재활성)와 한탄바이러스는 4년 연속 출제됩니다. '
+            '"들쥐 배설물 흡입 + 추수철 + 신부전 + 진드기 상처 없음"이면 한탄바이러스, '
+            '"잠복감염 = 바이러스 DNA가 신경세포에 존재(비리온·외피·캡시드 아님)"을 확실히 암기하세요. '
+            '인플루엔자 소변이(점돌연변이)와 대변이(재편성)의 차이, '
+            'oseltamivir=뉴라민분해효소 억제도 매년 출제됩니다.\n'
+            '【세균학】 결핵은 4년 연속으로 "항산성염색 + 상엽 동공·석회화 + 세포매개성 과민반응"이 정답 패턴입니다. '
+            'H. pylori(요소분해효소+), Legionella(냉각탑+BCYE), '
+            'S. pyogenes 합병증(사구체신염=면역복합체, 성홍열=발열외독소)을 연결해 암기하세요.\n'
+            '【면역학】 Th1 분화 화살표 A=IL-12, 아나필락시스=제1형 IgE, '
+            'NK세포=CD16+CD56+CD3−(MHC I 감소 세포 공격), 수지상세포=전문항원제시세포가 핵심입니다. '
+            '가을철 발열 질환은 한탄(쥐 배설물 흡입)·쯔쯔가무시(진드기 딱지)·렙토스피라(물·흙 상처) 3가지를 반드시 감별하세요.',
+            s['note']
+        )
+    ]]
+    tip_t = Table(tip_data, colWidths=[28*mm, 136*mm])
+    tip_t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#fff8e1')),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 6),
+        ('TOPPADDING', (0, 0), (-1, -1), 6),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+        ('BOX', (0, 0), (-1, -1), 1, colors.HexColor('#f9a825')),
+    ]))
+    story.append(tip_t)
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
