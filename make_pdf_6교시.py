@@ -337,6 +337,222 @@ def build_pdf(output_path):
             ))
         story.append(Spacer(1, 2*mm))
 
+    # ── 섹션 5: ★★★ 3년 출제 — SSRI·결핵·오피오이드·와파린·흡입마취제·알코올 ──
+    story.append(PageBreak())
+    story.append(Paragraph('★★★ 최빈출 유형 — SSRI·결핵·오피오이드·와파린·흡입마취제·알코올 (3년 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    top3_items = [
+        ('14', 'SSRI / 우울증 · 세로토닌 증후군',
+         '2023·2024·2025 (3년)',
+         'SSRI(fluoxetine, paroxetine): 세로토닌 재흡수 억제 → 시냅스 세로토닌↑\n'
+         '→ 시냅스 전 재흡수 펌프(transporter) 차단 — 수용체 차단 아님\n'
+         'GI 부작용: 장 세로토닌 수용체(5-HT3) 직접 자극 → 구역·설사\n'
+         '세로토닌 증후군: SSRI + 트립탄(sumatriptan) 병용 → 불안·근긴장·고체온\n'
+         '→ MDMA(엑스터시): 세로토닌 과다 방출 → 고체온 + 저나트륨혈증\n'
+         '항우울 효과 발현: 복용 후 2주 이상 지연\n'
+         '※ GI 부작용 = 세로토닌 수용체 자극 (도파민·히스타민 아님)'),
+
+        ('15', '결핵 약물 — Isoniazid·Rifampin 부작용·상호작용',
+         '2021·2024·2025 (3년)',
+         'Isoniazid: 미콜산 합성 억제, 1차 항결핵제\n'
+         '→ 말초신경병증(손발 저림) → Vitamin B6(pyridoxine) 보충\n'
+         'Rifampin: RNA polymerase 억제, 강력 CYP 유도제\n'
+         '→ 와파린 병용: CYP 유도 → 와파린 대사↑ → 항응고 효과↓ → PT/INR↓\n'
+         '→ 경구피임약, cyclosporine, 항레트로바이러스제 효과도 감소\n'
+         '4제 요법: Isoniazid + Rifampin + Pyrazinamide + Ethambutol\n'
+         '※ Rifampin = CYP 유도(효과 감소), Isoniazid = B6 부족(신경독성)'),
+
+        ('16', '오피오이드 — 수용체·금단·말초 길항제',
+         '2021·2023·2024 (3년)',
+         'μ 수용체: 진통, 호흡억제, 변비, 도취감 — 호흡억제 주원인\n'
+         '급성 중독: 동공축소(miosis) + 호흡억제 + 의식저하 → μ수용체\n'
+         '→ 길항제: naloxone(정맥) → 즉각 역전\n'
+         'Methylnaltrexone: 말초 μ 수용체만 차단 → 변비 해소 (중추 진통 유지)\n'
+         '신체의존·금단: 갑작스런 중단 → 자율신경 항진(설사·빈맥·발한·불안)\n'
+         '내성: 수용체 탈감작, 하향조절\n'
+         '※ 호흡억제 = μ수용체 (κ=불쾌감, δ=기분조절)'),
+
+        ('17', '와파린·항응고제·약물 상호작용',
+         '2023·2024·2025 (3년)',
+         'Warfarin: Vitamin K 의존성 응고인자 II·VII·IX·X 합성 억제\n'
+         'Heparin: 항트롬빈 III 활성화 → 트롬빈·Xa 억제, 정맥 투여\n'
+         '→ 과다출혈 발생 시: protamine sulfate로 역전\n'
+         'Clopidogrel: ADP 수용체(P2Y12) 비가역 차단 → 혈소판 응집↓\n'
+         'Rifampin + warfarin: CYP 유도 → 와파린 혈중 농도↓ → 효과↓\n'
+         '→ 모니터링: PT/INR 증가 목표 (INR 2~3)\n'
+         '※ Rifampin = 와파린 효과 감소 (증가 아님)'),
+
+        ('18', '흡입마취제 — MAC·Partition coefficient',
+         '2021·2023·2024 (3년)',
+         'MAC: Minimum Alveolar Concentration — 50% 환자 마취 유지 최소 농도\n'
+         'Oil/gas 계수↑ → 지용성↑ → 뇌 친화도↑ → MAC 낮음 (낮은 농도로 마취)\n'
+         'Blood/gas 계수↓ → 폐에서 혈중 이행 느림 → 마취 유도·회복 빠름\n'
+         '→ Desflurane: blood/gas 가장 낮음 → 마취유도·회복 가장 빠름\n'
+         '→ Diethyl ether: blood/gas 높음 → 마취 유도 느림\n'
+         '※ blood/gas 낮을수록 빠름 (직관과 반대 — 혼동 주의)'),
+
+        ('19', '알코올 대사 · 알데하이드탈수소효소 결핍',
+         '2023·2024·2025 (3년)',
+         '대사경로: 에탄올 →(ADH)→ 아세트알데하이드 →(ALDH)→ 아세트산\n'
+         'ALDH 결핍(동아시아인 유전적): 아세트알데하이드 축적 → 홍조·빈맥·두통\n'
+         '→ 소량 음주에도 증상, 가족력 양성\n'
+         'Disulfiram: ALDH 억제 → 알코올 혐오요법 (알코올 의존 치료)\n'
+         '알코올 약동학: 0차 약동학 → 농도-시간 직선 (일정 속도 대사)\n'
+         '→ 고농도 시 효소 포화 → 일차에서 0차로 전환\n'
+         '※ ALDH 결핍 = 아세트알데하이드 축적 (ADH 결핍 아님)'),
+    ]
+
+    for no, title, years, desc in top3_items:
+        row = [[
+            Paragraph(f'<b>{no}.</b>', s['body']),
+            Paragraph(f'<b>{title}</b>', s['h2']),
+            Paragraph(years, s['small'])
+        ]]
+        t = Table(row, colWidths=[8*mm, 110*mm, 46*mm])
+        t.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#fce4ec')),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('LEFTPADDING', (0, 0), (-1, -1), 4),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+            ('TOPPADDING', (0, 0), (-1, -1), 3),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+            ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#f48fb1')),
+        ]))
+        story.append(t)
+        for line in desc.split('\n'):
+            story.append(Paragraph(
+                '• ' + line if not line.startswith('※') else line,
+                s['bullet']
+            ))
+        story.append(Spacer(1, 2*mm))
+
+    # ── 섹션 6: ★★ 준빈출 표 ────────────────────────────────
+    story.append(PageBreak())
+    story.append(Paragraph('★★ 준빈출 유형 요약표 (2년 출제)', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 3*mm))
+
+    semi_data = [
+        ['주제', '핵심 약물 / 기전', '오답 패턴', '출제 연도'],
+        ['알츠하이머\ndonepezil',
+         'AChE 억제 → ACh↑\nNMDA 차단(memantine)과 구별',
+         'GABA·도파민 수용체 작용\n→ 오답',
+         '2021·2025'],
+        ['파킨슨병\nlevodopa/carbidopa',
+         'Levodopa: 도파민 전구체\nCarbidopa: AADC 억제 → 말초 전환↓',
+         'carbidopa = COMT 억제제\n→ 오답 (entacapone)',
+         '2023·2024'],
+        ['헤르페스\nacyclovir',
+         '바이러스 TK → 삼인산화\n→ DNA polymerase 억제',
+         '바이러스 부착·방출 억제\n→ 오답',
+         '2023·2024'],
+        ['Statin\n근육통',
+         'HMG-CoA reductase 억제\n→ 간 콜레스테롤 합성↓',
+         '근육통 = 횡문근융해증 위험\n→ CPK 모니터링',
+         '2023·2025'],
+        ['Varenicline\n금연',
+         'α4β2 니코틴 수용체 부분작용제\n도파민↑(금단↓) + 니코틴 차단',
+         'β2 아드레날린 수용체\n→ 오답',
+         '2023·2025'],
+        ['통풍\nallopurinol',
+         '잔틴 산화효소 억제 → 요산 생성↓\nProbenecid: 요산 배설↑',
+         'colchicine = 발작 급성 치료\nallopurinol = 장기 예방',
+         '2021·2025'],
+        ['녹내장\n안압 하강',
+         'Pilocarpine: 무스카린 작용 → 방수 배출↑\nTimolol: β차단 → 방수 생성↓',
+         '피로카르핀 = 동공산대\n→ 오답 (실제 동공수축)',
+         '2021·2025'],
+        ['자궁수축억제제\nRitodrine',
+         'β2 수용체 작용제 → 자궁 평활근 이완\n→ 조산 방지',
+         'α1 수용체 작용\n→ 오답',
+         '2024·2025'],
+        ['갑상선 약물\nPTU/MMI',
+         'Peroxidase 억제 → 갑상선호르몬 합성↓\nPTU: T4→T3 전환도 억제',
+         'PTU 임신 1분기 금기(×)\n→ 오히려 임신 1분기에 PTU 사용',
+         '2021·2023'],
+        ['Digoxin\n심부전',
+         'Na+/K+ ATPase 억제 → 세포내 Na+↑\n→ Na+/Ca2+ 교환체 역방향 → Ca2+↑ → 수축력↑',
+         'Ca2+ 통로 직접 차단\n→ 오답',
+         '2023·2024'],
+    ]
+
+    col_w = [30*mm, 55*mm, 48*mm, 25*mm]
+    tbl = Table(semi_data, colWidths=col_w, repeatRows=1)
+    tbl.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#0f3460')),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+        ('FONTNAME', (0, 0), (-1, 0), 'NanumGothicBold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 8),
+        ('FONTNAME', (0, 1), (-1, -1), 'NanumGothic'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7.5),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.HexColor('#f8f9fa'), colors.white]),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 4),
+        ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+        ('GRID', (0, 0), (-1, -1), 0.3, colors.HexColor('#cccccc')),
+        ('LINEBELOW', (0, 0), (-1, 0), 1.5, colors.HexColor('#0f3460')),
+    ]))
+    story.append(tbl)
+    story.append(Spacer(1, 6*mm))
+
+    # ── 주제별 핵심 정리 ───────────────────────────────────────
+    story.append(Paragraph('주제별 핵심 암기 포인트', s['h1']))
+    story.append(HRFlowable(width='100%', thickness=1, color=colors.HexColor('#cccccc')))
+    story.append(Spacer(1, 2*mm))
+
+    keypoints = [
+        ('약동학 공식 정리',
+         [
+             'Vd = Dose / C₀ (IV bolus y절편)',
+             't½ = 0.693 / k (1차 약동학)',
+             'LD = Vd × Css (부하용량)',
+             'Css = (F × 용량) / (CL × τ)',
+             '알코올 = 0차 약동학 (농도-시간 직선)',
+         ]),
+        ('임상시험 단계 암기',
+         [
+             '전임상 → 1상(건강인·PK) → 2상(소수 환자·용량) → 3상(다수 환자·확증) → 4상(시판후)',
+             '1상: "반복투여 + 안전성 + 건강인" 키워드',
+             '2상: "소수 환자 + 유효 용량 결정" 키워드',
+             '3상: "이중맹검 + 무작위 + 효능 확증" 키워드',
+         ]),
+        ('수용체-약물 연결고리',
+         [
+             'D2 차단 → EPS (haloperidol, metoclopramide)',
+             'D2+5HT2 차단 → EPS 없음 (clozapine, olanzapine)',
+             'α4β2 니코틴 부분작용 → varenicline (금연)',
+             'β2 작용 → ritodrine(조산↓), albuterol(천식)',
+             'μ 수용체 → 호흡억제·진통·변비',
+         ]),
+        ('CYP450 약물 상호작용 핵심',
+         [
+             'Rifampin = 강력 CYP 유도 → 와파린·피임약 효과↓',
+             'Fluoxetine/paroxetine = CYP 억제 → 병용 약물 독성↑',
+             '알코올(만성) = CYP2E1 유도 → acetaminophen 독성↑',
+             '자몽주스 = CYP3A4 억제 → statin·CCB 혈중 농도↑',
+         ]),
+        ('부작용 연결 암기',
+         [
+             'ACEI → 마른기침 (브라디키닌) / ARB → 기침 없음',
+             'Clozapine → 무과립구증 (특이체질성)',
+             'Isoniazid → 말초신경병증 (Vit B6 보충)',
+             'Cisplatin → 신독성·구역구토 (ondansetron)',
+             'Thiazide → 저칼륨·저나트륨 / Loop → 저칼륨',
+             'Statin → 근육통·횡문근융해증 (CPK↑)',
+         ]),
+    ]
+
+    for heading, points in keypoints:
+        story.append(Paragraph(f'▶ {heading}', s['h2']))
+        for pt in points:
+            story.append(Paragraph(f'• {pt}', s['bullet']))
+        story.append(Spacer(1, 2*mm))
+
     doc.build(story)
     print(f'PDF 생성 완료: {output_path}')
 
