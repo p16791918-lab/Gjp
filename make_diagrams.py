@@ -204,8 +204,148 @@ def atrial_septum():
     return _save(fig, 'atrial_septum')
 
 
+def tca_cycle():
+    import numpy as np
+    fig, ax = _new(5.2, 4.2)
+    ax.set_xlim(-1.4, 1.4); ax.set_ylim(-1.5, 1.5); ax.set_aspect('equal')
+    nodes = ['시트르산\n(citrate)', '이소시트르산', 'α-케토글루타르산\n→ 글루탐산',
+             '숙시닐-CoA', '숙신산', '푸마르산', '말산', '옥살아세트산\n→ 아스파르트산']
+    n = len(nodes)
+    ang = [np.pi/2 - 2*np.pi*i/n for i in range(n)]
+    xs = [0.95*np.cos(a) for a in ang]; ys = [0.95*np.sin(a) for a in ang]
+    for i in range(n):
+        j = (i+1) % n
+        ax.annotate('', (xs[j], ys[j]), (xs[i], ys[i]),
+                    arrowprops=dict(arrowstyle='->', color='#0f3460', lw=1.1,
+                                    connectionstyle='arc3,rad=0.12'))
+    for i, (x, y, t) in enumerate(zip(xs, ys, nodes)):
+        hi = ('글루탐산' in t) or ('아스파르트산' in t)
+        ax.text(x, y, t, ha='center', va='center', fontsize=7.2,
+                weight='bold' if hi else 'normal',
+                color='#c0392b' if hi else '#222',
+                bbox=dict(boxstyle='round,pad=0.2',
+                          fc='#fff3cd' if hi else '#eef2f7', ec='#bbb'))
+    ax.text(0, 0, 'TCA\n회로', ha='center', va='center', fontsize=10, weight='bold', color='#0f3460')
+    ax.axis('off')
+    ax.set_title('TCA 회로 — 아미노산·지방산 대사 연결', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'tca_cycle')
+
+
+def electron_transport():
+    fig, ax = _new(5.8, 2.9)
+    ax.set_xlim(0, 14); ax.set_ylim(0, 6)
+    comps = [('복합체 I\n(NADH-Q)', '#c5cae9'), ('복합체 II\n(FADH₂)', '#c5cae9'),
+             ('CoQ', '#b2dfdb'), ('복합체 III', '#c5cae9'),
+             ('cyt c', '#b2dfdb'), ('복합체 IV\n(cyt c 산화효소)', '#ffcdd2')]
+    xs = [1.2, 3.0, 4.7, 6.4, 8.4, 10.4]
+    ws = [1.4, 1.4, 1.0, 1.4, 1.0, 1.8]
+    for (name, col), x, w in zip(comps, xs, ws):
+        ax.add_patch(Rectangle((x-w/2, 2.4), w, 1.6, fc=col, ec='#666'))
+        ax.text(x, 3.2, name, ha='center', va='center', fontsize=7.2)
+    for i in range(len(xs)-1):
+        ax.annotate('', (xs[i+1]-ws[i+1]/2, 3.2), (xs[i]+ws[i]/2, 3.2),
+                    arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.annotate('O₂ → H₂O', (12.4, 3.2), (11.3, 3.2),
+                arrowprops=dict(arrowstyle='->', color='#2e7d32'), fontsize=8, color='#2e7d32', va='center')
+    ax.plot([10.4, 10.4], [4.2, 5.2], color='#c0392b', lw=2)
+    ax.plot([10.0, 10.8], [5.0, 5.0], color='#c0392b', lw=2)
+    ax.text(10.4, 5.5, '청산가리(CN⁻) 차단', ha='center', fontsize=8, color='#c0392b', weight='bold')
+    ax.text(7, 1.4, '복합체 IV 차단 → 전자가 cyt c까지 전달되고 정체(상류 환원형 축적)',
+            ha='center', fontsize=7.6, color='#555')
+    ax.axis('off')
+    ax.set_title('전자전달계(ETC)와 청산가리 작용점', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'electron_transport')
+
+
+def urea_cycle():
+    import numpy as np
+    fig, ax = _new(5.2, 3.8)
+    ax.set_xlim(-1.5, 1.5); ax.set_ylim(-1.5, 1.6); ax.set_aspect('equal')
+    nodes = ['카바모일인산\n(CPS-I)', '시트룰린\n(OTC)', '아르지니노숙신산\n(ASS)',
+             '아르지닌\n(ASL)', '오르니틴\n(아르지네이스)']
+    n = len(nodes)
+    ang = [np.pi/2 - 2*np.pi*i/n for i in range(n)]
+    xs = [0.95*np.cos(a) for a in ang]; ys = [0.95*np.sin(a) for a in ang]
+    for i in range(n):
+        j = (i+1) % n
+        ax.annotate('', (xs[j], ys[j]), (xs[i], ys[i]),
+                    arrowprops=dict(arrowstyle='->', color='#0f3460', lw=1.1,
+                                    connectionstyle='arc3,rad=0.12'))
+    for x, y, t in zip(xs, ys, nodes):
+        ax.text(x, y, t, ha='center', va='center', fontsize=7.2,
+                bbox=dict(boxstyle='round,pad=0.2', fc='#eef2f7', ec='#bbb'))
+    ax.text(0, 0, '요소회로\nNH₃→요소', ha='center', va='center', fontsize=8.5, weight='bold', color='#0f3460')
+    ax.text(0, -1.42, 'CPT-I(지방산 산화)은 요소회로와 무관 → 암모니아↑ 원인 아님',
+            ha='center', fontsize=7.4, color='#c0392b')
+    ax.axis('off')
+    ax.set_title('요소회로 효소 (암모니아 처리)', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'urea_cycle')
+
+
+def o2_dissociation():
+    import numpy as np
+    fig, ax = _new(5.2, 3.2)
+    x = np.linspace(0, 100, 200)
+    def hb(p50):
+        n = 2.8
+        return 100 * x**n / (p50**n + x**n)
+    ax.plot(x, hb(26), color='#1565c0', lw=2, label='해수면 (정상)')
+    ax.plot(x, hb(38), color='#c0392b', lw=2, label='고산 (2,3-BPG↑)')
+    ax.axhline(50, color='#aaa', ls=':', lw=0.8)
+    ax.annotate('오른쪽 이동\n= 산소친화도 감소', (55, 62), (60, 30), fontsize=8, color='#c0392b',
+                arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.set_xlabel('산소분압 pO₂ (mmHg)', fontsize=8.5)
+    ax.set_ylabel('산소포화도 (%)', fontsize=8.5)
+    ax.legend(fontsize=8, loc='lower right')
+    ax.tick_params(labelsize=7.5)
+    ax.set_title('산소-헤모글로빈 해리곡선 (2,3-BPG 효과)', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'o2_dissociation')
+
+
+def glucose_alanine():
+    fig, ax = _new(5.4, 2.8)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 6)
+    ax.add_patch(Rectangle((0.5, 1), 3.2, 4, fc='#e3f2fd', ec='#1565c0'))
+    ax.add_patch(Rectangle((8.3, 1), 3.2, 4, fc='#ffebee', ec='#c0392b'))
+    ax.text(2.1, 4.6, '근육', ha='center', fontsize=9.5, weight='bold', color='#1565c0')
+    ax.text(9.9, 4.6, '간', ha='center', fontsize=9.5, weight='bold', color='#c0392b')
+    ax.text(2.1, 3.4, '포도당→피루브산', ha='center', fontsize=7.6)
+    ax.text(2.1, 2.6, '피루브산+아미노기\n→(ALT)→알라닌', ha='center', fontsize=7.4, color='#0f3460')
+    ax.text(9.9, 3.4, '알라닌→피루브산', ha='center', fontsize=7.6)
+    ax.text(9.9, 2.6, '→ 당신생 → 포도당', ha='center', fontsize=7.4, color='#0f3460')
+    ax.annotate('알라닌 →', (8.2, 3.8), (3.8, 3.8), fontsize=8, color='#333', va='center',
+                arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.annotate('← 포도당', (3.8, 2.0), (8.2, 2.0), fontsize=8, color='#2e7d32', va='center',
+                arrowprops=dict(arrowstyle='->', color='#2e7d32'))
+    ax.text(6, 0.4, '근육은 G6P가수분해효소가 없어 알라닌으로 간접 기여', ha='center', fontsize=7.6, color='#555')
+    ax.axis('off')
+    ax.set_title('포도당–알라닌 회로', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'glucose_alanine')
+
+
+def fasting_fuel():
+    import numpy as np
+    fig, ax = _new(5.2, 3.0)
+    t = np.linspace(0, 7, 100)
+    ax.plot(t, 100*np.exp(-t/2.2)+40, color='#1565c0', lw=2, label='포도당(B)')
+    ax.plot(t, 60*(1-np.exp(-t/0.8)), color='#e08a00', lw=2, label='지방산(C)')
+    ax.plot(t, 90*(1-np.exp(-t/3.5)), color='#c0392b', lw=2, label='케톤체(A)')
+    ax.set_xlabel('금식 기간 (일)', fontsize=8.5)
+    ax.set_ylabel('상대 농도', fontsize=8.5)
+    ax.legend(fontsize=8, loc='center right')
+    ax.tick_params(labelsize=7.5)
+    ax.text(0.2, 12, '초기: 글리코겐→포도당 · 지방분해로 지방산↑ · 수일 후 케톤체↑',
+            fontsize=7.2, color='#555')
+    ax.set_title('금식 시 혈중 연료 변화', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'fasting_fuel')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
-       liver_zones, cerebellar_layers, respiratory_tree, atrial_septum]
+       liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
+       tca_cycle, electron_transport, urea_cycle, o2_dissociation,
+       glucose_alanine, fasting_fuel]
 
 if __name__ == '__main__':
     for fn in ALL:

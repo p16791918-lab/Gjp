@@ -1,0 +1,462 @@
+{
+  "meta": {
+    "year": 2021,
+    "period": 2,
+    "title": "2021년도 2교시 문항별 상세 해설",
+    "subtitle": "생화학 (전 35문항 · 사진·개념도해 수록)"
+  },
+  "questions": [
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 1,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "지질대사·지단백",
+      "keywords": [
+        "LCAT",
+        "HDL",
+        "각막혼탁",
+        "lecithin-cholesterol acyltransferase"
+      ],
+      "q": "각막 혼탁+빈혈, HDL 6.6·단백뇨 — 결핍 효소는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 2,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "인지질 합성",
+      "keywords": [
+        "레시틴",
+        "CDP-choline",
+        "phosphatidylcholine",
+        "L/S비"
+      ],
+      "q": "L/S비 지질(레시틴) 합성에서 DAG와 결합하는 활성물질은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 3,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "mRNA 프로세싱",
+      "keywords": [
+        "5prime cap",
+        "캡핑",
+        "mRNA",
+        "번역개시"
+      ],
+      "q": "분해 보호·핵 밖 방출·번역개시에 관여하는 mRNA 프로세싱은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 4,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "분비단백 경로",
+      "keywords": [
+        "소포체",
+        "ER",
+        "인슐린",
+        "분비단백"
+      ],
+      "q": "형광 인슐린 번역 시 가장 먼저 형광이 관찰되는 소기관은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 5,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "DNA 결합 도메인",
+      "keywords": [],
+      "q": "DNA 결합 단백질 도메인 그림, A 이온은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 6,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "퓨린 대사·통풍",
+      "keywords": [
+        "통풍",
+        "요산",
+        "allopurinol",
+        "purine degradation",
+        "xanthine oxidase"
+      ],
+      "q": "방사선 치료 후 발가락 통증·allopurinol 반응 — 관여 대사경로는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 7,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "비타민D·칼슘",
+      "keywords": [
+        "비타민D 결핍",
+        "PTH",
+        "이차부갑상샘항진",
+        "칼슘"
+      ],
+      "q": "비타민 D 결핍 시 혈중 농도가 증가하는 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 8,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "금식 연료대사",
+      "keywords": [],
+      "q": "금식 첫 1주 혈중 농도 그래프, A-B-C에 해당하는 물질은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 9,
+      "ans": 4,
+      "subject": "생화학",
+      "topic": "요소회로",
+      "keywords": [],
+      "q": "고암모니아혈증 — 관여 가능성이 가장 낮은 원인은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 10,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "항산화·글루타치온",
+      "keywords": [],
+      "q": "시스테인 SH기를 유지하는, 그림 구조의 물질은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 11,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "세포막 유동성",
+      "keywords": [
+        "막 유동성",
+        "콜레스테롤",
+        "불포화지방산"
+      ],
+      "q": "세포막 유동성을 감소시키는 조건은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 12,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "뇌 에너지대사",
+      "keywords": [
+        "뇌",
+        "포도당",
+        "당신생",
+        "케톤체"
+      ],
+      "q": "뇌 신경세포 에너지 대사의 특징으로 옳은 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 13,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "포도당-알라닌 회로",
+      "keywords": [],
+      "q": "근육 글리코겐이 혈당 유지에 간접 기여할 때 관여하는 효소는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 14,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "당화혈색소",
+      "keywords": [
+        "HbA1c",
+        "적혈구 반감기",
+        "당화혈색소"
+      ],
+      "q": "인슐린 1개월 후에도 HbA1c 변화가 뚜렷하지 않은 이유는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 15,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "산화질소(NO)",
+      "keywords": [],
+      "q": "그림 반응에서 만들어지는 물질 A의 역할은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 16,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "PCR",
+      "keywords": [
+        "PCR",
+        "annealing 온도",
+        "비특이 밴드"
+      ],
+      "q": "PCR에서 비특이 밴드가 여럿일 때 해결법은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 17,
+      "ans": 1,
+      "subject": "생화학",
+      "topic": "β-산화 ATP 계산",
+      "keywords": [
+        "베타산화",
+        "팔미트산",
+        "ATP",
+        "FADH2",
+        "NADH"
+      ],
+      "q": "팔미트산 β-산화 7회·3회 시 각 ATP 생산량은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 18,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "아미노산 분류",
+      "keywords": [
+        "아미노산",
+        "pKa",
+        "음전하 R기",
+        "아스파르트산"
+      ],
+      "q": "R-기 중 pKa 값이 가장 작은 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 19,
+      "ans": 4,
+      "subject": "생화학",
+      "topic": "단백질 표적화",
+      "keywords": [
+        "신호서열",
+        "signal sequence",
+        "분비",
+        "N-말단"
+      ],
+      "q": "세포질 단백질 A를 세포 밖으로 분비시키려면?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 20,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "RNA 간섭",
+      "keywords": [
+        "siRNA",
+        "knock-down",
+        "RNA 간섭"
+      ],
+      "q": "mRNA 분해로 특정 단백질을 제거(knock-down)하는 데 쓰는 물질은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 21,
+      "ans": 1,
+      "subject": "생화학",
+      "topic": "글리코겐 대사",
+      "keywords": [
+        "가지생성효소",
+        "branching enzyme",
+        "긴 바깥가지",
+        "글리코겐축적병"
+      ],
+      "q": "글리코겐에 긴 바깥 가지가 많다 — 결핍 효소는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 22,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "당뇨 대사",
+      "keywords": [
+        "당뇨",
+        "단백질 분해",
+        "케톤체",
+        "인슐린 저항"
+      ],
+      "q": "혈당 230·HbA1c 12% — 몸에서 일어나는 변화로 맞는 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 23,
+      "ans": 1,
+      "subject": "생화학",
+      "topic": "지방산 합성",
+      "keywords": [
+        "시트르산 셔틀",
+        "citrate",
+        "아세틸-CoA",
+        "지방산 합성"
+      ],
+      "q": "지방산 합성 시 아세틸-CoA가 세포질로 나올 때의 형태는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 24,
+      "ans": 4,
+      "subject": "생화학",
+      "topic": "산화적 인산화",
+      "keywords": [],
+      "q": "청산가리(complex IV 억제) 시 전자가 정체되는 지점은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 25,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "항암제 내성",
+      "keywords": [
+        "methotrexate",
+        "DHFR",
+        "유전자 증폭",
+        "내성"
+      ],
+      "q": "Methotrexate 내성의 원인은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 26,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "지단백·췌장염",
+      "keywords": [
+        "카일로마이크론",
+        "ApoC-II",
+        "LPL",
+        "고중성지방혈증"
+      ],
+      "q": "반복 췌장염·TG 650·ApoC-II 낮음 — 증가하는 물질은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 27,
+      "ans": 4,
+      "subject": "생화학",
+      "topic": "산소해리곡선",
+      "keywords": [],
+      "q": "고산 지역 2,3-BPG↑ — 산소포화도 곡선과 헤모글로빈 특성은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 28,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "신경전달·아세틸콜린",
+      "keywords": [
+        "아세틸콜린",
+        "acetylcholinesterase",
+        "시냅스"
+      ],
+      "q": "아세틸콜린분해효소 활성 20%로 감소 시 시냅스에서 예상되는 현상은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 29,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "콜레스테롤·황색종",
+      "keywords": [],
+      "q": "눈 옆 덩어리(황색판종) — 관련성이 가장 높은 대사 이상은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 30,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "핵산 염기조성",
+      "keywords": [],
+      "q": "이중가닥 RNA 바이러스, 우라실 10%일 때 구아닌 비율은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 31,
+      "ans": 3,
+      "subject": "생화학",
+      "topic": "성장인자 신호전달",
+      "keywords": [],
+      "q": "거대아·거설증·배꼽탈장·IGF-2↑ (베크위스-비데만) — 활성 신호경로는?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 32,
+      "ans": 4,
+      "subject": "생화학",
+      "topic": "헤모글로빈병",
+      "keywords": [],
+      "q": "아프리카계 소아, 통증위기·낫적혈구 — 변이 유전자와 유형은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 33,
+      "ans": 5,
+      "subject": "생화학",
+      "topic": "빌리루빈 대사",
+      "keywords": [],
+      "q": "황달 물질(헴 분해산물)이 장으로 배설되기 위해 간에서 결합하는 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 34,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "TCA 회로",
+      "keywords": [],
+      "q": "TCA 회로 중간산물 중 글루탐산을 생성하는 것은?"
+    },
+    {
+      "year": 2021,
+      "period": 2,
+      "num": 35,
+      "ans": 2,
+      "subject": "생화학",
+      "topic": "비타민·엽산",
+      "keywords": [
+        "엽산",
+        "folate",
+        "신경관결손",
+        "임신"
+      ],
+      "q": "태아 신경관결손 예방을 위해 임산부에게 투약하는 비타민은?"
+    }
+  ]
+}
