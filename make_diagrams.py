@@ -384,11 +384,56 @@ def cerebral_autoregulation():
     return _save(fig, 'cerebral_autoregulation')
 
 
+def antagonist_curves():
+    import numpy as np
+    fig, ax = _new(5.2, 3.0)
+    x = np.linspace(-2, 3, 200)
+    def curve(shift=0, emax=100):
+        return emax / (1 + 10**(-(x - shift)))
+    ax.plot(x, curve(0), color='#1565c0', lw=2, label='A: 작용제 단독')
+    ax.plot(x, curve(1.0), color='#e08a00', lw=2, label='B: 경쟁적 길항제(우측이동)')
+    ax.plot(x, curve(0, 60), color='#c0392b', lw=2, label='C: 비경쟁적 길항제(최대↓)')
+    ax.axhline(50, color='#aaa', ls=':', lw=0.8)
+    ax.set_xlabel('로그 용량', fontsize=8.5)
+    ax.set_ylabel('반응 (%)', fontsize=8.5)
+    ax.legend(fontsize=7.6, loc='upper left')
+    ax.tick_params(labelsize=7.5)
+    ax.text(0.2, 8, 'ED50: A=C < B (경쟁적=우측이동, 비경쟁적=ED50 불변·Emax↓)',
+            fontsize=7.3, color='#555')
+    ax.set_title('작용제 용량-반응: 경쟁적 vs 비경쟁적 길항제', fontsize=10, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'antagonist_curves')
+
+
+def therapeutic_index():
+    import numpy as np
+    fig, ax = _new(5.2, 3.0)
+    x = np.linspace(-1, 4, 200)
+    eff = 100 / (1 + 10**(-(x - 0.5)))
+    tox = 100 / (1 + 10**(-(x - 2.5)))
+    ax.plot(x, eff, color='#1565c0', lw=2, label='효능(치료효과)')
+    ax.plot(x, tox, color='#c0392b', lw=2, label='독성')
+    ax.axhline(50, color='#aaa', ls=':', lw=0.8)
+    ax.annotate('ED50', (0.5, 50), (0.5, 20), fontsize=8, color='#1565c0', ha='center',
+                arrowprops=dict(arrowstyle='->', color='#1565c0'))
+    ax.annotate('TD50', (2.5, 50), (2.5, 20), fontsize=8, color='#c0392b', ha='center',
+                arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.set_xlabel('로그 용량', fontsize=8.5)
+    ax.set_ylabel('반응 개체 비율 (%)', fontsize=8.5)
+    ax.legend(fontsize=8, loc='center right')
+    ax.tick_params(labelsize=7.5)
+    ax.text(-0.9, 90, '치료지수(TI) = TD50 / ED50 (클수록 안전)', fontsize=7.8, color='#555')
+    ax.set_title('치료지수(therapeutic index)', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'therapeutic_index')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
        glucose_alanine, fasting_fuel,
-       flow_volume_loop, cerebral_autoregulation]
+       flow_volume_loop, cerebral_autoregulation,
+       antagonist_curves, therapeutic_index]
 
 if __name__ == '__main__':
     for fn in ALL:
