@@ -342,10 +342,53 @@ def fasting_fuel():
     return _save(fig, 'fasting_fuel')
 
 
+def flow_volume_loop():
+    import numpy as np
+    fig, ax = _new(5.0, 3.2)
+    v = np.linspace(0, 5, 100)
+    # 정상(A)
+    fn = np.where(v < 0.8, v/0.8*10, 10*(1-(v-0.8)/4.2))
+    ax.plot(5 - v, fn, color='#1565c0', lw=2, label='A: 정상')
+    # 폐쇄(B) — 오목한 하강(scooping), 낮은 유량
+    fb = np.where(v < 0.8, v/0.8*6, 6*(1-((v-0.8)/4.2))**1.8)
+    ax.plot(5 - v, fb, color='#c0392b', lw=2, label='B: 폐쇄(COPD)')
+    ax.annotate('오목한 하강\n(scooping)', (2.6, 1.6), (0.4, 4.0), fontsize=8, color='#c0392b',
+                arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.set_xlabel('폐용량 (큰 폐용량 →)', fontsize=8.5)
+    ax.set_ylabel('유량 (flow)', fontsize=8.5)
+    ax.legend(fontsize=8, loc='upper right')
+    ax.tick_params(labelsize=7.5)
+    ax.set_title('유량-용량곡선: 정상 vs 폐쇄폐질환', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'flow_volume_loop')
+
+
+def cerebral_autoregulation():
+    import numpy as np
+    fig, ax = _new(5.0, 3.0)
+    p = np.linspace(20, 200, 200)
+    flow = np.clip((p - 20) * 3, 0, None)
+    flow = np.where(p < 60, (p-20)/40*50, np.where(p > 150, 50 + (p-150)/50*40, 50))
+    ax.plot(p, flow, color='#0f3460', lw=2.2)
+    ax.axvspan(60, 150, color='#c5e1a5', alpha=.35)
+    ax.text(105, 70, '자동조절 구간\n(혈류 일정)', ha='center', fontsize=8, color='#2e7d32')
+    ax.annotate('B: 혈압↑ →\n뇌혈관 저항 증가로\n혈류 일정 유지', (110, 50), (120, 15),
+                fontsize=7.8, color='#c0392b', ha='left',
+                arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.text(35, 12, 'A: 조절 하한\n이하', fontsize=7.6, color='#555')
+    ax.set_xlabel('평균 동맥압 (mmHg)', fontsize=8.5)
+    ax.set_ylabel('뇌혈류량', fontsize=8.5)
+    ax.tick_params(labelsize=7.5)
+    ax.set_title('뇌혈류 자동조절 (myogenic)', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'cerebral_autoregulation')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
-       glucose_alanine, fasting_fuel]
+       glucose_alanine, fasting_fuel,
+       flow_volume_loop, cerebral_autoregulation]
 
 if __name__ == '__main__':
     for fn in ALL:
