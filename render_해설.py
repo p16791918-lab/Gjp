@@ -124,6 +124,10 @@ def build_pdf(meta, questions, output_path):
         block.append(Paragraph(item['exp'], s['exp']))
         if item.get('bg'):
             block.append(Paragraph('■ 관련 지식: ' + item['bg'], s['bg']))
+        if item.get('diag') and os.path.exists(item['diag']):
+            iw, ih = ImageReader(item['diag']).getSize()
+            w = min(102*mm, CONTENT_W)
+            block.append(Image(item['diag'], width=w, height=w*ih/iw, hAlign='LEFT'))
         if item.get('note'):
             block.append(Paragraph('▸ 감별/오답: ' + item['note'], s['note']))
         block.append(HRFlowable(width='100%', thickness=0.4, color=colors.HexColor('#dddddd'),
