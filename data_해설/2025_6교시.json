@@ -1,0 +1,531 @@
+{
+  "meta": {
+    "year": 2025,
+    "period": 6,
+    "title": "2025년도 6교시 문항별 상세 해설",
+    "subtitle": "약리학 (전 35문항 · 사진 수록)"
+  },
+  "questions": [
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 1,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "나이트로글리세린 설하",
+      "keywords": [
+        "니트로글리세린",
+        "설하투여",
+        "초회통과",
+        "협심증"
+      ],
+      "q": "안정형 협심증 급성 흉통에 나이트로글리세린 투여 — 옳은 방법은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 2,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "리토드린·β2",
+      "keywords": [
+        "ritodrine",
+        "베타2작용",
+        "자궁이완",
+        "조기진통"
+      ],
+      "q": "조기진통 산모에게 ritodrine 투여 — 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 3,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "항정상태농도",
+      "keywords": [
+        "용법변경",
+        "항정상태농도",
+        "약동학상수"
+      ],
+      "q": "100 mg 1일 3회 → 200 mg 1일 2회로 변경 시 달라질 수 있는 인자는?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 4,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "도네페질",
+      "keywords": [
+        "donepezil",
+        "콜린에스테라아제억제",
+        "알츠하이머"
+      ],
+      "q": "초기 알츠하이머병에 donepezil — 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 5,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "메토클로프라미드·추체외로",
+      "keywords": [
+        "metoclopramide",
+        "D2차단",
+        "파킨슨증",
+        "추체외로"
+      ],
+      "q": "metoclopramide 투여 후 파킨슨 증상 — 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 6,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "흡입스테로이드·구강칸디다",
+      "keywords": [
+        "흡입스테로이드",
+        "구강칸디다증",
+        "천식",
+        "국소면역"
+      ],
+      "q": "흡입 스테로이드 후 목쉼·입안 흰 반점 — 관련 유해반응은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 7,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "다약제내성·P-당단백",
+      "keywords": [
+        "P-glycoprotein",
+        "다약제내성",
+        "doxorubicin",
+        "약물유출"
+      ],
+      "q": "구조가 다른 항암제에도 교차내성이 생김 — 다약제내성의 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 8,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "초속효성 인슐린",
+      "keywords": [
+        "insulin lispro",
+        "식전",
+        "초속효성",
+        "시간작용곡선"
+      ],
+      "q": "식사 직전 주사해 식후 혈당을 조절할 인슐린 (사진 1) — 제제는?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 9,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "오셀타미비르",
+      "keywords": [
+        "oseltamivir",
+        "뉴라미니다아제",
+        "바이러스방출",
+        "인플루엔자"
+      ],
+      "q": "oseltamivir(타미플루)의 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 10,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "프라조신·기립저혈압",
+      "keywords": [
+        "prazosin",
+        "α1차단",
+        "첫복용현상",
+        "혈관확장"
+      ],
+      "q": "prazosin 첫 복용 후 어지럼·현기증 — 주된 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 11,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "신경근차단제",
+      "keywords": [
+        "신경근차단제",
+        "니코틴수용체",
+        "경쟁적",
+        "근이완"
+      ],
+      "q": "아세틸콜린과 경쟁 결합해 신경근을 차단하는 근이완제의 표적은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 12,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "COX-2 선택약",
+      "keywords": [
+        "celecoxib",
+        "COX-2선택",
+        "위장부작용",
+        "NSAID"
+      ],
+      "q": "NSAID로 미란성 위염 발생 — 위장관 부작용을 줄일 약물은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 13,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "MDMA",
+      "keywords": [
+        "MDMA",
+        "고체온",
+        "저나트륨",
+        "발작",
+        "클럽약물"
+      ],
+      "q": "클럽 약물 복용 후 고체온·갈증·과다 수분섭취·발작 — 복용 약물은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 14,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "SSRI 위장부작용",
+      "keywords": [
+        "fluoxetine",
+        "SSRI",
+        "5-HT3",
+        "오심"
+      ],
+      "q": "fluoxetine 복용 후 메스꺼움·구토·설사 — 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 15,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "올란자핀",
+      "keywords": [
+        "olanzapine",
+        "비정형항정신병",
+        "5-HT2A차단"
+      ],
+      "q": "조현병에 olanzapine 투여 — 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 16,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "류마티스·TNF억제제",
+      "keywords": [
+        "methotrexate",
+        "TNF-α억제제",
+        "류마티스",
+        "생물학제제"
+      ],
+      "q": "methotrexate 효과 불충분 시 추가할 약물은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 17,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "세로토닌증후군",
+      "keywords": [
+        "SSRI",
+        "트립탄",
+        "세로토닌증후군",
+        "상승작용"
+      ],
+      "q": "SSRI+트립탄 병용으로 세로토닌증후군 — 약물상호작용 유형은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 18,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "바레니클린",
+      "keywords": [
+        "varenicline",
+        "니코틴수용체",
+        "부분작용제",
+        "금연"
+      ],
+      "q": "금연약 varenicline의 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 19,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "아스피린·비가역",
+      "keywords": [
+        "aspirin",
+        "COX-1",
+        "공유결합",
+        "비가역",
+        "혈소판"
+      ],
+      "q": "반감기가 짧은데도 혈소판 억제가 수일 지속됨 — COX-1과의 결합은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 20,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "특이체질반응",
+      "keywords": [
+        "clozapine",
+        "무과립구증",
+        "특이체질",
+        "예측불가"
+      ],
+      "q": "clozapine 3주 후 무과립구증(예측 어려운 개인차) — 유해반응 분류는?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 21,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "에피네프린·α1",
+      "keywords": [
+        "epinephrine",
+        "아나필락시스",
+        "α1작용",
+        "혈압회복"
+      ],
+      "q": "아나필락시스에 epinephrine 근주로 혈압이 빠르게 회복 — 주된 기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 22,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "페니토인·Na통로",
+      "keywords": [
+        "phenytoin",
+        "전압의존성소듐통로",
+        "뇌전증"
+      ],
+      "q": "phenytoin의 표적은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 23,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "2상 임상시험",
+      "keywords": [
+        "임상시험",
+        "2상",
+        "용량반응",
+        "유효성"
+      ],
+      "q": "환자 300명 대상 용량-반응·초기 치료효과 평가 — 임상시험 단계는?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 24,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "스코폴라민·무스카린",
+      "keywords": [
+        "scopolamine",
+        "무스카린차단",
+        "멀미",
+        "패치"
+      ],
+      "q": "멀미 예방 scopolamine 패치의 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 25,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "알로퓨리놀",
+      "keywords": [
+        "allopurinol",
+        "잔틴산화효소",
+        "요산합성억제",
+        "통풍"
+      ],
+      "q": "통풍에 allopurinol 투여 — 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 26,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "에제티미브",
+      "keywords": [
+        "ezetimibe",
+        "장콜레스테롤흡수억제",
+        "NPC1L1",
+        "이상지질"
+      ],
+      "q": "atorvastatin에 병용한 ezetimibe의 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 27,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "티아지드",
+      "keywords": [
+        "thiazide",
+        "원위세뇨관",
+        "Na-Cl공동수송체"
+      ],
+      "q": "thiazide 이뇨제의 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 28,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "GABA-A 조절",
+      "keywords": [
+        "GABA-A",
+        "barbiturate",
+        "직접활성",
+        "benzodiazepine"
+      ],
+      "q": "GABA-A chloride current 곡선 (사진 2) — 옳은 설명은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 29,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "리팜핀 효소유도",
+      "keywords": [
+        "rifampin",
+        "CYP유도",
+        "와파린대사증가",
+        "약물상호작용"
+      ],
+      "q": "와파린 복용 중 rifampin 시작 후 항응고 효과 감소 — 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 30,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "항진균제·에르고스테롤",
+      "keywords": [
+        "azole",
+        "에르고스테롤",
+        "Coccidioides",
+        "항진균"
+      ],
+      "q": "Coccidioides 감염 치료약 X (사진 3) — 작용기전은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 31,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "이온화·헨더슨",
+      "keywords": [
+        "약염기",
+        "pKa",
+        "이온화비율",
+        "Henderson-Hasselbalch"
+      ],
+      "q": "약염기(pKa 9)를 pH 8 소장에 두면 이온화:비이온화 비율은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 32,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "ALDH2 결핍",
+      "keywords": [
+        "알데하이드탈수소효소",
+        "ALDH2",
+        "음주홍조",
+        "아세트알데히드"
+      ],
+      "q": "소량 음주에도 안면홍조·두근거림·두통 — 원인은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 33,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "MRSA·반코마이신",
+      "keywords": [
+        "MRSA",
+        "vancomycin",
+        "당뇨발궤양"
+      ],
+      "q": "당뇨발 궤양에서 메티실린내성 포도알균(MRSA) — 치료는?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 34,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "녹내장·방수유출",
+      "keywords": [
+        "개방각녹내장",
+        "무스카린작용제",
+        "필로카르핀",
+        "방수유출"
+      ],
+      "q": "개방각 녹내장에서 방수 유출을 증가시키는 약물은?"
+    },
+    {
+      "year": 2025,
+      "period": 6,
+      "num": 35,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "용량반응·효력",
+      "keywords": [
+        "농도반응곡선",
+        "EC50",
+        "효력",
+        "Emax"
+      ],
+      "q": "약물 X·Y의 농도-반응 곡선 (사진 4) — 옳은 설명은?"
+    }
+  ]
+}
