@@ -1,0 +1,360 @@
+{
+  "meta": {
+    "year": 2022,
+    "period": 6,
+    "title": "2022년도 6교시 문항별 상세 해설",
+    "subtitle": "약리학 (전 35문항 · 보기별 해설 · 사진 수록)"
+  },
+  "questions": [
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 1,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "디기탈리스·Na/K-ATPase",
+      "keywords": [],
+      "q": "디기탈리스는 세포내 칼슘을 높여 심근 수축력을 강화한다 — 그림에서 이 약물의 작용 장소는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 2,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "당뇨병케토산증·인슐린",
+      "keywords": [],
+      "q": "1형 당뇨 환자, 운동 중 갈증·과호흡, 혈당 345·pH 7.05(DKA) — 빠른 호전을 위한 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 3,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "페니실린 알레르기·대체",
+      "keywords": [],
+      "q": "이식환자 그람음성균 패혈증, 아목시실린에 아나필락시스 병력 — 처방할 수 있는 항생제는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 4,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "5α-환원효소 억제제",
+      "keywords": [],
+      "q": "전립샘비대증 치료 후 전립샘 축소·혈중 DHT 감소 — 투여한 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 5,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "코르티코스테로이드",
+      "keywords": [],
+      "q": "백혈구 이동·염증성 사이토카인·아이코사노이드 생성을 억제하는 면역억제제는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 6,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "옥시토신",
+      "keywords": [],
+      "q": "분만통이 약해진 산모에서 분만을 촉진하기 위한 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 7,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "할로페리돌·추체외로",
+      "keywords": [],
+      "q": "haloperidol의 추체외로 증상(불수의 운동·근긴장이상) 발생 기전은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 8,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "흡입마취·회복속도",
+      "keywords": [],
+      "q": "마취 깊이를 빠르게 조절하고 회복이 가장 빠른 마취제는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 9,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "치료지수",
+      "keywords": [],
+      "q": "약물 X: 5μg에서 50% 효과, 50μg에서 1% 사망, 100μg에서 50% 사망 — 치료지수는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 10,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "MRSA·반코마이신",
+      "keywords": [],
+      "q": "메티실린 내성 황색포도알균(MRSA) 치료에 가장 적절한 항생제는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 11,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "트라스투주맙·HER2",
+      "keywords": [],
+      "q": "말기 유방암에 trastuzumab을 쓰는 근거가 되는 면역조직화학 결과는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 12,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "척수마취",
+      "keywords": [],
+      "q": "제왕절개에서 요추 사이 거미막밑공간에 마취제를 투여해 하반신을 마취하는 방법은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 13,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "졸피뎀",
+      "keywords": [],
+      "q": "triazolam 대체용, 내성·의존이 드물고 작용지속이 짧으며 GABAA α1 서브유닛에 결합하는 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 14,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "아스피린·공유결합",
+      "keywords": [],
+      "q": "aspirin이 cyclooxygenase에 결합하는 방식은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 15,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "여분수용체",
+      "keywords": [],
+      "q": "약물이 전체 수용체에 결합하지 않았는데도 최고효능을 보이는 현상을 설명하는 것은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 16,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "메토트렉세이트 내성",
+      "keywords": [],
+      "q": "methotrexate(엽산 유사체, DHFR 억제)의 항대사효과에 대한 내성 기전은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 17,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "갑상샘저하·레보티록신",
+      "keywords": [],
+      "q": "무기력·체중증가·인지저하, T3·T4 낮고 TSH 높음(갑상샘저하) — 투여할 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 18,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "삼환계 항우울제·항콜린",
+      "keywords": [],
+      "q": "imipramine 복용 후 입마름·시야흐림·변비 — 어떤 수용체 차단 때문인가?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 19,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "숙시닐콜린",
+      "keywords": [],
+      "q": "기관내삽관 전 신경근차단제 투여 후 부분 수축(연축)에 이어 이완·마비 — 투여한 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 20,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "벤조디아제핀·염소이온",
+      "keywords": [],
+      "q": "diazepam이 GABAA 수용체에 작용할 때 투과성이 증가하는 이온은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 21,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "에탄올 영차 약동학",
+      "keywords": [],
+      "q": "혈중 에탄올 농도의 시간에 따른 변화 — 에탄올 약동학으로 옳은 설명은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 22,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "혈장단백결합·간경화",
+      "keywords": [],
+      "q": "뇌전증약의 혈장단백결합률 표에서, 간경화 환자에게 줄 때 뇌 독성 확률이 가장 높은 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 23,
+      "ans": 3,
+      "subject": "약리학",
+      "topic": "제2상 임상시험",
+      "keywords": [],
+      "q": "환자를 대상으로 효능을 평가하고 임상 용량을 처음 결정하는 신약개발 단계는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 24,
+      "ans": 1,
+      "subject": "약리학",
+      "topic": "퀴닌·킨코니즘",
+      "keywords": [],
+      "q": "말라리아 약물치료 후 귀울림·시력장애·두통·발진(킨코니즘) — 원인 약물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 25,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "보툴리눔독소·ACh 방출",
+      "keywords": [],
+      "q": "주름 제거 주사(보툴리눔독소)의 신경근접합부 작용 장소는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 26,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "로시글리타존·PPARγ",
+      "keywords": [],
+      "q": "thiazolidinedione(rosiglitazone)의 포도당 대사 그림에서 작용 장소는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 27,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "이뇨제·디곡신 독성",
+      "keywords": [],
+      "q": "hydrochlorothiazide 복용 후 심부전에 디기탈리스를 쓰려 한다 — 주의할 이온 불균형은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 28,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "아세트아미노펜·CYP2E1",
+      "keywords": [],
+      "q": "acetaminophen 과용량의 간독성에 관여하는 1상 대사반응 효소는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 29,
+      "ans": 2,
+      "subject": "약리학",
+      "topic": "니트로글리세린·cGMP",
+      "keywords": [],
+      "q": "휴식 중 가슴통증에 설하투여로 호전된 혈관 작용 약물(니트로글리세린)의 작용기전은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 30,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "필로카르핀·섬모체근",
+      "keywords": [],
+      "q": "녹내장 치료제 pilocarpine이 작용하는 구조물은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 31,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "헤파린 해독제",
+      "keywords": [],
+      "q": "임신부 심부정맥혈전 치료 중 출혈, 약물이 antithrombin III와 결합해 응고인자를 불활성화 — 해독제는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 32,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "에피네프린·β2 수용체",
+      "keywords": [],
+      "q": "에피네프린은 이완기 혈압을 낮추나 노르에피네프린은 낮추지 않는다 — 이 차이를 만든 수용체는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 33,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "COX-2 선택 억제제",
+      "keywords": [],
+      "q": "aspirin 복용 중 윗배 통증·흑색변(위장출혈) — 바꿀 적절한 약은?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 34,
+      "ans": 5,
+      "subject": "약리학",
+      "topic": "코르티코스테로이드·감량",
+      "keywords": [],
+      "q": "신증후군에 항염·면역억제제 A 복용 중 통통·성장저해·위장 자극, 중단 시 서서히 감량 필요 — 치료제 A는?"
+    },
+    {
+      "year": 2022,
+      "period": 6,
+      "num": 35,
+      "ans": 4,
+      "subject": "약리학",
+      "topic": "메타돈·아편금단",
+      "keywords": [],
+      "q": "헤로인 상습 투여자가 마지막 투여 다음날 불안·콧물·발한·구토·설사·근육연축(금단) — 개선을 위한 약물은?"
+    }
+  ]
+}
