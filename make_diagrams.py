@@ -508,13 +508,151 @@ def tca_energy():
     return _save(fig, 'tca_energy')
 
 
+def pv_loop():
+    """좌심실 압력-용적곡선(PV loop) — 4상 + S1/S2 판막 사건."""
+    fig, ax = _new(5.2, 3.8)
+    # 꼭짓점 (용적 mL, 압력 mmHg)
+    A = (120, 8)    # 승모판 닫힘(S1) = 이완기말
+    B = (120, 80)   # 대동맥판 열림
+    C = (50, 100)   # 대동맥판 닫힘(S2) = 수축기말
+    D = (50, 8)     # 승모판 열림
+    import numpy as np
+    # 박출기 곡선(B→C): 살짝 위로 볼록
+    bx = np.linspace(120, 50, 40); by = 80 + 20*np.sin(np.linspace(0, np.pi, 40))*0.9
+    # 충만기 곡선(D→A): 완만한 상승
+    dx = np.linspace(50, 120, 40); dy = 8 + 0.0009*(dx-50)**2
+    ax.plot([A[0], B[0]], [A[1], B[1]], color='#0f3460', lw=2)      # 등용성 수축
+    ax.plot(bx, by, color='#0f3460', lw=2)                          # 박출
+    ax.plot([C[0], D[0]], [C[1], D[1]], color='#0f3460', lw=2)      # 등용성 이완
+    ax.plot(dx, dy, color='#0f3460', lw=2)                          # 충만
+    for (x, y), t, dxy in [(A, 'S1 승모판닫힘', (6, -10)), (B, '대동맥판 열림', (4, 4)),
+                           (C, 'S2 대동맥판닫힘', (-2, 8)), (D, '승모판 열림', (-30, -6))]:
+        ax.plot(x, y, 'o', color='#c0392b', ms=5)
+        ax.annotate(t, (x, y), (x+dxy[0], y+dxy[1]), fontsize=7.3, color='#c0392b')
+    ax.text(85, 45, '박출량(SV)', fontsize=8, color='#1565c0', ha='center')
+    ax.annotate('', (50, 32), (120, 32), arrowprops=dict(arrowstyle='<->', color='#1565c0'))
+    ax.text(85, 26, 'SV = EDV - ESV', fontsize=7, color='#1565c0', ha='center')
+    ax.set_xlabel('좌심실 용적 (mL)', fontsize=8.5)
+    ax.set_ylabel('좌심실 압력 (mmHg)', fontsize=8.5)
+    ax.set_xlim(30, 150); ax.set_ylim(0, 120); ax.tick_params(labelsize=7.5)
+    ax.set_title('좌심실 압력-용적곡선(PV loop)', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'pv_loop')
+
+
+def cardiac_ap():
+    """심실근 활동전위 5상 — 고원기(L형 Ca) 강조."""
+    import numpy as np
+    fig, ax = _new(5.2, 3.4)
+    t0 = np.linspace(-0.5, 0, 20); v0 = np.full_like(t0, -90)          # 4상 안정막
+    t1 = np.array([0, 0.02]); v1 = np.array([-90, 20])                 # 0상 상승(Na)
+    t2 = np.array([0.02, 0.05]); v2 = np.array([20, 5])                # 1상 초기재분극
+    t3 = np.linspace(0.05, 0.25, 30); v3 = np.full_like(t3, 5)         # 2상 고원기(Ca)
+    t4 = np.linspace(0.25, 0.35, 20); v4 = np.linspace(5, -90, 20)     # 3상 재분극(K)
+    t5 = np.linspace(0.35, 0.7, 20); v5 = np.full_like(t5, -90)        # 4상
+    for t, v in [(t0, v0), (t1, v1), (t2, v2), (t3, v3), (t4, v4), (t5, v5)]:
+        ax.plot(t, v, color='#0f3460', lw=2)
+    ax.axhline(0, color='#ccc', ls=':', lw=0.7)
+    ax.annotate('0상 (Na+ 유입)', (0.012, 15), (-0.45, 25), fontsize=7.4, color='#c0392b',
+                weight='bold', arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.annotate('1상', (0.035, 10), (0.04, 30), fontsize=7.4, color='#555', weight='bold',
+                arrowprops=dict(arrowstyle='->', color='#555'))
+    ax.text(0.15, 22, '2상 고원기\n(L형 Ca2+ 유입 vs K+ 유출)', fontsize=7.4, color='#1565c0',
+            ha='center', weight='bold')
+    ax.annotate('3상 (K+ 유출)', (0.30, -40), (0.33, -20), fontsize=7.4, color='#2e7d32',
+                weight='bold', arrowprops=dict(arrowstyle='->', color='#2e7d32'))
+    ax.text(0.55, -78, '4상 안정막 -90mV', fontsize=7.4, color='#555', ha='center', weight='bold')
+    ax.set_xlabel('시간', fontsize=8.5); ax.set_ylabel('막전위 (mV)', fontsize=8.5)
+    ax.set_ylim(-100, 40); ax.set_xticks([]); ax.tick_params(labelsize=7.5)
+    ax.set_title('심실근 활동전위 — 고원기와 이온흐름', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'cardiac_ap')
+
+
+def cardiac_venous_return():
+    """심장기능곡선 × 정맥환류곡선 교차 = 작동점."""
+    import numpy as np
+    fig, ax = _new(5.2, 3.4)
+    rap = np.linspace(-2, 8, 100)
+    co = 5 * (1 - np.exp(-(rap + 2) / 2.2))           # 심장기능곡선(전부하↑→박출↑)
+    vr = np.clip((7 - rap) * 0.75, 0, None)           # 정맥환류곡선(MSFP=7에서 0)
+    ax.plot(rap, co, color='#c0392b', lw=2, label='심장기능곡선(Starling)')
+    ax.plot(rap, vr, color='#1565c0', lw=2, label='정맥환류곡선')
+    # 교차점 근사
+    idx = int(np.argmin(np.abs(co - vr)))
+    ax.plot(rap[idx], co[idx], 'ko', ms=6)
+    ax.annotate('작동점\n(심박출량=정맥환류)', (rap[idx], co[idx]),
+                (rap[idx]-3.2, co[idx]+0.6), fontsize=7.4, color='#333',
+                arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.axvline(7, color='#1565c0', ls=':', lw=0.8)
+    ax.text(7, 0.2, 'MSFP\n(평균체순환\n충만압)', fontsize=6.8, color='#1565c0', ha='center')
+    ax.set_xlabel('우심방압 RAP (mmHg)', fontsize=8.5)
+    ax.set_ylabel('혈류량 (L/분)', fontsize=8.5)
+    ax.legend(fontsize=7.6, loc='upper right'); ax.tick_params(labelsize=7.5)
+    ax.set_title('심장기능곡선 × 정맥환류곡선', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'cardiac_venous_return')
+
+
+def menstrual_cycle():
+    """월경주기 호르몬 곡선 — 여포기/황체기, 배란."""
+    import numpy as np
+    fig, ax = _new(5.4, 3.4)
+    d = np.linspace(0, 28, 200)
+    def bump(c, w, h): return h * np.exp(-((d - c) / w) ** 2)
+    lh = bump(14, 0.7, 1.0) + 0.08
+    fsh = bump(13.3, 1.0, 0.45) + bump(1, 3, 0.18) + 0.08
+    est = bump(12.5, 2.2, 0.85) + bump(21, 3.5, 0.5) + 0.06
+    prog = bump(21, 3.6, 1.0) + 0.03
+    ax.plot(d, lh, color='#c0392b', lw=1.8, label='LH')
+    ax.plot(d, fsh, color='#8e44ad', lw=1.5, label='FSH')
+    ax.plot(d, est, color='#1565c0', lw=1.8, label='에스트로겐')
+    ax.plot(d, prog, color='#2e7d32', lw=1.8, label='프로게스테론')
+    ax.axvline(14, color='#888', ls='--', lw=1)
+    ax.text(14, 1.15, '배란', fontsize=8, color='#333', ha='center', weight='bold')
+    ax.text(7, -0.16, '여포기(증식기)', fontsize=7.6, color='#555', ha='center')
+    ax.text(21, -0.16, '황체기(분비기)', fontsize=7.6, color='#555', ha='center')
+    ax.set_xlabel('주기 일수 (day)', fontsize=8.5); ax.set_ylabel('상대 농도', fontsize=8.5)
+    ax.set_ylim(-0.25, 1.3); ax.set_yticks([]); ax.tick_params(labelsize=7.5)
+    ax.legend(fontsize=7.4, loc='upper left', ncol=2)
+    ax.set_title('월경주기 호르몬 변화', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'menstrual_cycle')
+
+
+def glucose_titration():
+    """신장 포도당 처리 — 여과·재흡수·배설과 역치·Tm."""
+    import numpy as np
+    fig, ax = _new(5.2, 3.4)
+    pg = np.linspace(0, 600, 300)
+    filt = pg * 1.25                                   # 여과량(GFR 125)
+    tm = 375.0                                         # 재흡수 최대
+    # splay: Tm 부근을 부드럽게 포화시키는 재흡수 곡선
+    reab = tm * np.tanh(filt / tm)
+    exc = np.clip(filt - reab, 0, None)
+    ax.plot(pg, filt, color='#333', lw=1.8, label='여과량(filtered)')
+    ax.plot(pg, reab, color='#1565c0', lw=1.8, label='재흡수(reabsorbed)')
+    ax.plot(pg, exc, color='#c0392b', lw=1.8, label='배설(excreted)')
+    ax.axhline(tm, color='#1565c0', ls=':', lw=0.8)
+    ax.text(20, tm + 15, 'Tm(재흡수 최대)', fontsize=7, color='#1565c0')
+    ax.axvline(180, color='#c0392b', ls=':', lw=0.8)
+    ax.text(188, 40, '역치≈180\n(포도당뇨 시작)', fontsize=7, color='#c0392b')
+    ax.set_xlabel('혈장 포도당 (mg/dL)', fontsize=8.5)
+    ax.set_ylabel('포도당량 (mg/분)', fontsize=8.5)
+    ax.legend(fontsize=7.4, loc='upper left'); ax.tick_params(labelsize=7.5)
+    ax.set_title('신장 포도당 처리 — 역치·Tm·삼출(splay)', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'glucose_titration')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
        glucose_alanine, fasting_fuel,
        flow_volume_loop, cerebral_autoregulation,
        antagonist_curves, therapeutic_index,
-       glycolysis, tca_energy]
+       glycolysis, tca_energy,
+       pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration]
 
 if __name__ == '__main__':
     for fn in ALL:
