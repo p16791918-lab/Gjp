@@ -802,6 +802,71 @@ def antigen_presentation():
     return _save(fig, 'antigen_presentation')
 
 
+def pk_curves():
+    """혈중농도-시간곡선 — 정맥 vs 경구, 치료역(MEC~MTC)."""
+    import numpy as np
+    fig, ax = _new(5.4, 3.4)
+    t = np.linspace(0, 12, 300)
+    iv = 100 * np.exp(-0.35 * t)                       # 정맥: 즉시 최고 후 소실
+    ka, ke = 1.1, 0.35
+    oral = 60 * (ka / (ka - ke)) * (np.exp(-ke * t) - np.exp(-ka * t))  # 경구: 흡수+소실
+    ax.plot(t, iv, color='#c0392b', lw=2, label='정맥주사(IV)')
+    ax.plot(t, oral, color='#1565c0', lw=2, label='경구(초회통과·흡수)')
+    ax.axhline(70, color='#e08a00', ls=':', lw=0.9)
+    ax.axhline(20, color='#2e7d32', ls=':', lw=0.9)
+    ax.text(9.5, 73, 'MTC(최소독성농도)', fontsize=6.8, color='#e08a00')
+    ax.text(9.5, 22, 'MEC(최소유효농도)', fontsize=6.8, color='#2e7d32')
+    ax.annotate('치료역', (6, 45), fontsize=8, color='#555', ha='center')
+    # 경구 Tmax
+    it = int(np.argmax(oral))
+    ax.plot(t[it], oral[it], 'ko', ms=4)
+    ax.annotate('Tmax', (t[it], oral[it]), (t[it]+0.6, oral[it]+8), fontsize=7, color='#1565c0')
+    ax.set_xlabel('시간', fontsize=8.5); ax.set_ylabel('혈중 약물농도', fontsize=8.5)
+    ax.set_ylim(0, 105); ax.legend(fontsize=7.6, loc='upper right'); ax.tick_params(labelsize=7.5)
+    ax.set_title('혈중농도-시간곡선 — 정맥 vs 경구', fontsize=10.5, color=NAVY, weight='bold')
+    fig.tight_layout()
+    return _save(fig, 'pk_curves')
+
+
+def autonomic_receptors():
+    """자율신경 수용체 지도 — 교감(아드레날린) vs 부교감(콜린)."""
+    fig, ax = _new(5.8, 4.2)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 12); ax.axis('off')
+
+    def box(x, y, w, h, t, fc, tc='#20303d', fs=6.8):
+        ax.add_patch(Rectangle((x, y), w, h, fc=fc, ec='#888', lw=0.9))
+        ax.text(x + w/2, y + h/2, t, fontsize=fs, ha='center', va='center', color=tc)
+
+    # 교감 (왼쪽)
+    ax.text(3.0, 11.3, '교감신경 (아드레날린성)', fontsize=9, ha='center', weight='bold', color='#c0392b')
+    ax.text(3.0, 10.6, '절후 노르에피네프린 · 부신속질 에피네프린', fontsize=6.6, ha='center', color='#555')
+    symp = [
+        ('α1', '혈관수축·산동·전립샘/방광목 수축 (차단=프라조신·탐수로신)', 9.3),
+        ('α2', '시냅스전 음성되먹임 (NE 분비↓)', 7.9),
+        ('β1', '심박·수축력↑·레닌분비 (차단=베타차단제)', 6.5),
+        ('β2', '기관지·혈관 확장·자궁이완 (작용=살부타몰·리토드린)', 5.1),
+    ]
+    for r, eff, y in symp:
+        box(0.5, y, 1.0, 1.0, r, '#fdecea', '#c0392b', 8)
+        ax.text(1.7, y + 0.5, eff, fontsize=6.5, va='center', color='#333')
+
+    # 부교감 (오른쪽/아래)
+    ax.text(3.0, 3.9, '부교감신경 (콜린성) · 절후 아세틸콜린', fontsize=9, ha='center',
+            weight='bold', color='#1565c0')
+    para = [
+        ('M2', '심박↓·전도↓ (심장)', 2.6),
+        ('M3', '분비·평활근 수축·축동·조절수축 (작용=필로카르핀)', 1.4),
+        ('Nn/Nm', '신경절·신경근접합부 (니코틴 수용체)', 0.2),
+    ]
+    for r, eff, y in para:
+        box(0.5, y, 1.0, 1.0, r, '#e3f2fd', '#1565c0', 7.5)
+        ax.text(1.7, y + 0.5, eff, fontsize=6.5, va='center', color='#333')
+
+    ax.set_title('자율신경 수용체 지도 — 교감(α·β) vs 부교감(M·N)',
+                 fontsize=10, color=NAVY, weight='bold')
+    return _save(fig, 'autonomic_receptors')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
@@ -811,7 +876,8 @@ ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        glycolysis, tca_energy,
        pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration,
        knudson_2hit, gn_immunofluorescence,
-       gram_wall, antigen_presentation]
+       gram_wall, antigen_presentation,
+       pk_curves, autonomic_receptors]
 
 if __name__ == '__main__':
     for fn in ALL:
