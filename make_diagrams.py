@@ -718,6 +718,90 @@ def gn_immunofluorescence():
     return _save(fig, 'gn_immunofluorescence')
 
 
+def gram_wall():
+    """세균 세포벽 3형 — 그람양성 / 그람음성 / 항산균."""
+    fig, ax = _new(5.8, 3.4)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 10); ax.axis('off')
+
+    def layer(x, y, w, h, col, ec='#888'):
+        ax.add_patch(Rectangle((x, y), w, h, fc=col, ec=ec, lw=0.8))
+
+    W = 3.0
+    # 그람양성 (x=0.4): 두꺼운 펩티도글리칸
+    cx = 0.6
+    ax.text(cx + W/2, 9.3, '그람양성', fontsize=9, ha='center', weight='bold', color='#6a1b9a')
+    layer(cx, 2.0, W, 0.7, '#d1c4e9')                       # 세포막
+    layer(cx, 2.7, W, 3.0, '#9575cd')                       # 두꺼운 펩티도글리칸
+    ax.text(cx + W/2, 4.2, '두꺼운\n펩티도글리칸\n(+테이코산)', fontsize=6.8, ha='center',
+            va='center', color='white')
+    ax.text(cx + W/2, 2.35, '세포막', fontsize=6.5, ha='center', va='center')
+    ax.text(cx + W/2, 1.2, '보라색 유지\n(크리스탈바이올렛)', fontsize=6.6, ha='center', color='#6a1b9a')
+
+    # 그람음성 (중앙): 얇은 펩티도글리칸 + 외막(LPS)
+    cx = 4.5
+    ax.text(cx + W/2, 9.3, '그람음성', fontsize=9, ha='center', weight='bold', color='#c0392b')
+    layer(cx, 2.0, W, 0.7, '#ffcdd2')                       # 세포막
+    layer(cx, 2.7, W, 0.8, '#e57373')                       # 얇은 펩티도글리칸
+    layer(cx, 3.5, W, 0.9, '#ef9a9a')                       # 주변공간
+    layer(cx, 4.4, W, 0.9, '#c62828')                       # 외막 (LPS)
+    ax.text(cx + W/2, 4.85, '외막(LPS=내독소)', fontsize=6.6, ha='center', va='center', color='white')
+    ax.text(cx + W/2, 3.1, '얇은 펩티도글리칸', fontsize=6.4, ha='center', va='center')
+    ax.text(cx + W/2, 2.35, '세포막', fontsize=6.5, ha='center', va='center')
+    ax.text(cx + W/2, 1.2, '분홍색\n(사프라닌 대조염색)', fontsize=6.6, ha='center', color='#c0392b')
+
+    # 항산균 (오른쪽): 미콜산
+    cx = 8.4
+    ax.text(cx + W/2, 9.3, '항산균(결핵·한센)', fontsize=9, ha='center', weight='bold', color='#1565c0')
+    layer(cx, 2.0, W, 0.7, '#bbdefb')                       # 세포막
+    layer(cx, 2.7, W, 1.2, '#64b5f6')                       # 펩티도글리칸+아라비노갈락탄
+    layer(cx, 3.9, W, 1.4, '#1565c0')                       # 미콜산(밀랍)
+    ax.text(cx + W/2, 4.6, '미콜산\n(밀랍층)', fontsize=6.8, ha='center', va='center', color='white')
+    ax.text(cx + W/2, 3.3, '펩티도글리칸', fontsize=6.4, ha='center', va='center', color='white')
+    ax.text(cx + W/2, 2.35, '세포막', fontsize=6.5, ha='center', va='center')
+    ax.text(cx + W/2, 1.2, '항산성 염색\n(잘 안 벗겨짐)', fontsize=6.6, ha='center', color='#1565c0')
+
+    ax.set_title('세균 세포벽 3형 — 그람 염색성의 근거', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'gram_wall')
+
+
+def antigen_presentation():
+    """항원제시 경로 — MHC I(내인성·CD8) vs MHC II(외인성·CD4)."""
+    fig, ax = _new(5.8, 4.2)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 12); ax.axis('off')
+
+    def box(x, y, w, h, t, fc, tc='#20303d', fs=7.0):
+        ax.add_patch(Rectangle((x, y), w, h, fc=fc, ec='#888', lw=1.0))
+        ax.text(x + w/2, y + h/2, t, fontsize=fs, ha='center', va='center', color=tc)
+
+    # MHC I (왼쪽)
+    ax.text(3.0, 11.2, 'MHC I 경로', fontsize=9.5, ha='center', weight='bold', color='#1565c0')
+    ax.text(3.0, 10.5, '모든 유핵세포', fontsize=7, ha='center', color='#555')
+    steps1 = ['내인성 항원\n(바이러스·세포질 단백)', '프로테아좀에서 분해',
+              'TAP로 소포체 이동', 'MHC I에 적재', 'CD8+ 세포독성 T세포']
+    ys = [9.2, 7.7, 6.2, 4.7, 3.0]
+    for t, y in zip(steps1, ys):
+        box(0.7, y, 4.6, 1.0, t, '#e3f2fd')
+    for i in range(len(ys)-1):
+        ax.annotate('', (3.0, ys[i+1]+1.0), (3.0, ys[i]),
+                    arrowprops=dict(arrowstyle='->', color='#1565c0'))
+
+    # MHC II (오른쪽)
+    ax.text(9.0, 11.2, 'MHC II 경로', fontsize=9.5, ha='center', weight='bold', color='#c0392b')
+    ax.text(9.0, 10.5, '항원제시세포(수지상·대식·B)', fontsize=7, ha='center', color='#555')
+    steps2 = ['외인성 항원\n(식균한 세균 단백)', '엔도솜·리소좀에서 분해',
+              '(불변사슬 CLIP 교체)', 'MHC II에 적재', 'CD4+ 보조 T세포']
+    for t, y in zip(steps2, ys):
+        box(6.7, y, 4.6, 1.0, t, '#fdecea')
+    for i in range(len(ys)-1):
+        ax.annotate('', (9.0, ys[i+1]+1.0), (9.0, ys[i]),
+                    arrowprops=dict(arrowstyle='->', color='#c0392b'))
+
+    ax.text(6.0, 1.6, 'MHC I = CD8(세포독성) · MHC II = CD4(보조)  —  "8×1 = 2×4" 규칙',
+            fontsize=7.4, ha='center', color='#555', weight='bold')
+    ax.set_title('항원제시 — 내인성(MHC I) vs 외인성(MHC II)', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'antigen_presentation')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
@@ -726,7 +810,8 @@ ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        antagonist_curves, therapeutic_index,
        glycolysis, tca_energy,
        pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration,
-       knudson_2hit, gn_immunofluorescence]
+       knudson_2hit, gn_immunofluorescence,
+       gram_wall, antigen_presentation]
 
 if __name__ == '__main__':
     for fn in ALL:

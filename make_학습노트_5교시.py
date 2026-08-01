@@ -1,0 +1,483 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""2021~2025 기종평 5교시(미생물학·면역학) 빈출유형 학습노트 PDF 생성."""
+import re
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import mm
+from reportlab.lib import colors
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import (
+    SimpleDocTemplate, Paragraph, Spacer, HRFlowable, KeepTogether, Table, TableStyle,
+    PageBreak, Image as RLImage
+)
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from PIL import Image as PILImage
+
+pdfmetrics.registerFont(TTFont('Nanum', '/usr/share/fonts/truetype/nanum/NanumGothic.ttf'))
+pdfmetrics.registerFont(TTFont('NanumB', '/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf'))
+
+CONTENT_W = (210 - 30) * mm
+
+S = {
+    'title': ParagraphStyle('t', fontName='NanumB', fontSize=20, leading=26, alignment=1,
+        textColor=colors.HexColor('#12263a'), spaceAfter=4),
+    'sub': ParagraphStyle('s', fontName='Nanum', fontSize=10.5, leading=15, alignment=1,
+        textColor=colors.HexColor('#5a6b7b'), spaceAfter=3),
+    'sec': ParagraphStyle('sec', fontName='NanumB', fontSize=13, leading=18, spaceBefore=12,
+        spaceAfter=6, textColor=colors.white, backColor=colors.HexColor('#0f3460'),
+        borderPad=6, leftIndent=3),
+    'card': ParagraphStyle('c', fontName='NanumB', fontSize=11, leading=15, spaceBefore=2,
+        spaceAfter=3, textColor=colors.HexColor('#0f3460')),
+    'stars': ParagraphStyle('st', fontName='NanumB', fontSize=9, leading=12,
+        textColor=colors.HexColor('#c0392b'), spaceAfter=3),
+    'core': ParagraphStyle('co', fontName='Nanum', fontSize=9.3, leading=15, leftIndent=6,
+        spaceAfter=3, textColor=colors.HexColor('#20303d')),
+    'trap': ParagraphStyle('tr', fontName='Nanum', fontSize=8.8, leading=14, leftIndent=8,
+        spaceBefore=2, spaceAfter=2, textColor=colors.HexColor('#8a4b08'),
+        backColor=colors.HexColor('#fff5e6'), borderPad=4),
+    'cell': ParagraphStyle('cell', fontName='Nanum', fontSize=8.3, leading=11.5,
+        textColor=colors.HexColor('#20303d')),
+    'cellh': ParagraphStyle('cellh', fontName='NanumB', fontSize=8.3, leading=11.5,
+        textColor=colors.white, alignment=1),
+    'tip': ParagraphStyle('tip', fontName='Nanum', fontSize=9, leading=15, leftIndent=6,
+        spaceAfter=3, textColor=colors.HexColor('#234e52')),
+    'cap': ParagraphStyle('cap', fontName='Nanum', fontSize=7.5, leading=10, alignment=1,
+        spaceBefore=1, spaceAfter=1, textColor=colors.HexColor('#6b7b8b')),
+}
+
+
+def esc(t):
+    for a, b in (('₂', '2'), ('₁', '1'), ('₃', '3'), ('−', '-'), ('–', '-')):
+        t = t.replace(a, b)
+    t = t.replace('&', '&amp;')
+    t = t.replace('<b>', '\x01').replace('</b>', '\x02')
+    t = t.replace('<', '〈').replace('>', '〉')
+    t = t.replace('\x01', '<b>').replace('\x02', '</b>')
+    return t
+
+
+def P(t, st):
+    return Paragraph(esc(t), S[st])
+
+
+def make_img(path, cap, max_w=80 * mm, max_h=95 * mm):
+    iw, ih = PILImage.open(path).size
+    s = min(max_w / iw, max_h / ih)
+    img = RLImage(path, width=iw * s, height=ih * s)
+    img.hAlign = 'CENTER'
+    return KeepTogether([Spacer(1, 1 * mm), img, P(cap, 'cap')])
+
+
+def header_widths(n):
+    if n == 2: return [0.32, 0.68]
+    if n == 3: return [0.24, 0.38, 0.38]
+    return [1.0 / n] * n
+
+
+def make_table(header, rows):
+    data = [[Paragraph(esc(h), S['cellh']) for h in header]]
+    for r in rows:
+        data.append([Paragraph(esc(c), S['cell']) for c in r])
+    col_w = [CONTENT_W * x for x in header_widths(len(header))]
+    t = Table(data, colWidths=col_w, hAlign='LEFT')
+    t.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#34617f')),
+        ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.HexColor('#f4f8fb'), colors.white]),
+        ('GRID', (0, 0), (-1, -1), 0.4, colors.HexColor('#c3d3df')),
+        ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+        ('LEFTPADDING', (0, 0), (-1, -1), 4), ('RIGHTPADDING', (0, 0), (-1, -1), 4),
+        ('TOPPADDING', (0, 0), (-1, -1), 3), ('BOTTOMPADDING', (0, 0), (-1, -1), 3),
+    ]))
+    return t
+
+
+SECTIONS = [
+    ('Ⅰ. 세균 일반 · 그람양성', [
+        {
+            'title': '세균 세포벽 · 염색(그람·항산·협막)', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '그람양성균은 <b>두꺼운 펩티도글리칸(+테이코산)</b>으로 크리스탈바이올렛을 붙잡아 보라색으로, '
+                '그람음성균은 얇은 펩티도글리칸에 <b>외막(LPS=내독소)</b>이 있어 탈색 후 사프라닌으로 분홍색으로 '
+                '보인다.',
+                '결핵·한센균은 세포벽에 <b>미콜산(밀랍층)</b>이 있어 그람염색이 잘 안 되고 항산성 염색'
+                '(지엘-닐센)으로 확인한다.',
+                '협막(capsule)은 다당류 껍질로 식균을 피하는 병독인자이며, 폐렴사슬알균·수막알균·헤모필루스 등이 '
+                '가지고 협막백신의 표적이 된다.',
+                '내독소(LPS)는 그람음성균 외막의 지질 A가 원인으로 열·쇼크를 일으키고, 외독소는 균이 분비하는 '
+                '단백질 독소다.'],
+            'table': {'header': ['구분', '벽 구조', '염색'],
+                      'rows': [
+                          ['그람양성', '두꺼운 펩티도글리칸', '보라색'],
+                          ['그람음성', '얇은 펩티도글리칸 + 외막(LPS)', '분홍색'],
+                          ['항산균', '미콜산(밀랍)', '항산성(ZN)']]},
+            'img': ('diagrams/gram_wall.png', '▲ 세균 세포벽 3형 — 그람 염색성의 근거'),
+            'trap': '⚠ 함정 — 내독소(LPS)를 그람양성균 성분으로 낚는다(그람음성 외막). 협막의 역할을 부착으로만 '
+                    '낚는다(식균 회피).'},
+        {
+            'title': '포도알균 — 황색 · 표피 · MRSA · 독소', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '황색포도알균은 <b>코아굴라제 양성</b>으로 화농·농양을 잘 만들고, 표피포도알균은 코아굴라제 음성으로 '
+                '인공삽입물(카테터·인공판막) 생물막 감염을 일으킨다.',
+                'MRSA는 <b>mecA 유전자의 변형 PBP2a</b>로 베타락탐에 내성을 보여 반코마이신 등으로 치료한다.',
+                '독소쇼크증후군은 <b>초항원(TSST-1)</b>이 다수 T세포를 무차별 활성화해 대량 사이토카인·쇼크를 '
+                '일으킨다.',
+                '포도알균 식중독은 이미 만들어진 <b>장독소(내열성)</b> 때문에 잠복기가 짧고 구토가 심하다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 표피포도알균을 코아굴라제 양성으로 낚거나(음성), 포도알균 식중독을 균 증식 감염으로 '
+                    '낚는다(미리 만든 독소).'},
+        {
+            'title': '사슬알균 — A군 · 폐렴 · 후유증', 'stars': '★★★ 4년(21·22·24·25)',
+            'core': [
+                'A군 사슬알균(화농사슬알균)은 <b>바시트라신 감수성·베타용혈</b>로 구분하며 인두염·성홍열·농가진을 '
+                '일으킨다.',
+                'A군 감염 후에는 면역매개 후유증으로 <b>류마티스열(교차반응)과 감염후사구체신염(면역복합체)</b>이 '
+                '생긴다.',
+                '폐렴사슬알균은 <b>알파용혈·옵토킨 감수성·협막</b>이 특징으로 대엽폐렴·수막염·중이염을 일으키며 '
+                '협막백신이 있다.',
+                'B군 사슬알균(무유사슬알균)은 신생아 수막염·패혈증의 흔한 원인이다.'],
+            'table': {'header': ['균', '감별', '질환'],
+                      'rows': [
+                          ['A군(화농)', '바시트라신 감수성·베타용혈', '인두염·성홍열·후유증'],
+                          ['폐렴사슬알균', '옵토킨 감수성·협막', '대엽폐렴·수막염'],
+                          ['B군(무유)', '신생아', '신생아 수막염·패혈증']]},
+            'img': None,
+            'trap': '⚠ 함정 — 류마티스열과 사구체신염의 기전(교차반응 vs 면역복합체)을 뒤바꾸거나, 폐렴사슬알균을 '
+                    '바시트라신 감수성으로 낚는다(A군).'},
+    ]),
+    ('Ⅱ. 그람음성 · 특수 세균', [
+        {
+            'title': '장내세균 · 설사(EHEC·살모넬라·콜레라·예르시니아)', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '장출혈성대장균(EHEC, O157:H7)은 <b>시가독소</b>로 혈성설사와 용혈요독증후군을 일으키며 항생제는 '
+                '독소 방출을 늘려 피한다.',
+                '콜레라균은 <b>쌀뜨물 설사</b>를 일으키는데, 콜레라독소가 cAMP를 올려 장에서 물·전해질을 대량 '
+                '분비시킨다.',
+                '살모넬라(장티푸스)는 오염 음식·물로 감염돼 발열·서맥·장미진을 보이고 담낭에 보균한다.',
+                '예르시니아는 충수염 유사 복통을, 비브리오 불니피쿠스는 간질환자·해산물에서 패혈증·괴사를 '
+                '일으킨다.'],
+            'table': {'header': ['균', '독소/기전', '특징'],
+                      'rows': [
+                          ['EHEC(O157)', '시가독소', '혈성설사·용혈요독(항생제 회피)'],
+                          ['콜레라', '콜레라독소(cAMP↑)', '쌀뜨물 설사'],
+                          ['살모넬라', '침습·담낭보균', '발열·서맥·장미진'],
+                          ['비브리오 불니피쿠스', '패혈증', '간질환·해산물']]},
+            'img': None,
+            'trap': '⚠ 함정 — EHEC에 항생제를 우선 쓴다고 낚는다(독소 방출↑·HUS 위험). 콜레라독소와 시가독소의 '
+                    '기전을 뒤바꾼다.'},
+        {
+            'title': '헬리코박터 · 레지오넬라 · 녹농균', 'stars': '★★★ 4년(21·22·23·25)',
+            'core': [
+                '헬리코박터는 <b>요소분해효소</b>로 위산을 중화하며 정착해 위염·소화궤양·위암·MALT림프종을 '
+                '일으키고, 요소호기검사로 진단한다.',
+                '레지오넬라는 <b>냉각탑·수계</b> 에어로졸로 흡입 감염돼 폐렴을 일으키며, 세포내 기생해 특수배지'
+                '(BCYE)로 배양한다.',
+                '녹농균은 습한 환경·화상·인공호흡기에서 감염되는 기회감염균으로 청록색 색소·포도향을 내고 '
+                '다제내성이 흔하다.',
+                '이들은 모두 그람음성이며 면역저하·의료연관 감염에서 중요하다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 헬리코박터 진단의 근거를 카탈라제로 낚는다(요소분해효소). 레지오넬라를 사람 간 전파로 '
+                    '낚는다(수계 에어로졸).'},
+        {
+            'title': '결핵 · 한센 — 항산균 · Th1 · 투베르쿨린', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '결핵균은 <b>미콜산·항산성</b>이며 대식세포 안에서 살아남아 <b>Th1·인터페론감마</b>가 대식세포를 '
+                '활성화해 육아종(건락괴사)을 만든다.',
+                '조직 손상은 균 자체보다 <b>지연형 과민반응(제IV형)</b>에 의한 것으로, 투베르쿨린(TST)·IGRA로 '
+                '감작을 확인한다.',
+                '잠복결핵은 균이 살아 있으나 증상·전염이 없는 상태로, TST 양성이지만 흉부 소견이 없다.',
+                '한센병은 나균이 서늘한 피부·말초신경을 침범하며, Th1 우세형(결핵양)과 Th2 우세형(나종형)으로 '
+                '나뉜다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 결핵 조직손상을 균 독소로 낚는다(제IV형 과민). 잠복결핵을 전염성으로 낚는다(무증상·'
+                    '비전염).'},
+        {
+            'title': '세포내·비정형 세균 — 리케차 · 클라미디아 · 매독', 'stars': '★★★ 4년(21·22·23·24)',
+            'core': [
+                '쯔쯔가무시(오리엔티아)는 <b>털진드기 유충</b>이 매개해 가피(eschar)·발열·발진을 일으키는 리케차 '
+                '질환이다.',
+                '클라미디아는 세포내에서만 증식하는 세균으로 요도염·자궁경부염과 <b>신생아 봉입체 결막염·폐렴</b>을 '
+                '일으킨다.',
+                '매독균(트레포네마 팔리덤)은 배양이 안 돼 <b>암시야현미경</b>과 혈청검사로 진단하며 1기 굳은궤양·'
+                '2기 발진·3기 고무종으로 진행한다.',
+                '이들 비정형균은 세포벽이 없거나 특이해 <b>베타락탐이 잘 안 들고</b> 마크로라이드·독시사이클린으로 '
+                '치료한다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 클라미디아·리케차에 베타락탐을 우선 쓴다고 낚는다(세포내·비정형). 쯔쯔가무시 매개체를 '
+                    '모기로 낚는다(털진드기).'},
+        {
+            'title': '클로스트리디움 — 가스괴저 · 위막결장염 · 신경독소', 'stars': '★★★ 3년(21·23·25)',
+            'core': [
+                '클로스트리디움은 <b>혐기성 아포형성</b> 그람양성균으로 조건이 나쁘면 아포로 견딘다.',
+                '가스괴저(C. perfringens)는 상처에서 <b>알파독소(레시티나제)</b>로 근육을 괴사시키고 가스를 낸다.',
+                '위막결장염(C. difficile)은 항생제로 정상 세균총이 무너진 뒤 독소 A/B로 대장에 위막을 만든다.',
+                '보툴리눔·파상풍 독소는 SNARE를 절단하는데, <b>보툴리눔은 아세틸콜린 방출을 막아 이완마비</b>, '
+                '<b>파상풍은 억제신경 방출을 막아 경직마비</b>를 일으킨다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 보툴리눔(이완마비)과 파상풍(경직마비)의 마비 방향을 뒤바꾼다. C. difficile을 감염성 '
+                    '접촉으로만 낚는다(항생제 유발·세균총 붕괴).'},
+    ]),
+    ('Ⅲ. 바이러스 일반 · 호흡기', [
+        {
+            'title': '바이러스 구조 · 복제 · 부착 · 간섭', 'stars': '★★★ 4년(21·23·25)',
+            'core': [
+                '바이러스는 <b>외피 유무</b>로 나뉘는데, 외피보유(인플루엔자·헤르페스·HIV)는 지질막이라 건조·소독에 '
+                '약하고, 비외피(노로·아데노·폴리오)는 환경에 강해 손·물로 잘 퍼진다.',
+                '감염은 <b>바이러스 표면단백이 숙주 수용체에 부착</b>하며 시작된다(인플루엔자 HA-시알산, HIV '
+                'gp120-CD4).',
+                '바이러스 간섭은 한 바이러스 감염이 인터페론 등을 통해 다른 바이러스 증식을 막는 현상이고, '
+                '결손간섭입자는 정상 바이러스 증식을 방해한다.',
+                'RNA 바이러스는 변이가 잦고, 레트로바이러스는 <b>역전사효소</b>로 RNA를 DNA로 바꿔 숙주 유전체에 '
+                '끼어든다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 비외피 바이러스를 소독에 약하다고 낚는다(오히려 강함). 부착과 침투 단계를 뒤바꾼다.'},
+        {
+            'title': '인플루엔자 — 항원 변이 · 재편성 · 치료', 'stars': '★★★ 5년(21·22·23·25)',
+            'core': [
+                '인플루엔자는 표면에 <b>혈구응집소(HA)·뉴라미니다제(NA)</b>를 가지며, HA로 세포에 붙고 NA로 새 '
+                '바이러스가 떨어져 나온다.',
+                '<b>항원소변이(drift)</b>는 점돌연변이로 조금씩 바뀌어 매년 유행하고 백신을 갱신하게 하며, '
+                '<b>항원대변이(shift)</b>는 유전자 재편성으로 크게 바뀌어 대유행을 일으킨다.',
+                '대변이는 절편 유전체를 가진 바이러스가 <b>여러 아형에 동시 감염</b>돼 유전자를 섞을 때 생긴다.',
+                '오셀타미비르는 NA를 억제해 바이러스 방출을 막고, 진단·방어력은 적혈구응집억제(HI) 역가로 평가한다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 소변이(drift)와 대변이(shift)의 기전(점돌연변이 vs 재편성)을 뒤바꾼다. 오셀타미비르 '
+                    '표적을 HA로 낚는다(NA).'},
+        {
+            'title': '코로나 · 호흡기 바이러스', 'stars': '★★★ 3년(22·24·25)',
+            'core': [
+                '코로나바이러스는 외피보유 RNA 바이러스로 스파이크단백이 수용체(SARS-CoV-2는 ACE2)에 붙으며, '
+                'SARS·MERS·코로나19를 일으킨다.',
+                'mRNA 백신은 스파이크단백 유전정보를 넣어 항체를 유도하는 방식이다.',
+                'RSV는 영유아 세기관지염·폐렴의 흔한 원인이고, 아데노바이러스는 인두결막열·유행각결막염을 '
+                '일으킨다.',
+                '호흡기 바이러스는 비말·접촉으로 전파돼 계절유행을 보인다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — SARS-CoV-2 수용체를 시알산으로 낚거나(ACE2), RSV를 성인 흔한 폐렴으로 낚는다'
+                    '(영유아 세기관지염).'},
+        {
+            'title': '홍역 · 풍진 · 볼거리(MMR·파라믹소)', 'stars': '★★★ 4년(21·22·23·25)',
+            'core': [
+                '홍역은 전염성이 매우 강한 파라믹소바이러스로 코플릭반점 뒤 발진이 얼굴에서 아래로 퍼지고 '
+                '아급성경화범뇌염 합병증이 있다.',
+                '볼거리(유행귀밑샘염)도 파라믹소바이러스로 귀밑샘이 붓고 고환염·수막염을 일으킬 수 있다.',
+                '풍진은 임신 초기에 감염되면 <b>선천풍진증후군(백내장·심장기형·난청)</b>을 일으키며, IgM으로 최근 '
+                '감염을 진단한다.',
+                'MMR은 생백신으로 이 세 가지를 함께 예방한다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 풍진의 위험을 성인 발진으로만 낚는다(임신 초 태아 기형이 핵심). 홍역과 풍진의 발진·'
+                    '합병증을 섞는다.'},
+    ]),
+    ('Ⅳ. 바이러스 — 간염·헤르페스·인수공통·종양', [
+        {
+            'title': '간염바이러스(A~E) — 전파 · 만성 · 백신', 'stars': '★★★ 5년(21·22·24·25)',
+            'core': [
+                'A형·E형 간염은 <b>분변-경구</b>로 전파돼 급성으로 앓고 만성화하지 않으며(E형은 임신부에서 중증), '
+                'A형은 백신이 있다.',
+                'B형·C형·D형 간염은 <b>혈액·체액·수직감염</b>으로 전파돼 만성 간염·간경변·간세포암으로 진행할 수 '
+                '있다.',
+                'B형은 DNA 바이러스로 백신(표면항원)이 있고, HBsAg는 감염, anti-HBs는 회복·면역, IgM anti-HBc는 '
+                '최근 감염을 뜻한다.',
+                'C형은 RNA 바이러스로 백신이 없으나 항바이러스제로 완치가 가능하고, D형은 B형이 있어야 감염된다.'],
+            'table': {'header': ['형', '전파', '만성화'],
+                      'rows': [
+                          ['A·E형', '분변-경구', '없음(E형 임신부 중증)'],
+                          ['B·D형', '혈액·체액·수직', '있음(B형 백신)'],
+                          ['C형', '혈액', '높음(백신 없음·치료 완치)']]},
+            'img': None,
+            'trap': '⚠ 함정 — A형이 만성화한다고 낚는다(급성만). HBsAg와 anti-HBs의 의미(감염 vs 회복)를 '
+                    '뒤바꾼다.'},
+        {
+            'title': '헤르페스바이러스 — 잠복 · 재활성', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '헤르페스바이러스과는 모두 <b>초감염 후 평생 잠복</b>했다가 면역저하·스트레스에 재활성되는 것이 '
+                '특징이다.',
+                '단순포진(HSV-1/2)은 <b>삼차·엉치신경절</b>에 잠복하고, 수두-대상포진(VZV)은 수두를 앓은 뒤 '
+                '<b>등쪽뿌리신경절</b>에 잠복했다 대상포진으로 재활성된다.',
+                '거대세포바이러스(CMV)는 <b>수직감염·이식·면역저하</b>에서 문제되며 봉입체(올빼미눈)를 만든다.',
+                'EB바이러스(EBV)는 전염단핵구증·버킷림프종·비인두암과 연관된다.'],
+            'table': {'header': ['바이러스', '잠복부위', '연관'],
+                      'rows': [
+                          ['HSV-1/2', '삼차·엉치신경절', '입술·성기 포진'],
+                          ['VZV', '등쪽뿌리신경절', '수두→대상포진'],
+                          ['CMV', '백혈구·장기', '수직감염·이식(올빼미눈)'],
+                          ['EBV', 'B세포', '단핵구증·버킷·비인두암']]},
+            'img': None,
+            'trap': '⚠ 함정 — 대상포진을 새 감염으로 낚는다(VZV 재활성). HSV와 VZV의 잠복 신경절을 뒤바꾼다.'},
+        {
+            'title': '위장관 바이러스 · 한타 · SFTS · 아르보', 'stars': '★★★ 5년(21·22·23·24·25)',
+            'core': [
+                '노로바이러스는 비외피라 소량으로도 감염되는 <b>겨울철 집단 위장염</b>의 흔한 원인이고, 로타바이러스는 '
+                '영유아 설사의 주원인으로 백신이 있다.',
+                '한타바이러스는 <b>설치류 배설물</b> 흡입으로 감염돼 신증후군출혈열(발열·출혈·신부전)을 일으킨다.',
+                'SFTS(중증열성혈소판감소증후군)는 <b>참진드기</b>가 매개해 발열·혈소판·백혈구 감소를 일으킨다.',
+                '아르보바이러스(지카·일본뇌염·치쿤구니야)는 <b>모기</b>가 매개하며, 지카는 소두증, 일본뇌염은 '
+                '뇌염을 일으킨다.'],
+            'table': {'header': ['병원체', '매개/전파', '질환'],
+                      'rows': [
+                          ['노로·로타', '분변-경구', '위장염(겨울·영유아)'],
+                          ['한타', '설치류 배설물', '신증후군출혈열'],
+                          ['SFTS', '참진드기', '발열·혈소판감소'],
+                          ['지카·일본뇌염', '모기', '소두증·뇌염']]},
+            'img': None,
+            'trap': '⚠ 함정 — 한타(설치류)와 SFTS(진드기)의 매개를 뒤바꾸거나, 노로바이러스를 백신으로 예방한다고 '
+                    '낚는다(로타만 백신).'},
+        {
+            'title': 'HPV · 레트로바이러스(HIV)', 'stars': '★★★ 3년(21·22·24·25)',
+            'core': [
+                'HPV는 고위험형(16·18)의 <b>E6·E7</b>이 p53·RB를 불활성화해 자궁경부암·두경부암을 일으키며, '
+                '감염 상피에 koilocyte가 보인다.',
+                'HIV는 레트로바이러스로 <b>gp120이 CD4·보조수용체(CCR5/CXCR4)</b>에 붙어 CD4 T세포를 감염·파괴해 '
+                '세포면역이 무너진다.',
+                'HIV는 <b>역전사효소</b>로 RNA를 DNA로 바꿔 숙주 유전체에 삽입(프로바이러스)하며, 항체가 나오기 전 '
+                '창문기가 있다.',
+                'CD4 수가 떨어지면 폐포자충폐렴·칸디다·CMV 같은 기회감염이 생기며, 확진은 항체·항원·핵산검사로 '
+                '한다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — HIV 표적세포를 CD8로 낚는다(CD4). HPV 발암을 협막·독소로 낚는다(E6/E7).'},
+    ]),
+    ('Ⅴ. 진균', [
+        {
+            'title': '진균 일반 · 주요 병원진균', 'stars': '★★★ 4년(21·22·23·24·25)',
+            'core': [
+                '진균 세포막은 콜레스테롤 대신 <b>에르고스테롤</b>을 쓰며, 아졸(합성 억제)·암포테리신B(결합·구멍)가 '
+                '이를 표적으로 한다.',
+                '칸디다는 정상 세균총이 무너지거나 면역저하 시 <b>거짓균사</b>를 만들며 구강·질·전신감염을 '
+                '일으킨다(질염은 하얀 치즈 분비물).',
+                '피부사상균(백선)은 각질(케라틴)을 먹고 피부·손발톱·머리카락에 감염돼 KOH 표본으로 확인한다.',
+                '크립토코쿠스는 <b>협막</b>이 있어 먹물염색으로 보이고 비둘기 배설물과 연관돼 면역저하자 수막염을, '
+                '스포로트릭스는 가시·식물에 찔려 림프관을 따라 결절을 만든다(정원사병).'],
+            'table': {'header': ['진균', '특징', '단서'],
+                      'rows': [
+                          ['칸디다', '거짓균사', '질염·구강·전신(면역저하)'],
+                          ['피부사상균', '각질 감염', 'KOH·백선'],
+                          ['크립토코쿠스', '협막', '먹물·비둘기·수막염'],
+                          ['스포로트릭스', '림프성 결절', '정원사·가시']]},
+            'img': None,
+            'trap': '⚠ 함정 — 진균 표적을 콜레스테롤로 낚는다(에르고스테롤). 크립토코쿠스와 칸디다의 단서(협막·먹물 '
+                    'vs 거짓균사)를 뒤바꾼다.'},
+    ]),
+    ('Ⅵ. 면역', [
+        {
+            'title': '선천면역 · 항원제시세포(수지상·NK·중성구)', 'stars': '★★★ 4년(21·22·23·24·25)',
+            'core': [
+                '선천면역은 특이성 없이 즉시 작동하며 <b>패턴인식수용체(TLR)</b>로 병원체 공통구조를 인식하고 보체·'
+                '식세포·인터페론이 방어한다.',
+                '수지상세포는 항원을 잡아 림프절로 가 T세포에 제시하는 <b>가장 강력한 항원제시세포</b>로 선천-적응 '
+                '면역을 잇는다(피부의 랑게르한스세포가 대표).',
+                '자연살해세포(NK)는 <b>MHC I이 낮아진</b> 바이러스감염·종양세포를 항체 없이 죽이며(missing self), '
+                '항체의존세포독성(ADCC)에도 관여한다.',
+                '중성구는 급성 세균감염의 1차 방어로 식균하고, <b>중성구세포외덫(NET)</b>으로 균을 잡는다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — NK세포가 MHC I이 높은 세포를 죽인다고 낚는다(낮아진 세포). 수지상세포를 항체 생산세포로 '
+                    '낚는다(항원제시).'},
+        {
+            'title': '항원제시 · T세포 분화(MHC·TAP·Th1/Th2)', 'stars': '★★★ 3년(21·24·25)',
+            'core': [
+                'MHC I은 모든 유핵세포가 <b>내인성 항원(바이러스·세포질 단백)</b>을 프로테아좀·TAP를 거쳐 제시해 '
+                '<b>CD8 세포독성 T세포</b>가 인식한다.',
+                'MHC II는 항원제시세포가 <b>외인성 항원(식균한 세균)</b>을 엔도솜에서 처리해 제시하며 <b>CD4 보조 '
+                'T세포</b>가 인식한다("8×1=2×4" 규칙).',
+                'T세포는 TCR과 CD3 복합체로 항원을 인식하며, 도움을 받은 CD4 T세포는 사이토카인에 따라 분화한다.',
+                'Th1은 <b>IL-12로 유도돼 인터페론감마</b>로 대식세포·세포내 감염 방어(결핵)를, Th2는 IL-4로 유도돼 '
+                '기생충·알레르기 반응을 담당한다.'],
+            'table': None,
+            'img': ('diagrams/antigen_presentation.png', '▲ 항원제시 — 내인성(MHC I·CD8) vs 외인성(MHC II·CD4)'),
+            'trap': '⚠ 함정 — MHC I을 외인성 항원과 낚거나(내인성), Th1 유도 사이토카인을 IL-4로 낚는다(IL-12).'},
+        {
+            'title': '과민반응 4형', 'stars': '★★★ 3년(21·24·25)',
+            'core': [
+                '제I형은 <b>IgE·비만세포</b>가 즉시 히스타민을 뿜어 아나필락시스·알레르기·천식을 일으킨다.',
+                '제II형은 <b>항체가 세포표면 항원</b>에 붙어 파괴하는 반응(수혈부작용·자가면역용혈·항GBM)이다.',
+                '제III형은 <b>면역복합체</b>가 조직에 쌓여 보체·중성구를 부르는 반응(혈청병·루푸스·아르투스반응)이다.',
+                '제IV형은 항체 없이 <b>감작 T세포·대식세포</b>가 매개하는 지연반응(결핵반응·접촉피부염·이식거부)이다.'],
+            'table': {'header': ['형', '매개', '예'],
+                      'rows': [
+                          ['I형(즉시)', 'IgE·비만세포', '아나필락시스·천식'],
+                          ['II형', '항체·세포표면', '용혈·항GBM'],
+                          ['III형', '면역복합체', '혈청병·루푸스·아르투스'],
+                          ['IV형(지연)', 'T세포·대식세포', '결핵반응·접촉피부염']]},
+            'img': None,
+            'trap': '⚠ 함정 — II형(세포표면 항체)과 III형(면역복합체)을 뒤바꾸거나, 제IV형을 항체매개로 낚는다'
+                    '(T세포).'},
+        {
+            'title': '면역결핍 · 항체 · 면역관문', 'stars': '★★ 2년(22·24·25)',
+            'core': [
+                'X연관 무감마글로불린혈증(브루톤)은 B세포 성숙이 안 돼 항체가 없어 <b>생후 6개월 이후 반복 세균감염</b>을 '
+                '겪는다.',
+                '유전성 혈관부종은 <b>C1억제인자 결핍</b>으로 보체·브래디키닌이 과활성돼 반복 부종을 일으킨다.',
+                '항체는 Fab(항원결합)와 Fc(효과·보체·식세포 결합)로 나뉘며, F(ab′)2는 Fc를 제거해 항원결합만 '
+                '남긴 절편이다.',
+                '면역관문(PD-1·CTLA-4)은 T세포를 끄는 제동장치로, 면역관문억제제는 이를 풀어 항암 T세포를 다시 '
+                '활성화한다.'],
+            'table': None,
+            'img': None,
+            'trap': '⚠ 함정 — 무감마글로불린혈증의 첫 감염 시기를 출생 직후로 낚는다(모체 IgG 소실되는 6개월 이후). '
+                    '유전성 혈관부종을 IgE 알레르기로 낚는다(C1억제인자·브래디키닌).'},
+    ]),
+]
+
+TIPS = [
+    '세균은 "그람·염색·배지·독소"를 세트로 — 미콜산=항산균, 요소분해효소=헬리코박터, 시가독소=EHEC, 옵토킨=폐렴사슬알균.',
+    '바이러스는 "외피 유무·유전체·전파·잠복"으로 정리 — 인플루엔자 drift/shift, 헤르페스 잠복부위, 간염 전파경로를 표로 익힌다.',
+    '매개체 문제는 단서 하나로 갈린다 — 한타=설치류, SFTS=참진드기, 쯔쯔가무시=털진드기, 지카·일본뇌염=모기.',
+    '면역은 세포·분자를 방향으로 외운다 — MHC I=CD8(내인성), MHC II=CD4(외인성), NK=MHC 낮은 세포, Th1=IL-12·IFN-γ.',
+    '과민반응 4형과 면역결핍은 대표 예시 한 개씩 붙여 외운다 — I형 아나필락시스, III형 아르투스, XLA, 유전성 혈관부종.',
+]
+
+
+def build():
+    doc = SimpleDocTemplate('기종평_5교시_빈출유형_학습노트.pdf', pagesize=A4,
+                            leftMargin=15 * mm, rightMargin=15 * mm,
+                            topMargin=14 * mm, bottomMargin=14 * mm)
+    story = []
+    story.append(Spacer(1, 40 * mm))
+    story.append(P('기초의학종합평가 5교시', 'title'))
+    story.append(P('빈출유형 학습노트 (미생물학·면역학)', 'title'))
+    story.append(Spacer(1, 6 * mm))
+    story.append(P('2021 · 2022 · 2023 · 2024 · 2025 — 5개 연도 교차 분석', 'sub'))
+    story.append(P('문제를 풀기 위해 필요한 핵심 개념 · 감별 표 · 모식도 · 반복 오답 함정', 'sub'))
+    story.append(Spacer(1, 10 * mm))
+    story.append(P('★★★ = 3년 이상 출제(최빈출)  ·  ★★ = 2년(준빈출)  ·  괄호는 출제 연도', 'sub'))
+    story.append(PageBreak())
+
+    for sec_title, cards in SECTIONS:
+        story.append(P(sec_title, 'sec'))
+        for c in cards:
+            core = c['core']
+            story.append(KeepTogether([P(c['title'], 'card'), P(c['stars'], 'stars'),
+                                       P('• ' + core[0], 'core')]))
+            for line in core[1:]:
+                story.append(P('• ' + line, 'core'))
+            if c.get('table'):
+                story.append(Spacer(1, 2 * mm))
+                story.append(make_table(c['table']['header'], c['table']['rows']))
+            if c.get('img'):
+                story.append(make_img(c['img'][0], c['img'][1]))
+            story.append(Spacer(1, 1.5 * mm))
+            story.append(P(c['trap'], 'trap'))
+            story.append(Spacer(1, 3 * mm))
+            story.append(HRFlowable(width='100%', thickness=0.4,
+                                    color=colors.HexColor('#d5dee6'), spaceAfter=3))
+
+    story.append(P('시험 전략 TIP', 'sec'))
+    for t in TIPS:
+        story.append(P('• ' + t, 'tip'))
+
+    doc.build(story)
+    print('학습노트 생성 완료: 기종평_5교시_빈출유형_학습노트.pdf')
+
+
+if __name__ == '__main__':
+    build()
