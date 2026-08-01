@@ -50,16 +50,22 @@ S = {
         spaceAfter=3, textColor=colors.HexColor('#234e52')),
     'cap': ParagraphStyle('cap', fontName='Nanum', fontSize=7.5, leading=10, alignment=1,
         spaceBefore=1, spaceAfter=1, textColor=colors.HexColor('#6b7b8b')),
+    'lab': ParagraphStyle('lab', fontName='Nanum', fontSize=8, leading=12, alignment=1,
+        spaceBefore=1, spaceAfter=2, textColor=colors.HexColor('#0f3460'),
+        backColor=colors.HexColor('#eef3f8'), borderPad=3),
 }
 
 
-def make_img(path, cap, max_w=64 * mm, max_h=46 * mm):
-    """대표 사진을 비율 유지하며 삽입하고 캡션을 단다."""
+def make_img(path, cap, labels=None, max_w=64 * mm, max_h=46 * mm):
+    """대표 사진을 비율 유지하며 삽입하고 캡션·라벨 설명을 단다."""
     iw, ih = PILImage.open(path).size
     s = min(max_w / iw, max_h / ih)
     img = RLImage(path, width=iw * s, height=ih * s)
     img.hAlign = 'CENTER'
-    return KeepTogether([Spacer(1, 1 * mm), img, P(cap, 'cap')])
+    parts = [Spacer(1, 1 * mm), img, P(cap, 'cap')]
+    if labels:
+        parts.append(P(labels, 'lab'))
+    return KeepTogether(parts)
 
 
 def esc(t):
@@ -115,7 +121,8 @@ SECTIONS = [
                 '거쳐 안지오텐신Ⅱ가 되어 혈관을 수축시키고 알도스테론 분비를 촉진한다.',
                 '그림 문제에서는 들세동맥 벽에 붙어 있는 과립세포(토리곁세포)의 위치를 고르는 것이 핵심이다.'],
             'table': None,
-            'img': ('figures/2022_1_사진7.jpg', '▲ 토리곁장치 모식도 — 들세동맥 벽의 토리곁세포(레닌) 위치 (2022 1교시)'),
+            'img': ('figures/2022_1_사진7.jpg', '▲ 토리곁장치 모식도 — 들세동맥 벽의 토리곁세포(레닌) 위치 (2022 1교시)',
+                    'A 토리곁세포(레닌·정답)  ·  B·E 토리/주변조직  ·  C 토리주머니공간  ·  D 세동맥'),
             'trap': '⚠ 자주 나오는 함정 — 감지하는 치밀반과 분비하는 토리곁세포를 서로 바꿔 제시하거나, 레닌을 '
                     '"호르몬"이라고 표현한다. 또 지지·수축을 담당하는 메산지움세포를 레닌 분비세포인 것처럼 낚는다.'},
         {
@@ -132,7 +139,8 @@ SECTIONS = [
                           ['창내피', '내피에 창(fenestra)이 있어 큰 혈구를 막는다.'],
                           ['토리기저막(GBM)', 'IV형 콜라겐·라미닌·음전하 헤파란황산으로 알부민을 차단한다.'],
                           ['발세포 여과틈새', '네프린으로 이뤄진 슬릿막이며, 소실되면 단백뇨가 생긴다.']]},
-            'img': ('figures/2022_1_사진10.jpg', '▲ 토리 여과장벽 전자현미경 — 발돌기·기저막·내피 (2022 1교시)'),
+            'img': ('figures/2022_1_사진10.jpg', '▲ 토리 여과장벽 전자현미경 — 발돌기·기저막·내피 (2022 1교시)',
+                    'A 발돌기(발세포)  ·  C 토리기저막 GBM(정답)  ·  D 내피'),
             'trap': '⚠ 자주 나오는 함정 — "음전하·IV형 콜라겐·라미닌"이라는 지문이 나오면 답은 항상 '
                     '<b>기저막(GBM)</b>이며, 창내피나 발세포로 낚는 경우가 많다.'},
         {
@@ -143,7 +151,8 @@ SECTIONS = [
                 'ADH가 부족하거나 콩팥이 반응하지 않으면 물을 붙잡지 못해 묽은 소변을 대량 배설하는 요붕증이 생기므로, '
                 '그림에서는 <b>집합관</b>을 고르면 된다.'],
             'table': None,
-            'img': ('figures/2022_1_사진9.jpg', '▲ 콩팥단위 모식도 — ADH 작용부위(집합관) (2022 1교시)'),
+            'img': ('figures/2022_1_사진9.jpg', '▲ 콩팥단위 모식도 — ADH 작용부위(집합관) (2022 1교시)',
+                    'A 토리  ·  B 토리곁세포  ·  C 헨레고리  ·  D 먼쪽세관  ·  E 집합관(정답)'),
             'trap': '⚠ 자주 나오는 함정 — ADH의 작용부위를 여과가 일어나는 토리나 헨레고리·먼쪽세관으로 낚지만, '
                     '정답은 <b>집합관</b>이다.'},
     ]),
@@ -287,7 +296,8 @@ SECTIONS = [
                           ['폐동맥판', '왼쪽 둘째 갈비사이공간에서 잘 들린다.'],
                           ['삼첨판', '왼쪽 복장뼈 아래(넷째~다섯째 갈비사이)에서 잘 들린다.'],
                           ['승모판', '심장꼭대기(왼쪽 중간빗장선 다섯째 갈비사이)에서 잘 들린다.']]},
-            'img': ('figures/2022_1_사진18.jpg', '▲ 앞가슴 판막 청진부위 A~E (2022 1교시)'),
+            'img': ('figures/2022_1_사진18.jpg', '▲ 앞가슴 판막 청진부위 A~E (2022 1교시)',
+                    'A 대동맥판(오른쪽 2번째 갈비사이·정답) — 나머지 판막 위치는 위 표 참고'),
             'trap': '⚠ 자주 나오는 함정 — 위쪽 둘째 갈비사이에서 대동맥판(오른쪽)과 폐동맥판(왼쪽)의 좌우를 바꿔 낸다.'},
     ]),
     ('Ⅴ. 순환 · 소화 · 호흡 조직', [
@@ -322,7 +332,8 @@ SECTIONS = [
                 '미숙아에서 2형 폐포세포가 덜 자라 표면활성물질이 부족하면 허파꽈리가 쉽게 허탈되어 '
                 '<b>신생아호흡곤란증후군</b>이 생긴다.'],
             'table': None,
-            'img': ('figures/2022_1_사진34.jpg', '▲ 허파꽈리 조직 — 폐포세포 A~E (2022 1교시)'),
+            'img': ('figures/2022_1_사진34.jpg', '▲ 허파꽈리 조직 — 폐포세포 A~E (2022 1교시)',
+                    'A 제1형 폐포세포(얇음)  ·  C 제2형 폐포세포(표면활성물질·정답)'),
             'trap': '⚠ 자주 나오는 함정 — 가스교환(1형)과 표면활성물질 분비(2형)를 바꾸거나, 큰포식세포(먼지세포)를 '
                     '표면활성물질 세포로 낚는다.'},
         {
@@ -352,7 +363,8 @@ SECTIONS = [
                       'rows': [
                           ['세르톨리(버팀)', '정세관 안', '혈액고환장벽 형성, 인히빈·AMH 분비, FSH 반응, 지지·영양'],
                           ['라이디히(사이질)', '정세관 사이', '테스토스테론 분비, LH 반응']]},
-            'img': ('figures/2025_1_사진37.jpg', '▲ 정세관 단면 — 세르톨리(B)·사이질 라이디히세포 (2025 1교시)'),
+            'img': ('figures/2025_1_사진37.jpg', '▲ 정세관 단면 (2025 1교시)',
+                    'A 정세관 상피세포  ·  B 라이디히세포(테스토스테론·정답)  ·  C 정조세포  ·  D 정자  ·  E 사이질'),
             'trap': '⚠ 자주 나오는 함정 — 테스토스테론(라이디히)과 혈액고환장벽·인히빈(세르톨리)을 바꾼다. '
                     '"분열하지 않고 핵소체가 뚜렷하다"는 지문은 세르톨리세포이다.'},
         {
@@ -365,7 +377,8 @@ SECTIONS = [
                 '<b>기본인대(가로자궁목인대)</b>는 자궁을 지지하는 가장 중요한 인대이면서 자궁동맥이 지나가고, '
                 '약해지면 자궁탈출과 관련된다.'],
             'table': None,
-            'img': ('figures/2025_1_사진1.jpg', '▲ 여성 골반 인대 A~E — E=난소걸이인대(난소동맥) (2025 1교시)'),
+            'img': ('figures/2025_1_사진1.jpg', '▲ 여성 골반 인대 A~E (2025 1교시)',
+                    'A 난관  ·  B 고유난소인대  ·  C 자궁원인대  ·  D 자궁넓은인대  ·  E 난소걸이인대(난소동맥·정답)'),
             'trap': '⚠ 자주 나오는 함정 — 난소동맥이 지나는 인대를 고유난소인대나 자궁원인대로 낚는다(정답은 '
                     '난소걸이인대). 또 자궁동맥과 요관의 위아래 관계를 바꿔 낸다.'},
         {
@@ -418,7 +431,8 @@ def build():
                 story.append(Spacer(1, 2 * mm))
                 story.append(make_table(c['table']['header'], c['table']['rows']))
             if c.get('img'):
-                story.append(make_img(c['img'][0], c['img'][1]))
+                im = c['img']
+                story.append(make_img(im[0], im[1], im[2] if len(im) > 2 else None))
             story.append(Spacer(1, 1.5 * mm))
             story.append(P(c['trap'], 'trap'))
             story.append(Spacer(1, 3 * mm))
