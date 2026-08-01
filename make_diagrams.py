@@ -645,6 +645,79 @@ def glucose_titration():
     return _save(fig, 'glucose_titration')
 
 
+def knudson_2hit():
+    """종양유전자(1-hit gain) vs 종양억제유전자(2-hit loss) 모식도."""
+    fig, ax = _new(5.6, 3.6)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 10); ax.axis('off')
+
+    def allele(x, y, on, label=None):
+        # on=True: 활성/정상(파랑), False: 불활성/돌연변이(빨강 X)
+        col = '#c0392b' if not on else '#2e7d32'
+        ax.add_patch(Rectangle((x, y), 1.4, 0.7, fc='#eef2f7', ec=col, lw=1.6))
+        if not on:
+            ax.plot([x+0.2, x+1.2], [y+0.15, y+0.55], color=col, lw=1.6)
+            ax.plot([x+0.2, x+1.2], [y+0.55, y+0.15], color=col, lw=1.6)
+
+    # 종양유전자(위)
+    ax.text(0.2, 9.3, '종양유전자(oncogene) — 우성, 1-hit "기능획득"', fontsize=8.5,
+            color='#c0392b', weight='bold')
+    allele(0.7, 8.0, True); allele(2.3, 8.0, True)
+    ax.annotate('', (5.0, 8.35), (4.0, 8.35), arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.text(4.5, 8.75, '한쪽 활성화\n돌연변이', fontsize=6.8, ha='center', color='#333')
+    ax.add_patch(Rectangle((5.2, 8.0), 1.4, 0.7, fc='#fdecea', ec='#c0392b', lw=1.6))
+    ax.text(5.9, 8.35, '과활성', fontsize=6.8, ha='center', color='#c0392b')
+    allele(6.9, 8.0, True)
+    ax.annotate('', (10.0, 8.35), (8.6, 8.35), arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.text(10.6, 8.35, '암', fontsize=10, color='#c0392b', weight='bold', va='center')
+
+    # 종양억제유전자(아래)
+    ax.text(0.2, 5.6, '종양억제유전자 — 열성, 2-hit "기능상실"(Knudson)', fontsize=8.5,
+            color='#1565c0', weight='bold')
+    allele(0.7, 4.2, True); allele(2.3, 4.2, True)
+    ax.annotate('', (5.0, 4.55), (4.0, 4.55), arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.text(4.5, 4.95, '1st hit\n(한쪽 소실)', fontsize=6.8, ha='center', color='#333')
+    allele(5.2, 4.2, True); allele(6.9, 4.2, False)
+    ax.annotate('', (10.0, 4.55), (8.5, 4.55), arrowprops=dict(arrowstyle='->', color='#333'))
+    ax.text(9.25, 4.95, '2nd hit\n(나머지 소실)', fontsize=6.8, ha='center', color='#333')
+    ax.text(10.6, 4.55, '', fontsize=8)
+    allele(10.0, 4.2, False)
+    ax.annotate('', (10.7, 3.9), (10.7, 3.2), arrowprops=dict(arrowstyle='->', color='#c0392b'))
+    ax.text(10.7, 2.9, '억제 소실 → 암', fontsize=7.6, color='#c0392b', ha='center', weight='bold')
+    ax.text(6, 1.4, '유전성 암은 1st hit를 이미 물려받아(생식세포 돌연변이) 조기·다발 발생',
+            fontsize=7.4, ha='center', color='#555')
+    ax.set_title('발암 유전자 — 종양유전자(1-hit) vs 종양억제유전자(2-hit)',
+                 fontsize=10, color=NAVY, weight='bold')
+    return _save(fig, 'knudson_2hit')
+
+
+def gn_immunofluorescence():
+    """사구체신염 면역형광 3패턴 — 선형/과립상/무침착."""
+    import numpy as np
+    fig, ax = _new(5.8, 2.8)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 6); ax.axis('off')
+    panels = [
+        (2.0, '선형(linear)', '항GBM병\n(굿패스처)', 'line'),
+        (6.0, '과립상(granular)', '면역복합체\n(연쇄구균후·루푸스·막신병증)', 'granular'),
+        (10.0, '무침착/미약', 'ANCA 혈관염·\n미세변화(발돌기소실)', 'none'),
+    ]
+    for cx, title, sub, kind in panels:
+        # GBM 곡선(고리 모양)
+        t = np.linspace(0.2*np.pi, 1.8*np.pi, 100)
+        gx = cx + 1.3*np.cos(t); gy = 3.4 + 1.0*np.sin(t)
+        if kind == 'line':
+            ax.plot(gx, gy, color='#2e7d32', lw=3)
+        else:
+            ax.plot(gx, gy, color='#9aa', lw=1.2)
+        if kind == 'granular':
+            for tt in np.linspace(0.25*np.pi, 1.75*np.pi, 12):
+                ax.plot(cx + 1.3*np.cos(tt), 3.4 + 1.0*np.sin(tt), 'o',
+                        color='#2e7d32', ms=4)
+        ax.text(cx, 1.5, title, fontsize=8.2, ha='center', weight='bold', color='#0f3460')
+        ax.text(cx, 0.7, sub, fontsize=6.9, ha='center', color='#555')
+    ax.set_title('사구체신염 면역형광 패턴', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'gn_immunofluorescence')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
@@ -652,7 +725,8 @@ ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        flow_volume_loop, cerebral_autoregulation,
        antagonist_curves, therapeutic_index,
        glycolysis, tca_energy,
-       pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration]
+       pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration,
+       knudson_2hit, gn_immunofluorescence]
 
 if __name__ == '__main__':
     for fn in ALL:
