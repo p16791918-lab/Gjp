@@ -428,12 +428,93 @@ def therapeutic_index():
     return _save(fig, 'therapeutic_index')
 
 
+def glycolysis():
+    """해당작용 수직 흐름 모식도 — 3개 조절효소 강조 + 젖산/아세틸CoA 분기."""
+    fig, ax = _new(5.4, 6.2)
+    ax.set_xlim(0, 10); ax.set_ylim(0, 15)
+    main = [
+        (13.6, '포도당', False),
+        (11.9, '포도당-6-인산 (G6P)', False),
+        (10.2, '과당-6-인산 (F6P)', False),
+        (8.5, '과당-1,6-2인산 (F1,6BP)', False),
+        (6.8, '글리세르알데하이드-3-인산 ×2', False),
+        (5.1, '포스포엔올피루브산 (PEP) ×2', False),
+        (3.4, '피루브산 ×2', False),
+    ]
+    for y, t, _ in main:
+        ax.text(4.0, y, t, ha='center', va='center', fontsize=8,
+                bbox=dict(boxstyle='round,pad=0.3', fc='#eef2f7', ec='#8aa0b8'))
+    # 세로 화살표
+    for i in range(len(main) - 1):
+        ax.annotate('', (4.0, main[i+1][0] + 0.5), (4.0, main[i][0] - 0.5),
+                    arrowprops=dict(arrowstyle='-|>', color='#0f3460', lw=1.3))
+    # 효소·조효소 주석 (오른쪽)
+    def enz(y, text, hot):
+        ax.text(6.5, y, text, ha='left', va='center', fontsize=7.4,
+                color='#c0392b' if hot else '#555', weight='bold' if hot else 'normal')
+    enz(12.75, '헥소키나스 ★  (ATP 1 소모)', True)
+    enz(9.35, 'PFK-1 ★ 속도조절  (ATP 1 소모)', True)
+    enz(5.95, 'NAD+ 환원(NADH ×2) · ATP ×2 생성', False)
+    enz(4.25, '피루브산키나스 ★  (ATP ×2 생성)', True)
+    # 순생성 요약
+    ax.text(0.3, 14.4, '순생성(세포질): ATP 2 · NADH 2', ha='left', va='center',
+            fontsize=8.2, color='#0f3460', weight='bold',
+            bbox=dict(boxstyle='round,pad=0.3', fc='#fff3cd', ec='#d0a840'))
+    # 분기: 무산소(젖산) / 유산소(아세틸CoA)
+    ax.annotate('', (1.7, 1.9), (3.4, 2.9),
+                arrowprops=dict(arrowstyle='-|>', color='#7a7a7a', lw=1.2))
+    ax.annotate('', (6.4, 1.9), (4.6, 2.9),
+                arrowprops=dict(arrowstyle='-|>', color='#2e7d32', lw=1.2))
+    ax.text(1.5, 1.4, '젖산\n(무산소·LDH)\nNAD+ 재생', ha='center', va='center', fontsize=7.2,
+            color='#7a5100', bbox=dict(boxstyle='round,pad=0.3', fc='#fdf0d5', ec='#c9a24a'))
+    ax.text(6.6, 1.4, '아세틸CoA · TCA 진입\n(유산소·미토콘드리아)', ha='center', va='center', fontsize=7.2,
+            color='#1b5e20', bbox=dict(boxstyle='round,pad=0.3', fc='#dcedc8', ec='#7cb342'))
+    ax.axis('off')
+    ax.set_title('해당작용 — 3개 조절효소(★)와 피루브산 분기', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'glycolysis')
+
+
+def tca_energy():
+    """TCA 회로 한 바퀴 에너지·CO2 산출 모식도."""
+    import numpy as np
+    fig, ax = _new(5.4, 4.6)
+    ax.set_xlim(-1.7, 1.7); ax.set_ylim(-1.7, 1.7); ax.set_aspect('equal')
+    nodes = ['시트르산', '이소시트르산', 'α-케토\n글루타르산', '숙시닐-CoA',
+             '숙신산', '푸마르산', '말산', '옥살아세트산']
+    # 각 전이 화살표(i→i+1)에 붙는 산출물
+    edge_out = ['', 'NADH · CO2', 'NADH · CO2', 'GTP', 'FADH2', '', 'NADH', '(아세틸CoA 합류)']
+    n = len(nodes)
+    ang = [np.pi/2 - 2*np.pi*i/n for i in range(n)]
+    xs = [1.05*np.cos(a) for a in ang]; ys = [1.05*np.sin(a) for a in ang]
+    for i in range(n):
+        j = (i+1) % n
+        ax.annotate('', (xs[j], ys[j]), (xs[i], ys[i]),
+                    arrowprops=dict(arrowstyle='->', color='#0f3460', lw=1.1,
+                                    connectionstyle='arc3,rad=0.12'))
+        out = edge_out[i]
+        if out:
+            mx, my = (xs[i]+xs[j])/2, (ys[i]+ys[j])/2
+            r = (mx**2 + my**2) ** 0.5
+            hot = ('GTP' in out) or ('FADH' in out) or ('NADH' in out)
+            ax.text(mx*1.55, my*1.55, out, ha='center', va='center', fontsize=6.8,
+                    color='#c0392b' if hot else '#555', weight='bold' if hot else 'normal')
+    for x, y, t in zip(xs, ys, nodes):
+        ax.text(x, y, t, ha='center', va='center', fontsize=7.0,
+                bbox=dict(boxstyle='round,pad=0.2', fc='#eef2f7', ec='#bbb'))
+    ax.text(0, 0, '한 바퀴\nNADH 3\nFADH2 1\nGTP 1 · CO2 2', ha='center', va='center',
+            fontsize=8, weight='bold', color='#0f3460')
+    ax.axis('off')
+    ax.set_title('TCA 회로 — 한 바퀴 에너지·CO2 산출', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'tca_energy')
+
+
 ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        liver_zones, cerebellar_layers, respiratory_tree, atrial_septum,
        tca_cycle, electron_transport, urea_cycle, o2_dissociation,
        glucose_alanine, fasting_fuel,
        flow_volume_loop, cerebral_autoregulation,
-       antagonist_curves, therapeutic_index]
+       antagonist_curves, therapeutic_index,
+       glycolysis, tca_energy]
 
 if __name__ == '__main__':
     for fn in ALL:

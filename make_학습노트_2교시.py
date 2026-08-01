@@ -62,7 +62,7 @@ def P(t, st):
     return Paragraph(esc(t), S[st])
 
 
-def make_img(path, cap, max_w=66 * mm, max_h=46 * mm):
+def make_img(path, cap, max_w=72 * mm, max_h=92 * mm):
     iw, ih = PILImage.open(path).size
     s = min(max_w / iw, max_h / ih)
     img = RLImage(path, width=iw * s, height=ih * s)
@@ -148,7 +148,7 @@ SECTIONS = [
                           ['포도당 → G6P', '헥소키나스(간·인슐린은 글루코키나스 유도)'],
                           ['F6P → F1,6BP', 'PFK-1(속도조절): F2,6BP·AMP 활성 / ATP·시트르산 억제'],
                           ['PEP → 피루브산', '피루브산키나스(F1,6BP가 전방활성화)']]},
-            'img': None,
+            'img': ('diagrams/glycolysis.png', '▲ 해당작용 모식도 — 3개 조절효소(★)와 피루브산의 젖산/아세틸CoA 분기'),
             'trap': '⚠ 함정 — 해당작용의 속도조절 효소를 헥소키나스로 낚는다(정답은 PFK-1). 무산소 해당에서 젖산을 '
                     '만드는 목적을 "ATP 생산"으로 낚지만, 실제 목적은 <b>NAD+ 재생</b>이라 해당이 계속 돌 수 있게 하는 것이다.'},
         {
@@ -169,7 +169,7 @@ SECTIONS = [
                           ['환원조효소', 'NADH 3 · FADH₂ 1'],
                           ['기질수준 인산화', 'GTP 1 (숙시닐CoA→숙신산)'],
                           ['전자전달 포함 ATP', '약 10 ATP']]},
-            'img': None,
+            'img': ('diagrams/tca_energy.png', '▲ TCA 회로 모식도 — 각 단계에서 나오는 NADH·FADH2·GTP·CO2'),
             'trap': '⚠ 함정 — 속도조절 효소를 시트르산 합성효소로 낚는다(정답은 이소시트르산 탈수소효소). GTP 생성 '
                     '단계를 다른 단계로 낚거나, 글루타민의 TCA 진입점을 시트르산·옥살아세트산으로 낚는다(정답은 α-케토글루타르산).'},
         {
