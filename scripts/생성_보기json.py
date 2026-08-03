@@ -41,16 +41,24 @@ KOR_LAB = re.compile(
 KOR_LAB2 = re.compile(
     r'(?:혈색소|백혈구|적혈구|혈소판|혈장|혈청|헤모글로빈|알부민|크레아티닌|빌리루빈|요단백)\s*\d')
 
+# 그림에서 추출된 잡기호(체크·프사이·따옴표 등)가 마지막 보기에 붙은 것
+ARTIFACT = re.compile(r'[\d\s]*[√Ψ、｀´{}∙_].*$', re.S)
+# 지문 가정문( "(단, ...)" 이 "( , ...)" 로 깨져 앞에 붙은 것 )
+PREFIX_JUNK = re.compile(r'^\s*\(\s*,[^)]*\)\s*')
+TAIL_JUNK = re.compile(r"[\s'\"√Ψ_·]+$")
+
 def clean(t):
     t = re.split(r'20\d\d\s*학년도', t)[0]   # 연도 꼬리말 + 이후 전부 제거
     t = FOOTER.sub('', t)
+    t = PREFIX_JUNK.sub('', t)
+    t = ARTIFACT.sub('', t)
     t = JUNK.split(t)[0]
     cut = len(t)
     for rx in (ENG_LAB, KOR_LAB, KOR_LAB2):
         m = rx.search(t)
         if m:
             cut = min(cut, m.start())
-    return ' '.join(t[:cut].split()).strip()
+    return TAIL_JUNK.sub('', ' '.join(t[:cut].split())).strip()
 
 def find(year, kyo):
     for p in glob.glob(f'문제/{year}/*.pdf'):
@@ -64,7 +72,8 @@ def is_imagelike(opts):
     def bare(o):
         o = o.strip()
         return (o in labs) or bool(re.fullmatch(r'[A-E가-마]\s*[-~]\s*[A-E가-마]', o)) \
-               or bool(re.fullmatch(r'[①-⑤A-E가-마\s,·]+', o))
+               or bool(re.fullmatch(r'[①-⑤A-E가-마\s,·]+', o)) \
+               or bool(re.fullmatch(r'[ㄱ-ㅎA-E→\s,·]+', o))   # ㄱ-ㄷ 조합·순서나열형
     return sum(1 for o in opts if o and bare(o)) >= 3
 
 def _segments(block):
@@ -113,12 +122,20 @@ def extract(year, kyo):
             out[num] = {'opts': opts, 'image': is_imagelike(opts)}
     return out
 
+def load_override():
+    p = 'data_보기_override.json'
+    return json.load(open(p)) if os.path.exists(p) else {}
+
 if __name__ == '__main__':
+    OV = load_override()
     tot=0
     for y in ['2021','2022','2023','2024','2025']:
         for k in ['1','2','3','4','5','6']:
             try: data = extract(y, k)
             except Exception as e: print('SKIP', y, k, e); continue
+            # 추출기가 원 문자 마커를 놓쳐 보기가 병합된 문항 수동 보정
+            for num, opts in OV.get(f'{y}_{k}', {}).items():
+                data[num] = {'opts': opts, 'image': is_imagelike(opts)}
             json.dump(data, open(f'data_보기/{y}_{k}.json','w'), ensure_ascii=False, indent=0)
             img = sum(1 for v in data.values() if v['image'])
             tot += len(data)

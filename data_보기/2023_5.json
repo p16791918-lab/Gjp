@@ -338,5 +338,15 @@
 "쯔쯔가무시병"
 ],
 "image": false
+},
+"14": {
+"opts": [
+"Escherichia coli",
+"Enterococcus faecalis",
+"Pseudomonas aeruginosa",
+"viridans group streptococci",
+"Staphylococcus epidermidis"
+],
+"image": false
 }
 }

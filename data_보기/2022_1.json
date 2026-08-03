@@ -195,7 +195,7 @@
 "분계섬유줄(stria terminalis)",
 "활꼴다발(arcuate fasciculus)",
 "갈고리다발(uncinate fasciculus)",
-"시상섬유줄(stria medullaris of thalamus) 1 Ψ ' 、 1 : √ √ √ √ ' √ √ U ' √ √ √"
+"시상섬유줄(stria medullaris of thalamus)"
 ],
 "image": false
 },
@@ -295,7 +295,7 @@
 "B",
 "C",
 "D",
-"E ' ' √ √ √ 1 √ √ V 1 √ V √ √ √ ' √ √ √"
+"E"
 ],
 "image": true
 },
@@ -395,7 +395,7 @@
 "앞겉질척수로(anterior corticospinal tract)",
 "가쪽겉질척수로(lateral corticospinal tract)",
 "앞소뇌척수로(anterior cerebellospinal tract)",
-"뒤소뇌척수로(posterior cerebellospinal tract) { √ √ Ψ √ √ ! ㅅ √ √ ㅅ √ √ { 1 √"
+"뒤소뇌척수로(posterior cerebellospinal tract)"
 ],
 "image": false
 },
@@ -595,7 +595,7 @@
 "빈창자(jejunum)",
 "막창자꼬리(appendix)",
 "오름잘록창자(ascending colon)",
-"내림잘록창자(descending colon) { ' √ 으 1 { Ψ √ U √ √ 1 √ :"
+"내림잘록창자(descending colon)"
 ],
 "image": false
 }

@@ -75,7 +75,7 @@
 "레지오넬라증(Legionellosis)",
 "렙토스피라증(Leptospirosis)",
 "아나플라즈마증(Anaplasmosis)",
-"신증후출혈열(Hemorrhagic fever with renal syndrome) 1 _ √ √ √ √ ' √ U c √ √ ' √ √ √"
+"신증후출혈열(Hemorrhagic fever with renal syndrome)"
 ],
 "image": false
 },
@@ -155,7 +155,7 @@
 "뇌염 유발 바이러스",
 "출혈열 유발 바이러스",
 "절지동물매개 바이러스",
-"설치동물매개 바이러스 지카바이러스(Zika virus), 뎅기바이러스(Dengue virus) 황열 바이러스(Yellow fever virus) 일본뇌염바이러스(Japanese encephalitis virus) 중증열성혈소판감소증후군 바이러스(SFTS virus) { √ √ ' √ √ √ ' √ √ ' 1 Ψ 으"
+"설치동물매개 바이러스 지카바이러스(Zika virus), 뎅기바이러스(Dengue virus) 황열 바이러스(Yellow fever virus) 일본뇌염바이러스(Japanese encephalitis virus) 중증열성혈소판감소증후군 바이러스(SFTS virus)"
 ],
 "image": false
 },
@@ -345,7 +345,7 @@
 "Aspergillus flavus",
 "Malassezia furfur",
 "Sporothrix schenkii",
-"Pneumocystis jiroveci 스 √ ' √"
+"Pneumocystis jiroveci 스"
 ],
 "image": false
 }

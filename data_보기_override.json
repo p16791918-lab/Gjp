@@ -1,0 +1,14 @@
+{
+  "2023_2": {
+    "18": ["포화 지방산은 불포화 지방산보다 녹는점이 높다.", "포화 지방산은 불포화 지방산보다 이중결합이 더 많다.", "포화 지방산은 이중결합 위치에서 꺾어진 구조를 갖고 있다.", "포화 및 불포화 지방산은 탄소 수가 많을수록 용해도가 높다.", "포화 및 불포화 지방산은 탄소가 대부분 홀수 개 이다."]
+  },
+  "2023_5": {
+    "14": ["Escherichia coli", "Enterococcus faecalis", "Pseudomonas aeruginosa", "viridans group streptococci", "Staphylococcus epidermidis"]
+  },
+  "2023_6": {
+    "1": ["sulfotransferase", "cytochrome P450", "N-acetyltransferase", "thiopurine methyltransferase", "UDP-glucuronosyltransferase"]
+  },
+  "2024_4": {
+    "43": ["ER positive", "t(9;22)(q34;q11)", "BRCA gene mutation", "HER-2 gene amplification", "DNMT3A gene DNA methylation"]
+  }
+}

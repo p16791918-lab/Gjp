@@ -107,7 +107,7 @@
 "ㄴ A,",
 "ㄷ B,"
 ],
-"image": false
+"image": true
 },
 "12": {
 "opts": [
@@ -307,7 +307,7 @@
 "→ → → → ㅁ ㄴ ㄱ ㄷ ㄹ",
 "→ → → →"
 ],
-"image": false
+"image": true
 },
 "33": {
 "opts": [
@@ -327,7 +327,7 @@
 "→ → → → E C D B A",
 "→ → → →"
 ],
-"image": false
+"image": true
 },
 "35": {
 "opts": [

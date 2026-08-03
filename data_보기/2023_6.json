@@ -348,5 +348,15 @@
 "항암제를 비활성화하는 효소 증가"
 ],
 "image": false
+},
+"1": {
+"opts": [
+"sulfotransferase",
+"cytochrome P450",
+"N-acetyltransferase",
+"thiopurine methyltransferase",
+"UDP-glucuronosyltransferase"
+],
+"image": false
 }
 }
