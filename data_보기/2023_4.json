@@ -291,11 +291,11 @@
 },
 "30": {
 "opts": [
-"Giant cell arteritis",
 "Takayasu arteritis",
 "Kawasaki disease",
 "Polyarteritis nodosa",
-"Granulomatosis with polyangiitis"
+"Granulomatosis with polyangiitis",
+"- Blood test: = WBC 2.1 ×106/ L, RBC 3.05 ×10 μ 6/ L,"
 ],
 "image": false
 },
@@ -361,11 +361,11 @@
 },
 "37": {
 "opts": [
-"박테리아괴사성 염증",
-"박테리아화농성 염증",
-"바이러스육아종성 염증",
-"곰팡이만성염증 및 흉터형성",
-"바이러스세포변성세포증식 염증"
+"박테리아괴사성 염증 -",
+"박테리아화농성 염증 -",
+"바이러스육아종성 염증 -",
+"곰팡이만성염증 및 흉터형성 -",
+"바이러스세포변성세포증식 염증 - /"
 ],
 "image": false
 },
@@ -441,11 +441,11 @@
 },
 "45": {
 "opts": [
-"기형종",
 "샘암종",
 "장액샘종",
 "점액샘종",
-"자궁내막증"
+"자궁내막증",
+"- Blood test: ="
 ],
 "image": false
 },

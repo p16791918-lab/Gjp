@@ -291,11 +291,11 @@
 },
 "30": {
 "opts": [
-"카할세포(Interstitial cell of Cajal)",
-"카할세포(Interstitial cell of Cajal)",
-"카할세포(Interstitial cell of Cajal)",
-"신경내분비세포(Neuroendocrine cell)",
-"신경내분비세포(Neuroendocrine cell)"
+"카할세포(Interstitial cell of Cajal) - KIT mutation",
+"카할세포(Interstitial cell of Cajal) - APC mutation",
+"카할세포(Interstitial cell of Cajal) - KRAS mutation",
+"신경내분비세포(Neuroendocrine cell) - KIT mutation",
+"신경내분비세포(Neuroendocrine cell) - APC mutation"
 ],
 "image": false
 },
@@ -485,7 +485,7 @@
 "톡소포자충증",
 "파동편모충증",
 "리슈만편모충증",
-"바베스열원충증"
+"바베스열원충증 - 고양이가 종숙주이다. - 덜 익힌 고기를 섭취하였을 경우 감염될 수 있다. - 대식세포, 백혈구 등 그물내피계통 세포에 잘 감염된다. - 감염 초기 증상으로 림프선염, 발열, 두통, 근육통 등을 일으킬 수 있다. - 면역결핍 환자에게 심각한 기회감염성 질환을 일으킨다. - 임산부가 초기 감염되었을 경우 태아에게 뇌수종, 망막 맥락막염 등의 기형을 유발한다."
 ],
 "image": false
 },
@@ -596,6 +596,16 @@
 "메닐편모충증",
 "이질아메바증",
 "이핵아메바증"
+],
+"image": false
+},
+"25": {
+"opts": [
+"규소폐증(silicosis)",
+"소세포암종(small cell carcinoma)",
+"악성중피종(malignant mesothelioma)",
+"특발폐섬유증(idiopathic pulmonary fibrosis)",
+"탄광부진폐증(coal worker’s pneumoconiosis)"
 ],
 "image": false
 }

@@ -4,7 +4,7 @@
 "모기",
 "진드기",
 "사람 간 접촉",
-"대변구강 경로",
+"대변구강 경로 -",
 "쥐의 분변 흡입"
 ],
 "image": false
@@ -211,11 +211,11 @@
 },
 "23": {
 "opts": [
-"Shigella dysenteriae",
-"Escherichia coli",
-"Streptococcus pyogenes",
-"Campylobacter jejuni",
-"Staphylococcus aureus"
+"Shigella dysenteriae - Shiga toxin",
+"Escherichia coli - heat-labile enterotoxin",
+"Streptococcus pyogenes - erythrogenic toxin",
+"Campylobacter jejuni - cytolethal distending toxin",
+"Staphylococcus aureus - toxic shock syndrome toxin-1"
 ],
 "image": false
 },
@@ -232,7 +232,7 @@
 "25": {
 "opts": [
 "계절성 없이 발생",
-"대변구강 경로로 전파",
+"대변구강 경로로 전파 -",
 "이중가닥 유전자 보유 RNA",
 "주로 영아에서 심한 감염 초래",
 "청소년기에는 가벼운 질환 초래"

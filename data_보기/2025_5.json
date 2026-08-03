@@ -21,10 +21,10 @@
 },
 "3": {
 "opts": [
-"I형 과민반응",
-"II형 과민반응",
-"III형 과민반응",
-"IV형 과민반응",
+"I형 과민반응 – IgE 매개",
+"II형 과민반응 – 항체 매개 세포독성",
+"III형 과민반응 – 면역복합체 매개",
+"IV형 과민반응 – 지연형 T세포 반응",
 "I형과 III형의 복합적 과민성반응"
 ],
 "image": false
@@ -181,11 +181,11 @@
 },
 "19": {
 "opts": [
-"Shigella dysenteriae",
-"Staphylococcus aureus",
-"Escherichia coli",
-"Helicobacter pylori",
-"Yersinia enterocolitica"
+"Shigella dysenteriae - Shiga toxin",
+"Staphylococcus aureus - enterotoxin",
+"Escherichia coli - heat-labile enterotoxin",
+"Helicobacter pylori - vacuolating cytotoxin A",
+"Yersinia enterocolitica - heat-stable enterotoxin"
 ],
 "image": false
 },
@@ -291,11 +291,11 @@
 },
 "30": {
 "opts": [
-"IL-10 투여",
-"종양세포의 MHC class I 제거",
-"보체 단백질 주입",
-"종양항원에 대한 항체 주입",
-"면역관문 억제제(anti-PD-1 또는 anti-PD-L1 항체) 투 여"
+"IL-10 투여 - NK세포 활성 억제",
+"종양세포의 MHC class I 제거 - T세포 인식 회피",
+"보체 단백질 주입 - 종양세포에 대한 용해반응 유도",
+"종양항원에 대한 항체 주입 - 항체의존세포매개세포 독성(ADCC) 유도",
+"면역관문 억제제(anti-PD-1 또는 anti-PD-L1 항체) 투 여 - T세포 활성 회복"
 ],
 "image": false
 },

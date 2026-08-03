@@ -131,11 +131,11 @@
 },
 "14": {
 "opts": [
-"Bacteria",
-"Bacteria",
-"Virus",
-"Fungus",
-"Virus"
+"Bacteria - Necrotizing inflammation",
+"Bacteria - Suppurative inflammation",
+"Virus - Granulomatous inflammation",
+"Fungus - Chronic inflammation and scarring",
+"Virus - Cytopathic/cytoproliferative inflammation"
 ],
 "image": false
 },

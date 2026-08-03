@@ -74,7 +74,7 @@
 "리보뉴클레오타이드 환원효소",
 "(ribonucleotide reductase) 다이하이드로폴레이트 환원효소",
 "(dihydrofolate reductase) 아데닌 포스포리보실기 전달효소",
-"(adenine phosphoribosyltransferase) 하이포잔틴구아닌 포스포리보실기 전달효소",
+"(adenine phosphoribosyltransferase) 하이포잔틴구아닌 포스포리보실기 전달효소 -",
 "(hypoxanthine guanine phosphoribosyltransferase) –"
 ],
 "image": false
@@ -253,7 +253,7 @@
 "opts": [
 "지방분해효소(lipase)",
 "녹말분해효소(amylase)",
-"알파포도당화물분해효소",
+"알파포도당화물분해효소 - ( -glucosidase)",
 "α 알칼리성 인산염분해효소(alkaline phosphatase)",
 "크레아틴 인산화효소 동종효소 (creatine kinase)"
 ],
@@ -284,7 +284,7 @@
 "소듐(Na",
 "+) 인슐린(insulin)",
 "중탄산염(HCO",
-"3 -) 베타하이드록시부티르산",
+"3 -) 베타하이드록시부티르산 - ( -hydroxybutyrate)",
 "β"
 ],
 "image": false

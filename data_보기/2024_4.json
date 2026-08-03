@@ -101,10 +101,10 @@
 },
 "11": {
 "opts": [
-"(Dual blood supply) 출혈성 괴사 이중 혈액 공급",
-"(Dual blood supply) 출혈성 괴사 단일 혈액 공급",
-"(End artery blood supply) 백색 괴사 단일 혈액 공급",
-"(End artery blood supply) 허혈성 괴사 이중 혈액 공급",
+"(Dual blood supply) 출혈성 괴사 이중 혈액 공급 -",
+"(Dual blood supply) 출혈성 괴사 단일 혈액 공급 -",
+"(End artery blood supply) 백색 괴사 단일 혈액 공급 -",
+"(End artery blood supply) 허혈성 괴사 이중 혈액 공급 -",
 "(Dual blood supply)"
 ],
 "image": false
@@ -355,7 +355,17 @@
 "색전",
 "울혈",
 "충혈",
-"소변 검사 상 단백뇨 혈뇨 포도당 케톤 1+, 4+, -,"
+"소변 검사 상 단백뇨 혈뇨 포도당 케톤 1+, 4+, -, – 식도정맥류 치핵 메두사머리"
+],
+"image": false
+},
+"38": {
+"opts": [
+"시간 12 - Neutrophils",
+"시간 12 T lymphocytes",
+"– 시간 72 Neutrophils",
+"– 시간 72 T lymphocytes",
+"– 시간 120 - Macrophages"
 ],
 "image": false
 },

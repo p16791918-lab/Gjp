@@ -141,7 +141,7 @@
 },
 "15": {
 "opts": [
-"두빈존슨 증후군",
+"두빈존슨 증후군 - (Dubin johnson syndrome)",
 "지연피부포르피린증(porphyria cutanea tarda)",
 "급성간헐포르피린증(acute intermittent porphyria)",
 "선천적혈구형성포르피린증(congenital erythropoietic",
@@ -324,7 +324,7 @@
 "항정상태(steady state)",
 "구획화(compartmentation)",
 "단백질 전환(protein turnover)",
-"속도제한단계",
+"속도제한단계 - (rate-limiting step)",
 "다른자리 조절(allosteric regulation)"
 ],
 "image": false
@@ -345,7 +345,7 @@
 "석시닐CoA",
 "호모시스테인",
 "프로피오닐CoA",
-"알파케토글루타르산"
+"알파케토글루타르산 -"
 ],
 "image": false
 }
