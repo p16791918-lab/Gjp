@@ -594,29 +594,31 @@ def visual_field_only():
         ax.plot([cx-r, cx+r], [cy, cy], color='#bbb', lw=0.4)
         ax.plot([cx, cx], [cy-r, cy+r], color='#bbb', lw=0.4)
 
+    # 실제 시험 그림 번호(1~5)에 대응
     rows = [
-        ('시신경', 'full', 'norm', '한눈 완전 실명'),
-        ('시각교차', 'left', 'right', '양비측 반맹'),
-        ('시각로', 'left', 'left', '반대쪽 동측반맹'),
-        ('마이어고리', 'UL', 'UL', '반대쪽 위 사분맹'),
-        ('뒤통수엽', 'left_ms', 'left_ms', '동측반맹(황반보존)'),
+        ('①', '오른 시신경', 'norm', 'full', '오른눈 완전 실명'),
+        ('②', '가쪽 시각교차', 'norm', 'left', '오른눈 코쪽 반맹'),
+        ('③', '정중 시각교차', 'left', 'right', '양비측 반맹'),
+        ('④', '오른 시각로', 'left', 'left', '왼쪽 동측반맹'),
+        ('⑤', '오른 부챗살', 'left', 'left', '왼쪽 동측반맹'),
     ]
-    ax.text(3.4, 11.3, '왼눈', fontsize=7.5, ha='center', weight='bold', color='#0f3460')
-    ax.text(5.4, 11.3, '오른눈', fontsize=7.5, ha='center', weight='bold', color='#0f3460')
+    ax.text(4.4, 11.3, '왼눈', fontsize=7.2, ha='center', weight='bold', color='#0f3460')
+    ax.text(6.1, 11.3, '오른눈', fontsize=7.2, ha='center', weight='bold', color='#0f3460')
     y = 10.2
-    for label, lspec, rspec, desc in rows:
-        ax.text(0.2, y, label, fontsize=7.4, va='center', ha='left', color='#222')
-        eye(3.4, y, 0.6, lspec)
+    for num, loc, lspec, rspec, desc in rows:
+        ax.text(0.15, y+0.18, num, fontsize=8.5, va='center', ha='left', color='#c0392b', weight='bold')
+        ax.text(0.9, y+0.18, loc, fontsize=6.9, va='center', ha='left', color='#222')
+        eye(4.4, y, 0.55, lspec)
         if rspec == 'norm':
-            ax.add_patch(Circle((5.4, y), 0.6, fc='white', ec='#333', lw=1.0))
-            ax.plot([5.4-0.6, 5.4+0.6], [y, y], color='#bbb', lw=0.4)
-            ax.plot([5.4, 5.4], [y-0.6, y+0.6], color='#bbb', lw=0.4)
+            ax.add_patch(Circle((6.1, y), 0.55, fc='white', ec='#333', lw=1.0))
+            ax.plot([6.1-0.55, 6.1+0.55], [y, y], color='#bbb', lw=0.4)
+            ax.plot([6.1, 6.1], [y-0.55, y+0.55], color='#bbb', lw=0.4)
         else:
-            eye(5.4, y, 0.6, rspec)
-        ax.text(6.6, y, desc, fontsize=7.0, va='center', ha='left', color='#c0392b')
+            eye(6.1, y, 0.55, rspec)
+        ax.text(7.2, y+0.15, desc, fontsize=6.9, va='center', ha='left', color='#c0392b')
         y -= 2.0
-    ax.text(6, 0.3, '검은(파란) 부분 = 안 보이는 시야', fontsize=6.8, ha='center', color='#555')
-    ax.set_title('병변 위치별 시야결손', fontsize=10, color=NAVY, weight='bold')
+    ax.text(6, 0.3, '파란 부분 = 안 보이는 시야  ·  번호는 실제 시험 그림과 대응', fontsize=6.6, ha='center', color='#555')
+    ax.set_title('실제 시험 그림 1~5의 시야결손', fontsize=9.5, color=NAVY, weight='bold')
     return _save(fig, 'visual_field_only')
 
 

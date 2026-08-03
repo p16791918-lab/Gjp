@@ -166,12 +166,25 @@ def build_pdf(meta, questions, output_path):
             for n in sorted(item['options']):
                 body = item['options'][n]
                 if use_verb and n - 1 < len(ventry['opts']) and ventry['opts'][n-1]:
-                    # 실제 시험 보기(verbatim)로 교체. 정답 근거는 exp가 담당(보기줄엔 안 붙임).
-                    name = ventry['opts'][n-1].replace('&', '&amp;')
+                    # 실제 시험 보기(verbatim)로 교체. 모듈 보기 이름이 실제 보기와 같으면
+                    # 그 해설(오답/정답 근거)을 함께 보여준다(어긋난 지어낸 해설은 숨김).
+                    vraw = ventry['opts'][n-1]
+                    name = vraw.replace('&', '&amp;')
+                    mparts = re.split(r'[—–]', body, 1)
+
+                    def _name(t):
+                        t = re.split(r'[—–(]', t)[0]              # '(' 나 em-dash 앞
+                        return re.sub(r'[\s.,·:/0-9A-Za-z]', '', t)  # 한글만
+                    rat = ''
+                    if len(mparts) > 1:
+                        mn, vn = _name(mparts[0]), _name(vraw)
+                        if mn and vn and mn == vn:   # 한글 이름이 정확히 같을 때만
+                            rat = re.sub(r'[\s.]*정답[.]?\s*$', '', mparts[1]).strip()
+                    tail = f' — {rat}' if rat else ''
                     if n == item['ans']:
-                        block.append(Paragraph(f'<b>{CIRCLED[n]} {name}  ◀ 정답</b>', s['opt_correct']))
+                        block.append(Paragraph(f'<b>{CIRCLED[n]} {name}{tail}  ◀ 정답</b>', s['opt_correct']))
                     else:
-                        block.append(Paragraph(f'{CIRCLED[n]} {name}', s['opt']))
+                        block.append(Paragraph(f'{CIRCLED[n]} {name}{tail}', s['opt']))
                 elif n == item['ans']:
                     body = re.sub(r'[\s.]*정답[.]?\s*$', '', body)   # 끝의 '정답.' 중복 제거
                     block.append(Paragraph(
