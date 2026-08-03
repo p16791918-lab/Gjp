@@ -348,5 +348,35 @@
 "Pneumocystis jiroveci 스"
 ],
 "image": false
+},
+"14": {
+"opts": [
+"장침투성대장균(enteroinvasive E. coli, EIEC)",
+"장독소생성대장균(enterotoxigenic E. coli, ETEC)",
+"장병원성대장균(enteropathogenic E. coli, EPEC)",
+"장응집성대장균(enteroaggregative E. coli, EAEC)",
+"장출혈성대장균(enterohemorrhagic E. coli, EHEC)"
+],
+"image": false
+},
+"16": {
+"opts": [
+"간염 유발 바이러스",
+"뇌염 유발 바이러스",
+"출혈열 유발 바이러스",
+"절지동물매개 바이러스",
+"설치동물매개 바이러스"
+],
+"image": false
+},
+"35": {
+"opts": [
+"Rhizopus oryzae",
+"Aspergillus flavus",
+"Malassezia furfur",
+"Sporothrix schenkii",
+"Pneumocystis jiroveci"
+],
+"image": false
 }
 }

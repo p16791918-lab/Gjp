@@ -11,6 +11,11 @@
   "2022_4": {
     "32": ["Aspergillus fumigatus", "Pneumocystis jiroveci", "Pseudomonas aeruginosa", "Streptococcus pneumoniae", "Mycobacterium tuberculosis"]
   },
+  "2022_5": {
+    "14": ["장침투성대장균(enteroinvasive E. coli, EIEC)", "장독소생성대장균(enterotoxigenic E. coli, ETEC)", "장병원성대장균(enteropathogenic E. coli, EPEC)", "장응집성대장균(enteroaggregative E. coli, EAEC)", "장출혈성대장균(enterohemorrhagic E. coli, EHEC)"],
+    "16": ["간염 유발 바이러스", "뇌염 유발 바이러스", "출혈열 유발 바이러스", "절지동물매개 바이러스", "설치동물매개 바이러스"],
+    "35": ["Rhizopus oryzae", "Aspergillus flavus", "Malassezia furfur", "Sporothrix schenkii", "Pneumocystis jiroveci"]
+  },
   "2022_3": {
     "11": ["뼈대근육 수축 · 뼈대근육의 적정 수축력 보조", "뼈대근육 수축 · 폄반사의 활성화", "근방추 수축 · 뼈대근육의 빠른 수축", "근방추 수축 · 폄반사의 민감도 유지", "근방추 수축 · 폄반사의 활성화"],
     "13": ["노안 · 렌즈의 조절력 약화 · 볼록렌즈", "난시 · 렌즈의 조절력 약화 · 오목렌즈", "근시 · 망막의 뒤에 초점 맺음 · 볼록렌즈", "원시 · 망막의 뒤에 초점 맺음 · 오목렌즈", "백내장 · 렌즈의 굴절력 고정 · 볼록렌즈"],
