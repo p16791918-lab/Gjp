@@ -459,9 +459,11 @@ SECTIONS = [
                           ['시각로 / 부챗살', '반대쪽 동측반맹'],
                           ['관자엽(마이어고리)', '반대쪽 위 사분맹'],
                           ['뒤통수엽 경색', '동측반맹(황반 보존)']]},
-            'img': ('figures/2023_1_사진33-2.jpg',
-                    '▲ 실제 시험 시각경로 그림(2023 1교시 48번) — 눈→시신경→교차→시각로→LGN→부챗살→뒤통수엽,'
-                    ' 병변 1~5가 경로 위에 표시됨'),
+            'img': [('figures/2023_1_사진33-2.jpg',
+                     '▲ 실제 시험 시각경로 그림(2023 1교시 48번) — 눈→시신경→교차→시각로→LGN→부챗살→뒤통수엽,'
+                     ' 병변 1~5가 경로 위에 표시됨'),
+                    ('diagrams/visual_field_only.png',
+                     '▲ 병변 위치별 시야결손(파란 부분 = 안 보이는 시야)')],
             'trap': '⚠ 함정 — 시각교차 병변을 동측반맹으로 낚는다(양비측). "교차 전=같은 눈 / 교차=양비측 / 교차 후='
                     '반대쪽 동측" 원칙을 뒤바꾸거나, 마이어고리(관자엽)를 아래 사분맹으로 낚는다(위 사분맹).'},
         {
@@ -593,7 +595,9 @@ def build():
                 story.append(Spacer(1, 2 * mm))
                 story.append(make_table(c['table']['header'], c['table']['rows']))
             if c.get('img'):
-                story.append(make_img(c['img'][0], c['img'][1]))
+                imgs = c['img'] if isinstance(c['img'][0], (list, tuple)) else [c['img']]
+                for ip, icap in imgs:
+                    story.append(make_img(ip, icap))
             story.append(Spacer(1, 1.5 * mm))
             story.append(P(c['trap'], 'trap'))
             story.append(Spacer(1, 3 * mm))
