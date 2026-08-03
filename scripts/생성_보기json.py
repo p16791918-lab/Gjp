@@ -97,7 +97,9 @@ def is_imagelike(opts):
         o = o.strip()
         return (o in labs) or bool(re.fullmatch(r'[A-E가-마]\s*[-~]\s*[A-E가-마]', o)) \
                or bool(re.fullmatch(r'[①-⑤A-E가-마\s,·]+', o)) \
-               or bool(re.fullmatch(r'[ㄱ-ㅎA-E→\s,·]+', o))   # ㄱ-ㄷ 조합·순서나열형
+               or bool(re.fullmatch(r'[ㄱ-ㅎA-E→\s,·]+', o)) \
+               or bool(re.fullmatch(r'\d', o)) \
+               or o.startswith('사진')   # 그림 부위 선택형(단일 숫자·사진 참조)
     return sum(1 for o in opts if o and bare(o)) >= 3
 
 def _segments(block):

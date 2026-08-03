@@ -77,7 +77,7 @@
 "4",
 "5"
 ],
-"image": false
+"image": true
 },
 "9": {
 "opts": [
@@ -317,7 +317,7 @@
 "4",
 "5"
 ],
-"image": false
+"image": true
 },
 "33": {
 "opts": [
@@ -527,7 +527,7 @@
 "4",
 "5"
 ],
-"image": false
+"image": true
 },
 "54": {
 "opts": [
@@ -597,6 +597,6 @@
 "4",
 "5"
 ],
-"image": false
+"image": true
 }
 }

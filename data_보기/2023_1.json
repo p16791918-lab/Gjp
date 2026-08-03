@@ -277,7 +277,7 @@
 "사진 ( 19-4)",
 "사진 ( 19-5)"
 ],
-"image": false
+"image": true
 },
 "30": {
 "opts": [
@@ -467,7 +467,7 @@
 "4",
 "5"
 ],
-"image": false
+"image": true
 },
 "49": {
 "opts": [
@@ -589,6 +589,26 @@
 ],
 "image": false
 },
+"18": {
+"opts": [
+"엄마가 태동을 감지함",
+"바깥생식기관으로 남녀 구분이 가능함",
+"표면활성물질(surfactant)의 분비가 시작됨",
+"동공빛반사(pupillary light reflex)가 나타남",
+"피부가 태아기름막(vernix caseosa)으로 모두 덮임"
+],
+"image": false
+},
+"31": {
+"opts": [
+"오른모서리가지(right marginal branch)",
+"왼심장동맥의 휘돌이가지(circumflex branch)",
+"앞심실사이가지(anterior interventricular branch)",
+"뒤심실사이가지(posterior interventricular branch)",
+"오른심장동맥의 굴심방결절가지(sinuatrial nodal branch)"
+],
+"image": false
+},
 "42": {
 "opts": [
 "5-10 μm",
@@ -596,6 +616,36 @@
 "25-30 μm",
 "35-40 μm",
 "45-50 μm"
+],
+"image": false
+},
+"44": {
+"opts": [
+"배벽이 형성되지 못함",
+"신경관이 융합되지 않음",
+"배설강막(cloacal membrane)이 열리지 않음",
+"요로곧창자사이벽(urorectal septum)이 형성되지 않음",
+"생리적배꼽탈장(physiological umbilical hernia)이 지속됨"
+],
+"image": false
+},
+"47": {
+"opts": [
+"'1'과 '4' 사이에 승모판막이 있다",
+"'6'과 '7'은 온몸순환과 관련된다",
+"'2'의 벽은 '1'의 벽보다 더 두껍다",
+"'5'의 왼쪽에 사이막모서리기둥이 있다",
+"'4'의 빗살근육은 '3'의 빗살근육에 비해 더 뚜렷하다"
+],
+"image": false
+},
+"58": {
+"opts": [
+"오른콩팥동맥은 왼콩팥동맥보다 짧음",
+"왼콩팥은 오른콩팥보다 조금 아래 있음",
+"왼콩팥정맥은 대동맥과 왼콩팥동맥의 앞을 지남",
+"콩팥근막(renal fascia)은 부신을 둘러싸지 않음",
+"콩팥주위지방피막(perirenal fat capsule)은 콩팥근막의 바깥쪽에 있음"
 ],
 "image": false
 }
