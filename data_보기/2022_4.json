@@ -598,5 +598,15 @@
 "크루스파동편모충증"
 ],
 "image": false
+},
+"32": {
+"opts": [
+"Aspergillus fumigatus",
+"Pneumocystis jiroveci",
+"Pseudomonas aeruginosa",
+"Streptococcus pneumoniae",
+"Mycobacterium tuberculosis"
+],
+"image": false
 }
 }
