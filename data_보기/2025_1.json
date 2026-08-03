@@ -9,16 +9,6 @@
 ],
 "image": true
 },
-"2": {
-"opts": [
-"①",
-"②",
-"③",
-"④",
-"⑤"
-],
-"image": true
-},
 "3": {
 "opts": [
 "가",
@@ -75,7 +65,7 @@
 "소뇌낫(falx cerebelli)",
 "소뇌천막(tentorium cerebelli)",
 "안장가로막(diaphragma sellae)",
-"치아인대(denticulate ligament) 2025학년도 기초의학종합평가 (1교시) 2"
+"치아인대(denticulate ligament)"
 ],
 "image": false
 },
@@ -155,7 +145,7 @@
 "벌림",
 "굽힘",
 "안쪽돌림",
-"바깥돌림 2025학년도 기초의학종합평가 (1교시) 3"
+"바깥돌림"
 ],
 "image": false
 },
@@ -235,7 +225,7 @@
 "가슴분절",
 "허리분절",
 "엉치분절",
-"꼬리분절 2025학년도 기초의학종합평가 (1교시) 4"
+"꼬리분절"
 ],
 "image": false
 },
@@ -315,7 +305,7 @@
 "오른쪽 귀밑샘염",
 "오른쪽 대상포진",
 "왼쪽 중간대뇌동맥 경색증",
-"오른쪽 중간대뇌동맥 경색증 2025학년도 기초의학종합평가 (1교시) 5"
+"오른쪽 중간대뇌동맥 경색증"
 ],
 "image": false
 },
@@ -395,7 +385,7 @@
 "안쪽반달(medial meniscus)",
 "가쪽곁인대(lateral collateral ligament)",
 "앞십자인대(anterior cruciate ligament)",
-"뒤십자인대(posterior cruciate ligament) 2025학년도 기초의학종합평가 (1교시) 6"
+"뒤십자인대(posterior cruciate ligament)"
 ],
 "image": false
 },
@@ -485,7 +475,7 @@
 "넓적다리빗근(sartorius muscle)",
 "큰볼기근(gluteus maximus muscle)",
 "중간볼기근(gluteus medius muscle)",
-"넓적다리네갈래근(quadriceps femoris muscle) 2025학년도 기초의학종합평가 (1교시) 7"
+"넓적다리네갈래근(quadriceps femoris muscle)"
 ],
 "image": false
 },
@@ -565,7 +555,7 @@
 "발생 4~8주차",
 "발생 9~13주차",
 "발생 14~27주차",
-"발생 28~40주차 2025학년도 기초의학종합평가 (1교시) 8"
+"발생 28~40주차"
 ],
 "image": false
 },
@@ -595,7 +585,7 @@
 "B",
 "C",
 "D",
-"E 1교시 종료"
+"E 1"
 ],
 "image": true
 }

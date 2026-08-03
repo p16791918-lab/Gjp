@@ -71,11 +71,11 @@
 },
 "8": {
 "opts": [
+"CA-125",
 "CA-19-9",
 "칼시토닌",
 "알파태아단백",
-"태아성암항원",
-"학년도 기초의학종합평가 교시 2023 (4 ) 2"
+"태아성암항원"
 ],
 "image": false
 },
@@ -155,7 +155,7 @@
 "색전",
 "울혈",
 "충혈",
-"식도정맥류 치핵 메두사머리 학년도 기초의학종합평가 교시 2023 (4 ) 3"
+"식도정맥류 치핵 메두사머리"
 ],
 "image": false
 },
@@ -211,11 +211,11 @@
 },
 "22": {
 "opts": [
+"비대",
 "위축",
 "증식",
 "화생",
-"석회화",
-"학년도 기초의학종합평가 교시 2023 (4 ) 4"
+"석회화"
 ],
 "image": false
 },
@@ -291,11 +291,11 @@
 },
 "30": {
 "opts": [
+"Giant cell arteritis",
 "Takayasu arteritis",
 "Kawasaki disease",
 "Polyarteritis nodosa",
-"Granulomatosis with polyangiitis",
-"- Blood test: = WBC 2.1 ×106/ L, RBC 3.05 ×10 μ 6/ L, Hb 8.6 g/dL, μ Platelet 252 ×106/ L μ = BUN 25 mg/dL, Creatinine 0.93 mg/dL, Uric acid 8.2 mg/dL, Protein 6.8 g/dL, Albumin 2.4 g/dL = eGFR(Schwarts) 71 ml/min/1.73m2, Total cholesterol 184 mg/dL = ANA Homogenous 1:1280, ANCA Negative = C3 15.8 mg/dL, C4 0.6 mg/dL, CH50 <10.0 mg/dL - Urine analysis: = Specific gravity 1.020, Albumin +++, Occult blood ++++ = Protein/Cr ratio 4945.3 mg/g, Albumin/Cr ratio 3614.5 mg/g 학년도 기초의학종합평가 교시 2023 (4 ) 5"
+"Granulomatosis with polyangiitis"
 ],
 "image": false
 },
@@ -361,11 +361,11 @@
 },
 "37": {
 "opts": [
-"박테리아괴사성 염증 -",
-"박테리아화농성 염증 -",
-"바이러스육아종성 염증 -",
-"곰팡이만성염증 및 흉터형성 -",
-"바이러스세포변성세포증식 염증 - /"
+"박테리아괴사성 염증",
+"박테리아화농성 염증",
+"바이러스육아종성 염증",
+"곰팡이만성염증 및 흉터형성",
+"바이러스세포변성세포증식 염증"
 ],
 "image": false
 },
@@ -375,7 +375,7 @@
 "C5a",
 "Interferon-",
 "γ Transforming growth factor-",
-"β Phospholipase Protease Endonuclease ATPase 학년도 기초의학종합평가 교시 2023 (4 ) 6"
+"β Phospholipase Protease Endonuclease ATPase"
 ],
 "image": false
 },
@@ -441,11 +441,11 @@
 },
 "45": {
 "opts": [
+"기형종",
 "샘암종",
 "장액샘종",
 "점액샘종",
-"자궁내막증",
-"- Blood test: = BUN 14.2 mg/dL, Creatinine 0.84 mg/dL, Protein 3.8 g/dL Albumin 1.4 g/dL = eGFR(CKD-EPI) 92 ml/min/1.73m2, Total cholesterol 428 mg/dL = ANA Negative, ANCA Negative - Urine analysis: = Specific gravity 1.019, Albumin +++, Occult blood +, RBC 5-10 /HPF, WBC 0-3 /HPF, = Protein/Cr ratio 4223.5 mg/g 백혈구 4500/mm3 혈색소 , 11.5 g/dL 혈소판 , 184000/mm3 Na+ 139 meq/L, K+ 3.5 meq/L, Cl- 104 meq/L CRP 0.08 mg/dL CA19-9 2265 U/mL 학년도 기초의학종합평가 교시 2023 (4 ) 7"
+"자궁내막증"
 ],
 "image": false
 },
@@ -521,11 +521,11 @@
 },
 "53": {
 "opts": [
+"가시아메바증",
 "고양이구충증",
 "이질아메바증",
 "파동편모충증",
-"리슈만편모충증",
-"학년도 기초의학종합평가 교시 2023 (4 ) 8"
+"리슈만편모충증"
 ],
 "image": false
 },
@@ -591,11 +591,11 @@
 },
 "60": {
 "opts": [
+"퀴닌",
 "메플로퀸",
 "이버멕틴",
 "클로로퀸",
-"프리마퀸",
-"교시 4 종료 자웅이체이다 - . 체강이 있다 - 체형은 가늘고 긴 원통상이다 - . 구강식도장항문으로 구성된 소화기관이 있다 - , , , ."
+"프리마퀸"
 ],
 "image": false
 }

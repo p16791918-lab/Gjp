@@ -4,7 +4,7 @@
 "모기",
 "진드기",
 "사람 간 접촉",
-"대변구강 경로 -",
+"대변구강 경로",
 "쥐의 분변 흡입"
 ],
 "image": false
@@ -61,11 +61,11 @@
 },
 "7": {
 "opts": [
+"투과(penetration)",
 "껍질벗김(uncoating)",
 "핵산 복제(replication)",
 "바이러스 방출(release)",
-"표적세포 부착(attachment)",
-"혈압: 90/60 mmHg 맥박 회분 : 84 / 호흡 회분 : 20 / 체온: 37.8℃ 백혈구: 25,000/mm3 혈소판: 13,000/mm3 AST/ALT: 130/14 IU/L 요단백: 3+ Hanantan virus IgM antibody : positive 학년도 기초의학종합평가 교시 2023 (5 ) 2"
+"표적세포 부착(attachment)"
 ],
 "image": false
 },
@@ -96,16 +96,6 @@
 "Mycoplasma pneumoniae",
 "Chlamydophila pneumoniae",
 "Mycobacterium tuberculosis"
-],
-"image": false
-},
-"11": {
-"opts": [
-"E. coli, EIEC) 장독소생성대장균(enterotoxigenic",
-"E. coli, ETEC) 장병원성대장균(enteropathogenic",
-"E. coli, EPEC) 장응집성대장균(enteroaggregative",
-"E. coli, EAEC) 장출혈성대장균(enterohemorrhagic",
-"E. coli, EHEC)"
 ],
 "image": false
 },
@@ -145,7 +135,7 @@
 "큰포식세포(macrophage)",
 "자연살해세포(natural killer cell)",
 "항원제시세포(antigen-presenting cell)",
-"사진 항산성 염색 결과 2-1. 사진 세균 배양 결과 2-2. 학년도 기초의학종합평가 교시 2023 (5 ) 3"
+"사진 항산성 염색 결과 2-1. 사진 세균 배양 결과 2-2."
 ],
 "image": false
 },
@@ -221,11 +211,11 @@
 },
 "23": {
 "opts": [
-"Shigella dysenteriae - Shiga toxin",
-"Escherichia coli - heat-labile enterotoxin",
-"Streptococcus pyogenes - erythrogenic toxin",
-"Campylobacter jejuni - cytolethal distending toxin",
-"Staphylococcus aureus - toxic shock syndrome toxin-1 학년도 기초의학종합평가 교시 2023 (5 ) 4"
+"Shigella dysenteriae",
+"Escherichia coli",
+"Streptococcus pyogenes",
+"Campylobacter jejuni",
+"Staphylococcus aureus"
 ],
 "image": false
 },
@@ -242,7 +232,7 @@
 "25": {
 "opts": [
 "계절성 없이 발생",
-"대변구강 경로로 전파 -",
+"대변구강 경로로 전파",
 "이중가닥 유전자 보유 RNA",
 "주로 영아에서 심한 감염 초래",
 "청소년기에는 가벼운 질환 초래"
@@ -301,11 +291,11 @@
 },
 "31": {
 "opts": [
+"Epstein-Barr virus",
 "Varicella-zoster virus",
 "Human herpesvirus-7",
 "Herpes simplex virus-1",
-"Human cytomegalovirus",
-"학년도 기초의학종합평가 교시 2023 (5 ) 5"
+"Human cytomegalovirus"
 ],
 "image": false
 },
@@ -341,11 +331,11 @@
 },
 "35": {
 "opts": [
+"뎅기열",
 "라임병",
 "렙토스피라증",
 "유행성출혈열",
-"쯔쯔가무시병",
-"교시 5 종료"
+"쯔쯔가무시병"
 ],
 "image": false
 }

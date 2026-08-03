@@ -91,11 +91,11 @@
 },
 "10": {
 "opts": [
+"A",
 "B",
 "C",
 "D",
-"E",
-"학년도 기초의학종합평가 교시 2024 (1 ) 2"
+"E"
 ],
 "image": true
 },
@@ -181,11 +181,11 @@
 },
 "19": {
 "opts": [
+"사이 L1, L2",
 "사이 L2, L3",
 "사이 L3, L4",
 "사이 L4, L5",
-"사이 L5, S1",
-"참고치 free T3 0.41 ( 0.23~0.53 ng/mL) 참고치 free T4 1.43 ( 0.7~1.8 ng/dL) 참고치 TSH <0.05 ( 0.4~5.0 IU/mL) μ 참고치 Thyroglobulin <0.1 ( 0~52 ng/mL) 참고치 PTH (parathyroid hormone) <5 ( 8~76 pg/mL) 학년도 기초의학종합평가 교시 2024 (1 ) 3"
+"사이 L5, S1"
 ],
 "image": false
 },
@@ -281,11 +281,11 @@
 },
 "29": {
 "opts": [
+"전립샘굴(prostatic sinus)",
 "전립샘소실(prostatic utricle)",
 "해면체요도(cavernous urethra)",
 "요도능선둔덕(seminal colliculus)",
-"요도 막부분(membranous part of urethra)",
-"학년도 기초의학종합평가 교시 2024 (1 ) 4"
+"요도 막부분(membranous part of urethra)"
 ],
 "image": false
 },
@@ -375,7 +375,7 @@
 "위십이지장동맥(gastroduodenal artery)",
 "위창자간막동맥(superior mesenteric artery)",
 "아래창자간막동맥(inferior mesenteric artery)",
-"혈중 코티솔 농도 참고치 10 g/dL ( , <5) μ 학년도 기초의학종합평가 교시 2024 (1 ) 5"
+"혈중 코티솔 농도"
 ],
 "image": false
 },
@@ -471,11 +471,11 @@
 },
 "48": {
 "opts": [
+"별아교세포(astrocyte)",
 "미세아교세포(microglia)",
 "신경집세포(Schwann cell)",
 "뇌실막세포(ependymal cell)",
-"희소돌기아교세포(oligodendrocyte)",
-"학년도 기초의학종합평가 교시 2024 (1 ) 6"
+"희소돌기아교세포(oligodendrocyte)"
 ],
 "image": false
 },
@@ -561,11 +561,11 @@
 },
 "57": {
 "opts": [
+"A",
 "B",
 "C",
 "D",
-"E",
-"학년도 기초의학종합평가 교시 2024 (1 ) 7"
+"E"
 ],
 "image": true
 },
@@ -591,11 +591,11 @@
 },
 "60": {
 "opts": [
+"1",
 "2",
 "3",
 "4",
-"5",
-"교시 1 종료"
+"5"
 ],
 "image": false
 }

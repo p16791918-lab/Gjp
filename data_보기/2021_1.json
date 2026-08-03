@@ -71,11 +71,11 @@
 },
 "8": {
 "opts": [
-"A - B",
-"A - C",
-"B - A",
-"B - C",
-"C - A"
+"A",
+"A",
+"B",
+"B",
+"C"
 ],
 "image": true
 },
@@ -95,7 +95,7 @@
 "왼위동맥(left gastric artery)",
 "오른위동맥(right gastric artery)",
 "위이자샘창자동맥(superior pancreaticoduodenal artery)",
-"아래이자샘창자동맥(inferior pancreaticoduodenal artery) 2021학년도 기초의학종합평가 (1교시) 2"
+"아래이자샘창자동맥(inferior pancreaticoduodenal artery)"
 ],
 "image": false
 },
@@ -195,7 +195,7 @@
 "별아교세포(astrocyte)",
 "미세아교세포(microglia)",
 "뇌실막세포(ependymocyte)",
-"희소돌기아교세포(oligodendrocyte) 2021학년도 기초의학종합평가 (1교시) 3"
+"희소돌기아교세포(oligodendrocyte)"
 ],
 "image": false
 },
@@ -295,7 +295,7 @@
 "B",
 "C",
 "D",
-"E 2021학년도 기초의학종합평가 (1교시) 4"
+"E"
 ],
 "image": true
 },
@@ -395,7 +395,7 @@
 "경첩관절(hinge joint)",
 "안장관절(saddle joint)",
 "타원관절(ellipsoid joint)",
-"절구관절(ball and socket joint) 코티솔 12 μg/dL (참고치, <5) 2021학년도 기초의학종합평가 (1교시) 5"
+"절구관절(ball and socket joint)"
 ],
 "image": false
 },
@@ -505,7 +505,7 @@
 "노던블롯법(Northern blot)",
 "웨스턴블롯법(Western blot)",
 "제자리부합법(In situ hybridization)",
-"면역조직화학염색법(Immunohistochemistry) 2021학년도 기초의학종합평가 (1교시) 6"
+"면역조직화학염색법(Immunohistochemistry)"
 ],
 "image": false
 },
@@ -518,16 +518,6 @@
 "중간벌집(middle ethmoidal cells)"
 ],
 "image": false
-},
-"54": {
-"opts": [
-"①",
-"②",
-"③",
-"④",
-"⑤"
-],
-"image": true
 },
 "55": {
 "opts": [
@@ -585,7 +575,7 @@
 "항문꼬리신경(anococcygeal nerve)",
 "위볼기신경(superior gluteal nerve)",
 "골반내장신경(pelvic splachnic nerve)",
-"속폐쇄근신경(nerve to obturator internus muscle) A B C ① A띠 H띠 I띠 ② A띠 I띠 H띠 ③ I띠 A띠 H띠 ④ I띠 H띠 A띠 ⑤ H띠 A띠 I띠"
+"속폐쇄근신경(nerve to obturator internus muscle)"
 ],
 "image": false
 }

@@ -11,11 +11,46 @@ import fitz
 def norm(s): return unicodedata.normalize('NFC', s)
 CIRC = '①②③④⑤'
 
-FOOTER = re.compile(r'\s*20\d\d\s*학년도.*$|\s*기초의학종합평가.*$|\s*\d+\s*/\s*\d+\s*$|\s*\(\s*\d교시\s*\).*$')
+# 페이지 꼬리말/구역 종료 표시 — 추출 시 어절 순서가 뒤섞여도 잡히게 함
+FOOTER = re.compile(
+    r'\s*(?:20\d\d\s*)?학년도.*$'          # ...학년도 기초의학종합평가 (N교시) p
+    r'|\s*기초의학종합평가.*$'
+    r'|\s*교시\s*\d*\s*종료.*$'            # (N)교시 N 종료 ...
+    r'|\s*\(\s*\d교시\s*\).*$'
+    r'|\s*\d+\s*/\s*\d+\s*$', re.S)
+# 다음 문항 지문·검사치·보기표가 마지막 보기(주로 ⑤)에 딸려 들어온 것을 잘라냄
+JUNK = re.compile(
+    r'(?:혈액|혈청|소변|검사|혈압|맥박|체온|백혈구|혈소판|요단백|호흡수|참고치)\s*[:：]'
+    r'|참고치|(?:^|[\s(])[a-e]\)\s|\*\s|\s[-–]\s'
+    r'|환자\s*[:：]'                        # 다음 문항 임상 지문
+    r'|혈압\s*맥박|혈압\s*심박수'          # 다음 문항 활력징후 표
+    r'|(?:^|\s)(?:PaO2|PaCO2|PACO2|pH)\s*[:：]'  # 다음 문항 검사 지문
+    r'|(?:^|\s)[가나다라마]\)\s'           # 다음 문항 보기표(가) 나) ..)
+    r'|(?:^|\s)[가나다라마]\s?[가-힣]{1,10}\s*\.'  # "가신생아 . 나광범위..." 뒤섞인 보기표
+    r'|(?:^|\s)[A-E]\.\s'                  # 다음 문항 보기표(A. B. ..)
+    r'|[①②③④⑤]|[A-E]\s[A-E]\s[A-E]')   # 다음 문항 보기표(①.. / A B C ..)
+# 영문 검사치(이름 + 숫자 + 단위)
+ENG_LAB = re.compile(
+    r'[A-Za-z][A-Za-z0-9/().·\s-]{0,22}?[\s(]\d[\d.,~/]*\s*'
+    r'(?:mg/dL|IU/L|mmHg|/mm3|μg/dL|ng/mL|g/dL|mmol|mEq|%)')
+# 한글 검사치(임상 단위만 — 생리 값 보기 mmHg·mL 등은 건드리지 않음)
+KOR_LAB = re.compile(
+    r'[가-힣A-Za-z][가-힣A-Za-z0-9/\s]{0,7}?\s?\d[\d.,~/]*\s*'
+    r'(?:μg/dL|mg/dL|IU/L|ng/mL|mEq|IU/mL)')
+# 검사명 키워드로 시작하는 검사치(실제 보기어를 먹지 않도록 이름 앵커링)
+KOR_LAB2 = re.compile(
+    r'(?:혈색소|백혈구|적혈구|혈소판|혈장|혈청|헤모글로빈|알부민|크레아티닌|빌리루빈|요단백)\s*\d')
 
 def clean(t):
+    t = re.split(r'20\d\d\s*학년도', t)[0]   # 연도 꼬리말 + 이후 전부 제거
     t = FOOTER.sub('', t)
-    return ' '.join(t.split()).strip()
+    t = JUNK.split(t)[0]
+    cut = len(t)
+    for rx in (ENG_LAB, KOR_LAB, KOR_LAB2):
+        m = rx.search(t)
+        if m:
+            cut = min(cut, m.start())
+    return ' '.join(t[:cut].split()).strip()
 
 def find(year, kyo):
     for p in glob.glob(f'문제/{year}/*.pdf'):

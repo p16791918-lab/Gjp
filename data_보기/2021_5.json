@@ -95,17 +95,17 @@
 "DNA 바이러스",
 "RNA 바이러스",
 "외피보유 바이러스",
-"외피비보유 바이러스 2021학년도 기초의학종합평가 (5교시) 2"
+"외피비보유 바이러스"
 ],
 "image": false
 },
 "11": {
 "opts": [
-"Chocolate agar (가열 혈액우무배지) - X 인자(hemin) 와 V 인자(NAD) 공급",
-"Buffered Charcoal-yeast extract agar (BCYE 우무배 지) - 시스테인과 철 공급",
-"Cystine tellurite blood 우무배지 - 시스테인 공급과 텔루라이트에 의한 기타 세균 성장 억제",
-"Thiosulfate Citrate Bile Salts Sucrose agar (TCBS 우 무배지) - 장내세균과 그람양성균 성장 억제",
-"Xylose-lysine-deoxycholate agar (XLD 우무배지) - 자 일로스와 라이신 deoxycholate에 의한 비병원성균 성 장 억제"
+"Chocolate agar (가열 혈액우무배지)",
+"Buffered Charcoal-yeast extract agar (BCYE 우무배 지)",
+"Cystine tellurite blood 우무배지",
+"Thiosulfate Citrate Bile Salts Sucrose agar (TCBS 우 무배지)",
+"Xylose-lysine-deoxycholate agar (XLD 우무배지)"
 ],
 "image": false
 },
@@ -181,11 +181,11 @@
 },
 "19": {
 "opts": [
-"Coxiella burnetii - Q열 - 모기",
-"Rickettsia typhi - 발진티푸스 - 이",
-"Rickettsia prowazekii - 발진열 - 진드기",
-"Rickettsia rickettsii - 록키산홍반열 - 벼룩",
-"Orientia tsutsugamushi - 쯔쯔가무시병 - 좀진드기 2021학년도 기초의학종합평가 (5교시) 3"
+"Coxiella burnetii",
+"Rickettsia typhi",
+"Rickettsia prowazekii",
+"Rickettsia rickettsii",
+"Orientia tsutsugamushi"
 ],
 "image": false
 },
@@ -275,7 +275,7 @@
 "rabies virus",
 "cytomegalovirus",
 "Epstein-Barr virus",
-"human immunodeficiency virus 2021학년도 기초의학종합평가 (5교시) 4"
+"human immunodeficiency virus"
 ],
 "image": false
 },

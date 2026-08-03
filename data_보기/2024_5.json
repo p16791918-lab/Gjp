@@ -71,11 +71,11 @@
 },
 "8": {
 "opts": [
+"노로바이러스",
 "로타바이러스",
 "레오바이러스",
 "아데노바이러스",
-"조류 인플루엔자 바이러스",
-"혈압 맥박 회분호흡 회분 109/65 mmHg, 118 / , 20 / 체온 37.9 ℃ 혈액 검사: WBC 21,800/mm3, Neutrophil 89.36 % Lactate 3.1 mmol/L 소변 검사: WBC 2+, WBC 10-29/HPF, Bacteria 1+ 학년도 기초의학종합평가 교시 2024 (5 ) 2"
+"조류 인플루엔자 바이러스"
 ],
 "image": false
 },
@@ -155,7 +155,7 @@
 "Microsporum canis",
 "Sporothrix schenckii",
 "Aspergillus fumigatus",
-"Trichophyton mentagrophytes 학년도 기초의학종합평가 교시 2024 (5 ) 3"
+"Trichophyton mentagrophytes"
 ],
 "image": false
 },
@@ -235,7 +235,7 @@
 "면역형광법",
 "혈구응집반응법",
 "웨스턴블롯 검사",
-"사람면역바이러스 효소면역측정법 결과에서 양성 (HIV) 학년도 기초의학종합평가 교시 2024 (5 ) 4"
+"사람면역바이러스 효소면역측정법 결과에서 양성 (HIV)"
 ],
 "image": false
 },
@@ -289,16 +289,6 @@
 ],
 "image": false
 },
-"30": {
-"opts": [
-"E. coli, EIEC) 장독소생성대장균(enterotoxigenic",
-"E. coli, ETEC) 장병원성대장균(enteropathogenic",
-"E. coli, EPEC) 장응집성대장균(enteroaggregative",
-"E. coli, EAEC) 장출혈성대장균(enterohemorrhagic",
-"E. coli, EHEC)"
-],
-"image": false
-},
 "31": {
 "opts": [
 "고세균",
@@ -315,7 +305,7 @@
 "이전 백신 접종에 의한 항체의 반응",
 "혈소판 막 항원에 대한 자가항체 생성",
 "프로스타글란딘류코트리엔 등의 분비 ,",
-"가슴 선 사진 X 사진 ( 6)에서 좌측 폐 첨부 에 (lung apex) 하얀 구름모양의 작은 병터가 관찰되었다. 학년도 기초의학종합평가 교시 2024 (5 ) 5"
+"가슴 선 사진 X 사진 ( 6)에서 좌측 폐 첨부 에 (lung apex) 하얀 구름모양의 작은 병터가 관찰되었다."
 ],
 "image": false
 },
@@ -341,11 +331,11 @@
 },
 "35": {
 "opts": [
+"나선균",
 "그람양성알균",
 "그람음성알균",
 "그람양성막대균",
-"그람음성막대균",
-"교시 5 종료 혈액검사 < > WBC 14,500 Hb 12.0 PLT 45,000 Cr 2.0 소변검사 < > 비중 1.015 단백 3+ 적혈구 10~15/HPF 백혈구 0~1/HPF"
+"그람음성막대균"
 ],
 "image": false
 }
