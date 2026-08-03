@@ -598,5 +598,155 @@
 "프리마퀸"
 ],
 "image": false
+},
+"13": {
+"opts": [
+"암 신생혈관 생성",
+"손상된 DNA 복구 기능 상실",
+"종양 개시제(tumor initiator)에 의한 돌연변이",
+"종양 촉진제(tumor promoter)에 의한 종양세포 증식",
+"전위(translocation)에 의한 종양유전자(oncogene)의 변이"
+],
+"image": false
+},
+"16": {
+"opts": [
+"경색",
+"부종",
+"색전",
+"울혈",
+"충혈"
+],
+"image": false
+},
+"17": {
+"opts": [
+"모순색전증(Paradoxical embolism)",
+"골수색전증(Bone marrow embolism)",
+"동정맥기형(Arteriovenous malformation)",
+"혈관 내피세포 활성화(Endothelial activation)",
+"파종성 혈관내 응고증(Disseminated intravascular coagulation)"
+],
+"image": false
+},
+"26": {
+"opts": [
+"아밀로이드증(amyloidosis)",
+"폐포단백질증(pulmonary alveolar proteinosis)",
+"통상성 간질성 폐렴(usual interstitial pneumonia)",
+"박리사이질폐렴(desquamative interstitial pneumonia)",
+"비특이성 간질성 폐렴(nonspecific interstitial pneumonia)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"항Sm 항체",
+"항DNA 항체",
+"항Scl70 항체",
+"항인지질항체",
+"항SS-A / SS-B 항체"
+],
+"image": false
+},
+"30": {
+"opts": [
+"Giant cell arteritis",
+"Takayasu arteritis",
+"Kawasaki disease",
+"Polyarteritis nodosa",
+"Granulomatosis with polyangiitis"
+],
+"image": false
+},
+"33": {
+"opts": [
+"편평상피화생",
+"편평세포암종",
+"반응성 변화(위축)",
+"고등급편평상피내병터",
+"저등급편평상피내병터"
+],
+"image": false
+},
+"35": {
+"opts": [
+"K+",
+"Na+",
+"Ca2+",
+"Fe3+",
+"Mg2+"
+],
+"image": false
+},
+"36": {
+"opts": [
+"피부경화증(scleroderma)",
+"강직척추염(ankylosing spondylitis)",
+"IgG4 관련질환(IgG4 related disease)",
+"굿패스처증후군(Goodpasture syndrome)",
+"전신성 홍반성 루푸스(systemic lupus erythematosus)"
+],
+"image": false
+},
+"37": {
+"opts": [
+"박테리아 - 괴사성 염증",
+"박테리아 - 화농성 염증",
+"바이러스 - 육아종성 염증",
+"곰팡이 - 만성염증 및 흉터형성",
+"바이러스 - 세포변성/세포증식 염증"
+],
+"image": false
+},
+"38": {
+"opts": [
+"C3a",
+"C3b",
+"C5a",
+"Interferon-γ",
+"Transforming growth factor-β"
+],
+"image": false
+},
+"39": {
+"opts": [
+"Histamine",
+"Interferon-γ",
+"Leukotriene B4",
+"Prostaglandin E2",
+"5-hydroxyeicosatetraenoic acid (5-HETE)"
+],
+"image": false
+},
+"41": {
+"opts": [
+"제1형 과민반응",
+"제2형 과민반응",
+"제3형 과민반응",
+"제4형 과민반응",
+"제5형 과민반응"
+],
+"image": false
+},
+"44": {
+"opts": [
+"TSH 증가",
+"혈당 저하",
+"혈청 유리 T3 감소",
+"카테콜아민 활성 저하",
+"항-TSH수용체 자가항체 양성"
+],
+"image": false
+},
+"45": {
+"opts": [
+"기형종",
+"샘암종",
+"장액샘종",
+"점액샘종",
+"자궁내막증"
+],
+"image": false
 }
 }
