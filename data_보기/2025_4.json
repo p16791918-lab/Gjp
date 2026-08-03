@@ -133,9 +133,9 @@
 "opts": [
 "Bacteria - Necrotizing inflammation",
 "Bacteria - Suppurative inflammation",
-"Virus - Granulomatous inflammation",
-"Fungus - Chronic inflammation and scarring",
-"Virus - Cytopathic/cytoproliferative inflammation"
+"Virus",
+"Fungus",
+"Virus"
 ],
 "image": false
 },
@@ -545,7 +545,7 @@
 "무구조충",
 "왜소조충",
 "유구조충",
-"광절열두조충"
+"광절열두조"
 ],
 "image": false
 },

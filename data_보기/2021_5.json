@@ -101,11 +101,11 @@
 },
 "11": {
 "opts": [
-"Chocolate agar (가열 혈액우무배지) - X 인자(hemin) 와 V 인자(NAD) 공급",
+"Chocolate agar (가열 혈액우무배지)",
 "Buffered Charcoal-yeast extract agar (BCYE 우무배 지) - 시스테인과 철 공급",
-"Cystine tellurite blood 우무배지 - 시스테인 공급과 텔루라이트에 의한 기타 세균 성장 억제",
+"Cystine tellurite blood 우무배지",
 "Thiosulfate Citrate Bile Salts Sucrose agar (TCBS 우 무배지) - 장내세균과 그람양성균 성장 억제",
-"Xylose-lysine-deoxycholate agar (XLD 우무배지) - 자 일로스와 라이신 deoxycholate에 의한 비병원성균 성 장 억제"
+"Xylose-lysine-deoxycholate agar (XLD 우무배지)"
 ],
 "image": false
 },

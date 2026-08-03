@@ -214,8 +214,8 @@
 "Shigella dysenteriae - Shiga toxin",
 "Escherichia coli - heat-labile enterotoxin",
 "Streptococcus pyogenes - erythrogenic toxin",
-"Campylobacter jejuni - cytolethal distending toxin",
-"Staphylococcus aureus - toxic shock syndrome toxin-1"
+"Campylobacter jejuni",
+"Staphylococcus aureus"
 ],
 "image": false
 },

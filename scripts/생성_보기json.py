@@ -21,7 +21,9 @@ FOOTER = re.compile(
 # 다음 문항 지문·검사치·보기표가 마지막 보기(주로 ⑤)에 딸려 들어온 것을 잘라냄
 JUNK = re.compile(
     r'(?:혈액|혈청|소변|검사|혈압|맥박|체온|백혈구|혈소판|요단백|호흡수|참고치)\s*[:：]'
-    r'|참고치|정상치'
+    r'|참고치|정상치|정상\s*범위'
+    r'|[가-힣]*효소\s*[:：]'                # 다음 문항 검사(효소: 정상 범위 ...)
+    r'|HBsAg|HBcAg|anti-HCV|HBV\s*DNA'      # 다음 문항 혈청검사 나열
     r'|(?:당화혈색소|요단백|신사구체여과율|사구체여과율)\s*[(:：+\d]'  # 다음 문항 임상검사
     r'|(?:^|[\s(])[a-e]\)\s|\*\s'
     r'|환자\s*[:：]'                        # 다음 문항 임상 지문
@@ -56,8 +58,21 @@ ARTIFACT = re.compile(r'[\d\s]*[√Ψ、｀´{}∙_].*$', re.S)
 PREFIX_JUNK = re.compile(r'^\s*\(\s*,[^)]*\)\s*')
 TAIL_JUNK = re.compile(r"[\s'\"√Ψ_·(]+$")   # 꼬리의 잡기호·미완결 여는괄호 제거
 
+def dash_leak(t):
+    """'옵션 - 서술문. - 서술문.' 형태로 다음 문항 서술이 딸려온 것 절단.
+    정상 매칭보기(A - B - C, 1 - 7 - 98)는 세그먼트가 짧아 보존."""
+    if ' - ' not in t:
+        return t
+    head, _, rest = t.partition(' - ')
+    rest_segs = rest.split(' - ')
+    long_seg = any(len(s.strip()) > 25 for s in rest_segs)
+    sentence = len(rest_segs) >= 3 and re.search(r'다\.?(?:\s|$)|이다|있다|없다', rest)
+    return head.strip() if (long_seg or sentence) else t
+
 def clean(t):
+    t = ' '.join(t.split())                   # 공백·줄바꿈 정규화(대시 누출 판별 위해)
     t = re.split(r'20\d\d\s*학년도', t)[0]   # 연도 꼬리말 + 이후 전부 제거
+    t = dash_leak(t)
     t = FOOTER.sub('', t)
     t = PREFIX_JUNK.sub('', t)
     t = ARTIFACT.sub('', t)
