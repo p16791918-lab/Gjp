@@ -480,55 +480,94 @@ def glycolysis():
 
 
 def visual_field_defects():
-    """시각경로 병변 위치별 시야결손(반맹) — 좌·우 눈 시야 도식."""
+    """시각경로 해부(병변 위치 ①~⑤) + 병변별 시야결손 도식."""
     import numpy as np
-    from matplotlib.patches import Wedge, Circle
-    fig, ax = _new(5.8, 5.2)
-    ax.set_xlim(0, 12); ax.set_ylim(0, 12); ax.axis('off')
+    from matplotlib.patches import Wedge, Circle, FancyArrowPatch
+    fig, ax = _new(6.6, 5.6)
+    ax.set_xlim(0, 20); ax.set_ylim(0, 12); ax.axis('off')
 
     def eye(cx, cy, r, spec):
-        ax.add_patch(Circle((cx, cy), r, fc='white', ec='#333', lw=1.1))
+        ax.add_patch(Circle((cx, cy), r, fc='white', ec='#333', lw=1.0))
         g = '#333'
         if spec == 'full':
-            ax.add_patch(Circle((cx, cy), r, fc=g, ec='#333', lw=1.1))
+            ax.add_patch(Circle((cx, cy), r, fc=g, ec='#333', lw=1.0))
         elif spec == 'left':
             ax.add_patch(Wedge((cx, cy), r, 90, 270, fc=g))
         elif spec == 'right':
             ax.add_patch(Wedge((cx, cy), r, -90, 90, fc=g))
-        elif spec == 'UL':   # 위-왼쪽 사분면
+        elif spec == 'UL':
             ax.add_patch(Wedge((cx, cy), r, 90, 180, fc=g))
-        elif spec == 'left_ms':  # 좌반맹 + 황반보존
+        elif spec == 'left_ms':
             ax.add_patch(Wedge((cx, cy), r, 90, 270, fc=g))
             ax.add_patch(Circle((cx, cy), r*0.32, fc='white', ec='none'))
-        # 십자 안내선
-        ax.plot([cx-r, cx+r], [cy, cy], color='#bbb', lw=0.5)
-        ax.plot([cx, cx], [cy-r, cy+r], color='#bbb', lw=0.5)
+        ax.plot([cx-r, cx+r], [cy, cy], color='#bbb', lw=0.4)
+        ax.plot([cx, cx], [cy-r, cy+r], color='#bbb', lw=0.4)
 
+    # ── 왼쪽: 시각경로 해부 (위=눈, 아래=뒤통수엽) ──
+    LE, RE = (2.3, 10.6), (5.3, 10.6)   # 왼눈·오른눈
+    CH = (3.8, 8.2)                     # 시각교차
+    LGL, LGR = (2.2, 6.2), (5.4, 6.2)   # 가쪽무릎체
+    COL, COR = (2.9, 2.4), (4.7, 2.4)   # 뒤통수엽
+    for c, lab in [(LE, '왼눈'), (RE, '오른눈')]:
+        ax.add_patch(Circle(c, 0.55, fc='#eef2f7', ec='#333', lw=1.1))
+        ax.text(c[0], c[1]+0.9, lab, fontsize=7, ha='center', color='#333')
+    # 시신경 (눈→교차)
+    ax.plot([LE[0], CH[0]], [LE[1]-0.55, CH[1]+0.2], color='#0f3460', lw=1.6)
+    ax.plot([RE[0], CH[0]], [RE[1]-0.55, CH[1]+0.2], color='#0f3460', lw=1.6)
+    ax.add_patch(Circle(CH, 0.28, fc='#c5cae9', ec='#0f3460'))
+    ax.text(CH[0]+0.9, CH[1]+0.1, '시각교차', fontsize=6.8, color='#0f3460', va='center')
+    # 시각로 (교차→LGN)
+    ax.plot([CH[0], LGL[0]], [CH[1]-0.2, LGL[1]+0.3], color='#0f3460', lw=1.6)
+    ax.plot([CH[0], LGR[0]], [CH[1]-0.2, LGR[1]+0.3], color='#0f3460', lw=1.6)
+    for c in (LGL, LGR):
+        ax.add_patch(Circle(c, 0.26, fc='#b2dfdb', ec='#00695c'))
+    ax.text(LGR[0]+0.5, LGR[1], 'LGN', fontsize=6.5, color='#00695c', va='center')
+    # 시각로부챗살 (LGN→뒤통수엽, 마이어고리 곡선)
+    ax.add_patch(FancyArrowPatch(LGL, COL, connectionstyle='arc3,rad=-0.35',
+                 arrowstyle='-', color='#5c6bc0', lw=1.6))
+    ax.add_patch(FancyArrowPatch(LGR, COR, connectionstyle='arc3,rad=0.35',
+                 arrowstyle='-', color='#5c6bc0', lw=1.6))
+    for c in (COL, COR):
+        ax.add_patch(Wedge(c, 0.6, 200, 340, fc='#ffcc80', ec='#b5680a', lw=1.0))
+    ax.text((COL[0]+COR[0])/2, 1.3, '뒤통수엽(시각겉질)', fontsize=6.8, ha='center', color='#b5680a')
+
+    # 병변 표시 ①~⑤ (오른쪽 경로에 빨간 절단)
+    def lesion(p, num, dxy):
+        ax.plot([p[0]-0.28, p[0]+0.28], [p[1]+0.28, p[1]-0.28], color='#c0392b', lw=2.4)
+        ax.text(p[0]+dxy[0], p[1]+dxy[1], num, fontsize=8.5, color='#c0392b',
+                weight='bold', ha='center', va='center')
+    lesion(((RE[0]+CH[0])/2+0.2, (RE[1]+CH[1])/2+0.1), '①', (0.55, 0.35))   # 오른 시신경
+    lesion((CH[0], CH[1]), '②', (-0.7, -0.4))                               # 교차 정중
+    lesion(((CH[0]+LGR[0])/2, (CH[1]+LGR[1])/2), '③', (0.6, 0.2))           # 오른 시각로
+    lesion((5.9, 4.2), '④', (0.55, 0.0))                                    # 오른 마이어고리
+    lesion((COR[0]+0.2, COR[1]), '⑤', (0.6, -0.2))                          # 오른 뒤통수엽
+
+    # ── 오른쪽: 병변별 시야결손 ──
     rows = [
-        ('① 오른 시신경',        'full', 'norm', '오른눈 완전 실명'),
-        ('② 시각교차(정중)',     'left', 'right', '양측 이측반맹(양비측)'),
-        ('③ 오른 시각로',        'left', 'left', '왼쪽 동측반맹'),
-        ('④ 오른 관자엽(마이어)', 'UL', 'UL', '왼쪽 위 사분맹'),
-        ('⑤ 오른 뒤통수엽',      'left_ms', 'left_ms', '왼쪽 동측반맹(황반보존)'),
+        ('①', 'full', 'norm', '오른눈 완전 실명'),
+        ('②', 'left', 'right', '양비측 반맹'),
+        ('③', 'left', 'left', '왼쪽 동측반맹'),
+        ('④', 'UL', 'UL', '왼쪽 위 사분맹'),
+        ('⑤', 'left_ms', 'left_ms', '왼쪽 동측반맹(황반보존)'),
     ]
-    y = 10.6
-    ax.text(1.9, 11.4, '병변 위치', fontsize=8, ha='center', weight='bold', color='#0f3460')
-    ax.text(5.2, 11.4, '왼눈', fontsize=8, ha='center', weight='bold', color='#0f3460')
-    ax.text(6.9, 11.4, '오른눈', fontsize=8, ha='center', weight='bold', color='#0f3460')
-    ax.text(9.6, 11.4, '결손', fontsize=8, ha='center', weight='bold', color='#0f3460')
-    for label, lspec, rspec, desc in rows:
-        ax.text(0.2, y, label, fontsize=7.6, va='center', ha='left', color='#222')
-        eye(5.2, y, 0.62, lspec)
-        eye(6.9, y, 0.62, 'norm' if rspec == 'norm' else rspec)
+    ax.text(12.3, 11.3, '왼눈', fontsize=7, ha='center', weight='bold', color='#0f3460')
+    ax.text(13.9, 11.3, '오른눈', fontsize=7, ha='center', weight='bold', color='#0f3460')
+    ax.text(17.2, 11.3, '시야결손', fontsize=7, ha='center', weight='bold', color='#0f3460')
+    y = 10.2
+    for num, lspec, rspec, desc in rows:
+        ax.text(10.7, y, num, fontsize=9, va='center', ha='center', color='#c0392b', weight='bold')
+        eye(12.3, y, 0.52, lspec)
         if rspec == 'norm':
-            ax.add_patch(Circle((6.9, y), 0.62, fc='white', ec='#333', lw=1.1))
-            ax.plot([6.9-0.62, 6.9+0.62], [y, y], color='#bbb', lw=0.5)
-            ax.plot([6.9, 6.9], [y-0.62, y+0.62], color='#bbb', lw=0.5)
-        ax.text(9.6, y, desc, fontsize=7.0, va='center', ha='center', color='#c0392b')
-        y -= 2.05
-    ax.text(6, 0.2, '검은 부분 = 안 보이는 시야  ·  교차 전=같은눈 / 교차=양비측 / 교차 후=반대쪽 동측',
-            fontsize=6.9, ha='center', color='#555')
-    ax.set_title('시각경로 병변과 시야결손(반맹)', fontsize=10.5, color=NAVY, weight='bold')
+            ax.add_patch(Circle((13.9, y), 0.52, fc='white', ec='#333', lw=1.0))
+            ax.plot([13.9-0.52, 13.9+0.52], [y, y], color='#bbb', lw=0.4)
+            ax.plot([13.9, 13.9], [y-0.52, y+0.52], color='#bbb', lw=0.4)
+        else:
+            eye(13.9, y, 0.52, rspec)
+        ax.text(17.2, y, desc, fontsize=6.9, va='center', ha='center', color='#c0392b')
+        y -= 2.0
+    ax.text(10, 0.3, '빨간 X = 병변 위치  ·  검은 부분 = 안 보이는 시야  ·  교차 전=같은눈 / 교차=양비측 / 교차 후=반대쪽 동측',
+            fontsize=6.6, ha='center', color='#555')
+    ax.set_title('시각경로 병변 위치와 시야결손(반맹)', fontsize=10.5, color=NAVY, weight='bold')
     return _save(fig, 'visual_field_defects')
 
 
