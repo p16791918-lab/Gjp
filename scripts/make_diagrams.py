@@ -289,16 +289,21 @@ def o2_dissociation():
     def hb(p50):
         n = 2.8
         return 100 * x**n / (p50**n + x**n)
-    ax.plot(x, hb(26), color='#1565c0', lw=2, label='해수면 (정상)')
-    ax.plot(x, hb(38), color='#c0392b', lw=2, label='고산 (2,3-BPG↑)')
+    ax.plot(x, hb(20), color='#1565c0', lw=2, ls='--', label='좌측이동 (친화도↑)')
+    ax.plot(x, hb(26), color='#333', lw=2, label='정상 (P50≈26)')
+    ax.plot(x, hb(38), color='#c0392b', lw=2, label='우측이동 (친화도↓)')
     ax.axhline(50, color='#aaa', ls=':', lw=0.8)
-    ax.annotate('오른쪽 이동\n= 산소친화도 감소', (55, 62), (60, 30), fontsize=8, color='#c0392b',
+    ax.text(2, 50, 'P50', fontsize=7, color='#888', va='bottom')
+    ax.annotate('우측이동 = 친화도↓ (조직에 O2 방출↑)\nH+↑(pH↓)·CO2↑·온도↑·2,3-BPG↑',
+                (52, 60), (30, 20), fontsize=7.2, color='#c0392b',
                 arrowprops=dict(arrowstyle='->', color='#c0392b'))
-    ax.set_xlabel('산소분압 pO₂ (mmHg)', fontsize=8.5)
+    ax.text(30, 92, '좌측이동 = 친화도↑\npH↑·CO2↓·온도↓·CO·태아Hb·미오글로빈',
+            fontsize=7.2, color='#1565c0')
+    ax.set_xlabel('산소분압 pO2 (mmHg)', fontsize=8.5)
     ax.set_ylabel('산소포화도 (%)', fontsize=8.5)
-    ax.legend(fontsize=8, loc='lower right')
+    ax.legend(fontsize=7.5, loc='lower right')
     ax.tick_params(labelsize=7.5)
-    ax.set_title('산소-헤모글로빈 해리곡선 (2,3-BPG 효과)', fontsize=10.5, color=NAVY, weight='bold')
+    ax.set_title('산소-헤모글로빈 해리곡선 (보어 효과)', fontsize=10.5, color=NAVY, weight='bold')
     fig.tight_layout()
     return _save(fig, 'o2_dissociation')
 
@@ -472,6 +477,45 @@ def glycolysis():
     ax.axis('off')
     ax.set_title('해당작용 — 3개 조절효소(★)와 피루브산 분기', fontsize=10.5, color=NAVY, weight='bold')
     return _save(fig, 'glycolysis')
+
+
+def energy_overview():
+    """포도당 완전산화 전체 흐름 — 해당→피루브산산화→TCA→전자전달계, ATP 총계."""
+    fig, ax = _new(6.0, 3.6)
+    ax.set_xlim(0, 13); ax.set_ylim(0, 10); ax.axis('off')
+
+    def box(x, y, w, h, t, fc, tc='#20303d', fs=7.2):
+        ax.add_patch(Rectangle((x, y), w, h, fc=fc, ec='#888', lw=1.0))
+        ax.text(x + w/2, y + h/2, t, fontsize=fs, ha='center', va='center', color=tc)
+
+    steps = [
+        (0.3, '포도당\n(세포질)', '#eef2f7'),
+        (3.0, '피루브산 ×2\n해당', '#dbe7f2'),
+        (6.0, '아세틸CoA ×2\n(미토콘드리아)', '#dbe7d5'),
+        (9.0, 'TCA 회로 ×2', '#fdecc8'),
+    ]
+    for x, t, c in steps:
+        box(x, 6.5, 2.4, 1.8, t, c)
+    for x in [2.7, 5.7, 8.7]:
+        ax.annotate('', (x + 0.3, 7.4), (x, 7.4), arrowprops=dict(arrowstyle='->', color='#333'))
+    # 산출물(각 단계 아래)
+    ax.text(1.5, 5.9, 'ATP 2 · NADH 2', fontsize=6.8, ha='center', color='#1565c0')
+    ax.text(7.2, 5.9, 'NADH 2 · CO2 2\n(피루브산 탈수소효소)', fontsize=6.6, ha='center', color='#2e7d32')
+    ax.text(10.2, 5.9, 'NADH 6 · FADH2 2\nGTP 2 · CO2 4', fontsize=6.6, ha='center', color='#b5680a')
+    # 전자전달계 수집 박스
+    box(2.6, 2.6, 7.8, 1.6, '전자전달계 · 산화적 인산화 (미토콘드리아 속막)\nNADH ≈ 2.5 ATP · FADH2 ≈ 1.5 ATP · 최종 전자수용체 = 산소',
+        '#c5cae9', fs=7.0)
+    for x in [2.0, 8.2, 10.2]:
+        ax.annotate('', (x, 4.2), (x, 5.6), arrowprops=dict(arrowstyle='->', color='#5c6bc0', lw=1.2))
+    ax.text(11.6, 3.4, 'H2O', fontsize=7.5, color='#2e7d32', weight='bold')
+    ax.annotate('', (11.4, 3.4), (10.4, 3.4), arrowprops=dict(arrowstyle='->', color='#2e7d32'))
+    # 총계
+    ax.add_patch(Rectangle((3.2, 0.4), 6.6, 1.2, fc='#fff3cd', ec='#d0a840', lw=1.2))
+    ax.text(6.5, 1.0, '포도당 1개 완전산화 ≈ 30~32 ATP  (무산소면 해당의 2 ATP뿐)',
+            fontsize=7.8, ha='center', color='#0f3460', weight='bold')
+    ax.set_title('에너지 대사 전체 흐름 — 해당 · TCA · 전자전달계',
+                 fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'energy_overview')
 
 
 def tca_energy():
@@ -873,7 +917,7 @@ ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        glucose_alanine, fasting_fuel,
        flow_volume_loop, cerebral_autoregulation,
        antagonist_curves, therapeutic_index,
-       glycolysis, tca_energy,
+       glycolysis, tca_energy, energy_overview,
        pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration,
        knudson_2hit, gn_immunofluorescence,
        gram_wall, antigen_presentation,
