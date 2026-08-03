@@ -2,6 +2,9 @@
   "2021_4": {
     "25": ["규소폐증(silicosis)", "소세포암종(small cell carcinoma)", "악성중피종(malignant mesothelioma)", "특발폐섬유증(idiopathic pulmonary fibrosis)", "탄광부진폐증(coal worker’s pneumoconiosis)"]
   },
+  "2021_6": {
+    "19": ["1.5", "2", "3", "100", "1000"]
+  },
   "2023_1": {
     "42": ["5-10 μm", "15-20 μm", "25-30 μm", "35-40 μm", "45-50 μm"]
   },
