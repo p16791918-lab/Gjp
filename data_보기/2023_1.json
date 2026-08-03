@@ -1,0 +1,602 @@
+{
+"1": {
+"opts": [
+"혀편도(lingual tonsil)",
+"귀밑샘(parotid gland)",
+"혀밑샘(sublingual gland)",
+"목구멍편도(palatine tonsil)",
+"턱밑샘(submandibular gland)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"3": {
+"opts": [
+"말총(cauda equina)",
+"종말끈(filum terminale)",
+"척수원뿔(conus medullaris)",
+"척수신경절(spinal ganglion)",
+"허리척수신경(lumbar spinal nerve)"
+],
+"image": false
+},
+"4": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"5": {
+"opts": [
+"맥락얼기(choroid plexus)",
+"정중구멍(median aperture)",
+"거미막과립(arachnoid granulation)",
+"뇌실사이구멍(interventricular foramen)",
+"중간뇌수도관(mesencephalic aqueduct)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"7": {
+"opts": [
+"시상하부(hypothalamus)",
+"부신겉질(adrenal cortex)",
+"부신속질(adrenal medulla)",
+"뇌하수체 앞엽(anterior lobe of pituitary gland)",
+"뇌하수체 뒤엽(posterior lobe of pituitary gland)"
+],
+"image": false
+},
+"8": {
+"opts": [
+"두덩정강근(gracilis muscle)",
+"엉덩허리근(iliopsoas muscle)",
+"큰볼기근(gluteus maximus muscle)",
+"넙다리두갈래근(biceps femoris muscle)",
+"넙다리네갈래근(quadriceps femoris muscle)"
+],
+"image": false
+},
+"9": {
+"opts": [
+"위이마이랑",
+"위관자이랑",
+"중심앞이랑",
+"중심뒤이랑",
+"모서리위이랑"
+],
+"image": false
+},
+"10": {
+"opts": [
+"가 지방조직",
+"가 림프조직",
+"나 지방조직",
+"나 림프조직",
+"다 림프조직 학년도 기초의학종합평가 교시 2023 (1 ) 2"
+],
+"image": false
+},
+"11": {
+"opts": [
+"공막(sclera)",
+"맥락막(choroid)",
+"황반(macula lutea)",
+"유리체(vitreous body)",
+"시각신경원반(optic disc)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"13": {
+"opts": [
+"큰두렁정맥(great saphenous vein)",
+"아래배벽정맥(inferior epigastric vein)",
+"얕은배벽정맥(superficial epigastric vein)",
+"얕은엉덩휘돌이정맥(superficial circumflex iliac vein)",
+"얕은바깥음부정맥(superficial external pudendal vein)"
+],
+"image": false
+},
+"14": {
+"opts": [
+"뇌들보(corpus callosum)",
+"방추겉질(fusiform cortex)",
+"이마연합영역(frontal association area)",
+"뒤마루엽겉질(posterior parietal cortex)",
+"관자연합영역(temporal association area)"
+],
+"image": false
+},
+"15": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"16": {
+"opts": [
+"가슴막(pleura)",
+"피부 표피(epidermis)",
+"뇌신경(cranial nerve)",
+"부신겉질(adrenal cortex)",
+"척수신경절(spinal ganglion)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"18": {
+"opts": [
+"엄마가 태동을 감지함",
+"바깥생식기관으로 남녀 구분이 가능함",
+"표면활성물질 의 분비감 시작됨 (surfactant)",
+"동공빛반사 가 나타남 (pupillary light reflex)",
+"피부가 태아기름막 으로 모두 덮임 (vernix caseosa)"
+],
+"image": false
+},
+"19": {
+"opts": [
+"①",
+"②",
+"③",
+"④",
+"⑤"
+],
+"image": true
+},
+"20": {
+"opts": [
+"넙다리빗근(sartorius muscle)",
+"궁둥구멍근(piriformis muscle)",
+"큰볼기근(gluteus maximus muscle)",
+"중간볼기근(gluteus medius muscle)",
+"넙다리네갈래근(quadriceps femoris muscle)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"B",
+"C",
+"D",
+"E",
+"학년도 기초의학종합평가 교시 2023 (1 ) 3"
+],
+"image": true
+},
+"22": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"23": {
+"opts": [
+"자신경(ulnar nerve)",
+"노신경(radial nerve)",
+"정중신경(median nerve)",
+"겨드랑신경(axillary nerve)",
+"근육피부신경(musculocutaneous nerve)"
+],
+"image": false
+},
+"24": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"25": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"26": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"27": {
+"opts": [
+"왼쪽 대뇌반구 마루엽",
+"왼쪽 대뇌반구 이마엽",
+"왼쪽 대뇌반구 관자엽",
+"오른쪽 대뇌반구 이마엽",
+"오른쪽 대뇌반구 관자엽"
+],
+"image": false
+},
+"28": {
+"opts": [
+"경막바깥공간(epidural space)",
+"경막밑공간(subdural space)",
+"거미막밑공간(subarachnoid space)",
+"연질막밑공간(subpial space)",
+"뇌실내공간(intraventricular space)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"사진 ( 19-1)",
+"사진 ( 19-2)",
+"사진 ( 19-3)",
+"사진 ( 19-4)",
+"사진 ( 19-5)"
+],
+"image": false
+},
+"30": {
+"opts": [
+"성대주름(vocal fold)",
+"안뜰주름(vestibular fold)",
+"후두실(laryngeal ventricle)",
+"모뿔덮개주름(aryepiglottic fold)",
+"쐐기연골결절(cuneiform tubercle)"
+],
+"image": false
+},
+"31": {
+"opts": [
+"왼심장동맥의 휘돌이가지(circumflex branch)",
+"앞심실사이가지(anterior interventricular branch)",
+"뒤심실사이가지(posterior interventricular branch)",
+"오른심장동맥의 굴심방결절가지(sinuatrial nodal",
+"branch) 학년도 기초의학종합평가 교시 2023 (1 ) 4"
+],
+"image": false
+},
+"32": {
+"opts": [
+"버팀세포(Sertoli cell)",
+"섬유모세포(fibroblast)",
+"사이질세포(interstitial cell)",
+"일차정모세포(primary spermatocyte)",
+"이차정모세포(secondary spermatocyte)"
+],
+"image": false
+},
+"33": {
+"opts": [
+"앞정강근(tibialis anterior muscle)",
+"긴종아리근(fibularis longus muscle)",
+"짧은종아리근(fibularis brevis muscle)",
+"셋째종아리근(fibularis tertius muscle)",
+"긴발가락폄근(extensor digitorum longus muscle)"
+],
+"image": false
+},
+"34": {
+"opts": [
+"요관(ureter)",
+"요도(urethra)",
+"큰술잔(major calyx)",
+"콩팥깔때기(renal pelvis)",
+"방광삼각(trigone of urinary bladder)"
+],
+"image": false
+},
+"35": {
+"opts": [
+"간정맥(hepatic vein)",
+"간동맥(hepatic artery)",
+"간문맥(hepatic portal vein)",
+"위대정맥(superior vena cava)",
+"아래대정맥(inferior vena cava)"
+],
+"image": false
+},
+"36": {
+"opts": [
+"갑상샘(thyroid gland)",
+"젖샘(mammary gland)",
+"턱밑샘(submandibular gland)",
+"땀분비땀샘(eccrine sweat gland)",
+"샘창자점막밑샘(duodenal submucosal gland)"
+],
+"image": false
+},
+"37": {
+"opts": [
+"위(stomach)",
+"돌창자(ileum)",
+"잘록창자(colon)",
+"빈창자(jejunum)",
+"샘창자(duodenum)"
+],
+"image": false
+},
+"38": {
+"opts": [
+"A, B",
+"A, D",
+"B, C",
+"B, D",
+"C, D"
+],
+"image": true
+},
+"39": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"40": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"41": {
+"opts": [
+"피부밑조직",
+"배바깥빗근 널힘줄",
+"배속빗근 널힘줄",
+"배가로근막",
+"복막"
+],
+"image": false
+},
+"42": {
+"opts": [
+"μ 15-20 m",
+"μ 25-30 m",
+"μ 35-40 m",
+"μ 45-50 m",
+"μ 혈압 정상치 : 180/100 mmHg ( 120/80 mmHg) 맥박수 회분 정상치 회분 : 120 / ( 60~80 / ) 호흡수 회분 정상치 회분 : 30 / ( 12~20 / ) 학년도 기초의학종합평가 교시 2023 (1 ) 5"
+],
+"image": false
+},
+"43": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"44": {
+"opts": [
+"신경관이 융합되지 않음",
+"배설강막 이 열리지 않음 (cloacal membrane)",
+"요로곧창자사이벽 이 형성되지 않음 (urorectal septum)",
+"생리적배꼽탈장 이 지 (physiological umbilical hernia)",
+"속됨"
+],
+"image": false
+},
+"45": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"46": {
+"opts": [
+"큰모음근(adductor magnus)",
+"장딴지근(gastrocnemius muscle)",
+"앞정강근(tibialis anterior muscle)",
+"반막근(semimembranosus muscle)",
+"넙다리네갈래근(quadriceps femoris muscle)"
+],
+"image": false
+},
+"47": {
+"opts": [
+"과 사이에 승모판막이 있다 ‘1’ ‘4’ .",
+"과 은 온몸순환과 관련된다 ‘6’ ‘7’ .",
+"의 벽은 의 벽보다 더 두껍다 ‘2’ ‘1’ .",
+"의 왼쪽에 사이막모서리기둥이 있다 ‘5’ .",
+"의 빗살근육은 의 빗살근육에 비해 더 뚜렷하다 ‘4’ ‘3’ ."
+],
+"image": false
+},
+"48": {
+"opts": [
+"1",
+"2",
+"3",
+"4",
+"5"
+],
+"image": false
+},
+"49": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"50": {
+"opts": [
+"T5",
+"T9",
+"T11",
+"L1",
+"L3"
+],
+"image": false
+},
+"51": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"52": {
+"opts": [
+"B",
+"C",
+"D",
+"E",
+"코티솔 참고치 12 g/dL ( , < 5 g/dL) μ μ 학년도 기초의학종합평가 교시 2023 (1 ) 6"
+],
+"image": true
+},
+"53": {
+"opts": [
+"단층입방상피",
+"중층편평상피",
+"단층편평상피",
+"중층입방상피",
+"단층섬모입방상피"
+],
+"image": false
+},
+"54": {
+"opts": [
+"미주신경(vagus nerve)",
+"큰내장신경(greater splanchnic nerve)",
+"작은내장신경(lesser splanchnic nerve)",
+"맨아래내장신경(least splanchnic nerve)",
+"허리내장신경(lumbar splanchnic nerve)"
+],
+"image": false
+},
+"55": {
+"opts": [
+"바닥세포(basal cell)",
+"술잔세포(goblet cell)",
+"섬모세포(ciliated cell)",
+"미세융모세포(microvillous cell)",
+"신경내분비세포(neuroendocrine cell)"
+],
+"image": false
+},
+"56": {
+"opts": [
+"반달뼈(lunate)",
+"손배뼈(scaphoid)",
+"알머리뼈(capitate)",
+"큰마름뼈(trapezium)",
+"작은마름뼈(trapezoid)"
+],
+"image": false
+},
+"57": {
+"opts": [
+"음부신경(pudendal nerve)",
+"항문꼬리신경(anococcygeal nerve)",
+"위볼기신경(superior gluteal nerve)",
+"골반내장신경(pelvic splanchnic nerve)",
+"속폐쇄근신경(nerve to obturator internus muscle)"
+],
+"image": false
+},
+"58": {
+"opts": [
+"왼콩팥은 오른콩팥보다 조금 아래 있음",
+"왼콩팥정맥은 대동맥과 왼콩팥동맥의 앞을 지남",
+"콩팥근막 은 부신을 둘러싸지 않음 (renal fascia)",
+"콩팥주위지방피막 은 콩팥근막의 (perirenal fat capsule)",
+"바깥쪽에 있음"
+],
+"image": false
+},
+"59": {
+"opts": [
+"잘록창자띠(taenia coli)",
+"돌림주름(plica circularis)",
+"잘록창자팽대(haustra coli)",
+"돌막창자주름(ileocecal fold)",
+"복막주렁(epiploic appendices)"
+],
+"image": false
+},
+"60": {
+"opts": [
+"난포자극호르몬(FSH)",
+"에스트로겐(estrogen)",
+"프로제스테론(progesterone)",
+"사람융모막생식샘자극호르몬(hCG)",
+"교시 1 종료"
+],
+"image": false
+}
+}

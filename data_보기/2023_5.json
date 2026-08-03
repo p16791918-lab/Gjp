@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"모기",
+"진드기",
+"사람 간 접촉",
+"대변구강 경로 -",
+"쥐의 분변 흡입"
+],
+"image": false
+},
+"2": {
+"opts": [
+"엽록체(chloroplast)",
+"세포벽 셀룰로스(cellulose)",
+"핵막이 없는 핵양체(nucleoid)",
+"원형질막 에르고스테롤(ergosterol)",
+"세포질그물(endoplasmic reticulum)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"용균감염(lytic infection)",
+"형질전환(transformation)",
+"급성감염(acute infection)",
+"잠복감염(latent infection)",
+"불현감염(abortive infection)"
+],
+"image": false
+},
+"4": {
+"opts": [
+"Bacillus cereus",
+"Escherichia coli",
+"Campylobacter jejuni",
+"Yersinia enterocolitica",
+"Vibrio parahaemolyticus"
+],
+"image": false
+},
+"5": {
+"opts": [
+"Klebsiella pneumoniae",
+"Legionella pneumophila",
+"Mycoplasma pneumoniae",
+"Cryptococcus neoformans",
+"Mycobacterium tuberculosis"
+],
+"image": false
+},
+"6": {
+"opts": [
+"캡시드(capsid)",
+"외피(envelope)",
+"핵산(nucleic acid)",
+"부착단백질(attachment protein)",
+"비구조단백질(nonstructural protein)"
+],
+"image": false
+},
+"7": {
+"opts": [
+"껍질벗김(uncoating)",
+"핵산 복제(replication)",
+"바이러스 방출(release)",
+"표적세포 부착(attachment)",
+"혈압: 90/60 mmHg 맥박 회분 : 84 / 호흡 회분 : 20 / 체온: 37.8℃ 백혈구: 25,000/mm3 혈소판: 13,000/mm3 AST/ALT: 130/14 IU/L 요단백: 3+ Hanantan virus IgM antibody : positive 학년도 기초의학종합평가 교시 2023 (5 ) 2"
+],
+"image": false
+},
+"8": {
+"opts": [
+"큐열",
+"이질",
+"발진열",
+"살모넬라증",
+"브루셀라증"
+],
+"image": false
+},
+"9": {
+"opts": [
+"태반통과",
+"보체활성",
+"옵소닌화",
+"독소의 중화",
+"항체매개세포독성"
+],
+"image": false
+},
+"10": {
+"opts": [
+"Rhodococcus equi",
+"Nocardia farcinica",
+"Mycoplasma pneumoniae",
+"Chlamydophila pneumoniae",
+"Mycobacterium tuberculosis"
+],
+"image": false
+},
+"11": {
+"opts": [
+"E. coli, EIEC) 장독소생성대장균(enterotoxigenic",
+"E. coli, ETEC) 장병원성대장균(enteropathogenic",
+"E. coli, EPEC) 장응집성대장균(enteroaggregative",
+"E. coli, EAEC) 장출혈성대장균(enterohemorrhagic",
+"E. coli, EHEC)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"아단위백신(subunit vaccine)",
+"톡소이드 백신(toxoid vaccine)",
+"접합백신(conjugated vaccine)",
+"약독화 생백신(live attenuated vaccine)",
+"불활성화 사백신(killed inactivated vaccine)"
+],
+"image": false
+},
+"13": {
+"opts": [
+"세포 B (B cell)",
+"중성구(neutrophil)",
+"비만세포(mast cell)",
+"큰포식세포(macrophage)",
+"수지상세포(dendritic cell)"
+],
+"image": false
+},
+"14": {
+"opts": [
+"Escherichia coli",
+"Enterococcus faecalis",
+"Pseudomonas aeruginosa viridans group streptococci",
+"",
+"Staphylococcus epidermidis"
+],
+"image": false
+},
+"15": {
+"opts": [
+"중성구(neutrophil)",
+"큰포식세포(macrophage)",
+"자연살해세포(natural killer cell)",
+"항원제시세포(antigen-presenting cell)",
+"사진 항산성 염색 결과 2-1. 사진 세균 배양 결과 2-2. 학년도 기초의학종합평가 교시 2023 (5 ) 3"
+],
+"image": false
+},
+"16": {
+"opts": [
+"사진 ( 3-1)",
+"사진 ( 3-2)",
+"사진 ( 3-3)",
+"사진 ( 3-4)",
+"사진 ( 3-5)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"Chlamydophila psittaci",
+"Neisseria gonorrhoeae",
+"Chlamydia trachomatis",
+"Ureaplasma urealyticum",
+"Mycoplasma pneumoniae"
+],
+"image": false
+},
+"18": {
+"opts": [
+"레지오넬라증(Legionellosis)",
+"렙토스피라증(Leptospirosis)",
+"쯔쯔가무시병(Tsutsugamushi disease)",
+"신증후출혈열(Hemorrhagic fever with",
+"renal syndrome)"
+],
+"image": false
+},
+"19": {
+"opts": [
+"간",
+"고환",
+"비장",
+"갑상샘",
+"상기도"
+],
+"image": false
+},
+"20": {
+"opts": [
+"알코올(alcohol)",
+"트리클로산(triclosan)",
+"요오드포화합물(iodophors)",
+"클로르헥시딘(chlorhexidine)",
+"파라클로로메타자이레놀(parachlorometaxylenol)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"Bordetella pertussis",
+"Klebsiella pneumoniae",
+"Legionella pneumophila",
+"Haemophilus influenzae",
+"Corynebacterium diphtheriae"
+],
+"image": false
+},
+"22": {
+"opts": [
+"Escherichia coli",
+"Vibrio vulnificus",
+"Salmonella Typhi",
+"Shigella dysenteriae",
+"Campylobacter jejuni"
+],
+"image": false
+},
+"23": {
+"opts": [
+"Shigella dysenteriae - Shiga toxin",
+"Escherichia coli - heat-labile enterotoxin",
+"Streptococcus pyogenes - erythrogenic toxin",
+"Campylobacter jejuni - cytolethal distending toxin",
+"Staphylococcus aureus - toxic shock syndrome toxin-1 학년도 기초의학종합평가 교시 2023 (5 ) 4"
+],
+"image": false
+},
+"24": {
+"opts": [
+"수혈",
+"성접촉",
+"곤충 물림",
+"비말 감염",
+"설치류 배설물과의 접촉"
+],
+"image": false
+},
+"25": {
+"opts": [
+"계절성 없이 발생",
+"대변구강 경로로 전파 -",
+"이중가닥 유전자 보유 RNA",
+"주로 영아에서 심한 감염 초래",
+"청소년기에는 가벼운 질환 초래"
+],
+"image": false
+},
+"26": {
+"opts": [
+"형 조력 세포 1 T (Th1 cell)",
+"형 조력 세포 2 T (Th2 cell)",
+"큰포식세포(macrophage)",
+"상피모양세포(epitheloid cell)",
+"세포독성 세포 T (cytotoxic T cell)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"독성효과(toxic effect)",
+"세포자멸사(apoptosis)",
+"공동효과(cavitation effect)",
+"적혈구응집(hemagglutination)",
+"세포병변효과(cytopathic effect)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"세균의 운동성을 증가시킨다.",
+"항체 생성의 주된 면역원이다.",
+"포식세포의 식작용을 회피한다.",
+"외부 유전자를 받아들이는 수용체이다.",
+"고온 환경에서 살아 남기 위한 구조이다."
+],
+"image": false
+},
+"29": {
+"opts": [
+"Measles virus",
+"Coxsackievirus",
+"Epstein-Barr virus",
+"Varicella-zoster virus",
+"Molluscum contagiosum virus"
+],
+"image": false
+},
+"30": {
+"opts": [
+"Candida albicans",
+"Malassezia globosa",
+"Coccidioides immitis",
+"Aspergillus fumigatus",
+"Blastomyces dermatitidis"
+],
+"image": false
+},
+"31": {
+"opts": [
+"Varicella-zoster virus",
+"Human herpesvirus-7",
+"Herpes simplex virus-1",
+"Human cytomegalovirus",
+"학년도 기초의학종합평가 교시 2023 (5 ) 5"
+],
+"image": false
+},
+"32": {
+"opts": [
+"리바비린(ribavirin)",
+"라미부딘(lamivudine)",
+"아시클로버(acyclovir)",
+"소포스부비르(sofosbuvir)",
+"오셀타미비르(oseltamivir)"
+],
+"image": false
+},
+"33": {
+"opts": [
+"Escherichia coli",
+"Proteus vulgaris",
+"Helicobacter pylori",
+"Campylobacter jejuni",
+"Klebsiella pneumoniae"
+],
+"image": false
+},
+"34": {
+"opts": [
+"Escherichia coli",
+"Bacteroides fragilis",
+"Clostridioides difficile",
+"Staphylococcus aureus",
+"Clostridium perfringens"
+],
+"image": false
+},
+"35": {
+"opts": [
+"라임병",
+"렙토스피라증",
+"유행성출혈열",
+"쯔쯔가무시병",
+"교시 5 종료"
+],
+"image": false
+}
+}

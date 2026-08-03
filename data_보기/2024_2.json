@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"의 활성이 증가한다 p16 .",
+"의 활성이 증가한다 CDK1 .",
+"단백질의 인산화가 일어난다 RB .",
+"단백질과 단백질이 결합한다 RB E2F1 .",
+"단백질이 에 결합한다 HDAC cyclin E DNA ."
+],
+"image": false
+},
+"2": {
+"opts": [
+"질량분석기",
+"친화크로마토그래피",
+"효소결합면역흡착측정",
+"SDS-PAGE",
+"Western blot"
+],
+"image": false
+},
+"3": {
+"opts": [
+"ADP",
+"ATP",
+"Citrate",
+"NADH",
+"NADPH"
+],
+"image": false
+},
+"4": {
+"opts": [
+"의 발현 감소 MEK",
+"의 인산화 감소 ERK",
+"의 변이 증가 BRAF V600K",
+"정상 의 발현 증가 BRAF(WT BRAF)",
+"상위 신호전달 단백질 의 발현 감소 RAS"
+],
+"image": false
+},
+"5": {
+"opts": [
+"알부민",
+"인지질",
+"중성지방",
+"지질단백질",
+"철결합글로불린"
+],
+"image": false
+},
+"6": {
+"opts": [
+"Vitamin A",
+"Vitamin B1",
+"Vitamin C",
+"Vitamin D",
+"Vitamin E"
+],
+"image": false
+},
+"7": {
+"opts": [
+"당분해(glycolysis)",
+"지방분해(lipolysis)",
+"케톤생성(ketogenesis)",
+"당원분해(glycogenolysis)",
+"포도당신생성(gluconeogenesis)"
+],
+"image": false
+},
+"8": {
+"opts": [
+"지방산 합성",
+"산화적 스트레스",
+"미생물 포식작용",
+"산화질소 합성 (NO)",
+"스테로이드 호르몬 합성"
+],
+"image": false
+},
+"9": {
+"opts": [
+"연결효소 DNA (DNA ligase)",
+"중합효소 알파 DNA (DNA polymerase )",
+"α 중합효소 감마 DNA (DNA polymerase )",
+"γ 단일가닥 결합 단백질",
+"(single-strand DNA-binding protein) 가해당과정 을 활성할 수 있다 . (glycolysis) . 나시트르산회로 를 활성할 수 있다 . (citric acid cycle) . 다. 산화인산화 를 활성할 수 있다 (oxidative phosphorylation) . 라미토콘드리아의 생성을 촉진할 수 있다 . ATP . 학년도 기초의학종합평가 교시 2024 (2 ) 2"
+],
+"image": false
+},
+"10": {
+"opts": [
+"의 복구 기전이 존재함 DNA",
+"는 이중 나선 구조를 가짐 DNA",
+"복제가 반보존적으로 일어남 DNA",
+"텔로미어 의 길이가 복제시 짧아짐 (telomere)",
+"가 후손으로 전달되는 유전의 핵심 물질임 DNA"
+],
+"image": false
+},
+"11": {
+"opts": [
+"2O) 산소(O",
+"2) 수산기(OH·)",
+"초과산화물(O",
+"2 -) 과산화수소(H",
+"2O2)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"가 분해된다 Acetyl-CoA carboxylase .",
+"활성이 줄어든다 Acetyl-CoA carboxylase .",
+"발현이 증가한다 Acetyl-CoA carboxylase .",
+"가 핵안으로 이동한다 Acetyl-CoA carboxylase .",
+"가 세포막으로 이동한다 Acetyl-CoA carboxylase ."
+],
+"image": false
+},
+"13": {
+"opts": [
+"지방산 합성",
+"지방산 산화",
+"케톤체 합성",
+"케톤체 산화",
+"콜레스테롤 합성"
+],
+"image": false
+},
+"14": {
+"opts": [
+"고리산소화효소 (cycloxygenase)",
+"인지질분해효소 C (phospholipase C)",
+"인지질분해효소 D (phospholipase D)",
+"인지질분해효소 A2 (phospholipase A2)",
+"불포화지방산산화효소 (lipoxygenase)"
+],
+"image": false
+},
+"15": {
+"opts": [
+"두빈존슨 증후군 - (Dubin johnson syndrome)",
+"지연피부포르피린증(porphyria cutanea tarda)",
+"급성간헐포르피린증(acute intermittent porphyria)",
+"선천적혈구형성포르피린증(congenital erythropoietic",
+"prophyria)"
+],
+"image": false
+},
+"16": {
+"opts": [
+"혈청 페리틴 감소 (ferritin)",
+"소적혈구(microcytic RBC)",
+"철결합글로불린 포화도 감소 (transferrin)",
+"총철결합능 감소 (total iron binding capacity)",
+"철결합글로불린 수용체 의 증가 (transferrin receptor)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"혈액 내 산소의 증가",
+"포도당의 해당과정 감소",
+"조직 내 산소의 해리 증가",
+"적혈구 내 산소의 해리 증가",
+"산소와 헤모글로빈의 결합력 증가"
+],
+"image": false
+},
+"18": {
+"opts": [
+"산화질소(nitric oxide)",
+"레티노산(retinoic acid)",
+"에피네프린(epinephrine)",
+"갑상선 호르몬(thyroid hormone)",
+"가 아르지닌 에서 만들어진다 . (arginine) . 나 분비된 세포의 주변에서 작용한다 . . 다 를 활성화하여 의 농도를 높일 . Guanylyl cyclase cGMP 수 있다. 학년도 기초의학종합평가 교시 2024 (2 ) 3"
+],
+"image": false
+},
+"19": {
+"opts": [
+"Aromatase",
+"3-Hydroxylase",
+"11-Hydroxylase",
+"17-Hydroxylase",
+"21-Hydroxylase"
+],
+"image": false
+},
+"20": {
+"opts": [
+"총 분자의 가 생성된다 6 NADH .",
+"총 분자의 8 FADH",
+"2가 생성된다. 베타 산화 와 다른 별도의 산화과정이 필 ( -oxidation)",
+"β 요하다. 이중결합 이전까지 산화과정이 진행되어 총 분자의 4",
+"가 생성된다 acetyl CoA ."
+],
+"image": false
+},
+"21": {
+"opts": [
+"혈액의 pH",
+"젖산의 농도",
+"산소 부분압",
+"1,3-bisphosphoglycerate",
+"2,3-bisphosphoglycerate"
+],
+"image": false
+},
+"22": {
+"opts": [
+"CDK1",
+"cdc20",
+"Securin",
+"Separase",
+"APC(anaphase promoting complex)"
+],
+"image": false
+},
+"23": {
+"opts": [
+"Ghrelin",
+"Insulin",
+"Leptin",
+"PYY(peptide YY)",
+"GLP-1(glucagon-like peptide 1)"
+],
+"image": false
+},
+"24": {
+"opts": [
+"Coenzyme Q",
+"Cytochrome b",
+"Cytochrome c",
+"FMN(Flavin mononucleotide)",
+"FAD(Flavin adenine dinucleotide)"
+],
+"image": false
+},
+"25": {
+"opts": [
+"간에서 인산카바모일 합성효소가 활성화된다.",
+"간에서 글루타민 분해효소의 활성이 감소한다.",
+"근육에서 글루타민 합성효소의 활성이 증가한다.",
+"간에서 오니틴카바모일기 전달효소가 활성화된다.",
+"간에서 알라닌아미노기 전달효소의 합성이 감소한다."
+],
+"image": false
+},
+"26": {
+"opts": [
+"Niacin",
+"Thiamine(vitamin B1)",
+"Riboflavin(vitamin B2)",
+"Pyridoxine(vitamin B6)",
+"Cobalamin(vitamin B12)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"3 PIP",
+"2 DAG",
+"cAMP",
+"cGMP",
+"가 헤모글로빈 농도 참고치 . : 8 g/dL ( , 12-15 g/dL) 나 평균적혈구 용적 . (mean corpuscular volume): 115 fL 참고치 ( , 80-95 fL) 다 적혈구용적률 참고치 . (hematocrit): 29 % ( , 36-44 %) 학년도 기초의학종합평가 교시 2024 (2 ) 4"
+],
+"image": false
+},
+"28": {
+"opts": [
+"카이모트립신(chymotrypsin)",
+"시트르산 분해효소(citrate lyase)",
+"오니틴 탈카복실화효소(ornithine decarboxylase)",
+"파이루브산 탈수소효소(pyruvate dehydrogenase)",
+"아세틸 카복실화효소 -CoA (acetyl-CoA carboxylase)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"타이로신(tyrosine)",
+"페닐젖산(phenyllactate)",
+"페닐아세트산(phenylacetate)",
+"호모시스테인(homocysteine)",
+"페닐파이루브산(phenylpyruvate)"
+],
+"image": false
+},
+"30": {
+"opts": [
+"비타민 A",
+"비타민 C",
+"비타민 D",
+"비타민 E",
+"비타민 K"
+],
+"image": false
+},
+"31": {
+"opts": [
+"간의 글리코젠",
+"근육의 글리코젠",
+"혈액내의 젖산염",
+"지방조직의 중성지방",
+"간에서 합성된 케톤체"
+],
+"image": false
+},
+"32": {
+"opts": [
+"유전체학",
+"전사체학",
+"단백체학",
+"대사체학",
+"신호전달체학"
+],
+"image": false
+},
+"33": {
+"opts": [
+"항정상태(steady state)",
+"구획화(compartmentation)",
+"단백질 전환(protein turnover)",
+"속도제한단계 - (rate-limiting step)",
+"다른자리 조절(allosteric regulation)"
+],
+"image": false
+},
+"34": {
+"opts": [
+"NAD",
+"FAD",
+"바이오틴",
+"카르니틴",
+"Coenzyme A"
+],
+"image": false
+},
+"35": {
+"opts": [
+"석시닐CoA",
+"호모시스테인",
+"프로피오닐CoA",
+"알파케토글루타르산 -",
+"교시 2 종료 가신생아 . 나광범위항생제 사용 . 다만성 소장 질환 . 라소장 절제술 . 가 헴 합성의 기질이다 . . 나 시트르산 회로에서 를 생성한다 . GTP . 다 메티오닌에서 합성될 수 있다 . ."
+],
+"image": false
+}
+}

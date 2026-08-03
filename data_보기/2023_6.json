@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"sulfotransferase",
+"cytochrome P450",
+"",
+"N-acetyltransferase thiopurine methyltransferase",
+"UDP-glucuronosyltransferase"
+],
+"image": false
+},
+"2": {
+"opts": [
+"의 청소율이 보다 높다 A B .",
+"의 분포용적이 보다 크다 A B .",
+"의 소화관 흡수율이 보다 낮다 A B .",
+"의 혈장 단백 결합률이 보다 낮다 A B .",
+"의 차 통과 효과 가 보다 작다 A 1 (first-pass effect) B ."
+],
+"image": false
+},
+"3": {
+"opts": [
+"수용체 길항제 opioid",
+"세로토닌 수용체 작동제",
+"도파민 D",
+"2 수용체 길항제 아드레날린",
+"β2 수용체 작동제"
+],
+"image": false
+},
+"4": {
+"opts": [
+"분포 용적은 이다 10 L .",
+"반감기는 시간이다 3.5 .",
+"생체이용률은 이다 50% .",
+"청소율은 약 이다 3.5 L/h .",
+"제거속도 상수는 이다 0.5/h ."
+],
+"image": false
+},
+"5": {
+"opts": [
+"완전 작동제(full agonist)",
+"부분 작동제(partial agonist)",
+"자율신경절 차단제(ganglion blocker)",
+"경쟁적 길항제(competitive antagonist)",
+"비경쟁적 길항제(noncompetitive antagonist)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"경구투여",
+"경피패치",
+"피하주사",
+"정맥내주사",
+"근육내주사"
+],
+"image": false
+},
+"7": {
+"opts": [
+"약물상호작용",
+"세포면역형 반응",
+"지연형 과민반응",
+"아나필락시스 반응",
+"면역복합체형 반응"
+],
+"image": false
+},
+"8": {
+"opts": [
+"전임상시험",
+"제상 임상시험 1",
+"제상 임상시험 2",
+"제상 임상시험 3",
+"제상 임상시험 4"
+],
+"image": false
+},
+"9": {
+"opts": [
+"iodide",
+"lithium",
+"amiodarone",
+"methimazole",
+"levothyroxine"
+],
+"image": false
+},
+"10": {
+"opts": [
+"2 수용체 히스타민 H",
+"2 수용체 아드레날린",
+"α1 수용체 아세틸콜린 M",
+"2 수용체 세로토닌 5-HT",
+"2 수용체 학년도 기초의학종합평가 교시 2023 (6 ) 2"
+],
+"image": false
+},
+"11": {
+"opts": [
+"α1 수용체 아드레날린",
+"α2 수용체 아드레날린",
+"β1 수용체 아드레날린",
+"β2 수용체 아드레날린",
+"β3 수용체"
+],
+"image": false
+},
+"12": {
+"opts": [
+"기관지 수축",
+"지방분해 촉진",
+"당원분해 촉진",
+"중추신경 매개 반사성 혈관 수축",
+"매개 혈관이완 억제 nitric oxide"
+],
+"image": false
+},
+"13": {
+"opts": [
+"2",
+"3",
+"4",
+"5",
+"6"
+],
+"image": false
+},
+"14": {
+"opts": [
+"mannitol",
+"furosemide",
+"acetazolamide",
+"spironolactone",
+"hydrochlorothiazide"
+],
+"image": false
+},
+"15": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"16": {
+"opts": [
+"억제 5 -reductase",
+"α 무스카린 M",
+"3 수용체 차단 아드레날린",
+"α1 수용체 차단 아드레날린",
+"β2 수용체 차단 억제 phosphodiesterase-5"
+],
+"image": false
+},
+"17": {
+"opts": [
+"억제 cytochrome P450 2E1",
+"활성화 cytochrome P450 2E1",
+"억제 alcohol dehydrogenase",
+"억제 aldehyde dehydrogenase",
+"활성화 aldehyde dehydrogenase"
+],
+"image": false
+},
+"18": {
+"opts": [
+"α 안드로겐 수용체 길항제",
+"억제제 HMG-CoA reductase",
+"아드레날린",
+"α1 수용체 길항제 억제제 phosphodiesterase-5",
+"참고사항 Handerson-Hasselbalch equation: pKa = pH + log([HA]/[A-]) 학년도 기초의학종합평가 교시 2023 (6 ) 3"
+],
+"image": false
+},
+"19": {
+"opts": [
+"도파민",
+"히스타민",
+"세로토닌",
+"아세틸콜린",
+"글루타메이트"
+],
+"image": false
+},
+"20": {
+"opts": [
+"유사체 prostaglandin",
+"억제제 cyclooxygenase 2",
+"히스타민 H",
+"2 수용체 길항제 무스카린 M",
+"3 수용체 길항제"
+],
+"image": false
+},
+"21": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"22": {
+"opts": [
+"aspirin",
+"vitamine K",
+"1 streptokinase",
+"protamine sulfate",
+"aminocaproic acid"
+],
+"image": false
+},
+"23": {
+"opts": [
+"rifampin",
+"penicillin",
+"quinolone",
+"vancomycin",
+"erythromycin"
+],
+"image": false
+},
+"24": {
+"opts": [
+"혈당",
+"간효소",
+"총빌리루빈",
+"크레아티닌",
+"헤모글로빈"
+],
+"image": false
+},
+"25": {
+"opts": [
+"칼슘 통로 차단제",
+"안지오텐신 전환효소 억제제",
+"아드레날린 수용체 길항제",
+"α 아드레날린 수용체 길항제",
+"β"
+],
+"image": false
+},
+"26": {
+"opts": [
+"선조체 에서 도파민 유리 증가 (striatum)",
+"선조체 에서 도파민 수용체 차단 (striatum)",
+"말초 조직에서 효소 활성 감소 decarboxylase",
+"대뇌피질",
+"(cerebral cortex)에서 도파민 수용체 합성 증가"
+],
+"image": false
+},
+"27": {
+"opts": [
+"칼슘 펌프 억제",
+"소디움 펌프 억제",
+"칼슘 이온 통로 활성 증가",
+"소디움 이온 통로 활성 증가",
+"포타슘 이온 통로 활성 증가"
+],
+"image": false
+},
+"28": {
+"opts": [
+"β 억제 dipeptidyl peptidase-4 (DPP-4)",
+"간근육 및 지방조직에서 활성화 , PPAR-",
+"γ 수용체 활성화 glucagon-like peptide 1 (GLP1)",
+"간근육 및 지방조직에서 , AMP-dependent protein",
+"활성화 kinase (AMPK) 학년도 기초의학종합평가 교시 2023 (6 ) 4"
+],
+"image": false
+},
+"29": {
+"opts": [
+"서맥",
+"야뇨",
+"졸음",
+"저혈당",
+"호흡 곤란"
+],
+"image": false
+},
+"30": {
+"opts": [
+"meclizine",
+"ipratropium",
+"scopolamine",
+"dimenhydrinate",
+"chlorpheniramine"
+],
+"image": false
+},
+"31": {
+"opts": [
+"후광 효과 (halo)",
+"천장 효과 (ceiling)",
+"위약 효과 (placebo)",
+"차폐 효과 (masking)",
+"공명 효과 (resonance)"
+],
+"image": false
+},
+"32": {
+"opts": [
+"(oil/gas) λ (blood/gas) λ A 1.4 0.47 B 19 0.45 C 65 12 D 98 1.8 E 224 2.3 A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"33": {
+"opts": [
+"바이러스 배출 억제",
+"바이러스 합성 억제 DNA",
+"바이러스 합성 억제 RNA",
+"바이러스 억제 protease",
+"바이러스 부착과 진입 억제"
+],
+"image": false
+},
+"34": {
+"opts": [
+"niacin",
+"colestipol",
+"ezetimibe",
+"gemfibrozil",
+"simvastatin"
+],
+"image": false
+},
+"35": {
+"opts": [
+"암세포의 항암제 배출 중가",
+"항암제 활성화 감소 prodrug",
+"항암제 표적 단백질 변형 증가",
+"항암제를 비활성화하는 효소 증가",
+"교시 6 종료 총 콜레스테롤 정상치 260 mg/dL ( <200) 콜레스테롤 정상치 LDL- 170 mg/dL ( <100) 콜레스테롤 정상치 HDL- 50 mg/dL ( >40) 중성지방 정상치 140 mg/dL ( <150)"
+],
+"image": false
+}
+}

@@ -1,0 +1,332 @@
+{
+"1": {
+"opts": [
+"불일치(mismatch)",
+"무염기 자리(abasic site)",
+"DNA 부가물(DNA adduct)",
+"티민 이합체(thymine dimer)",
+"이중가닥 절단(double-strand break)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"포스파티딜세린(phosphatidylserine)",
+"포스파티딜콜린(phosphatidylcholine)",
+"포스파티딜글리세롤(phosphatidylglycerol)",
+"혈소판 활성 인자(platelet activating factor)",
+"포스파티딜에탄올라민(phosphatidylethanolamine)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"제2형 당뇨병과 함께 제1형 당뇨병이 공존하고 있음 을 나타낸다.",
+"제2형 당뇨병의 경과가 좋지 않아 미세 혈관에 합병 증이 발생하고 있다.",
+"치료에도 불구하고 혈당 조절에 실패하여 2~3개월간 혈당의 수치가 높았다.",
+"당뇨병의 악화로 당화혈색소를 만드는 효소가 과도하 게 분비되었음을 나타낸다.",
+"헤모글로빈 단백질의 베타 사슬(beta chain)에 유전적 으로 당뇨병에 걸리기 쉬운 변이가 있다."
+],
+"image": false
+},
+"4": {
+"opts": [
+"해당작용(glycolysis)",
+"시트르산 회로(citric acid cycle)",
+"글리코겐 합성(glycogen synthesis)",
+"핵소사민 경로(hexosamine pathway)",
+"인산오탄당 경로(pentose phosphate pathway)"
+],
+"image": false
+},
+"5": {
+"opts": [
+"알캅톤뇨증(alkaptonuria)",
+"리증후군(Leigh syndrome)",
+"페닐케톤뇨증(phenylketonuria)",
+"호모시스테인뇨증(homocystinuria)",
+"단풍당밀뇨증(maple syrup urine disease)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"복합체 I(complex I)",
+"복합체 II(complex II)",
+"복합체 III(complex III)",
+"복합체 IV(complex IV)",
+"ATP 합성효소(ATP synthase)"
+],
+"image": false
+},
+"7": {
+"opts": [
+"트로포닌(troponin)",
+"마이오제닌(myogenin)",
+"카디오리핀(cardiolipin)",
+"크레아틴 인산화효소(creatine kinase)",
+"젖산 탈수소효소(lactate dehydrogenase)"
+],
+"image": false
+},
+"8": {
+"opts": [
+"렙틴(leptin)",
+"그렐린(ghrelin)",
+"인크레틴(incretin)",
+"아디포넥틴(adiponectin)",
+"혈관작용장펩티드(vasoactive intestinal peptide) 당화혈색소(HbA1c) 8% (참고치, <6.5) 2022학년도 기초의학종합평가 (2교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"단백질 분해",
+"mRNA 분해",
+"전사(transcription) 억제",
+"RNA 잘라이음(splicing)",
+"염색체 조직화(chromosome organization)"
+],
+"image": false
+},
+"10": {
+"opts": [
+"HMG-CoA",
+"젖산(lactate)",
+"파이루브산(pyruvate)",
+"아세틸 CoA(acetyl CoA)",
+"아세토아세트산(acetoacetate)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"트롬복산(thromboxane) A2",
+"류코트라이엔(leukotriene) B4",
+"류코트라이엔(leukotriene) E4",
+"프로스타글란딘(prostaglandin) E2",
+"프로스타글란딘(prostaglandin) F2α"
+],
+"image": false
+},
+"12": {
+"opts": [
+"젖산 탈수소효소(lactate dehydrogenase)가 알코올 분 해에 이용되기 때문",
+"알코올을 분해하는 효소로 인해 세포질의 NAD+/NADH 비율이 감소하기 때문",
+"알코올 분해로 생성된 아세트산(acetic acid)으로 인해 세포 내 pH가 감소하기 때문",
+"알코올이 글루카곤의 작용을 억제하여 포도당신합성 에 필요한 효소가 부족해지기 때문",
+"알코올 분해로 생성된 아세트알데히드(acetaldehyde) 가 포도당신합성 경로 효소를 억제하기 때문"
+],
+"image": false
+},
+"13": {
+"opts": [
+"cAMP",
+"시트룰린(citrulline)",
+"N-아세틸 글루탐산(N-acetyl glutamate)",
+"N-아세틸 글루코사민(N-acetyl glucosamine)",
+"N-아세틸 갈락토사민(N-acetyl galactosamine)"
+],
+"image": false
+},
+"14": {
+"opts": [
+"글리세롤 인산화효소(glycerol kinase)",
+"HMG CoA 합성효소(HMG CoA synthase)",
+"아세틸 CoA 카복실화효소(acetyl CoA carboxylase)",
+"카르니틴 팔미토일전이효소 I(carnitine palmitoyltransferase I)",
+"3-인산 글리세롤 탈수소효소(glycerol 3-phosphate dehydrogenase)"
+],
+"image": false
+},
+"15": {
+"opts": [
+"저체중",
+"정상체중",
+"과체중",
+"비만",
+"고도비만"
+],
+"image": false
+},
+"16": {
+"opts": [
+"글리코겐 가인산분해효소(glycogen phosphorylase)",
+"글리코겐 합성효소 인산화효소(glycogen synthase kinase)",
+"1-인산포도당 인산분해효소(glucose-1 phosphatase)",
+"6-인산포도당 인산분해효소(glucose-6 phosphatase)",
+"가인산분해효소 인산화효소(phosphorylase kinase)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"기질 농도의 증가",
+"효소 농도의 감소",
+"비경쟁억제제의 추가",
+"경쟁억제제 농도의 증가",
+"물을 추가하여 효소-억제제 복합체의 농도 감소 A. 케톤체 합성에 필요한 전구체이다. B. 콜레스테롤 합성에 필요한 전구체이다. C. 시트르산 회로로 들어가는 대사체이다. 2022학년도 기초의학종합평가 (2교시) 3"
+],
+"image": false
+},
+"18": {
+"opts": [
+"해당작용의 활성이 증가한다.",
+"아미노산 분해의 활성이 감소한다.",
+"인산오탄당 경로의 활성이 감소한다.",
+"저밀도지질단백질(LDL)의 분비가 증가한다.",
+"포도당수송체(GLUT2)의 세포막으로의 이동이 증가한다."
+],
+"image": false
+},
+"19": {
+"opts": [
+"전기(prophase)",
+"중기(metaphase)",
+"후기(anaphase)",
+"말기(telophase)",
+"전중기(prometaphase)"
+],
+"image": false
+},
+"20": {
+"opts": [
+"pH",
+"나트륨(Na+)",
+"인슐린(Insulin)",
+"중탄산염(HCO3 -)",
+"베타-하이드록시부티르산(β-hydroxybutyrate)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"리놀레산(linoleic acid)",
+"팔미트산(palmitic acid)",
+"스테아르산(stearic acid)",
+"미리스트산(myristic acid)",
+"아라키돈산(arachidonic acid)"
+],
+"image": false
+},
+"22": {
+"opts": [
+"젖산(lactate)",
+"포도당(glucose)",
+"케톤체(ketone body)",
+"중성지방(triacylglycerol)",
+"유리지방산(free fatty acid)"
+],
+"image": false
+},
+"23": {
+"opts": [
+"간",
+"뇌",
+"근육",
+"신장",
+"지방"
+],
+"image": false
+},
+"24": {
+"opts": [
+"지방산",
+"포도당",
+"글리세롤",
+"아미노산",
+"크레아틴인산"
+],
+"image": false
+},
+"26": {
+"opts": [
+"단백질 인산화효소 A(protein kinase A)",
+"단백질 인산화효소 B(protein kinase B)",
+"단백질 인산화효소 C(protein kinase C)",
+"단백질 인산화효소 D(protein kinase D)",
+"단백질 인산화효소 G(protein kinase G) A. 글리코겐을 저장하지 않는다. B. 평상시 우리 몸에 필요한 산소의 20%를 소모한다. C. 에너지원으로 평상시에는 포도당을 사용하고, 장기간 의 금식 시에는 케톤체를 사용한다 빈혈의 원인 결핍 영양소 ① 철결핍빈혈 철 ② 용혈빈혈 엽산 ③ 거대적혈모구빈혈 엽산 ④ 악성빈혈 비타민 B12 ⑤ 재생불량성빈혈 비타민 B12 2022학년도 기초의학종합평가 (2교시) 4"
+],
+"image": false
+},
+"28": {
+"opts": [
+"미셀(micelle)",
+"이중층(bilayer)",
+"리포좀(liposome)",
+"지질 콜로이드(lipid colloid)",
+"지질 나노입자(lipid nanoparticle)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"콜레스테롤(cholesterol)",
+"스핑고미엘린(sphingomyelin)",
+"프로스타글란딘(prostaglandin)",
+"포스파티딜세린(phosphatidylserine)",
+"포스파티딜콜린(phosphatidylcholine)"
+],
+"image": false
+},
+"30": {
+"opts": [
+"RNA 분해",
+"5’-cap 형성",
+"3’-poly A 형성",
+"RNA 편집(editing)",
+"RNA 잘라이음(splicing)"
+],
+"image": false
+},
+"31": {
+"opts": [
+"Gain-of-function 돌연변이다.",
+"Gαs 단량체의 GTPase 활성을 감소시킨다.",
+"PTH에 대한 반응으로 IP3 생성이 증가하지 않는다.",
+"PTH에 대한 반응으로 PIP2 생성이 증가하지 않는다.",
+"PTH에 대한 반응으로 cAMP 생성이 증가하지 않는다."
+],
+"image": false
+},
+"32": {
+"opts": [
+"securin",
+"perforin",
+"aquaporin",
+"F0F1 ATPase",
+"uncoupling protein 1"
+],
+"image": false
+},
+"33": {
+"opts": [
+"등전점",
+"분자구조",
+"소수성 지수",
+"번역 후 변형",
+"아미노산 서열"
+],
+"image": false
+},
+"34": {
+"opts": [
+"시트르산(citrate)",
+"석신산(succinate)",
+"아이소시트르산(isocitrate)",
+"옥살아세트산(oxaloacetate)",
+"알파케토글루타르산(alpha-ketoglutarate)"
+],
+"image": false
+},
+"35": {
+"opts": [
+"세포막 LDL 수용체 증가",
+"세포막 LDL 수용체 감소",
+"아세틸 CoA 카복실화 효소 활성 증가",
+"아세틸 CoA 카복실화 효소 활성 감소",
+"아실 CoA:콜레스테롤 아실기전달효소 활성 증가 2,3-BPG에 대한 친화력 산소에 대한 친화력 ① 증가 감소 ② 증가 증가 ③ 감소 증가 ④ 감소 감소 ⑤ 변화 없음 변화 없음 A. 세포막의 구성성분이다. B. 탄소수 6개 또는 5개로 이루어진 고리 4개가 있다. C. 극성을 가진 히드록실기(hydroxyl group)가 있다. D. 비극성인 알킬 곁사슬(alkyl side chain)이 있다. A. 갈색지방조직에 존재한다. B. 미토콘드리아 내막에 구멍을 낸다. C. 저온 상태에서 체온을 유지하게 한다."
+],
+"image": false
+}
+}

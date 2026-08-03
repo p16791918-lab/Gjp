@@ -33,10 +33,11 @@
       "year": 2023,
       "period": 5,
       "num": 3,
-      "ans": 5,
+      "ans": 4,
       "subject": "미생물학",
-      "topic": "불현(유산)감염",
+      "topic": "감염 형태(이상 문항)",
       "keywords": [
+        "잠복감염",
         "불현감염",
         "abortive"
       ],

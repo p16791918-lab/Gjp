@@ -1,0 +1,602 @@
+{
+"1": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"2": {
+"opts": [
+"①",
+"②",
+"③",
+"④",
+"⑤"
+],
+"image": true
+},
+"3": {
+"opts": [
+"가",
+"나",
+"다",
+"라",
+"마"
+],
+"image": true
+},
+"4": {
+"opts": [
+"승모판막",
+"삼첨판막",
+"대동맥판막",
+"허파동맥판막",
+"심장정맥굴판막"
+],
+"image": false
+},
+"5": {
+"opts": [
+"노신경",
+"자신경",
+"정중신경",
+"겨드랑신경",
+"근육피부신경"
+],
+"image": false
+},
+"6": {
+"opts": [
+"1",
+"2",
+"3",
+"4",
+"5"
+],
+"image": false
+},
+"7": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"8": {
+"opts": [
+"대뇌낫(falx cerebri)",
+"소뇌낫(falx cerebelli)",
+"소뇌천막(tentorium cerebelli)",
+"안장가로막(diaphragma sellae)",
+"치아인대(denticulate ligament) 2025학년도 기초의학종합평가 (1교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"으뜸세포(chief cell)",
+"벽세포(parietal cell)",
+"목점액세포(mucous neck cell)",
+"장내분비세포(enteroendocrine cell)",
+"장크롬친화세포(enterochromaffin cell)"
+],
+"image": false
+},
+"10": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"11": {
+"opts": [
+"망막(retina)",
+"표피(epidermis)",
+"심장막(pericardium)",
+"부신속질(adrenal medulla)",
+"속귀 막미로(membranous labyrinth)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"1",
+"2",
+"3",
+"4",
+"5"
+],
+"image": false
+},
+"13": {
+"opts": [
+"중심정맥(central vein)",
+"지라정맥(splenic vein)",
+"식도정맥(esophageal vein)",
+"아래곧창자정맥(inferior rectal vein)",
+"위창자간막정맥(superior mesenteric vein)"
+],
+"image": false
+},
+"14": {
+"opts": [
+"Leydig cell",
+"Myoid cell",
+"Primary spermatocyte",
+"Sertoli cell",
+"Spermatid"
+],
+"image": false
+},
+"15": {
+"opts": [
+"난소동맥(ovarian artery)",
+"바깥엉덩동맥(external iliac artery)",
+"속음부동맥(internal pudendal artery)",
+"위창자간막동맥(superior mesenteric artery)",
+"아래창자간막동맥(inferior mesenteric artery)"
+],
+"image": false
+},
+"16": {
+"opts": [
+"모음",
+"벌림",
+"굽힘",
+"안쪽돌림",
+"바깥돌림 2025학년도 기초의학종합평가 (1교시) 3"
+],
+"image": false
+},
+"17": {
+"opts": [
+"도파민(dopamin)",
+"프로락틴(prolactin)",
+"난포자극호르몬(FSH)",
+"갑상샘자극호르몬(TSH)",
+"부신겉질자극호르몬(ACTH)"
+],
+"image": false
+},
+"18": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"19": {
+"opts": [
+"좁은 척추관",
+"적은 척수액 양",
+"골화가 덜 된 척추뼈",
+"조밀한 척수신경뿌리",
+"척수원뿔의 낮은 위치"
+],
+"image": false
+},
+"20": {
+"opts": [
+"엉덩관절(hip joint)",
+"팔꿉관절(elbow joint)",
+"어깨관절(shoulder joint)",
+"복장빗장관절(sternoclavicular joint)",
+"몸쪽노자관절(proximal radioulnar joint)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"일곱째목뼈-첫째등뼈",
+"둘째-셋째등뼈",
+"넷째-다섯째등뼈",
+"여섯째-일곱째등뼈",
+"여덟째-아홉째등뼈"
+],
+"image": false
+},
+"22": {
+"opts": [
+"겨드랑",
+"젖꼭지",
+"명치부위",
+"배꼽부위",
+"두덩부위"
+],
+"image": false
+},
+"23": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"24": {
+"opts": [
+"목분절",
+"가슴분절",
+"허리분절",
+"엉치분절",
+"꼬리분절 2025학년도 기초의학종합평가 (1교시) 4"
+],
+"image": false
+},
+"25": {
+"opts": [
+"골반",
+"왼쪽 팔",
+"왼쪽 다리",
+"오른쪽 팔",
+"오른쪽 다리"
+],
+"image": false
+},
+"26": {
+"opts": [
+"곧은혈관(vasa recta)",
+"집합관(collecting duct)",
+"교감신경섬유(sympathetic nerve fiber)",
+"토리쪽곱슬세관(proximal convoluted tubule)",
+"헨레고리 가는부분(thin limb of Henle`s loop)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"(1)",
+"(2)",
+"(3)",
+"(4)",
+"(5)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"복강동맥",
+"속엉덩동맥",
+"바깥엉덩동맥",
+"위창자간막동맥",
+"아래창자간막동맥"
+],
+"image": false
+},
+"29": {
+"opts": [
+"기관(trachea)",
+"대동맥활(aortic arch)",
+"반홀정맥(hemiazygos vein)",
+"팔머리정맥(brachiocephalic vein)",
+"왼온목동맥(left common carotid artery)"
+],
+"image": false
+},
+"30": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"31": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"32": {
+"opts": [
+"왼쪽 귀밑샘염",
+"오른쪽 귀밑샘염",
+"오른쪽 대상포진",
+"왼쪽 중간대뇌동맥 경색증",
+"오른쪽 중간대뇌동맥 경색증 2025학년도 기초의학종합평가 (1교시) 5"
+],
+"image": false
+},
+"33": {
+"opts": [
+"감각언어 장애",
+"같은쪽 시야 결손",
+"반대쪽 시야 결손",
+"같은쪽 얼굴 및 사지의 수의운동 장애",
+"반대쪽 얼굴 및 사지의 수의운동 장애"
+],
+"image": false
+},
+"34": {
+"opts": [
+"얼굴신경(facial nerve)",
+"미주신경(vagus nerve)",
+"삼차신경(trigeminal nerve)",
+"혀밑신경(hypoglossal nerve)",
+"혀인두신경(glossopharyngeal nerve)"
+],
+"image": false
+},
+"35": {
+"opts": [
+"기관(trachea)",
+"엽기관지(lobar bronchus)",
+"구역기관지(segmental bronchus)",
+"호흡세기관지(respiratory bronchiole)",
+"허파꽈리관(alveolar duct)"
+],
+"image": false
+},
+"36": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"37": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"38": {
+"opts": [
+"미주신경(vagus nerve)",
+"더부신경(accessory nerve)",
+"목신경고리(ansa cervicalis)",
+"등쪽어깨신경(dorsal scapular nerve)",
+"가로목신경(transverse cervical nerve)"
+],
+"image": false
+},
+"39": {
+"opts": [
+"음부신경(pudendal nerve)에 의해 지배됨",
+"신경분포는 배변 시 바깥항문조임근에 관여함",
+"통증에 민감하여, 수술 시 충분한 마취가 필요함",
+"내장감각신경이 주로 분포하며, 통증에는 민감하지 않음",
+"아래곧창자동맥(inferior rectal artery)에서 혈액을 공 급받음"
+],
+"image": false
+},
+"40": {
+"opts": [
+"무릎힘줄(patellar tendon)",
+"안쪽반달(medial meniscus)",
+"가쪽곁인대(lateral collateral ligament)",
+"앞십자인대(anterior cruciate ligament)",
+"뒤십자인대(posterior cruciate ligament) 2025학년도 기초의학종합평가 (1교시) 6"
+],
+"image": false
+},
+"41": {
+"opts": [
+"자궁간막(mesometrium)",
+"자궁관간막(mesosalpinx)",
+"기본인대(cardinal ligament)",
+"자궁원인대(round ligament of uterus)",
+"넓은자궁인대(broad ligament of uterus)"
+],
+"image": false
+},
+"42": {
+"opts": [
+"5-10 μm",
+"15-20 μm",
+"25-30 μm",
+"35-40 μm",
+"45-50 μm"
+],
+"image": false
+},
+"43": {
+"opts": [
+"활발한 ATP 생산",
+"활발한 단백질 합성",
+"높은 칼슘이온 농도",
+"활발한 세포 소화 작용",
+"활발한 세포 운동 작용"
+],
+"image": false
+},
+"44": {
+"opts": [
+"배뇨근(detrusor muscle)",
+"방광삼각(vesical trigone)",
+"두덩요도근(pubourethral muscle)",
+"속요도조임근(internal urethral sphincter)",
+"바깥요도조임근(external urethral sphincter)"
+],
+"image": false
+},
+"45": {
+"opts": [
+"별아교세포(astrocyte)",
+"위성세포(satellite cell)",
+"미세아교세포(microglia)",
+"뇌실막세포(ependymal cell)",
+"희소돌기아교세포(oligodendrocyte)"
+],
+"image": false
+},
+"46": {
+"opts": [
+"해면뼈(spongy bone)",
+"치밀뼈(compact bone)",
+"탄력연골(elastic cartilage)",
+"섬유연골(fibrous cartilage)",
+"유리연골(hyaline cartilage)"
+],
+"image": false
+},
+"47": {
+"opts": [
+"성대근(vocalis muscle)",
+"갑상목뿔근(thyrohyoid muscle)",
+"반지갑상근(cricothyroid muscle)",
+"복장목뿔근(sternohyoid muscle)",
+"복장갑상근(sternothyroid muscle)"
+],
+"image": false
+},
+"48": {
+"opts": [
+"맥락얼기(choroid plexus)",
+"정중구멍(median aperture)",
+"거미막과립(arachnoid granulation)",
+"뇌실사이구멍(interventricular foramen)",
+"중간뇌수도관(mesencephalic aqueduct)"
+],
+"image": false
+},
+"49": {
+"opts": [
+"궁둥구멍근(piriformis muscle)",
+"넓적다리빗근(sartorius muscle)",
+"큰볼기근(gluteus maximus muscle)",
+"중간볼기근(gluteus medius muscle)",
+"넓적다리네갈래근(quadriceps femoris muscle) 2025학년도 기초의학종합평가 (1교시) 7"
+],
+"image": false
+},
+"50": {
+"opts": [
+"(사진 29-1)",
+"(사진 29-2)",
+"(사진 29-3)",
+"(사진 29-4)",
+"(사진 29-5)"
+],
+"image": false
+},
+"51": {
+"opts": [
+"뇌",
+"근육",
+"심장",
+"콩팥",
+"허파"
+],
+"image": false
+},
+"52": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"53": {
+"opts": [
+"Selectin",
+"Spectrin",
+"Aquaporin 1",
+"Duffy antigen",
+"Glycophorin A"
+],
+"image": false
+},
+"54": {
+"opts": [
+"털주머니(hair follicle)",
+"털세움근(arrector pili)",
+"피부기름샘(sebaceous gland)",
+"에크린땀샘(eccrine sweat gland)",
+"아포크린땀샘(apocrine sweat gland)"
+],
+"image": false
+},
+"55": {
+"opts": [
+"속목동맥(internal carotid artery)",
+"앞대뇌동맥(anterior cerebral artery)",
+"중간대뇌동맥(middle cerebral artery)",
+"뒤대뇌동맥(posterior cerebral artery)",
+"뒤교통동맥(posterior communicating artery)"
+],
+"image": false
+},
+"56": {
+"opts": [
+"헨레고리(loop of Henle)",
+"사구체주머니(glomerular capsule)",
+"먼쪽곱슬세관(distal convoluted tubule)",
+"사구체옆장치(juxtaglomerular apparatus)",
+"토리쪽곱슬세관(proximal convoluted tubule)"
+],
+"image": false
+},
+"57": {
+"opts": [
+"발생 1~2주차",
+"발생 4~8주차",
+"발생 9~13주차",
+"발생 14~27주차",
+"발생 28~40주차 2025학년도 기초의학종합평가 (1교시) 8"
+],
+"image": false
+},
+"58": {
+"opts": [
+"a",
+"b",
+"c",
+"d",
+"e"
+],
+"image": false
+},
+"59": {
+"opts": [
+"발등굽힘(dorsiflexion)",
+"발 가쪽번짐(eversion)",
+"엄지발가락 굽힘(flexion)",
+"둘째-다섯째발가락 굽힘(flexion)",
+"둘째-다섯째발가락 벌림(abduction)"
+],
+"image": false
+},
+"60": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E 1교시 종료"
+],
+"image": true
+}
+}

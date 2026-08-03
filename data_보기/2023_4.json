@@ -1,0 +1,602 @@
+{
+"1": {
+"opts": [
+"악성중피종",
+"전이샘암종",
+"원발폐샘암종",
+"신경내분비종양",
+"편평상피세포암종"
+],
+"image": false
+},
+"2": {
+"opts": [
+"RB1",
+"MYC",
+"MEN1",
+"EGFR",
+"STK11"
+],
+"image": false
+},
+"3": {
+"opts": [
+"초승달(crescent)",
+"돌기 형성(spike formation)",
+"섬유소모양 괴사(fibrionoid necrosis)",
+"사구체 기저막 이중화(double contour)",
+"메산지움 증식(mesangial proliferation)"
+],
+"image": false
+},
+"4": {
+"opts": [
+"ATM",
+"BRCA1",
+"CDH1",
+"NF1",
+"WT1"
+],
+"image": false
+},
+"5": {
+"opts": [
+"결핵",
+"과민폐렴증",
+"사코이드증",
+"악성림프종",
+"크립토코쿠스증"
+],
+"image": false
+},
+"6": {
+"opts": [
+"기형종(teratoma)",
+"과오종(hamartoma)",
+"이소종(choristoma)",
+"혼합종(mixed tumor)",
+"과증식성 용종(hyperplastic polyp)"
+],
+"image": false
+},
+"7": {
+"opts": [
+"유암종",
+"편평상피유두종",
+"비정형샘종증식",
+"편평상피세포이형성",
+"특발성 폐 신경내분비세포증식증"
+],
+"image": false
+},
+"8": {
+"opts": [
+"CA-19-9",
+"칼시토닌",
+"알파태아단백",
+"태아성암항원",
+"학년도 기초의학종합평가 교시 2023 (4 ) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"궤양",
+"고름염증",
+"장액염증",
+"섬유소염증",
+"유리질염증"
+],
+"image": false
+},
+"10": {
+"opts": [
+"사진 ( 8-1)",
+"사진 ( 8-2)",
+"사진 ( 8-3)",
+"사진 ( 8-4)",
+"사진 ( 8-5)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"림프구",
+"점막상피세포",
+"간질세포 Cajal",
+"민무늬근육세포",
+"신경내분비세포"
+],
+"image": false
+},
+"12": {
+"opts": [
+"당원 (Glycogen)",
+"아밀로이드 (Amyloid)",
+"중성지방 (Triglyceride)",
+"지방갈색소 (Lipofuscin)",
+"콜레스테롤 (Cholesterol)"
+],
+"image": false
+},
+"13": {
+"opts": [
+"손상된 복구 기능 상실 DNA",
+"종양 개시제 에 의한 돌연변이 (tumor initiators)",
+"종양 촉진제 에 의한 종양세포 증식 (tumor promoters)",
+"전위 에 의한 종양유전자 의 (translocation) (oncogene)",
+"변이"
+],
+"image": false
+},
+"14": {
+"opts": [
+"ALK",
+"BRAF",
+"KRAS",
+"MYC",
+"TP53"
+],
+"image": false
+},
+"15": {
+"opts": [
+"KIT",
+"MET",
+"VHL",
+"TFE3",
+"TSC1"
+],
+"image": false
+},
+"16": {
+"opts": [
+"부종",
+"색전",
+"울혈",
+"충혈",
+"식도정맥류 치핵 메두사머리 학년도 기초의학종합평가 교시 2023 (4 ) 3"
+],
+"image": false
+},
+"17": {
+"opts": [
+"골수색전증 (Bone marrow embolism)",
+"동정맥기형 (Arteriovenous malformation)",
+"혈관 내피세포 활성화 (Endothelial activation)",
+"파종성 혈관내 응고증 (Disseminated intravascular",
+"coagulation)"
+],
+"image": false
+},
+"18": {
+"opts": [
+"칸디다증(Candidiasis)",
+"분아균증(Blastomycosis)",
+"아스페르길루스증(Aspergillosis)",
+"히스토플라즈마증(Histoplasmosis)",
+"콕시디오이데스 진균증(Coccidioidomycosis)"
+],
+"image": false
+},
+"19": {
+"opts": [
+"내강형 A",
+"내강형 B",
+"삼중음성형",
+"발현형 HER2",
+"정상유방유사형"
+],
+"image": false
+},
+"20": {
+"opts": [
+"아메바",
+"리케차",
+"황색포도알균",
+"칸디다 알비칸스",
+"거대세포바이러스"
+],
+"image": false
+},
+"21": {
+"opts": [
+"ALK",
+"BRAF",
+"EGFR",
+"KRAS",
+"ROS1"
+],
+"image": false
+},
+"22": {
+"opts": [
+"위축",
+"증식",
+"화생",
+"석회화",
+"학년도 기초의학종합평가 교시 2023 (4 ) 4"
+],
+"image": false
+},
+"23": {
+"opts": [
+"신병증 IgA",
+"초승달사구체신염",
+"막증식사구체신염",
+"전신홍반루프스신염",
+"국소분절사구체신염"
+],
+"image": false
+},
+"24": {
+"opts": [
+"MCP-1",
+"RANTES",
+"Fractalkine",
+"Interleukin-8",
+"Lymphotactin"
+],
+"image": false
+},
+"25": {
+"opts": [
+"아나필락시스",
+"지연형 과민반응",
+"체액성 면역반응",
+"면역복합체 혈관반응",
+"항체의존성 과민반응"
+],
+"image": false
+},
+"26": {
+"opts": [
+"폐포단백질증(pulmonary alveolar proteinosis)",
+"통상성 간질성 폐렴(usual interstitial pneumonia)",
+"박리사이질폐렴(desquamative interstitial pneumonia)",
+"비특이성 간질성 폐렴(nonspecific interstitial",
+"pneumonia)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"항 항체 Sm",
+"항 항체 DNA",
+"항 항체 Scl70",
+"항인지질항체",
+"항 항체 SS-A / SS-B"
+],
+"image": false
+},
+"28": {
+"opts": [
+"결핵(tuberculosis)",
+"유육종증(sarcoidosis)",
+"진균성 폐렴(fungal pneumonia)",
+"세균성 폐렴(bacterial pneumonia)",
+"바이러스성 폐렴(viral pneumonia)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"궤양",
+"구축",
+"비후흉터",
+"켈로이드",
+"육아조직"
+],
+"image": false
+},
+"30": {
+"opts": [
+"Takayasu arteritis",
+"Kawasaki disease",
+"Polyarteritis nodosa",
+"Granulomatosis with polyangiitis",
+"- Blood test: = WBC 2.1 ×106/ L, RBC 3.05 ×10 μ 6/ L, Hb 8.6 g/dL, μ Platelet 252 ×106/ L μ = BUN 25 mg/dL, Creatinine 0.93 mg/dL, Uric acid 8.2 mg/dL, Protein 6.8 g/dL, Albumin 2.4 g/dL = eGFR(Schwarts) 71 ml/min/1.73m2, Total cholesterol 184 mg/dL = ANA Homogenous 1:1280, ANCA Negative = C3 15.8 mg/dL, C4 0.6 mg/dL, CH50 <10.0 mg/dL - Urine analysis: = Specific gravity 1.020, Albumin +++, Occult blood ++++ = Protein/Cr ratio 4945.3 mg/g, Albumin/Cr ratio 3614.5 mg/g 학년도 기초의학종합평가 교시 2023 (4 ) 5"
+],
+"image": false
+},
+"31": {
+"opts": [
+"(A) Lamina propria (B) Muscularis propria",
+"(A) Lamina propria (B) Muscularis mucosae",
+"(A) Muscularis mucosae (B) Lamina propria",
+"(A) Muscularis mucosae (B) Muscularis propria",
+"(A) Muscularis propria (B) Muscularis mucosae"
+],
+"image": false
+},
+"32": {
+"opts": [
+"Pseudocyst",
+"Serous cystic neoplasm",
+"Mucinous cystic neoplasm",
+"Solid pseudopapillary neoplasm",
+"Intraductal pancreatic mucinous neoplasm"
+],
+"image": false
+},
+"33": {
+"opts": [
+"편평상피화생",
+"편평세포암종",
+"반응성 변화위축 :",
+"고등급편평상피내병터",
+"저등급편평상피내병터"
+],
+"image": false
+},
+"34": {
+"opts": [
+"섬유화",
+"고름염증",
+"육아종성 염증",
+"특이 소견 없음",
+"상피세포 내 핵내봉입체"
+],
+"image": false
+},
+"35": {
+"opts": [
+"+ Na",
+"+ Ca",
+"2+ Fe",
+"3+ Mg",
+"2+"
+],
+"image": false
+},
+"36": {
+"opts": [
+"피부경화증(scleroderma)",
+"강직척추염(ankylosing spondylitis)",
+"관련질환 IgG4 (Ig4 related disease)",
+"굿패스처증후군(Goodpasture syndrome)",
+"전신성 홍반성 루푸스(systemic lupus erythematosus)"
+],
+"image": false
+},
+"37": {
+"opts": [
+"박테리아괴사성 염증 -",
+"박테리아화농성 염증 -",
+"바이러스육아종성 염증 -",
+"곰팡이만성염증 및 흉터형성 -",
+"바이러스세포변성세포증식 염증 - /"
+],
+"image": false
+},
+"38": {
+"opts": [
+"C3b",
+"C5a",
+"Interferon-",
+"γ Transforming growth factor-",
+"β Phospholipase Protease Endonuclease ATPase 학년도 기초의학종합평가 교시 2023 (4 ) 6"
+],
+"image": false
+},
+"39": {
+"opts": [
+"Histamine",
+"Interferon-",
+"γ Leukotriene B4",
+"Prostaglandin E2",
+"5-hydroxyeicosatetraenoic acid (5-HETE)"
+],
+"image": false
+},
+"40": {
+"opts": [
+"APC",
+"TP53",
+"KRAS",
+"SMAD4",
+"CTNNB1"
+],
+"image": false
+},
+"41": {
+"opts": [
+"제형 과민반응 1",
+"제형 과민반응 2",
+"제형 과민반응 3",
+"제형 과민반응 4",
+"제형 과민반응 5"
+],
+"image": false
+},
+"42": {
+"opts": [
+"췌장샘암종",
+"자가면역췌장염",
+"췌장내분비종양",
+"췌관내 유두상 점액종양",
+"췌장 고형 가유두상 종양"
+],
+"image": false
+},
+"43": {
+"opts": [
+"급성담낭염",
+"급성췌장염",
+"지방색전증",
+"알콜성 간경변증",
+"장간막동맥경색증"
+],
+"image": false
+},
+"44": {
+"opts": [
+"증가 TSH",
+"혈당 저하",
+"혈청 유리 T",
+"3 감소 카테콜아민 활성 저하",
+"항 수용체 자가항체 양성 -TSH"
+],
+"image": false
+},
+"45": {
+"opts": [
+"샘암종",
+"장액샘종",
+"점액샘종",
+"자궁내막증",
+"- Blood test: = BUN 14.2 mg/dL, Creatinine 0.84 mg/dL, Protein 3.8 g/dL Albumin 1.4 g/dL = eGFR(CKD-EPI) 92 ml/min/1.73m2, Total cholesterol 428 mg/dL = ANA Negative, ANCA Negative - Urine analysis: = Specific gravity 1.019, Albumin +++, Occult blood +, RBC 5-10 /HPF, WBC 0-3 /HPF, = Protein/Cr ratio 4223.5 mg/g 백혈구 4500/mm3 혈색소 , 11.5 g/dL 혈소판 , 184000/mm3 Na+ 139 meq/L, K+ 3.5 meq/L, Cl- 104 meq/L CRP 0.08 mg/dL CA19-9 2265 U/mL 학년도 기초의학종합평가 교시 2023 (4 ) 7"
+],
+"image": false
+},
+"46": {
+"opts": [
+"열대열원충",
+"회선사상충",
+"만손주혈흡충",
+"큰리슈만편모충",
+"크루스파동편모충"
+],
+"image": false
+},
+"47": {
+"opts": [
+"알벤다졸",
+"이버멕틱",
+"클로로퀸",
+"프라지콴텔",
+"메트로니다졸"
+],
+"image": false
+},
+"48": {
+"opts": [
+"고충증",
+"폐흡충증",
+"유구조충증",
+"이질아메바증",
+"요코가와흡충증"
+],
+"image": false
+},
+"49": {
+"opts": [
+"고충증",
+"요충증",
+"사상충증",
+"주혈흡충증",
+"질편모충증"
+],
+"image": false
+},
+"50": {
+"opts": [
+"원포자충증",
+"장아메바증",
+"람블편모충증",
+"사람등포자충증",
+"작은와포자충증"
+],
+"image": false
+},
+"51": {
+"opts": [
+"선모충증",
+"폐흡충증",
+"유구낭미충증",
+"이질아메바증",
+"만손주혈흡충증"
+],
+"image": false
+},
+"52": {
+"opts": [
+"포낭",
+"난포낭",
+"영양형",
+"분열소체",
+"포자소체"
+],
+"image": false
+},
+"53": {
+"opts": [
+"고양이구충증",
+"이질아메바증",
+"파동편모충증",
+"리슈만편모충증",
+"학년도 기초의학종합평가 교시 2023 (4 ) 8"
+],
+"image": false
+},
+"54": {
+"opts": [
+"단핵구",
+"림프구",
+"호산구",
+"호염구",
+"호중구"
+],
+"image": false
+},
+"55": {
+"opts": [
+"회충",
+"구충",
+"편충",
+"요충",
+"분선충"
+],
+"image": false
+},
+"56": {
+"opts": [
+"고충증",
+"포충증",
+"개구충증",
+"유구낭미충증",
+"회선사상충증"
+],
+"image": false
+},
+"57": {
+"opts": [
+"간흡충증",
+"분선충증",
+"람블편모충증",
+"요코가와흡충증",
+"광절열두조충증"
+],
+"image": false
+},
+"58": {
+"opts": [
+"선충류",
+"원충류",
+"흡충류",
+"원엽조충류",
+"의엽조충류"
+],
+"image": false
+},
+"59": {
+"opts": [
+"벼룩",
+"빈대",
+"옴진드기",
+"털집진드기",
+"집먼지진드기"
+],
+"image": false
+},
+"60": {
+"opts": [
+"메플로퀸",
+"이버멕틴",
+"클로로퀸",
+"프리마퀸",
+"교시 4 종료 자웅이체이다 - . 체강이 있다 - 체형은 가늘고 긴 원통상이다 - . 구강식도장항문으로 구성된 소화기관이 있다 - , , , ."
+],
+"image": false
+}
+}

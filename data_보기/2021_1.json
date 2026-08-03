@@ -1,0 +1,592 @@
+{
+"1": {
+"opts": [
+"인슐린(insulin)",
+"가스트린(gastrin)",
+"티록신(T4, thyroxine)",
+"알도스테론(aldosterone)",
+"부갑상샘호르몬(parathyroid hormone)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"척수덮개로(spinotectal tract)",
+"척수그물로(spinoreticular tract)",
+"가쪽척수시상로(lateral spinothalamic tact)",
+"앞척수시상로(anterior spinothalamic tract)",
+"뒤척수소뇌로(posterior spinocerebellar tract)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"다운증후군(Down syndrome)",
+"터너증후군(Turner syndrome)",
+"클라인펠터증후군(Klinefelter syndrome)",
+"5α-환원효소결핍(5α-reductase deficiency)",
+"안드로젠무감각증후군(Androgen insensitivity syndrome)"
+],
+"image": false
+},
+"4": {
+"opts": [
+"조가비핵(putamen)",
+"중격핵(septal nucleus)",
+"꼬리핵(caudate nucleus)",
+"속섬유막(internal capsule)",
+"기댐핵(nucleus accumbens)"
+],
+"image": false
+},
+"5": {
+"opts": [
+"별세포(stellate cell)",
+"두극세포(bipolar cell)",
+"과립세포(granular cell)",
+"바구니세포(basket cell)",
+"조롱박세포(Purkinje cell)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"미주신경(vagus nerve)",
+"가로막신경(phrenic nerve)",
+"긴가슴신경(long thoracic nerve)",
+"갈비사이위팔신경(intercostobrachial nerve)",
+"큰가슴내장신경(greater thoracic splanchnic nerve)"
+],
+"image": false
+},
+"7": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"8": {
+"opts": [
+"A - B",
+"A - C",
+"B - A",
+"B - C",
+"C - A"
+],
+"image": true
+},
+"9": {
+"opts": [
+"모루뼈(incus)",
+"등자뼈(stapes)",
+"망치뼈(malleus)",
+"고막(tympanic membrane)",
+"귀인두관(pharyngotympanic tube)"
+],
+"image": false
+},
+"10": {
+"opts": [
+"지라동맥(splenic artery)",
+"왼위동맥(left gastric artery)",
+"오른위동맥(right gastric artery)",
+"위이자샘창자동맥(superior pancreaticoduodenal artery)",
+"아래이자샘창자동맥(inferior pancreaticoduodenal artery) 2021학년도 기초의학종합평가 (1교시) 2"
+],
+"image": false
+},
+"11": {
+"opts": [
+"결정질(crystalline)",
+"글리코겐(glycogen)",
+"혈철소(hemosiderin)",
+"지방방울(lipid droplet)",
+"지질갈색소(lipofuscin)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"휘돌이가지(circumflex branch)",
+"오른심장동맥(right coronary artery)",
+"오른모서리가지(right marginal branch)",
+"굴심방결절가지(sinu-atrial nodal branch)",
+"앞심실사이가지(anterior interventricular branch)"
+],
+"image": false
+},
+"13": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"14": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"15": {
+"opts": [
+"신경그물(neuropil)",
+"운동단위(motor unit)",
+"운동종말판(motor end plate)",
+"위운동신경세포(upper motor neuron)",
+"신경세포사이연접(neuroneuronal synapse)"
+],
+"image": false
+},
+"16": {
+"opts": [
+"음경꺼풀(prepuce)",
+"음경귀두(glans penis)",
+"음경다리(crus of penis)",
+"음경망울(bulb of penis)",
+"깊은음경근막(deep fascia of penis)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"18": {
+"opts": [
+"오금동맥(popliteal artery)",
+"종아리동맥(fibular artery)",
+"앞정강동맥(anterior tibial artery)",
+"뒤정강동맥(posterior tibial artery)",
+"앞정강되돌이동맥(anterior tibial recurrent artery)"
+],
+"image": false
+},
+"19": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"20": {
+"opts": [
+"신경세포(neuron)",
+"별아교세포(astrocyte)",
+"미세아교세포(microglia)",
+"뇌실막세포(ependymocyte)",
+"희소돌기아교세포(oligodendrocyte) 2021학년도 기초의학종합평가 (1교시) 3"
+],
+"image": false
+},
+"21": {
+"opts": [
+"자신경(ulnar nerve)",
+"노신경(radial nerve)",
+"정중신경(median nerve)",
+"겨드랑신경(axillary nerve)",
+"근육피부신경(musculocutaneous nerve)"
+],
+"image": false
+},
+"22": {
+"opts": [
+"투명층(zona pellucida)",
+"과립층세포(granulosa cell)",
+"부챗살세포(corona radiata cell)",
+"난포막황체세포(theca lutein cell)",
+"난포세포더미세포(cumulus oophorus cell)"
+],
+"image": false
+},
+"23": {
+"opts": [
+"난소(ovary)",
+"위(stomach)",
+"지라(spleen)",
+"콩팥(kidney)",
+"이자(pancreas)"
+],
+"image": false
+},
+"24": {
+"opts": [
+"경막바깥공간(epidural space)",
+"경막밑공간(subdural space)",
+"거미막밑공간(subarachnoid space)",
+"연질막밑공간(subpial space)",
+"뇌실내공간(intraventricular space)"
+],
+"image": false
+},
+"25": {
+"opts": [
+"넙다리빗근(sartorius muscle)",
+"궁둥구멍근(piriformis muscle)",
+"큰볼기근(gluteus maximus muscle)",
+"중간볼기근(gluteus medius muscle)",
+"넙다리네갈래근(quadriceps femoris muscle)"
+],
+"image": false
+},
+"26": {
+"opts": [
+"세모인대(deltoid ligament)",
+"용수철인대(spring ligament)",
+"긴발바닥인대(long plantar ligament)",
+"짧은발바닥인대(short plantar ligament)",
+"앞목말종아리인대(anterior talofibular ligament)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"얼굴신경(facial nerve)",
+"미주신경(vagus nerve)",
+"삼차신경(trigeminal nerve)",
+"혀밑신경(hypoglossal nerve)",
+"혀인두신경(glossopharyngeal nerve)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"축삭(axon)",
+"신경연접(synapse)",
+"가지돌기(dendrite)",
+"니슬소체(Nissl body)",
+"신경원섬유(neurofibril)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"주기관지(main bronchus)",
+"위엽기관지(superior lobar bronchus)",
+"중간엽기관지(middle lobar bronchus)",
+"아래엽기관지(inferior lobar bronchus)",
+"아래혀구역기관지(inferior lingular segmental bronchus)"
+],
+"image": false
+},
+"30": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E 2021학년도 기초의학종합평가 (1교시) 4"
+],
+"image": true
+},
+"31": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"32": {
+"opts": [
+"단층입방상피(simple cuboidal epithelium)",
+"단층원주상피(simple columnar epithelium)",
+"중층입방상피(stratified cuboidal epithelium)",
+"중층원주상피(stratified columnar epithelium)",
+"거짓중층원주상피(pseudostratified columnar epithelium)"
+],
+"image": false
+},
+"33": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"34": {
+"opts": [
+"신경관(neural tube)이 융합되지 않았다.",
+"배벽(abdominal wall)이 형성되지 못하였다.",
+"배설강막(cloacal membrane)이 개통되지 못하였다.",
+"요로곧창자사이벽(urorectal septum)이 형성되지 않았다.",
+"생리학적배꼽탈장(physiological umbilical hernia)이 복귀되지 않았다."
+],
+"image": false
+},
+"35": {
+"opts": [
+"십이지장(duodenum)",
+"빈창자(jejunum)",
+"돌창자(ileum)",
+"막창자(cecum)",
+"큰창자(colon)"
+],
+"image": false
+},
+"36": {
+"opts": [
+"정면을 볼 때",
+"위쪽을 볼 때",
+"아래쪽을 볼 때",
+"오른쪽을 볼 때",
+"왼쪽을 볼 때"
+],
+"image": false
+},
+"37": {
+"opts": [
+"T12",
+"L1",
+"L3",
+"L5",
+"S1"
+],
+"image": false
+},
+"38": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"39": {
+"opts": [
+"위(superior)",
+"아래(inferior)",
+"앞(anterior)",
+"뒤(posterior)",
+"가쪽(lateral)"
+],
+"image": false
+},
+"40": {
+"opts": [
+"평면관절(plane joint)",
+"경첩관절(hinge joint)",
+"안장관절(saddle joint)",
+"타원관절(ellipsoid joint)",
+"절구관절(ball and socket joint) 코티솔 12 μg/dL (참고치, <5) 2021학년도 기초의학종합평가 (1교시) 5"
+],
+"image": false
+},
+"41": {
+"opts": [
+"사진 28-1",
+"사진 28-2",
+"사진 28-3",
+"사진 28-4",
+"사진 28-5"
+],
+"image": false
+},
+"42": {
+"opts": [
+"얼굴신경(facial nerve)",
+"눈신경(ophthalmic nerve)",
+"위턱신경(maxillary nerve)",
+"아래턱신경(mandibular nerve)",
+"눈돌림신경(oculomotor nerve)"
+],
+"image": false
+},
+"43": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"44": {
+"opts": [
+"콩팥(kidney)",
+"이자(pancreas)",
+"샘창자(duodenum)",
+"오름잘록창자(ascending colon)",
+"내림잘록창자(descending colon)"
+],
+"image": false
+},
+"45": {
+"opts": [
+"당뇨병 산모",
+"헤로인 투약 산모",
+"혈액순환장애 산모",
+"담배를 피우는 산모",
+"포도주를 자주 마시는 산모"
+],
+"image": false
+},
+"46": {
+"opts": [
+"어깨세모근(deltoid muscle)",
+"등세모근(trapezius muscle)",
+"넓은등근(latissimus dorsi muscle)",
+"어깨올림근(levator scapulae muscle)",
+"큰마름근(rhomboideus major muscle)"
+],
+"image": false
+},
+"47": {
+"opts": [
+"간의 네모엽",
+"간의 꼬리엽",
+"아래대정맥",
+"샘창자첫째부분",
+"샘창자둘쨰부분"
+],
+"image": false
+},
+"48": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"49": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"50": {
+"opts": [
+"뼈끝(epiphysis)",
+"뼈바깥막(periosteum)",
+"뼈끝판(epiphyseal plate)",
+"윤활막(synovial membrane)",
+"관절연골(articular cartilage)"
+],
+"image": false
+},
+"51": {
+"opts": [
+"H＆E 염색법(H＆E stain)",
+"노던블롯법(Northern blot)",
+"웨스턴블롯법(Western blot)",
+"제자리부합법(In situ hybridization)",
+"면역조직화학염색법(Immunohistochemistry) 2021학년도 기초의학종합평가 (1교시) 6"
+],
+"image": false
+},
+"53": {
+"opts": [
+"이마굴(frontal sinus)",
+"위턱굴(maxillary sinus)",
+"나비굴(sphenoidal sinus)",
+"앞벌집(anterior ethmoidal cells)",
+"중간벌집(middle ethmoidal cells)"
+],
+"image": false
+},
+"54": {
+"opts": [
+"①",
+"②",
+"③",
+"④",
+"⑤"
+],
+"image": true
+},
+"55": {
+"opts": [
+"에피네프린",
+"성장호르몬",
+"갑상샘호르몬",
+"부신겉질호르몬",
+"부갑상샘호르몬"
+],
+"image": false
+},
+"56": {
+"opts": [
+"감각수용",
+"각질분비",
+"색소형성",
+"포식작용",
+"항원제시"
+],
+"image": false
+},
+"57": {
+"opts": [
+"난소동맥(ovarian artery)",
+"배대동맥(abdominal aorta)",
+"속엉덩동맥(internal iliac artery)",
+"바깥엉덩동맥(external iliac artery)",
+"속음부동맥(internal pudendal artery)"
+],
+"image": false
+},
+"58": {
+"opts": [
+"왼심방",
+"왼심실",
+"오른심방",
+"오른심실",
+"심장꼭대기"
+],
+"image": false
+},
+"59": {
+"opts": [
+"타원오목(fossa ovalis)",
+"꼭지근(papillary muscle)",
+"근육기둥(trabeculae carneae)",
+"방실판막(atrioventricular valve)",
+"사이막모서리기둥(septomarginal trabecula)"
+],
+"image": false
+},
+"60": {
+"opts": [
+"음부신경(pudendal nerve)",
+"항문꼬리신경(anococcygeal nerve)",
+"위볼기신경(superior gluteal nerve)",
+"골반내장신경(pelvic splachnic nerve)",
+"속폐쇄근신경(nerve to obturator internus muscle) A B C ① A띠 H띠 I띠 ② A띠 I띠 H띠 ③ I띠 A띠 H띠 ④ I띠 H띠 A띠 ⑤ H띠 A띠 I띠"
+],
+"image": false
+}
+}

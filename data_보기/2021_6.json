@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"전임상",
+"제1상",
+"제2상",
+"제3상",
+"제4상"
+],
+"image": false
+},
+"2": {
+"opts": [
+"iodide",
+"perchlorate",
+"propranolol",
+"propylthiouracil",
+"radioactive iodine"
+],
+"image": false
+},
+"3": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"4": {
+"opts": [
+"atropine",
+"botulinum",
+"neostigmine",
+"hemicholinium",
+"succinylcholine"
+],
+"image": false
+},
+"5": {
+"opts": [
+"흡입",
+"경구투여",
+"정맥주사",
+"설하투여",
+"근육주사"
+],
+"image": false
+},
+"6": {
+"opts": [
+"aspirin",
+"celecoxib",
+"naproxen",
+"ibuprofen",
+"acetaminophen"
+],
+"image": false
+},
+"7": {
+"opts": [
+"IL-1 수용체 길항",
+"folic acid 대사 억제",
+"TNF-alpha 기능 억제",
+"cyclooxygenase-1 억제",
+"cyclooxygenase-2 억제"
+],
+"image": false
+},
+"8": {
+"opts": [
+"경구투여",
+"경피패치",
+"피하주사",
+"정맥주사",
+"근육주사"
+],
+"image": false
+},
+"9": {
+"opts": [
+"aspirin",
+"colchicine",
+"allopurinol",
+"probenecid",
+"acetaminophen 2021학년도 기초의학종합평가 (6교시) 2"
+],
+"image": false
+},
+"10": {
+"opts": [
+"alpha1 아드레날린 수용체",
+"alpha2 아드레날린 수용체",
+"beta1 아드레날린 수용체",
+"beta2 아드레날린 수용체",
+"beta3 아드레날린 수용체"
+],
+"image": false
+},
+"11": {
+"opts": [
+"옥시토신",
+"마그네슘황산염",
+"칼슘통로차단제",
+"beta2 아드레날린 수용체 작용제",
+"프로스타글란딘 합성효소 억제제"
+],
+"image": false
+},
+"12": {
+"opts": [
+"대변연화제",
+"삼투성 완하제",
+"자극성 완하제",
+"팽창성 완하제",
+"오피오이드 수용체 길항제"
+],
+"image": false
+},
+"13": {
+"opts": [
+"설하투여",
+"경구투여",
+"정맥주사",
+"피하주사",
+"근육주사"
+],
+"image": false
+},
+"14": {
+"opts": [
+"Category A",
+"Category B",
+"Category C",
+"Category D",
+"Category X"
+],
+"image": false
+},
+"15": {
+"opts": [
+"아세틸콜린 합성 촉진",
+"아세틸콜린 저장 증가",
+"아세틸콜린 유리 억제",
+"아세틸콜린 분해 억제",
+"아세틸콜린 수용체 차단"
+],
+"image": false
+},
+"16": {
+"opts": [
+"심장글리코시드",
+"고리작용이뇨제",
+"안지오텐신 수용체 길항제",
+"안지오텐신전환효소 억제제",
+"beta 아드레날린 수용체 길항제"
+],
+"image": false
+},
+"17": {
+"opts": [
+"화학적 길항작용",
+"경쟁적 길항작용",
+"비경쟁적 길항작용",
+"생리학적 길항작용",
+"생화학적 길항작용"
+],
+"image": false
+},
+"18": {
+"opts": [
+"0.15 ㎍/kg",
+"1.05 ㎍/kg",
+"1.5 ㎍/kg",
+"10.5 ㎍/kg",
+"105 ㎍/kg"
+],
+"image": false
+},
+"19": {
+"opts": [
+"1.5",
+"2",
+"3",
+"100",
+"1000 분포용적: 7 L/kg 청소율: 0.1 L/hr/kg 목표농도: 1.5 ng/mL 2021학년도 기초의학종합평가 (6교시) 3"
+],
+"image": false
+},
+"20": {
+"opts": [
+"A = B > C",
+"A < B = C",
+"A > B = C",
+"A = C < B",
+"A < C < B"
+],
+"image": false
+},
+"21": {
+"opts": [
+"소듐이온 손실 감소",
+"칼슘이온 손실 감소",
+"염소이온 손실 감소",
+"포타슘이온 손실 감소",
+"마그네슘이온 손실 감소"
+],
+"image": false
+},
+"22": {
+"opts": [
+"ampicillin",
+"amoxicillin",
+"ceftriaxone",
+"vancomycin",
+"ciprofloxacin"
+],
+"image": false
+},
+"23": {
+"opts": [
+"독작용(poisoning)",
+"상가작용(addition)",
+"상승작용(synergism)",
+"길항작용(antagonism)",
+"강화작용(potentiation)"
+],
+"image": false
+},
+"24": {
+"opts": [
+"니코틴 수용체",
+"무스카린 수용체",
+"히스타민 수용체",
+"alpha 아드레날린 수용체",
+"beta 아드레날린 수용체"
+],
+"image": false
+},
+"25": {
+"opts": [
+"위산 중화",
+"양성자펌프 억제",
+"무스카린 수용체 차단",
+"히스타민 H2 수용체 차단",
+"프로스타글란딘 합성 촉진"
+],
+"image": false
+},
+"26": {
+"opts": [
+"제1형 과민반응",
+"제2형 과민반응",
+"제3형 과민반응",
+"제4형 과민반응",
+"약물 과량 투여"
+],
+"image": false
+},
+"27": {
+"opts": [
+"작용제(agonist)",
+"역작용제(inverse agonist)",
+"화학적 길항제(chemical antagonist)",
+"경쟁적 길항제(competitive antagonist)",
+"생리학적 길항제(physiologic antagonist)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"29": {
+"opts": [
+"COMT 억제제",
+"MAO-B 억제제",
+"도파민 전구물질",
+"도파민 수용체 작용제",
+"무스카린 수용체 차단제 2021학년도 기초의학종합평가 (6교시) 4"
+],
+"image": false
+},
+"30": {
+"opts": [
+"도파민 D2 수용체",
+"히스타민 H1 수용체",
+"아세틸콜린 M2 수용체",
+"세로토닌 5-HT2A 수용체",
+"alpha1 아드레날린 수용체"
+],
+"image": false
+},
+"31": {
+"opts": [
+"alpha1 아드레날린 수용체 작용제",
+"alpha2 아드레날린 수용체 작용제",
+"beta1 아드레날린 수용체 작용제",
+"beta2 아드레날린 수용체 작용제",
+"beta3 아드레날린 수용체 작용제"
+],
+"image": false
+},
+"32": {
+"opts": [
+"주사부위 혈관수축",
+"국소마취제 pKa 저하",
+"국소마취제 대사 촉진",
+"감염부위 조직 pH 저하",
+"국소마취제 전신흡수 촉진"
+],
+"image": false
+},
+"33": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"34": {
+"opts": [
+"연구진을 구성한다.",
+"임상시험 대상자를 모집한다.",
+"신약 시판 가능성을 판단한다.",
+"제약사에 수행 전략을 제안한다.",
+"임상시험계획서의 윤리성을 평가한다."
+],
+"image": false
+},
+"35": {
+"opts": [
+"D2 수용체",
+"H1 수용체",
+"M3 수용체",
+"NK1 수용체",
+"5-HT3 수용체"
+],
+"image": false
+}
+}

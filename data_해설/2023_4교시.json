@@ -30,9 +30,9 @@
       "year": 2023,
       "period": 4,
       "num": 3,
-      "ans": 1,
+      "ans": 3,
       "subject": "병리학",
-      "topic": "초승달신염",
+      "topic": "ANCA 사구체신염·섬유소양괴사",
       "keywords": [],
       "q": "MPO-ANCA+, 혈뇨·단백뇨, 신생검 — 병리 소견은?"
     },
@@ -150,9 +150,9 @@
       "year": 2023,
       "period": 4,
       "num": 15,
-      "ans": 3,
+      "ans": 2,
       "subject": "병리학",
-      "topic": "투명세포 신세포암·VHL",
+      "topic": "유두형 신세포암·MET",
       "keywords": [],
       "q": "콩팥종양(옆구리통증·혈뇨) — 관련 유전자는?"
     },

@@ -1,0 +1,602 @@
+{
+"1": {
+"opts": [
+"유전적 불안정성(genome instability)",
+"신생혈관형성(inducing angiogenesis)",
+"면역회피(avoiding immune destruction)",
+"세포주기조절이상(cell cycle dysregulation)",
+"성장촉진자극(sustaining proliferative signaling)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"요산염",
+"실리콘",
+"메틸메타크릴산",
+"칼슘 피로인산염",
+"코르티코스테로이드 에스테르"
+],
+"image": false
+},
+"3": {
+"opts": [
+"유두암종",
+"소포암종",
+"수질암종",
+"저분화암종",
+"역형성암종"
+],
+"image": false
+},
+"4": {
+"opts": [
+"중성구",
+"림프구",
+"호산구",
+"대식세포",
+"비만세포"
+],
+"image": false
+},
+"5": {
+"opts": [
+"단백질 면역 블랏(Western blot)",
+"RNA 정량 검사(RNA quantitative PCR)",
+"면역조직화학염색(Immunohistochemistry)",
+"형광 제자리 부합법(Fluorescent in situ hybridization)",
+"중합효소연쇄반응 기반 유전자검사(PCR based genotyping)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"지속성 섬유끈(Persistent fibrous cord)",
+"히르슈슈프룽병(Hirschsprung disease)",
+"비대날문협착(Hypertrophic pyloric stenosis)",
+"기관식도 기형(Tracheoesophageal anomaly)",
+"이소성 위점막증(Heterotopic gastric mucosa)"
+],
+"image": false
+},
+"7": {
+"opts": [
+"ER positive",
+"PR positive",
+"P53 positive",
+"EGFR positive",
+"HER2 positive"
+],
+"image": false
+},
+"8": {
+"opts": [
+"항Sm 항체",
+"항DNA 항체",
+"항Scl70 항체",
+"항인지질항체",
+"항SS-A / SS-B 항체 2021학년도 기초의학종합평가 (4교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"즉시과민반응",
+"지연과민반응",
+"항체매개과민반응",
+"T세포독성과민반응",
+"면역복합체매개과민반응"
+],
+"image": false
+},
+"10": {
+"opts": [
+"6형",
+"11형",
+"16형",
+"40형",
+"42형"
+],
+"image": false
+},
+"11": {
+"opts": [
+"표피낭(epidermal cyst)",
+"가슴샘낭(thymic cyst)",
+"전이암종(metastatic carcinoma)",
+"아가미틈새낭(branchial cleft cyst)",
+"갑상혀관낭(thyroglossal duct cyst)"
+],
+"image": false
+},
+"12": {
+"opts": [
+"APC",
+"BRCA1",
+"EGFR",
+"RB1",
+"TP53"
+],
+"image": false
+},
+"13": {
+"opts": [
+"유사분열 수",
+"종양의 분화도",
+"Ki-67 염색지수",
+"고유근층 침범 여부",
+"유두모양 성장 여부"
+],
+"image": false
+},
+"14": {
+"opts": [
+"터너 증후군(Turner Syndrome)",
+"페닐케톤뇨증(phenylketonuria)",
+"여린X증후군(fragile X syndrome)",
+"마르팡 증후군(Marfan syndrome)",
+"에드워드 증후군(Edwards syndrome)"
+],
+"image": false
+},
+"15": {
+"opts": [
+"샘암종",
+"편평세포암종",
+"신경내분비종양",
+"위장관기질종양",
+"편평세포유두종"
+],
+"image": false
+},
+"16": {
+"opts": [
+"융모막암종(choriocarcinoma)",
+"불완전포상기태(partial hydatidiform mole)",
+"완전포상기태(complete hydatidiform mole)",
+"침윤성포상기태(invasive hydatidiform mole)",
+"태반자리영약막종양(placental site trophoblastic tumor)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"KMT2A (MLL)",
+"BCL2",
+"MYC",
+"CCND1",
+"PML-RARA 2021학년도 기초의학종합평가 (4교시) 3"
+],
+"image": false
+},
+"18": {
+"opts": [
+"거짓낭",
+"관샘암종",
+"점액성 낭샘종",
+"장액성 낭샘종",
+"고형거짓유두종양"
+],
+"image": false
+},
+"19": {
+"opts": [
+"경색(infarct)",
+"부종(edema)",
+"충혈(hyperemia)",
+"울혈(congestion)",
+"출혈(hemorrhage)"
+],
+"image": false
+},
+"20": {
+"opts": [
+"혈소판 이상",
+"혈관벽 장애",
+"응고인자 감소",
+"섬유소용해 증가",
+"혈관내피세포 이상"
+],
+"image": false
+},
+"21": {
+"opts": [
+"뇌하수체병",
+"약제 부작용",
+"그레이브스병",
+"바이러스 감염",
+"하시모토갑상샘염"
+],
+"image": false
+},
+"22": {
+"opts": [
+"IgA 신증",
+"막사구체신염",
+"미소변화신증",
+"감염후사구체신염",
+"막증식성사구체신염"
+],
+"image": false
+},
+"23": {
+"opts": [
+"고환종",
+"림프종",
+"샘암종",
+"배아암종",
+"난황낭종양"
+],
+"image": false
+},
+"24": {
+"opts": [
+"axon",
+"myelin",
+"dendrite",
+"astrocyte",
+"ganglion cell"
+],
+"image": false
+},
+"25": {
+"opts": [
+"규소폐증(silicosis)",
+"소세포암종(small cell carcinoma)",
+"악성중피종(malignant mesothelioma)",
+"특발폐섬유증(idiopathic pulmonary fibrosis)",
+"탄광부진폐증(coal worker’s pneumoconiosis) 치핵 메두사머리 식도정맥류 혈액: 혈액요소질소/크레아티닌 35/1.5 mg/dL 소변: 적혈구 다수, 단백질 1+ 2021학년도 기초의학종합평가 (4교시) 4"
+],
+"image": false
+},
+"26": {
+"opts": [
+"인슐린종",
+"급성췌장염",
+"아밀로이드증",
+"당뇨병케토산증",
+"고장성고삼투압증후군"
+],
+"image": false
+},
+"27": {
+"opts": [
+"췌관의 확장",
+"췌장실질의 위축",
+"엽상구조의 소실",
+"췌장실질의 섬유화",
+"급성염증 및 지방괴사"
+],
+"image": false
+},
+"28": {
+"opts": [
+"섬유샘종(fibroadenoma)",
+"제자리관암종(ductal carcinoma in situ)",
+"침습관암종(invasive ductal carcinoma)",
+"제자리소엽암종(lobular carcinoma in situ)",
+"침습소엽암종(invasive lobular carcinoma)"
+],
+"image": false
+},
+"29": {
+"opts": [
+"BRAF",
+"EGFR",
+"KRAS",
+"TERT",
+"TP53"
+],
+"image": false
+},
+"30": {
+"opts": [
+"카할세포(Interstitial cell of Cajal) - KIT mutation",
+"카할세포(Interstitial cell of Cajal) - APC mutation",
+"카할세포(Interstitial cell of Cajal) - KRAS mutation",
+"신경내분비세포(Neuroendocrine cell) - KIT mutation",
+"신경내분비세포(Neuroendocrine cell) - APC mutation"
+],
+"image": false
+},
+"31": {
+"opts": [
+"배아암종",
+"난소고환종",
+"난황낭종양",
+"융모막암종",
+"미성숙기형종"
+],
+"image": false
+},
+"32": {
+"opts": [
+"거대세포동맥염",
+"결절다발동맥염",
+"다카야스동맥염",
+"폐쇄혈전혈관염",
+"육아종증다발혈관염"
+],
+"image": false
+},
+"33": {
+"opts": [
+"칸디다",
+"자가면역",
+"헬리코박터",
+"졸링거엘리슨증후군",
+"십이지장 분비물의 역류 혈액: Na+ 132 mmol/L (참고치, 136~145) Cl- 104 mmol/L (참고치, 98~107) K+ 5.8 mmol/L (참고치, 3.5~5.1) 동맥혈가스: pH 7.1, PCO2 17 mmHg, PO2 95 mmHg 소변: 포도당 양성, 아세토아세트산 양성 혈청 아밀라아제(amylase) 2,022 U/L (참고치, 40~100) CEA 1.0 ng/mL (참고치, <2.5) CA 125 9.0 U/mL (참고치, <21) CA 19-9 12.0 U/mL (참고치, <37) AFP 1.7 ng/mL (참고치, <15.0) β-HCG 4 mIU/ml (참고치, <5) LDH 859 U/L (참고치, 135~225) 2021학년도 기초의학종합평가 (4교시) 5"
+],
+"image": false
+},
+"34": {
+"opts": [
+"thymoma",
+"seminoma",
+"T-lymphoblastic lymphoma",
+"anaplastic large cell lymphoma",
+"Hodgkin lymphoma, nodular sclerosis type"
+],
+"image": false
+},
+"35": {
+"opts": [
+"Pompe disease",
+"McArdle disease",
+"Becker muscular dystrophy",
+"Amyotrophic lateral sclerosis",
+"Duchenne muscular dystrophy"
+],
+"image": false
+},
+"36": {
+"opts": [
+"1p/19q FISH",
+"EGFR amplification",
+"TERT promoter mutation",
+"P53 immunohistochemistry",
+"MGMT methylation specific PCR"
+],
+"image": false
+},
+"37": {
+"opts": [
+"과오종",
+"유암종",
+"샘암종",
+"소세포암종",
+"편평세포암종"
+],
+"image": false
+},
+"38": {
+"opts": [
+"혈관종",
+"간세포샘종",
+"간세포암종",
+"간내담관암종",
+"전이성 샘암종"
+],
+"image": false
+},
+"39": {
+"opts": [
+"심근의 섬유화",
+"심근 내 중성구 침윤",
+"심근의 육아종성 염증",
+"심근의 아밀로이드 침착",
+"심근 내 림프구와 대식세포 침윤"
+],
+"image": false
+},
+"40": {
+"opts": [
+"세포 포식",
+"유사분열",
+"세포막 손상",
+"염색질 응집",
+"중성구 침윤"
+],
+"image": false
+},
+"41": {
+"opts": [
+"궤양",
+"삼출 염증",
+"화농 염증",
+"섬유소 염증",
+"장액성 염증"
+],
+"image": false
+},
+"42": {
+"opts": [
+"암배아항원(CEA)",
+"알파태아단백질(AFP)",
+"전립샘특이항원(PSA)",
+"암항원 125(CA 125)",
+"암항원 19-9(CA 19-9) 2021학년도 기초의학종합평가 (4교시) 6"
+],
+"image": false
+},
+"43": {
+"opts": [
+"구축",
+"궤양",
+"육아종",
+"켈로이드",
+"침습섬유종증"
+],
+"image": false
+},
+"44": {
+"opts": [
+"NPHP1",
+"PKD1",
+"PKHD1",
+"VHL",
+"WT1"
+],
+"image": false
+},
+"45": {
+"opts": [
+"TDP-43",
+"beta-amyloid",
+"polyglutamine",
+"neurofilament",
+"alpha-synuclein"
+],
+"image": false
+},
+"46": {
+"opts": [
+"수라민",
+"알벤다졸",
+"이버멕틴",
+"프라지콴텔",
+"메트로니다졸"
+],
+"image": false
+},
+"47": {
+"opts": [
+"분선충",
+"이질아메바",
+"톡소포자충",
+"바베스열원충",
+"작은와포자충"
+],
+"image": false
+},
+"48": {
+"opts": [
+"회충증",
+"분선충증",
+"람블편모충증",
+"요코가와흡충증",
+"일본주혈흡충증"
+],
+"image": false
+},
+"49": {
+"opts": [
+"말라리아",
+"톡소포자충증",
+"파동편모충증",
+"리슈만편모충증",
+"바베스열원충증 - 고양이가 종숙주이다. - 덜 익힌 고기를 섭취하였을 경우 감염될 수 있다. - 대식세포, 백혈구 등 그물내피계통 세포에 잘 감염된다. - 감염 초기 증상으로 림프선염, 발열, 두통, 근육통 등을 일으킬 수 있다. - 면역결핍 환자에게 심각한 기회감염성 질환을 일으킨다. - 임산부가 초기 감염되었을 경우 태아에게 뇌수종, 망막 맥락막염 등의 기형을 유발한다. 2021학년도 기초의학종합평가 (4교시) 7"
+],
+"image": false
+},
+"50": {
+"opts": [
+"알벤다졸",
+"클로로퀸",
+"프라지콴텔",
+"메트로니다졸",
+"디에틸카바마진"
+],
+"image": false
+},
+"51": {
+"opts": [
+"간질증",
+"포충증",
+"간흡충증",
+"유구낭미충증",
+"이질아메바증"
+],
+"image": false
+},
+"52": {
+"opts": [
+"사진 40-1",
+"사진 40-2",
+"사진 40-3",
+"사진 40-4",
+"사진 40-5"
+],
+"image": false
+},
+"53": {
+"opts": [
+"간흡충증",
+"고래회충증",
+"광절열두조충증",
+"요코가와흡충증",
+"호르텐스극구흡충증"
+],
+"image": false
+},
+"54": {
+"opts": [
+"개회충",
+"선모충",
+"고래회충",
+"고양이구충",
+"로아사상충"
+],
+"image": false
+},
+"55": {
+"opts": [
+"이",
+"벼룩",
+"빈대",
+"옴진드기",
+"집먼지진드기"
+],
+"image": false
+},
+"56": {
+"opts": [
+"오전 9시",
+"낮 12시",
+"오후 3시",
+"오후 6시",
+"밤 12시"
+],
+"image": false
+},
+"57": {
+"opts": [
+"난형열원충",
+"사일열원충",
+"삼일열원충",
+"열대열원충",
+"바베스열원충"
+],
+"image": false
+},
+"58": {
+"opts": [
+"간질증",
+"간흡충증",
+"개회충증",
+"간모세선충증",
+"요코가와흡충증 2021학년도 기초의학종합평가 (4교시) 8"
+],
+"image": false
+},
+"59": {
+"opts": [
+"캔디다증",
+"질편모충증",
+"람블편모충증",
+"파동편모충증",
+"리슈만편모충증"
+],
+"image": false
+},
+"60": {
+"opts": [
+"대장아메바증",
+"람블편모충증",
+"메닐편모충증",
+"이질아메바증",
+"이핵아메바증"
+],
+"image": false
+}
+}

@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"접합(conjugation)",
+"형질도입(transduction)",
+"형질전환(transformation)",
+"유전자 전위(transposition)",
+"유전자 재조합(genetic recombination)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"프로테옴(proteome)",
+"메타볼롬(metabolome)",
+"프로바이오틱스(probiotics)",
+"트랜스크립톰(transcriptome)",
+"마이크로바이오타(microbiota)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"효소면역측정법",
+"전자현미경 관찰",
+"미생물의 분리 동정",
+"중합효소연쇄반응법",
+"차세대염기서열결정법"
+],
+"image": false
+},
+"4": {
+"opts": [
+"면역원성의 정도",
+"핵막의 존재 유무",
+"세포막 인지질의 조성",
+"펩티도글리칸 층의 두께",
+"플라스미드 DNA의 존재 유무"
+],
+"image": false
+},
+"5": {
+"opts": [
+"협막",
+"용혈소",
+"장독소",
+"요소분해효소",
+"산화질소합성효소"
+],
+"image": false
+},
+"6": {
+"opts": [
+"Vibrio cholerae",
+"Shigella flexneri",
+"Campylobacter jejuni",
+"Enterotoxigenic E. coli",
+"Salmonella Typhimurium"
+],
+"image": false
+},
+"7": {
+"opts": [
+"Bacillus cereus",
+"Escherichia coli",
+"Campylobacter jejuni",
+"Clostridium perfringens",
+"Listeria monocytogenes"
+],
+"image": false
+},
+"8": {
+"opts": [
+"광견병(Rabies)",
+"레지오넬라증(Legionellosis)",
+"렙토스피라증(Leptospirosis)",
+"아나플라즈마증(Anaplasmosis)",
+"신증후출혈열(Hemorrhagic fever with renal syndrome) 1 _ √ √ √ √ ' √ U c √ √ ' √ √ √ 2022학년도 기초의학종합평가 (5교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"모기에 물림",
+"벼룩에 물림",
+"참진드기에 물림",
+"들쥐 배설물과 접촉",
+"양의 유산 과정에서 접촉"
+],
+"image": false
+},
+"10": {
+"opts": [
+"mycolic acid",
+"peptidoglycan",
+"arabinogalactan",
+"lipoarabinomannan",
+"trehalose dimycolate"
+],
+"image": false
+},
+"11": {
+"opts": [
+"카탈라제 검사",
+"담즙 용해성 검사",
+"혈장응고효소 검사",
+"옵토킨(optochin) 감수성 검사",
+"바시트라신(bacitracin) 감수성 검사"
+],
+"image": false
+},
+"12": {
+"opts": [
+"Clostridium tetani",
+"Legionella pneumophila",
+"Clostridium perfringens",
+"Cardiobacterium hominis",
+"Streptobacillus moniliformis"
+],
+"image": false
+},
+"13": {
+"opts": [
+"Staphylococcus aureus",
+"Staphylococcus epidermidis",
+"Staphylococcus lugdunensis",
+"Staphylococcus haemolyticus",
+"Staphylococcus saprophyticus"
+],
+"image": false
+},
+"14": {
+"opts": [
+"장침투성대장균(enteroinvasive E. coli, EIEC)",
+"장독소생성대장균(enterotoxigenic E. coli, ETEC)",
+"장병원성대장균(enteropathogenic E. coli, EPEC)",
+"장응집성대장균(enteroaggregative E. coli, EAEC)",
+"장출혈성대장균(enterohemorrhagic E. coli, EHEC)"
+],
+"image": false
+},
+"15": {
+"opts": [
+"급성감염",
+"만성감염",
+"잠복감염",
+"지발감염",
+"불현감염"
+],
+"image": false
+},
+"16": {
+"opts": [
+"간염 유발 바이러스",
+"뇌염 유발 바이러스",
+"출혈열 유발 바이러스",
+"절지동물매개 바이러스",
+"설치동물매개 바이러스 지카바이러스(Zika virus), 뎅기바이러스(Dengue virus) 황열 바이러스(Yellow fever virus) 일본뇌염바이러스(Japanese encephalitis virus) 중증열성혈소판감소증후군 바이러스(SFTS virus) { √ √ ' √ √ √ ' √ √ ' 1 Ψ 으 2022학년도 기초의학종합평가 (5교시) 3"
+],
+"image": false
+},
+"17": {
+"opts": [
+"피부 검체에서 바이러스 분리",
+"폐조직 검체에서 바이러스 항원 검출",
+"혈액 검체에서 바이러스 특이 IgM 검출",
+"소변 검체에서 바이러스 특이 IgG 검출",
+"비인두 도말 검체에서 바이러스 DNA 검출"
+],
+"image": false
+},
+"18": {
+"opts": [
+"모기",
+"수혈",
+"성행위",
+"오염된 물 섭취",
+"들쥐 배설물 흡입"
+],
+"image": false
+},
+"19": {
+"opts": [
+"면역형광법",
+"노던블롯검사",
+"효소면역측정법",
+"웨스턴블롯검사",
+"중합효소연쇄반응"
+],
+"image": false
+},
+"20": {
+"opts": [
+"점돌연변이(point mutation)",
+"유전자삭제(genetic deletion)",
+"유전자치환(genetic substitution)",
+"유전자재편성(genetic reassortment)",
+"유전자재조합(genetic recombination)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"핵산이 없다.",
+"단백 구조가 없다.",
+"분말형태로 감염된다.",
+"면역반응을 유발한다.",
+"자외선에 의해 살균된다."
+],
+"image": false
+},
+"22": {
+"opts": [
+"Epstein-Barr virus",
+"Varicella-Zoster virus",
+"Human herpesvirus 6",
+"Herpes simplex virus-1",
+"Human cytomegalovirus"
+],
+"image": false
+},
+"23": {
+"opts": [
+"물",
+"모기",
+"혈액",
+"야생동물",
+"호흡기 분비물"
+],
+"image": false
+},
+"24": {
+"opts": [
+"계절성 없이 발생",
+"대변-구강 경로로 전파",
+"이중가닥 RNA 유전자 보유",
+"주로 영아에서 심한 감염 초래",
+"청소년기에는 가벼운 질환 초래"
+],
+"image": false
+},
+"25": {
+"opts": [
+"Echovirus",
+"Astrovirus",
+"Norwalk virus",
+"Hepatitis A virus",
+"Rotavirus, group A 요단백 ++ 신사구체여과율 15 mL/분 (참고치, ≥60) 혈청크레아티닌 7.0 mg/dL (참고치, ≤1.5) 혈액요소질소 80 mg/dL (참고치, 6~20) 치쿤구니야 바이러스(Chikungunya virus) 특이 IgM 항체 가 검출됨 1 √ Ψ ' ' √ √ ' √ 으 ' { √ √ 1 √ √ √ 2022학년도 기초의학종합평가 (5교시) 4"
+],
+"image": false
+},
+"26": {
+"opts": [
+"Coronavirus",
+"Measles virus",
+"Influenza virus",
+"Metapneumovirus",
+"Respiratory syncytial virus"
+],
+"image": false
+},
+"27": {
+"opts": [
+"성접촉(sexual contact)",
+"동물에 의한 교상(animal bite)",
+"혈액 전파(blood transmission)",
+"매개물을 통한 전파(fomite transmission)",
+"분변-구강 전파(fecal to oral transmission)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"Arenaviridae",
+"Bunyaviridae",
+"Coronaviridae",
+"Paramyxoviridae",
+"Orthomyxoviridae"
+],
+"image": false
+},
+"29": {
+"opts": [
+"그람염색",
+"배양검사",
+"VDRL검사",
+"웨스턴블롯 검사",
+"암시야현미경 검사"
+],
+"image": false
+},
+"30": {
+"opts": [
+"IL-2",
+"IL-6",
+"IL-17",
+"TNF-α",
+"TGF-β"
+],
+"image": false
+},
+"31": {
+"opts": [
+"쿠퍼세포(Kupffer cell)",
+"랑게르한스세포(Langerhans cell)",
+"선천성 림프구(innate lymphoid cell)",
+"소포수지상세포(follicular dendritic cell)",
+"형질세포양 수지상세포(plasmacytoid dendritic cell)"
+],
+"image": false
+},
+"32": {
+"opts": [
+"C1 억제인자",
+"C3 전환효소",
+"C5 전환효소",
+"만노스결합렉틴",
+"세포막공격복합체"
+],
+"image": false
+},
+"33": {
+"opts": [
+"호중구(neutrophil)",
+"비만세포(mast cell)",
+"큰포식세포(macrophage)",
+"자연살해세포(natural killer cell)",
+"세포독성 T 세포(cytotoxic T cell) - 약 150 nm 크기의 구형 비리온 형태의 바이러스임 - 나선대칭(helical symmetry) 뉴클레오캡시드를 보유함 - 게놈은 분절되지 않은 선형 단일음성가닥 RNA로 구성됨 - 외피에 싸여 있으며 6~8개 정도의 구조단백을 보유함 - 외피에는 융합이나 혈구응집 등에 관여하는 당단백이 분포함 - Nipha virus, Hendra virus와 같은 고위험병원체가 포함 - 대표적인 감염증으로 홍역, 유행성이하선염 등이 있음 약자: Nitrogen Oxide (NO) Reactive Nitrogen Intermediate (RNI) ω √ ' √ √ ' √ { √ ' ' 으 Ψ 2022학년도 기초의학종합평가 (5교시) 5"
+],
+"image": false
+},
+"34": {
+"opts": [
+"거짓균사(pseudohyphae)",
+"이형성 진균(dimorphic fungi)",
+"거짓균사총(pseudomycelium)",
+"무격벽균사(coenocytic hyphae)",
+"생식균사체(reproductive mycelium)"
+],
+"image": false
+},
+"35": {
+"opts": [
+"Rhizopus oryzae",
+"Aspergillus flavus",
+"Malassezia furfur",
+"Sporothrix schenkii",
+"Pneumocystis jiroveci 스 √ ' √"
+],
+"image": false
+}
+}

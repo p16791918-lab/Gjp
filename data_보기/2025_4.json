@@ -1,0 +1,602 @@
+{
+"1": {
+"opts": [
+"연골육종 (Chondrosarcoma)",
+"연골과오종 (Chondroid hamartoma)",
+"경화페세포종 (Sclerosing pneumocytoma)",
+"전이성 샘암종 (Metastatic adenocarcinoma)",
+"전형 카르시노이드 종양 (Typical carcinoid tumor)"
+],
+"image": false
+},
+"2": {
+"opts": [
+"평활근종 (leiomyoma)",
+"평활근육종 (leiomyosarcoma)",
+"장액성 낭선종 (serous cystadenoma)",
+"요로상피세포암종 (urothelial carcinoma)",
+"경계성 평활근종양 (smooth muscle tumors of uncertain malignant potential, STUMP)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"Adenocarcinoma",
+"Gastrointestinal stromal tumor (GIST)",
+"Leiomyoma",
+"Neuroendocrine tumor",
+"Schwannoma"
+],
+"image": false
+},
+"4": {
+"opts": [
+"건락괴사로의 이행",
+"지방괴사와 석회화",
+"괴사부위 섬유화와 반흔 형성",
+"대식세포 식작용에 의한 완전 재생",
+"세포자멸사 유도로 인한 무흉터 치유"
+],
+"image": false
+},
+"5": {
+"opts": [
+"다수의 호산구가 폐포 내에 모여서 농양을 형성한다.",
+"다양한 크기의 육아종 내부에 광범위한 괴사를 동반한다.",
+"괴사를 동반하지 않은 육아종이 양측 폐의 림프관을 따라 병변이 퍼진다.",
+"만성간질폐렴이 세기관지를 중심으로 퍼지면서 경계 가 불분명한 육아종을 동반한다.",
+"국소적인 간질 섬유화가 흉막 아래 부위에 위치해 있 으면서 섬유화세포 병소를 동반한다."
+],
+"image": false
+},
+"6": {
+"opts": [
+"Fat necrosis",
+"Caseous necrosis",
+"Fibrinoid necrosis",
+"Coagulative necrosis",
+"Liquefactive necrosis"
+],
+"image": false
+},
+"7": {
+"opts": [
+"CA-125",
+"CA-19-9",
+"Calcitonin",
+"Catecholamine",
+"Carcinoembryonic antigen"
+],
+"image": false
+},
+"8": {
+"opts": [
+"Desmoplasia",
+"Angiogenesis",
+"Warburg effect",
+"Cell cycle progression",
+"Epithelial-mesenchymal transition 2025학년도 기초의학종합평가 (4교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"고환종(seminoma)",
+"난황낭종양(yolk sac tumor)",
+"융모막암종(choriocarcinoma)",
+"배아암종(embryonal carcinoma)",
+"혼합종자세포종양(mixed germ cell tumor)"
+],
+"image": false
+},
+"10": {
+"opts": [
+"융모막암종",
+"완전포상기태",
+"불완전포상기태",
+"상피양 영양막종양",
+"태반부착부 영양막종양"
+],
+"image": false
+},
+"11": {
+"opts": [
+"RAS signaling pathway",
+"Notch signaling pathway",
+"TGF-beta signaling pathway",
+"JAK-STAT signaling pathway",
+"Hedgehog signaling pathway"
+],
+"image": false
+},
+"12": {
+"opts": [
+"Teratoma",
+"Thymoma",
+"Carcinoid tumor",
+"Hodgkin lymphoma",
+"Squamous cell carcinoma"
+],
+"image": false
+},
+"13": {
+"opts": [
+"Neuroblastoma",
+"Paraganglioma",
+"Pheochromocytoma",
+"Adrenocortical adenoma",
+"Adrenocortical carcinoma"
+],
+"image": false
+},
+"14": {
+"opts": [
+"Bacteria - Necrotizing inflammation",
+"Bacteria - Suppurative inflammation",
+"Virus - Granulomatous inflammation",
+"Fungus - Chronic inflammation and scarring",
+"Virus - Cytopathic/cytoproliferative inflammation"
+],
+"image": false
+},
+"15": {
+"opts": [
+"포식세포",
+"조각난 핵",
+"세포 수축",
+"염색질 응집",
+"주변 조직의 염증반응"
+],
+"image": false
+},
+"16": {
+"opts": [
+"Radon",
+"Asbestos",
+"Benzene",
+"Vinyl chloride",
+"Polycyclic aromatic hydrocarbon"
+],
+"image": false
+},
+"17": {
+"opts": [
+"Adenocarcinoma",
+"Chronic inflammation",
+"Malignant mesothelioma",
+"Small cell carcinoma",
+"Squamous cell carcinoma 2025학년도 기초의학종합평가 (4교시) 3"
+],
+"image": false
+},
+"18": {
+"opts": [
+"IgA 신병증(IgA nephropathy)",
+"미소변화질환(minimal change disease)",
+"막사구체신염(membranous nephropathy)",
+"초점분절사구체경화증(focal segmental glomerulosclerosis)",
+"막증식사구체신염(membranoproliferative glomerulonephritis)"
+],
+"image": false
+},
+"19": {
+"opts": [
+"포식(phagocytosis)",
+"세포자멸사(apoptosis)",
+"산화 스트레스(oxidative stress)",
+"유전자 돌연변이(gene mutation)",
+"세포 내 감염(intracellular infection)"
+],
+"image": false
+},
+"20": {
+"opts": [
+"A-원주상피, B-중층편평상피, C-원주상피",
+"A-중층편평상피, B-원주상피, C-원주상피",
+"A-원주상피, B-원주상피, C-중층편평상피",
+"A-원주상피, B-중층편평상피, C-중층편평상피",
+"A-중층편평상피, B-중층편평상피, C-원주상피"
+],
+"image": false
+},
+"21": {
+"opts": [
+"Tuberculosis",
+"Kikuchi disease",
+"Burkitt lymphoma",
+"Hodgkin lymphoma",
+"Diffuse large B cell lymphoma"
+],
+"image": false
+},
+"22": {
+"opts": [
+"Demyelination",
+"Pick body 형성",
+"Lewy body 형성",
+"Bunina body 형성",
+"Neurofibrillary tangle과 β-amyloid plaque 형성"
+],
+"image": false
+},
+"23": {
+"opts": [
+"EBV",
+"HBV",
+"HHV8",
+"HPV",
+"HTLV-1"
+],
+"image": false
+},
+"24": {
+"opts": [
+"K+",
+"Na+",
+"Ca2+",
+"Mg2+",
+"Fe3+"
+],
+"image": false
+},
+"25": {
+"opts": [
+"Fat necrosis",
+"Caseous necrosis",
+"Liquefactive necrosis",
+"Coagulative necrosis",
+"Gangrenous necrosis Phospholipase Protease Endonuclease ATPase 2025학년도 기초의학종합평가 (4교시) 4"
+],
+"image": false
+},
+"26": {
+"opts": [
+"간세포의 미세소포성 지방증",
+"Florid duct lesion과 육아종성 염증",
+"양파껍질 양상의 담관 주위 섬유화",
+"Interface hepatitis와 형질세포 침윤",
+"문맥역 내 호산구 침윤과 담즙 정체"
+],
+"image": false
+},
+"27": {
+"opts": [
+"궤양(ulcer)",
+"장액염증(serous inflammation)",
+"섬유소염증(fibrinous inflammation)",
+"화농염증(suppurative inflammation)",
+"육아종염증(granulomatous inflammation)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"P53",
+"Smad4",
+"Trypsin",
+"Beta-catenin",
+"Synaptophysin"
+],
+"image": false
+},
+"29": {
+"opts": [
+"Actinomycosis",
+"Aspergillosis",
+"Candidiasis",
+"Cryptococcosis",
+"Mucormycosis"
+],
+"image": false
+},
+"30": {
+"opts": [
+"면역복합체의 침착으로 인한 세포증식에 따른 혈관 누출",
+"세뇨관의 재흡수 기능 이상으로 적혈구가 소변으로 누출",
+"족세포의 기능 소실로 인해 사구체 모세혈관 내피세 포가 직접 손상",
+"보체 매개성 염증 반응에 의해 사구체 내 혈류가 감 소하고 허혈성 손상 발생",
+"사구체 기저막의 콜라겐 사슬에 대한 자가항체에 의 한 직접적인 기저막의 손상"
+],
+"image": false
+},
+"31": {
+"opts": [
+"거대세포 바이러스 (CMV)",
+"단순포진 바이러스 (HSV)",
+"인간유두종 바이러스 (HPV)",
+"앱스타인 바 바이러스 (EBV)",
+"인간헤르페스 바이러스 (HHV)"
+],
+"image": false
+},
+"32": {
+"opts": [
+"HCV- Transforming infection",
+"HCV- Suppurative inflammation",
+"HBV- Granulomatous inflammation",
+"HCV- Granulomatous inflammation",
+"HBV- Chronic inflammation and scarring"
+],
+"image": false
+},
+"33": {
+"opts": [
+"Trauma",
+"Autoimmunity",
+"Bacterial infection",
+"Diabetic nephropathy",
+"Arterial thromboembolism"
+],
+"image": false
+},
+"34": {
+"opts": [
+"Acute fibrinous salpingitis",
+"Acute suppurative salpingitis",
+"Chronic granulomatous salpingitis",
+"Chronic salpingitis",
+"Pseudoxanthomatous salpingitis 혈액 : ALT 450 U/L AST 380 U/L 항핵항체(ANA): 양성 항평활근항체(ASMA): 양성 2025학년도 기초의학종합평가 (4교시) 5"
+],
+"image": false
+},
+"35": {
+"opts": [
+"(가) lamina propria (나) muscularis mucosae",
+"(가) muscularis mucosae (나) lamina propria",
+"(가) muscularis mucosae (나) muscularis propria",
+"(가) muscularis propria (나) muscularis mucosae",
+"(가) lamina propria (나) muscularis propria"
+],
+"image": false
+},
+"36": {
+"opts": [
+"TP53 mutation",
+"BRAF mutation",
+"KRAS mutation",
+"EGFR mutation",
+"FGFR mutation"
+],
+"image": false
+},
+"37": {
+"opts": [
+"IgA nephropathy",
+"Membranous nephropathy",
+"ANCA-associated vasculitis",
+"Systemic lupus erythematosus",
+"Post-infectious glomerulonephritis"
+],
+"image": false
+},
+"38": {
+"opts": [
+"Adenosis",
+"Adenoma",
+"Fibroadenoma",
+"Intraductal papilloma",
+"Ductal carcinoma in situ"
+],
+"image": false
+},
+"39": {
+"opts": [
+"관내유두종 (intraductal papilloma)",
+"관상피내암종 (ductal carcinoma in situ)",
+"소엽상피내암종 (lobular carcinoma in situ)",
+"보통형관상피증식 (usual ductal hyperplasia)",
+"비정형관상피증식 (atypical ductal hyperplasia)"
+],
+"image": false
+},
+"40": {
+"opts": [
+"olaparib",
+"fulvestrant",
+"trastuzumab",
+"atezolizumab",
+"pembrolizumab"
+],
+"image": false
+},
+"41": {
+"opts": [
+"amyloidosis",
+"Alport`s syndrome",
+"diabetic nephropathy",
+"thrombotic microangiopathy",
+"focal segmental glomerulosclerosis ● TX: 원발종양을 확인할 수 없다 ● T0: 원발종양의 증거가 없다. ● Tis: 제자리 상피세포암 (Carcinoma in situ): 상피내 종양으로(가)에 침범이 없는 경우: High grade dysplasia ● T1: 종양 침윤 (가), (나) or submucosa ● T1a: 종양 침윤 (가), or (나) ● T1b: 종양 침윤 submucosa 2025학년도 기초의학종합평가 (4교시) 6"
+],
+"image": false
+},
+"42": {
+"opts": [
+"APC",
+"MEN1",
+"MSH2",
+"STK11",
+"BRCA1"
+],
+"image": false
+},
+"43": {
+"opts": [
+"성숙기형종",
+"양성혼합종",
+"자궁내막증",
+"점액성낭샘종",
+"장액성낭샘종"
+],
+"image": false
+},
+"44": {
+"opts": [
+"대사산물 축적으로 인한 산증",
+"심근 허혈로 인한 펌프 기능 저하",
+"급성 혈액손실로 인한 전부하 감소",
+"심장 압전으로 인한 심실 충만 장애",
+"전신 염증 반응으로 인한 혈관 확장 및 투과성 증가"
+],
+"image": false
+},
+"45": {
+"opts": [
+"Metaplasia",
+"Hyperplasia",
+"Carcinoma in situ",
+"Invasive carcinoma",
+"Low grade dysplasia"
+],
+"image": false
+},
+"46": {
+"opts": [
+"알벤다졸",
+"이버멕틴",
+"클로로퀸",
+"프라지콴텔",
+"메트로니다졸"
+],
+"image": false
+},
+"47": {
+"opts": [
+"람블편모충증",
+"이질아메바증",
+"톡소포자충증",
+"사람등포자충증",
+"작은와포자충증"
+],
+"image": false
+},
+"48": {
+"opts": [
+"고충증",
+"포충증",
+"유구낭미충증",
+"유극악구충증",
+"회선사상충증"
+],
+"image": false
+},
+"49": {
+"opts": [
+"대변검사",
+"혈청검사",
+"피부반응검사",
+"대장내시경검사",
+"항문주위도말검사 2025학년도 기초의학종합평가 (4교시) 7"
+],
+"image": false
+},
+"50": {
+"opts": [
+"사상충",
+"말라리아",
+"주혈흡충",
+"파동편모충",
+"리슈만편모충"
+],
+"image": false
+},
+"51": {
+"opts": [
+"회충증",
+"간흡충증",
+"간모세선충증",
+"광절열두조충증",
+"요코가와흡충증"
+],
+"image": false
+},
+"52": {
+"opts": [
+"편충증",
+"회충증",
+"분선충증",
+"고래회충증",
+"장모세선충"
+],
+"image": false
+},
+"53": {
+"opts": [
+"동양안충증",
+"가시아메바증",
+"로아사상충증",
+"유극악구충증",
+"회선사상충증"
+],
+"image": false
+},
+"54": {
+"opts": [
+"포충증",
+"사상충증",
+"선모충증",
+"유구낭미충증",
+"톡소포자충증"
+],
+"image": false
+},
+"55": {
+"opts": [
+"단방조충",
+"무구조충",
+"왜소조충",
+"유구조충",
+"광절열두조충 직접빌리루빈 2.5 mg/dL (참고치, 0-0.4) 아스파트산아미노기전달효소 110 U/L (참고치, 0-40) 알라닌아미노기전달효소 127 U/L (참고치, 0-40) - 우안 각막: 중심부 상피 결손, 상피 하층의 경미한 혼탁 - 홍채 반사 (+) 백혈구 9,500/mm3 호산구 15 % (참고치, 1-5) 크레아틴인산화효소 315 U/L (참고치, 20-200) 젖산탈수소효소 350 U/L (참고치, 115-220) 2025학년도 기초의학종합평가 (4교시) 8"
+],
+"image": false
+},
+"56": {
+"opts": [
+"포충증",
+"개조충증",
+"왜소조충증",
+"아시아조충증",
+"광절열두조충증"
+],
+"image": false
+},
+"57": {
+"opts": [
+"옴진드기",
+"참진드기",
+"털진드기",
+"공주진드기",
+"털집진드기"
+],
+"image": false
+},
+"58": {
+"opts": [
+"오전 5시 ~ 오전 8시",
+"오전 9시 ~ 오후 12시",
+"오후 1시 ~ 오후 4시",
+"오후 6시 ~ 오후 9시",
+"오후 11시 ~ 오전 2시"
+],
+"image": false
+},
+"59": {
+"opts": [
+"간질증",
+"간흡충증",
+"유구조충증",
+"주혈흡충증",
+"요코가와흡충증"
+],
+"image": false
+},
+"60": {
+"opts": [
+"난형열원충",
+"사일열원충",
+"삼일열원충",
+"열대열원충",
+"바베스열원충 4교시 종료 백혈구 7,470/mm3 혈색소 13.1 g/dl (참고치, 13-16) 적혈구용적률 37 % (참고치, 38-52) 혈소판 159,000/mm3 (참고치, 150,000-400,000) 아스파트산아미노기전달효소 58 U/L (참고치, 0-40) 알라닌아미노기전달효소 38 U/L (참고치, 0-40) 젖산탈수소효소 265 U/L (참고치, 100-250) 오리엔티아쓰쓰가무시 IgG (+), IgM (+)"
+],
+"image": false
+}
+}

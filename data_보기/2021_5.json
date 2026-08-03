@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"zika virus",
+"echovirus",
+"rubella virus",
+"dengue virus",
+"herpes simplex virus"
+],
+"image": false
+},
+"2": {
+"opts": [
+"분절된 DNA",
+"분절된 RNA",
+"단일가닥 DNA",
+"이중가닥 DNA",
+"음성가닥 RNA"
+],
+"image": false
+},
+"3": {
+"opts": [
+"전위(transposition)",
+"접합(conjugation)",
+"재조합(recombination)",
+"형질도입(transduction)",
+"형질전환(transformation)"
+],
+"image": false
+},
+"4": {
+"opts": [
+"내독소에 의한 혈관내피세포의 투과도 변화",
+"외독소에 의한 사구체 기저막의 투과도 변화",
+"용혈소(hemolysin) 작용으로 인한 적혈구 파괴",
+"면역복합체의 침착으로 인한 사구체 기저막의 염증반응",
+"항체의 교차반응을 통한 사구체 기저막에 대한 항체 의존성 세포독성"
+],
+"image": false
+},
+"5": {
+"opts": [
+"IL-2",
+"IL-4",
+"IL-12",
+"IL-17",
+"IL-23"
+],
+"image": false
+},
+"6": {
+"opts": [
+"흡착",
+"방출",
+"조립",
+"탈외피",
+"단백질 합성"
+],
+"image": false
+},
+"7": {
+"opts": [
+"항체 생성 주된 면역원이다.",
+"포식세포 식작용을 회피한다.",
+"지질과 다당류로 구성되어 있다.",
+"외부 유전자를 받아들이는 수용체이다.",
+"고온 환경에서 살아 남기 위한 구조이다."
+],
+"image": false
+},
+"8": {
+"opts": [
+"Klebsiella pneumoniae",
+"Staphylococcus aureus",
+"Legionella pneumophila",
+"Streptococcus pyogenes",
+"Mycoplasma pneumoniae"
+],
+"image": false
+},
+"9": {
+"opts": [
+"막 투과성 감소",
+"내성경로의 합성",
+"β-lactamase의 생산",
+"항균제의 능동적 유출",
+"세포벽 표적단백질의 변화"
+],
+"image": false
+},
+"10": {
+"opts": [
+"결손 바이러스",
+"DNA 바이러스",
+"RNA 바이러스",
+"외피보유 바이러스",
+"외피비보유 바이러스 2021학년도 기초의학종합평가 (5교시) 2"
+],
+"image": false
+},
+"11": {
+"opts": [
+"Chocolate agar (가열 혈액우무배지) - X 인자(hemin) 와 V 인자(NAD) 공급",
+"Buffered Charcoal-yeast extract agar (BCYE 우무배 지) - 시스테인과 철 공급",
+"Cystine tellurite blood 우무배지 - 시스테인 공급과 텔루라이트에 의한 기타 세균 성장 억제",
+"Thiosulfate Citrate Bile Salts Sucrose agar (TCBS 우 무배지) - 장내세균과 그람양성균 성장 억제",
+"Xylose-lysine-deoxycholate agar (XLD 우무배지) - 자 일로스와 라이신 deoxycholate에 의한 비병원성균 성 장 억제"
+],
+"image": false
+},
+"12": {
+"opts": [
+"외상",
+"비말 흡입",
+"대변-구강 경로",
+"대변-요로 경로",
+"성행위를 통한 전파"
+],
+"image": false
+},
+"13": {
+"opts": [
+"Vibrio cholerae",
+"Helicobacter pylori",
+"Campylobacter jejuni",
+"Yersinia enterocolitica",
+"Pseudomonas aeruginosa"
+],
+"image": false
+},
+"14": {
+"opts": [
+"adenovirus",
+"rubella virus",
+"measles virus",
+"coxsackievirus",
+"herpes simplex virus"
+],
+"image": false
+},
+"15": {
+"opts": [
+"rotavirus",
+"norovirus",
+"poliovirus",
+"rhinovirus",
+"parvovirus"
+],
+"image": false
+},
+"16": {
+"opts": [
+"잠복감염(latent infection)",
+"현증감염(apparent infection)",
+"만성보균감염(carrier infection)",
+"불현증감염(inapparent infection)",
+"만성활동감염(chronic active infection)"
+],
+"image": false
+},
+"17": {
+"opts": [
+"자낭포자(ascospore)",
+"접합포자(zygospore)",
+"담자포자(basidiospore)",
+"별모양포자(staurospore)",
+"실모양 균사(thread-like hyphae)"
+],
+"image": false
+},
+"18": {
+"opts": [
+"바이러스는 환상의 DNA 형태를 유지하고 있다.",
+"바이러스가 기저세포에서 왕성하게 증식하고 있다.",
+"후기 유전자가 발현되어 바이러스 캡시드가 관찰된다.",
+"분화된 각질층에서 바이러스가 방출되어 감염성이 높다.",
+"바이러스 게놈이 숙주 염색체에 삽입되어 암유전자가 발현된다."
+],
+"image": false
+},
+"19": {
+"opts": [
+"Coxiella burnetii - Q열 - 모기",
+"Rickettsia typhi - 발진티푸스 - 이",
+"Rickettsia prowazekii - 발진열 - 진드기",
+"Rickettsia rickettsii - 록키산홍반열 - 벼룩",
+"Orientia tsutsugamushi - 쯔쯔가무시병 - 좀진드기 2021학년도 기초의학종합평가 (5교시) 3"
+],
+"image": false
+},
+"20": {
+"opts": [
+"해상력을 낮추기 위해서",
+"광선을 차단하기 위해서",
+"굴절지수를 낮추기 위해서",
+"광선의 산란을 막기 위해서",
+"해상력과 굴절지수를 낮추기 위해서"
+],
+"image": false
+},
+"21": {
+"opts": [
+"MHC 분자의 불변부위를 인지한다.",
+"모든 TCR 사슬은 4개의 Ig 도메인을 갖는다",
+"CD3 복합체는 TCR의 신호를 세포 내부로 전달한다",
+"T 세포의 CD4 보조수용체는 제1형 MHC 분자에 결 합한다",
+"T 세포 보조분자인 CD28은 MHC-펩티드 항원복합체 와 직접 결합한다"
+],
+"image": false
+},
+"22": {
+"opts": [
+"1회 투여한다.",
+"경구로 투여한다.",
+"점막 IgA를 생산한다.",
+"면역지속시간이 길다.",
+"독성주로 회귀하지 않는다."
+],
+"image": false
+},
+"23": {
+"opts": [
+"염소",
+"요오드",
+"고압증기",
+"에틸린옥사이드",
+"글루타르알데히드"
+],
+"image": false
+},
+"24": {
+"opts": [
+"Escherichia coli",
+"Shigella sonnei",
+"Clostridium difficile",
+"Salmonella enterica",
+"Vibrio parahaemolyticus"
+],
+"image": false
+},
+"25": {
+"opts": [
+"A형 간염, B형 간염",
+"A형 간염, C형 간염",
+"A형 간염, E형 간염",
+"B형 간염, C형 간염",
+"B형 간염, E형 간염"
+],
+"image": false
+},
+"26": {
+"opts": [
+"Candida albicans",
+"Aspergillus fumigatus",
+"Pneumocystis jirovecii",
+"Histoplasma capsulatum",
+"Cryptococcus neoformans"
+],
+"image": false
+},
+"27": {
+"opts": [
+"유전체 복제에 역전사효소와 인테그라제가 필요하기 때문이다.",
+"유전체 끝의 긴 말단반복부위가 숙주세포 리보솜과의 결합을 방해하기 때문이다.",
+"다른 양성극성 RNA 바이러스와는 다르게 유전체에 gag 유전자가 없기 때문이다.",
+"레트로바이러스 복제에는 외피에 있는 뉴라민분해효 소의 역할이 필수적이기 때문이다.",
+"두 가닥 RNA 유전체가 숙주세포의 RIG-I 유사 수용 체에 바로 인식되어 제거되기 때문이다."
+],
+"image": false
+},
+"28": {
+"opts": [
+"adenovirus",
+"rabies virus",
+"cytomegalovirus",
+"Epstein-Barr virus",
+"human immunodeficiency virus 2021학년도 기초의학종합평가 (5교시) 4"
+],
+"image": false
+},
+"29": {
+"opts": [
+"호중구",
+"호염구",
+"자연살해세포",
+"CD8+ T 림프구",
+"CD4+ T 림프구"
+],
+"image": false
+},
+"30": {
+"opts": [
+"ebola virus",
+"coronavirus",
+"rabies virus",
+"measles virus",
+"influenza virus"
+],
+"image": false
+},
+"31": {
+"opts": [
+"flavivirus",
+"arenavirus",
+"ebola virus",
+"marburg virus",
+"hantaan virus"
+],
+"image": false
+},
+"32": {
+"opts": [
+"잠복감염(latent infection)",
+"불활감염(abortive infection)",
+"지속감염(persistent infection)",
+"불현감염(inapparent infection)",
+"재활성감염(reactivated infection)"
+],
+"image": false
+},
+"33": {
+"opts": [
+"Por 단백",
+"섬모 단백",
+"Opa 단백",
+"협막 다당류",
+"지질테이코산"
+],
+"image": false
+},
+"34": {
+"opts": [
+"비만세포",
+"큰포식세포",
+"자연살해세포",
+"기억 T 림프구",
+"세포독성 T 림프구"
+],
+"image": false
+},
+"35": {
+"opts": [
+"1:320",
+"1:640",
+"1:1280",
+"1:2560",
+"1:5120"
+],
+"image": false
+}
+}

@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"항원 전환",
+"항원 소변이",
+"항원 대변이",
+"항체 유도 억제",
+"항원 유전형 변환"
+],
+"image": false
+},
+"2": {
+"opts": [
+"간섭(interference)",
+"재편성(reassortment)",
+"재조합(recombination)",
+"보완(complementation)",
+"유전자 삭제(genetic deletion)"
+],
+"image": false
+},
+"3": {
+"opts": [
+"I형 과민반응 – IgE 매개",
+"II형 과민반응 – 항체 매개 세포독성",
+"III형 과민반응 – 면역복합체 매개",
+"IV형 과민반응 – 지연형 T세포 반응",
+"I형과 III형의 복합적 과민성반응"
+],
+"image": false
+},
+"4": {
+"opts": [
+"Bacillus spp.",
+"Klebsiella spp.",
+"Neisseria spp.",
+"Streptococcus spp.",
+"Staphylococcus spp."
+],
+"image": false
+},
+"5": {
+"opts": [
+"성숙(maturation)",
+"부착(attachment)",
+"투과(penetration)",
+"생합성(synthesis)",
+"탈외피(uncoating)"
+],
+"image": false
+},
+"6": {
+"opts": [
+"양성 알균",
+"음성 알균",
+"양성 막대균",
+"음성 막대균",
+"양성 나선균"
+],
+"image": false
+},
+"7": {
+"opts": [
+"Adenovirus",
+"Vaccinia virus",
+"Cytomegalovirus",
+"Human papillomavirus",
+"Human immunodeficiency virus"
+],
+"image": false
+},
+"8": {
+"opts": [
+"모기",
+"수혈",
+"성행위",
+"오염된 물 섭취",
+"들쥐 배설물 흡입 흉부 X-ray상에서 경계가 뚜렷한 엽성 폐렴의 소견이 보였다. 객담에서 그람양성의 알균이 검출되었다. 혈액우무배지에서 알파용혈을 보였다. Catalase 음성이며 optochin에 감수성을 나타냈다. 요단백 ++ 신사구체여과율 15 mL/분 (참고치, ≥60) 혈청크레아티닌 7.0 mg/dL (참고치, ≤1.5) 혈액요소질소 80 mg/dL (참고치, 6~20) 2025학년도 기초의학종합평가 (5교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"Candida albicans",
+"Sporothrix schenckii",
+"Coccidioides immitis",
+"Aspergillus fumigatus",
+"Cryptococcus neoformans"
+],
+"image": false
+},
+"10": {
+"opts": [
+"접합(Conjugation)",
+"핵산전달(Transfection)",
+"형질도입(Transduction)",
+"형질전환(Transformation)",
+"유전자변이(Genetic variation)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"Bacillus anthracis",
+"Klebsiella pneumoniae",
+"Staphylococcus aureus",
+"Clostridium perfringens",
+"Streptococcus pyogenes"
+],
+"image": false
+},
+"12": {
+"opts": [
+"Escherichia coli",
+"Enterococcus faecalis",
+"Neisseria gonorrhoeae",
+"Staphylococcus aureus",
+"Streptococcus pneumoniae"
+],
+"image": false
+},
+"13": {
+"opts": [
+"큐열",
+"살모넬라증",
+"브루셀라증",
+"대장균 식중독",
+"황색포도알균 식중독"
+],
+"image": false
+},
+"14": {
+"opts": [
+"원인체의 외피가 신경세포에 존재한다.",
+"원인체의 RNA가 신경세포에 존재한다.",
+"원인체의 DNA가 신경세포에 존재한다.",
+"원인체의 비리온이 신경세포에 존재한다.",
+"원인체의 캡시드가 신경세포에 존재한다."
+],
+"image": false
+},
+"15": {
+"opts": [
+"Rotavirus",
+"Adenovirus",
+"Influenza virus",
+"Human cytomegalovirus",
+"Human immunodeficiency virus 진찰 결과 수포는 구강 점막과 혀에서도 관찰되었으며 항바이러스제를 투여한 결과 며칠 후 증상은 소실되었다. 2025학년도 기초의학종합평가 (5교시) 3"
+],
+"image": false
+},
+"16": {
+"opts": [
+"Poliovirus",
+"Coronavirus",
+"Influenza virus",
+"Coxsackievirus",
+"Varicella-zoster virus"
+],
+"image": false
+},
+"17": {
+"opts": [
+"피부내 비만세포검사",
+"자가혈청 피부반응검사",
+"의심항원 피부접촉검사",
+"피부내 T 세포 침윤검사",
+"투베르쿨린 피부반응검사"
+],
+"image": false
+},
+"18": {
+"opts": [
+"EF-1 억제",
+"EF-2 억제",
+"cAMP 생산",
+"VAMP 분해",
+"SNARE 분해"
+],
+"image": false
+},
+"19": {
+"opts": [
+"Shigella dysenteriae - Shiga toxin",
+"Staphylococcus aureus - enterotoxin",
+"Escherichia coli - heat-labile enterotoxin",
+"Helicobacter pylori - vacuolating cytotoxin A",
+"Yersinia enterocolitica - heat-stable enterotoxin"
+],
+"image": false
+},
+"20": {
+"opts": [
+"세포질내 리보솜",
+"세포벽의 지방산",
+"세포 주위의 협막",
+"세포막의 지질다당질",
+"세포벽의 펩티도글리칸"
+],
+"image": false
+},
+"21": {
+"opts": [
+"Adenovirus",
+"Epstein-Barr virus",
+"Human papillomavirus",
+"Human T-cell leukemia virus",
+"Kaposi’s sarcoma-associated herpesvirus"
+],
+"image": false
+},
+"22": {
+"opts": [
+"Dengue virus",
+"West Nile virus",
+"Yellow fever virus",
+"Chikungunya virus",
+"Japanese encephalitis virus"
+],
+"image": false
+},
+"23": {
+"opts": [
+"Hepatitis A virus",
+"Hepatitis B virus",
+"Hepatitis C virus",
+"Hepatitis D virus",
+"Hepatitis G virus"
+],
+"image": false
+},
+"24": {
+"opts": [
+"Echovirus",
+"Rhinovirus",
+"Coronavirus",
+"Measles virus",
+"Respiratory syncytial virus 2025학년도 기초의학종합평가 (5교시) 4"
+],
+"image": false
+},
+"25": {
+"opts": [
+"홍역",
+"A형 간염",
+"말라리아",
+"코로나바이러스병-19",
+"장출혈성대장균감염증"
+],
+"image": false
+},
+"26": {
+"opts": [
+"B세포 분화 억제",
+"CD4+ T세포 수 감소",
+"조절T세포 활성화 증가",
+"CD8+ T세포 항원 인식 감소",
+"MHC class II 항원 제시 증가"
+],
+"image": false
+},
+"27": {
+"opts": [
+"자낭포자(ascospore)",
+"접합포자(zygospore)",
+"담자포자(basidiospore)",
+"별모양포자(staurospore)",
+"실모양 균사(thread-like hyphae)"
+],
+"image": false
+},
+"28": {
+"opts": [
+"Adenovirus",
+"Rubella virus",
+"Measles virus",
+"Parainfluenza virus",
+"Varicella-zoster virus"
+],
+"image": false
+},
+"29": {
+"opts": [
+"포도당(glucose): 있음, 젖당(lactose): 있음",
+"포도당(glucose): 있음, 젖당(lactose): 없음",
+"포도당(glucose): 없음, 젖당(lactose): 있음",
+"포도당(glucose): 없음, 젖당(lactose): 없음",
+"포도당(glucose): 있음, 알로락토스(allolactose): 있음"
+],
+"image": false
+},
+"30": {
+"opts": [
+"IL-10 투여 - NK세포 활성 억제",
+"종양세포의 MHC class I 제거 - T세포 인식 회피",
+"보체 단백질 주입 - 종양세포에 대한 용해반응 유도",
+"종양항원에 대한 항체 주입 - 항체의존세포매개세포 독성(ADCC) 유도",
+"면역관문 억제제(anti-PD-1 또는 anti-PD-L1 항체) 투 여 - T세포 활성 회복"
+],
+"image": false
+},
+"31": {
+"opts": [
+"B세포",
+"NK세포",
+"대식세포",
+"CD4+ T세포",
+"CD8+ T세포"
+],
+"image": false
+},
+"32": {
+"opts": [
+"Bordetella pertussis",
+"Klebsiella pneumoniae",
+"Legionella pneumophila",
+"Haemophilus influenzae",
+"Streptococcus pneumoniae 2025학년도 기초의학종합평가 (5교시) 5"
+],
+"image": false
+},
+"33": {
+"opts": [
+"임산부",
+"건강한 어린이",
+"건강한 20대 성인",
+"50세 이상의 성인",
+"천식 증상을 가진 20대 성인"
+],
+"image": false
+},
+"34": {
+"opts": [
+"Dengue virus",
+"West Nile virus (WNV)",
+"Respiratory Syncytial Virus (RSV)",
+"Middle East Respiratory Syndrome Coronavirus (MERS-CoV)",
+"Severe Fever with Thrombocytopenia Syndrome virus (SFTSV)"
+],
+"image": false
+},
+"35": {
+"opts": [
+"아포",
+"협막",
+"용혈소",
+"장독소",
+"발열외독소 5교시 종료"
+],
+"image": false
+}
+}

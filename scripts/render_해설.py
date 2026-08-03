@@ -109,10 +109,23 @@ def _figure_row(fig_paths, target_h=34*mm, gap=4*mm, max_h=40*mm):
     return t
 
 
+def _load_verbatim(meta):
+    """data_보기/{연도}_{교시}.json 의 실제 시험 보기(verbatim)를 로드."""
+    import json as _json
+    p = f"data_보기/{meta['year']}_{meta['period']}.json"
+    if os.path.exists(p):
+        try:
+            return _json.load(open(p, encoding='utf-8'))
+        except Exception:
+            return {}
+    return {}
+
+
 def build_pdf(meta, questions, output_path):
     doc = SimpleDocTemplate(output_path, pagesize=A4,
         rightMargin=16*mm, leftMargin=16*mm, topMargin=16*mm, bottomMargin=16*mm)
     s = _styles()
+    verb = _load_verbatim(meta)
     story = [Spacer(1, 4*mm),
              Paragraph('기초의학종합평가 (KAMC)', s['subtitle']),
              Paragraph(meta['title'], s['title']),
@@ -147,9 +160,19 @@ def build_pdf(meta, questions, output_path):
             block.append(Paragraph('◪ 질환 개요: ' + item['disease'], s['disease']))
         if item.get('options'):
             block.append(Paragraph('■ 보기 해설', s['optlabel']))
+            ventry = verb.get(str(item['num']))
+            use_verb = bool(ventry) and not ventry.get('image') \
+                and len([o for o in ventry['opts'] if o]) >= 4
             for n in sorted(item['options']):
                 body = item['options'][n]
-                if n == item['ans']:
+                if use_verb and n - 1 < len(ventry['opts']) and ventry['opts'][n-1]:
+                    # 실제 시험 보기(verbatim)로 교체. 정답 근거는 exp가 담당(보기줄엔 안 붙임).
+                    name = ventry['opts'][n-1].replace('&', '&amp;')
+                    if n == item['ans']:
+                        block.append(Paragraph(f'<b>{CIRCLED[n]} {name}  ◀ 정답</b>', s['opt_correct']))
+                    else:
+                        block.append(Paragraph(f'{CIRCLED[n]} {name}', s['opt']))
+                elif n == item['ans']:
                     body = re.sub(r'[\s.]*정답[.]?\s*$', '', body)   # 끝의 '정답.' 중복 제거
                     block.append(Paragraph(
                         f'<b>{CIRCLED[n]} {body}  ◀ 정답</b>', s['opt_correct']))

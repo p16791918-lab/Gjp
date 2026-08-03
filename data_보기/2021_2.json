@@ -1,0 +1,342 @@
+{
+"1": {
+"opts": [
+"lipoprotein lipase",
+"cholestryl esterase",
+"HMG-CoA reductase",
+"acetyl-CoA carboxylase",
+"lecithin-cholesterol acyl transferase"
+],
+"image": false
+},
+"2": {
+"opts": [
+"ADP",
+"ATP",
+"CDP",
+"GTP",
+"TTP"
+],
+"image": false
+},
+"3": {
+"opts": [
+"Splicing",
+"5’ capping",
+"RNA editing",
+"RNA interference",
+"3’ polyadenylation"
+],
+"image": false
+},
+"4": {
+"opts": [
+"핵(nucleus)",
+"퍼옥시좀(peroxisome)",
+"골지체(golgi apparatus)",
+"원형질막(plasma membrane)",
+"세포질세망(endoplasmic reticulum)"
+],
+"image": false
+},
+"5": {
+"opts": [
+"Ca",
+"Fe",
+"Mg",
+"Na",
+"Zn"
+],
+"image": false
+},
+"6": {
+"opts": [
+"Pyrimidine salvage",
+"Purine degradation",
+"Pyrimidine degradation",
+"De novo purine biosynthesis",
+"De novo pyrimidine biosynthesis"
+],
+"image": false
+},
+"7": {
+"opts": [
+"calcium",
+"calcitonin",
+"triglyceride",
+"acid phosphatase",
+"parathyroid hormone 혈액: HDL-cholesterol 6.6 mg/dL (참고치, 40 mg/dL이상) 소변: 단백뇨가 관찰됨 * mRNA가 핵산말단분해효소에 의해 분해되지 않도록 보호한다. * mRNA가 핵공을 통해 핵으로부터 세포질로 방출되는 과정을 돕는다. * 단백질 번역 초기 과정에서 mRNA와 리보솜이 상호 작용하는 과정에 필요하다. a) 인슐린 유전자의 촉진자(promoter)-인슐린 유전자-형 광단백질 유전자 순서로 연결하여 형광을 띠는 인슐 린 단백질이 만들어질 수 있도록 유전자 발현 벡터를 제작한다. b) 위에서 만든 벡터를 췌장 베타-세포주에 넣어 형광 인슐린 단백질이 만들어질 수 있도록 한다. c) 이 세포에 강력한 빛을 주사하여 이미 존재하는 형광을 모두 없애고(bleaching 과정) 그 이후부터 새롭게 번역 (translation)되는 단백질만 형광을 띠도록 한다. d) 이 세포에 포도당을 투여하여 인슐린 유전자 발현을 유도한다. 2021학년도 기초의학종합평가 (2교시) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"아르지닌분해효소(Arginase)의 결핍",
+"아르지니노숙신산 분해효소(Argininosuccinate lyase) 의 결핍",
+"오니틴 카르바모일전이효소(Ornithine transcarbamoylase) 의 결핍",
+"카니틴 팔미토일 전이효소 I (Carnitine palmitoyl transferase I)의 결핍",
+"카바모일인산 합성효소 I (Carbamoyl phosphate synthetase I)의 결핍"
+],
+"image": false
+},
+"10": {
+"opts": [
+"카탈라아제(Catalase)",
+"글루타치온(Glutathione)",
+"퍼옥시리독신(Peroxiredoxin)",
+"호모시스테인(Homocysteine)",
+"수퍼옥사이드 디스뮤타아제(Superoxide dismutase)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"체온의 증가",
+"지방산의 탄소수 증가",
+"불포화지방산의 비율 증가",
+"세포막 주변 Ca2+ 농도의 감소",
+"고온에서의 콜레스테롤 비율 증가"
+],
+"image": false
+},
+"12": {
+"opts": [
+"심하게 굶었을 때는 주로 지방산을 에너지원으로 사 용한다.",
+"음식의 정상 섭취나 굶은 상태 모두 glucose만 에너 지원으로 사용한다.",
+"절식 때 간에서 당신생(gluconeogenesis)이 활발해져 생긴 당을 사용한다.",
+"혈중 glucose 고갈 시 우선적으로 근육 단백질 분해 로 만든 glucose를 사용한다.",
+"제1형 당뇨병 환자에게 실수로 인슐린을 투여하지 않 으면 그 영향은 근육세포보다 신경세포에 훨씬 더 크 게 미친다."
+],
+"image": false
+},
+"13": {
+"opts": [
+"포스포글루코뮤테이스(Phosphoglucomutase)",
+"알라닌 아미노전이효소(Alanine transaminase)",
+"피루브산 카복실화효소(Pyruvate carboxylase)",
+"포도당-6-인산분해효소(Glucose-6-phosphatase)",
+"아스파트산 아미노전이효소(Aspartate transaminase)"
+],
+"image": false
+},
+"14": {
+"opts": [
+"헤모글로빈 합성이 정상화되지 않았기 때문이다.",
+"적혈구의 반감기를 충분히 지나지 않았기 때문이다.",
+"골수에서 적혈구 생성이 정상화되지 않았기 때문이다.",
+"당화(glycation) 효소의 활성이 정상화되지 않았기 때 문이다.",
+"탈당화(deglycation) 효소의 합성이 충분히 증가하지 않았기 때문이다."
+],
+"image": false
+},
+"15": {
+"opts": [
+"혈압 증가",
+"자궁 수축",
+"평활근 이완",
+"백혈구 수 증가",
+"혈소판 응집 촉진 A B C ① 케톤체 지방산 포도당 ② 케톤체 포도당 지방산 ③ 지방산 케톤체 포도당 ④ 지방산 포도당 케톤체 ⑤ 포도당 지방산 케톤체 2021학년도 기초의학종합평가 (2교시) 3"
+],
+"image": false
+},
+"16": {
+"opts": [
+"반응 cycle의 횟수를 늘려본다.",
+"elongation의 온도를 높여본다.",
+"annealing의 온도를 높여본다.",
+"template DNA의 양을 늘려본다.",
+"Taq DNA polymerase의 양을 늘려본다."
+],
+"image": false
+},
+"17": {
+"opts": [
+"106, 40 ATP",
+"108, 40 ATP",
+"108, 42 ATP",
+"250, 80 ATP",
+"252, 82 ATP"
+],
+"image": false
+},
+"18": {
+"opts": [
+"방향성 R-기",
+"비극성 aliphatic R-기",
+"극성 uncharged R-기",
+"Positively charged R-기",
+"Negatively charged R-기"
+],
+"image": false
+},
+"19": {
+"opts": [
+"Ceramide를 단백질 A의 N-말단에 첨가",
+"SKL 아미노산 서열을 단백질 A의 C-말단에 첨가",
+"KDEL 아미노산 서열을 단백질 A의 C-말단에 첨가",
+"신호 서열(Signal sequence)을 단백질 A의 N-말단에 첨가",
+"SV40 T antigen에 존재하는 NLS(nuclear localization signal) 서열을 단백질 A의 C-말단에 첨가"
+],
+"image": false
+},
+"20": {
+"opts": [
+"t(transfer) RNA",
+"r(ribosomal) RNA",
+"si(small interfering)RNA",
+"비부호화(noncoding) RNA",
+"일차전사체(primary transcript)"
+],
+"image": false
+},
+"21": {
+"opts": [
+"Branching enzyme",
+"Glycogen synthase",
+"Glycogen phosphorylase",
+"α1→6 Glycosidase activity of debranching enzyme",
+"Glucan transferase activity of debranching enzyme"
+],
+"image": false
+},
+"22": {
+"opts": [
+"간에서 케톤체 방출 감소",
+"간에서 포도당 신생성 감소",
+"근육에서 단백질 분해 증가",
+"지방조직에서 지방산 유리 감소",
+"근육, 심장에서 포도당 섭취 증가 Fasting glucose 230 mg/dL (참고치, 80~120 mg/dL) HbA1c 12% (참고치, 4~6%) 2021학년도 기초의학종합평가 (2교시) 4"
+],
+"image": false
+},
+"23": {
+"opts": [
+"citrate",
+"malate",
+"pyruvate",
+"carnitine",
+"oxaloacetate"
+],
+"image": false
+},
+"24": {
+"opts": [
+"NADH",
+"FADH2",
+"Coenzyme Q",
+"Cytochrome C",
+"NADH-Q oxidoreductase"
+],
+"image": false
+},
+"25": {
+"opts": [
+"PRPP synthase 유전자의 결손(deletion)",
+"thymidine kinase 유전자의 결손(deletion)",
+"thymidylate synthase 유전자의 결손(deletion)",
+"xanthine oxidase 유전자의 증폭(amplification)",
+"dihydrofolate reductase 유전자의 증폭(amplification)"
+],
+"image": false
+},
+"26": {
+"opts": [
+"LDL",
+"HDL",
+"chylomicron",
+"free cholesterol",
+"cholesteryl ester"
+],
+"image": false
+},
+"27": {
+"opts": [
+"A, 헤모글로빈의 산소 친화도 증가",
+"A, 헤모글로빈의 산소 친화도 감소",
+"B, 헤모글로빈의 산소 친화도 증가",
+"B, 헤모글로빈의 산소 친화도 감소",
+"B, 헤모글로빈의 산소 친화도 변화 없음"
+],
+"image": false
+},
+"28": {
+"opts": [
+"Choline 농도 증가",
+"Acetate 농도 증가",
+"Na+ 이온 농도 증가",
+"Acetyl-CoA 농도 증가",
+"Acetylcholine 농도 증가"
+],
+"image": false
+},
+"29": {
+"opts": [
+"지방산 대사 이상",
+"케톤체 대사 이상",
+"아미노산 대사 이상",
+"스핑고지질 대사 이상",
+"콜레스테롤 대사 이상"
+],
+"image": false
+},
+"30": {
+"opts": [
+"10%",
+"20%",
+"40%",
+"80%",
+"90% 중성지방(triglyceride) 650 mg/dL (참고치, 150 mg/dL 미만) ApoC-II 0.12 mg/dL (참고치, 약 5.5 mg/dL) 2021학년도 기초의학종합평가 (2교시) 5"
+],
+"image": false
+},
+"31": {
+"opts": [
+"JAK/STAT 경로",
+"p38MAPK 경로",
+"PI3K-AKT 경로",
+"cAMP-PKA 경로",
+"calcium-PKC 경로"
+],
+"image": false
+},
+"32": {
+"opts": [
+"헤모글로빈 α-사슬, 결손(deletion)",
+"헤모글로빈 α-사슬, 전위(translocation)",
+"헤모글로빈 β-사슬, 재배열(rearrangement)",
+"헤모글로빈 β-사슬, 점돌연변이(point mutation)",
+"적혈구 생성인자(Erythropoietin), 증폭(amplification)"
+],
+"image": false
+},
+"33": {
+"opts": [
+"황산염(Sulfate)",
+"타우린(Taurine)",
+"글라이신(Glycine)",
+"글루타티온(Glutathione)",
+"글루쿠론산(Glucuronic acid)"
+],
+"image": false
+},
+"34": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"35": {
+"opts": [
+"Niacin",
+"Folate",
+"Thiamine",
+"Riboflavin",
+"Pantothenic acid"
+],
+"image": false
+}
+}

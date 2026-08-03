@@ -1,0 +1,352 @@
+{
+"1": {
+"opts": [
+"Enterococcus faecalis",
+"Klebsiella pneumoniae",
+"Staphylococcus aureus",
+"Streptococcus pyogenes",
+"Staphylococcus epidermidis"
+],
+"image": false
+},
+"2": {
+"opts": [
+"아포",
+"편모",
+"협막",
+"용혈소",
+"부종독소"
+],
+"image": false
+},
+"3": {
+"opts": [
+"풍진바이러스",
+"홍역바이러스",
+"천연두바이러스",
+"수두대상포진바이러스",
+"유행성이하선염바이러스"
+],
+"image": false
+},
+"4": {
+"opts": [
+"쯔쯔가무시",
+"뎅기바이러스",
+"한탄바이러스",
+"황열바이러스",
+"바이러스 SFTS"
+],
+"image": false
+},
+"5": {
+"opts": [
+"Clostridium tetani",
+"Legionella pneumophila",
+"Clostridium perfringens",
+"Cardiobacterium hominis",
+"Streptobacillus moniliformis"
+],
+"image": false
+},
+"6": {
+"opts": [
+"Escherichia coli",
+"Salmonella typhi",
+"Candida albicans",
+"Enterococcus faecalis",
+"Staphylococcus epidermidis"
+],
+"image": false
+},
+"7": {
+"opts": [
+"A",
+"B",
+"C",
+"D",
+"E"
+],
+"image": true
+},
+"8": {
+"opts": [
+"로타바이러스",
+"레오바이러스",
+"아데노바이러스",
+"조류 인플루엔자 바이러스",
+"혈압 맥박 회분호흡 회분 109/65 mmHg, 118 / , 20 / 체온 37.9 ℃ 혈액 검사: WBC 21,800/mm3, Neutrophil 89.36 % Lactate 3.1 mmol/L 소변 검사: WBC 2+, WBC 10-29/HPF, Bacteria 1+ 학년도 기초의학종합평가 교시 2024 (5 ) 2"
+],
+"image": false
+},
+"9": {
+"opts": [
+"Trichomonas vaginalis",
+"Neisseria gonorrhoeae",
+"Chlamydia trachomatis",
+"Mycoplasma genitalium",
+"Ureaplasma urealyticum"
+],
+"image": false
+},
+"10": {
+"opts": [
+"쿠퍼세포(Kupffer cell)",
+"랑게르한스세포(Langerhans cell)",
+"선천성 림프구(innate lymphoid cell)",
+"소포수지상세포(follicular dendritic cell)",
+"형질세포양 수지상세포(plasmacytoid dendritic cell)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"고혈압",
+"피부 발진",
+"체중 증가",
+"식욕 부진",
+"반복적인 감염"
+],
+"image": false
+},
+"12": {
+"opts": [
+"외상",
+"모기 매개",
+"비말 흡입",
+"진드기 매개",
+"오염된 음식 섭취"
+],
+"image": false
+},
+"13": {
+"opts": [
+"니파바이러스",
+"한타바이러스",
+"헨드라바이러스",
+"거대세포바이러스",
+"사람면역결핍바이러스"
+],
+"image": false
+},
+"14": {
+"opts": [
+"Vibrio",
+"Bacillus",
+"Salmonella",
+"Escherichia",
+"Staphylococcus"
+],
+"image": false
+},
+"15": {
+"opts": [
+"Escherichia coli",
+"Klebsiella pneumoniae",
+"Acinetobacter baumannii",
+"Pseudomonas aeruginosa",
+"Burkholderia pseudomallei"
+],
+"image": false
+},
+"16": {
+"opts": [
+"Candida albicans",
+"Microsporum canis",
+"Sporothrix schenckii",
+"Aspergillus fumigatus",
+"Trichophyton mentagrophytes 학년도 기초의학종합평가 교시 2024 (5 ) 3"
+],
+"image": false
+},
+"17": {
+"opts": [
+"Malassezia furfur",
+"Candida albicans",
+"Aspergillus fumigatus",
+"Histopasma capsulatum",
+"Cryptococcus neoformans"
+],
+"image": false
+},
+"18": {
+"opts": [
+"그람염색",
+"운동성 검사",
+"유전자 검사",
+"항원성 검사",
+"생화학적 검사"
+],
+"image": false
+},
+"19": {
+"opts": [
+"백신 DNA",
+"백신 RNA",
+"아단위 백신",
+"약독화 생백신",
+"바이러스 벡터 백신"
+],
+"image": false
+},
+"20": {
+"opts": [
+"발열외독소",
+"백일해 독소",
+"표피탈락독소",
+"테타노스파스민",
+"디프테리아 독소"
+],
+"image": false
+},
+"21": {
+"opts": [
+"Bordetella pertussis",
+"Klebsiella pneumoniae",
+"Haemophilus influenzae",
+"Leginonella pneumophila",
+"Mycoplasma pneumoniae"
+],
+"image": false
+},
+"22": {
+"opts": [
+"풍진바이러스",
+"형 간염바이러스 A",
+"형 간염바이러스 B",
+"형 간염바이러스 C",
+"거대세포바이러스"
+],
+"image": false
+},
+"23": {
+"opts": [
+"림프조직 파괴",
+"돌연변이 축적",
+"사이토카인 폭풍",
+"림프구 사멸 CD4+ T",
+"항원전달세포 기능저하"
+],
+"image": false
+},
+"24": {
+"opts": [
+"조직생검",
+"면역형광법",
+"혈구응집반응법",
+"웨스턴블롯 검사",
+"사람면역바이러스 효소면역측정법 결과에서 양성 (HIV) 학년도 기초의학종합평가 교시 2024 (5 ) 4"
+],
+"image": false
+},
+"25": {
+"opts": [
+"그람염색",
+"배양검사",
+"검사 VDRL",
+"웨스턴블롯 검사",
+"암시야현미경 검사"
+],
+"image": false
+},
+"26": {
+"opts": [
+"세포매개성 과민반응",
+"항산균에 의한 폐포 폐색",
+"특이항체에 의한 보체 활성화",
+"세균 부착소의 폐포세포 부착",
+"항산균 외독소의 세포독성작용"
+],
+"image": false
+},
+"27": {
+"opts": [
+"세포 B",
+"세포 CD4+ T",
+"세포 CD8+ T",
+"자연살해세포",
+"선천림프세포"
+],
+"image": false
+},
+"28": {
+"opts": [
+"IL-2",
+"IL-4",
+"IL-12",
+"IL-17",
+"IL-23"
+],
+"image": false
+},
+"29": {
+"opts": [
+"에코바이러스",
+"노로바이러스",
+"로타바이러스",
+"아데노바이러스",
+"엔테로바이러스"
+],
+"image": false
+},
+"30": {
+"opts": [
+"E. coli, EIEC) 장독소생성대장균(enterotoxigenic",
+"E. coli, ETEC) 장병원성대장균(enteropathogenic",
+"E. coli, EPEC) 장응집성대장균(enteroaggregative",
+"E. coli, EAEC) 장출혈성대장균(enterohemorrhagic",
+"E. coli, EHEC)"
+],
+"image": false
+},
+"31": {
+"opts": [
+"고세균",
+"프리온",
+"리케치아",
+"바이로이드",
+"위성바이러스"
+],
+"image": false
+},
+"32": {
+"opts": [
+"세포와 대식세포 반응 T helper 1",
+"이전 백신 접종에 의한 항체의 반응",
+"혈소판 막 항원에 대한 자가항체 생성",
+"프로스타글란딘류코트리엔 등의 분비 ,",
+"가슴 선 사진 X 사진 ( 6)에서 좌측 폐 첨부 에 (lung apex) 하얀 구름모양의 작은 병터가 관찰되었다. 학년도 기초의학종합평가 교시 2024 (5 ) 5"
+],
+"image": false
+},
+"33": {
+"opts": [
+"프리온",
+"바이러스 ssDNA",
+"바이러스 dsDNA",
+"바이러스 ssRNA",
+"바이러스 dsRNA"
+],
+"image": false
+},
+"34": {
+"opts": [
+"홍역",
+"코로나바아러스",
+"형간염 바이러스 C",
+"수두대상포진바이러스",
+"사람면역결핍바이러스"
+],
+"image": false
+},
+"35": {
+"opts": [
+"그람양성알균",
+"그람음성알균",
+"그람양성막대균",
+"그람음성막대균",
+"교시 5 종료 혈액검사 < > WBC 14,500 Hb 12.0 PLT 45,000 Cr 2.0 소변검사 < > 비중 1.015 단백 3+ 적혈구 10~15/HPF 백혈구 0~1/HPF"
+],
+"image": false
+}
+}
