@@ -121,11 +121,24 @@ def _load_verbatim(meta):
     return {}
 
 
+def _load_보기해설(meta):
+    """data_보기해설/{연도}_{교시}.json — 실제 보기별 오답/정답 해설(보충). {num:[5개]}."""
+    import json as _json
+    p = f"data_보기해설/{meta['year']}_{meta['period']}.json"
+    if os.path.exists(p):
+        try:
+            return _json.load(open(p, encoding='utf-8'))
+        except Exception:
+            return {}
+    return {}
+
+
 def build_pdf(meta, questions, output_path):
     doc = SimpleDocTemplate(output_path, pagesize=A4,
         rightMargin=16*mm, leftMargin=16*mm, topMargin=16*mm, bottomMargin=16*mm)
     s = _styles()
     verb = _load_verbatim(meta)
+    vexp = _load_보기해설(meta)
     story = [Spacer(1, 4*mm),
              Paragraph('기초의학종합평가 (KAMC)', s['subtitle']),
              Paragraph(meta['title'], s['title']),
@@ -176,9 +189,14 @@ def build_pdf(meta, questions, output_path):
                         t = re.split(r'[—–(]', t)[0]              # '(' 나 em-dash 앞
                         return re.sub(r'[\s.,·:/0-9A-Za-z]', '', t)  # 한글만
                     rat = ''
-                    if len(mparts) > 1:
+                    # (1) 보충 해설(data_보기해설)이 있으면 우선 사용
+                    supp = vexp.get(str(item['num']))
+                    if supp and n - 1 < len(supp) and supp[n-1]:
+                        rat = re.sub(r'[\s.]*정답[.]?\s*$', '', str(supp[n-1])).strip()
+                    # (2) 없으면 모듈 보기 이름이 실제와 정확히 같을 때만 그 해설 사용
+                    elif len(mparts) > 1:
                         mn, vn = _name(mparts[0]), _name(vraw)
-                        if mn and vn and mn == vn:   # 한글 이름이 정확히 같을 때만
+                        if mn and vn and mn == vn:
                             rat = re.sub(r'[\s.]*정답[.]?\s*$', '', mparts[1]).strip()
                     tail = f' — {rat}' if rat else ''
                     if n == item['ans']:
