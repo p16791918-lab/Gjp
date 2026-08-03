@@ -479,6 +479,59 @@ def glycolysis():
     return _save(fig, 'glycolysis')
 
 
+def visual_field_defects():
+    """시각경로 병변 위치별 시야결손(반맹) — 좌·우 눈 시야 도식."""
+    import numpy as np
+    from matplotlib.patches import Wedge, Circle
+    fig, ax = _new(5.8, 5.2)
+    ax.set_xlim(0, 12); ax.set_ylim(0, 12); ax.axis('off')
+
+    def eye(cx, cy, r, spec):
+        ax.add_patch(Circle((cx, cy), r, fc='white', ec='#333', lw=1.1))
+        g = '#333'
+        if spec == 'full':
+            ax.add_patch(Circle((cx, cy), r, fc=g, ec='#333', lw=1.1))
+        elif spec == 'left':
+            ax.add_patch(Wedge((cx, cy), r, 90, 270, fc=g))
+        elif spec == 'right':
+            ax.add_patch(Wedge((cx, cy), r, -90, 90, fc=g))
+        elif spec == 'UL':   # 위-왼쪽 사분면
+            ax.add_patch(Wedge((cx, cy), r, 90, 180, fc=g))
+        elif spec == 'left_ms':  # 좌반맹 + 황반보존
+            ax.add_patch(Wedge((cx, cy), r, 90, 270, fc=g))
+            ax.add_patch(Circle((cx, cy), r*0.32, fc='white', ec='none'))
+        # 십자 안내선
+        ax.plot([cx-r, cx+r], [cy, cy], color='#bbb', lw=0.5)
+        ax.plot([cx, cx], [cy-r, cy+r], color='#bbb', lw=0.5)
+
+    rows = [
+        ('① 오른 시신경',        'full', 'norm', '오른눈 완전 실명'),
+        ('② 시각교차(정중)',     'left', 'right', '양측 이측반맹(양비측)'),
+        ('③ 오른 시각로',        'left', 'left', '왼쪽 동측반맹'),
+        ('④ 오른 관자엽(마이어)', 'UL', 'UL', '왼쪽 위 사분맹'),
+        ('⑤ 오른 뒤통수엽',      'left_ms', 'left_ms', '왼쪽 동측반맹(황반보존)'),
+    ]
+    y = 10.6
+    ax.text(1.9, 11.4, '병변 위치', fontsize=8, ha='center', weight='bold', color='#0f3460')
+    ax.text(5.2, 11.4, '왼눈', fontsize=8, ha='center', weight='bold', color='#0f3460')
+    ax.text(6.9, 11.4, '오른눈', fontsize=8, ha='center', weight='bold', color='#0f3460')
+    ax.text(9.6, 11.4, '결손', fontsize=8, ha='center', weight='bold', color='#0f3460')
+    for label, lspec, rspec, desc in rows:
+        ax.text(0.2, y, label, fontsize=7.6, va='center', ha='left', color='#222')
+        eye(5.2, y, 0.62, lspec)
+        eye(6.9, y, 0.62, 'norm' if rspec == 'norm' else rspec)
+        if rspec == 'norm':
+            ax.add_patch(Circle((6.9, y), 0.62, fc='white', ec='#333', lw=1.1))
+            ax.plot([6.9-0.62, 6.9+0.62], [y, y], color='#bbb', lw=0.5)
+            ax.plot([6.9, 6.9], [y-0.62, y+0.62], color='#bbb', lw=0.5)
+        ax.text(9.6, y, desc, fontsize=7.0, va='center', ha='center', color='#c0392b')
+        y -= 2.05
+    ax.text(6, 0.2, '검은 부분 = 안 보이는 시야  ·  교차 전=같은눈 / 교차=양비측 / 교차 후=반대쪽 동측',
+            fontsize=6.9, ha='center', color='#555')
+    ax.set_title('시각경로 병변과 시야결손(반맹)', fontsize=10.5, color=NAVY, weight='bold')
+    return _save(fig, 'visual_field_defects')
+
+
 def energy_overview():
     """포도당 완전산화 전체 흐름 — 해당→피루브산산화→TCA→전자전달계, ATP 총계."""
     fig, ax = _new(6.0, 3.6)
@@ -917,7 +970,7 @@ ALL = [spinal_tracts, adrenal_zones, sarcomere, filtration_barrier,
        glucose_alanine, fasting_fuel,
        flow_volume_loop, cerebral_autoregulation,
        antagonist_curves, therapeutic_index,
-       glycolysis, tca_energy, energy_overview,
+       glycolysis, tca_energy, energy_overview, visual_field_defects,
        pv_loop, cardiac_ap, cardiac_venous_return, menstrual_cycle, glucose_titration,
        knudson_2hit, gn_immunofluorescence,
        gram_wall, antigen_presentation,
