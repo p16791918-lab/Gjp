@@ -1,48 +1,285 @@
 {
-  "2021_4": {
-    "25": ["규소폐증(silicosis)", "소세포암종(small cell carcinoma)", "악성중피종(malignant mesothelioma)", "특발폐섬유증(idiopathic pulmonary fibrosis)", "탄광부진폐증(coal worker’s pneumoconiosis)"]
-  },
-  "2021_6": {
-    "19": ["1.5", "2", "3", "100", "1000"]
-  },
-  "2022_2": {
-    "35": ["세포막 LDL 수용체 증가", "세포막 LDL 수용체 감소", "아세틸 CoA 카복실화 효소 활성 증가", "아세틸 CoA 카복실화 효소 활성 감소", "아실 CoA:콜레스테롤 아실기전달효소 활성 증가"]
-  },
-  "2022_4": {
-    "32": ["Aspergillus fumigatus", "Pneumocystis jiroveci", "Pseudomonas aeruginosa", "Streptococcus pneumoniae", "Mycobacterium tuberculosis"]
-  },
-  "2022_5": {
-    "14": ["장침투성대장균(enteroinvasive E. coli, EIEC)", "장독소생성대장균(enterotoxigenic E. coli, ETEC)", "장병원성대장균(enteropathogenic E. coli, EPEC)", "장응집성대장균(enteroaggregative E. coli, EAEC)", "장출혈성대장균(enterohemorrhagic E. coli, EHEC)"],
-    "16": ["간염 유발 바이러스", "뇌염 유발 바이러스", "출혈열 유발 바이러스", "절지동물매개 바이러스", "설치동물매개 바이러스"],
-    "35": ["Rhizopus oryzae", "Aspergillus flavus", "Malassezia furfur", "Sporothrix schenkii", "Pneumocystis jiroveci"]
-  },
-  "2022_3": {
-    "11": ["뼈대근육 수축 · 뼈대근육의 적정 수축력 보조", "뼈대근육 수축 · 폄반사의 활성화", "근방추 수축 · 뼈대근육의 빠른 수축", "근방추 수축 · 폄반사의 민감도 유지", "근방추 수축 · 폄반사의 활성화"],
-    "13": ["노안 · 렌즈의 조절력 약화 · 볼록렌즈", "난시 · 렌즈의 조절력 약화 · 오목렌즈", "근시 · 망막의 뒤에 초점 맺음 · 볼록렌즈", "원시 · 망막의 뒤에 초점 맺음 · 오목렌즈", "백내장 · 렌즈의 굴절력 고정 · 볼록렌즈"],
-    "19": ["증가 증가 증가", "증가 감소 증가", "감소 감소 증가", "감소 증가 감소", "감소 감소 감소"],
-    "35": ["0.1", "0.2", "0.3", "0.4", "0.5"]
-  },
-  "2023_1": {
-    "18": ["엄마가 태동을 감지함", "바깥생식기관으로 남녀 구분이 가능함", "표면활성물질(surfactant)의 분비가 시작됨", "동공빛반사(pupillary light reflex)가 나타남", "피부가 태아기름막(vernix caseosa)으로 모두 덮임"],
-    "31": ["오른모서리가지(right marginal branch)", "왼심장동맥의 휘돌이가지(circumflex branch)", "앞심실사이가지(anterior interventricular branch)", "뒤심실사이가지(posterior interventricular branch)", "오른심장동맥의 굴심방결절가지(sinuatrial nodal branch)"],
-    "42": ["5-10 μm", "15-20 μm", "25-30 μm", "35-40 μm", "45-50 μm"],
-    "44": ["배벽이 형성되지 못함", "신경관이 융합되지 않음", "배설강막(cloacal membrane)이 열리지 않음", "요로곧창자사이벽(urorectal septum)이 형성되지 않음", "생리적배꼽탈장(physiological umbilical hernia)이 지속됨"],
-    "47": ["'1'과 '4' 사이에 승모판막이 있다", "'6'과 '7'은 온몸순환과 관련된다", "'2'의 벽은 '1'의 벽보다 더 두껍다", "'5'의 왼쪽에 사이막모서리기둥이 있다", "'4'의 빗살근육은 '3'의 빗살근육에 비해 더 뚜렷하다"],
-    "58": ["오른콩팥동맥은 왼콩팥동맥보다 짧음", "왼콩팥은 오른콩팥보다 조금 아래 있음", "왼콩팥정맥은 대동맥과 왼콩팥동맥의 앞을 지남", "콩팥근막(renal fascia)은 부신을 둘러싸지 않음", "콩팥주위지방피막(perirenal fat capsule)은 콩팥근막의 바깥쪽에 있음"]
-  },
-  "2024_3": {
-    "9": ["혈장의 HCO3-", "혈장의 H2CO3", "적혈구 내 HCO3-", "혈장의 카바미노화합물", "적혈구 내 카바미노 화합물"]
-  },
-  "2023_2": {
-    "18": ["포화 지방산은 불포화 지방산보다 녹는점이 높다.", "포화 지방산은 불포화 지방산보다 이중결합이 더 많다.", "포화 지방산은 이중결합 위치에서 꺾어진 구조를 갖고 있다.", "포화 및 불포화 지방산은 탄소 수가 많을수록 용해도가 높다.", "포화 및 불포화 지방산은 탄소가 대부분 홀수 개 이다."]
-  },
-  "2023_5": {
-    "14": ["Escherichia coli", "Enterococcus faecalis", "Pseudomonas aeruginosa", "viridans group streptococci", "Staphylococcus epidermidis"]
-  },
-  "2023_6": {
-    "1": ["sulfotransferase", "cytochrome P450", "N-acetyltransferase", "thiopurine methyltransferase", "UDP-glucuronosyltransferase"]
-  },
-  "2024_4": {
-    "43": ["ER positive", "t(9;22)(q34;q11)", "BRCA gene mutation", "HER-2 gene amplification", "DNMT3A gene DNA methylation"]
-  }
+ "2021_4": {
+  "25": [
+   "규소폐증(silicosis)",
+   "소세포암종(small cell carcinoma)",
+   "악성중피종(malignant mesothelioma)",
+   "특발폐섬유증(idiopathic pulmonary fibrosis)",
+   "탄광부진폐증(coal worker’s pneumoconiosis)"
+  ]
+ },
+ "2021_6": {
+  "19": [
+   "1.5",
+   "2",
+   "3",
+   "100",
+   "1000"
+  ]
+ },
+ "2022_2": {
+  "35": [
+   "세포막 LDL 수용체 증가",
+   "세포막 LDL 수용체 감소",
+   "아세틸 CoA 카복실화 효소 활성 증가",
+   "아세틸 CoA 카복실화 효소 활성 감소",
+   "아실 CoA:콜레스테롤 아실기전달효소 활성 증가"
+  ]
+ },
+ "2022_4": {
+  "32": [
+   "Aspergillus fumigatus",
+   "Pneumocystis jiroveci",
+   "Pseudomonas aeruginosa",
+   "Streptococcus pneumoniae",
+   "Mycobacterium tuberculosis"
+  ]
+ },
+ "2022_5": {
+  "14": [
+   "장침투성대장균(enteroinvasive E. coli, EIEC)",
+   "장독소생성대장균(enterotoxigenic E. coli, ETEC)",
+   "장병원성대장균(enteropathogenic E. coli, EPEC)",
+   "장응집성대장균(enteroaggregative E. coli, EAEC)",
+   "장출혈성대장균(enterohemorrhagic E. coli, EHEC)"
+  ],
+  "16": [
+   "간염 유발 바이러스",
+   "뇌염 유발 바이러스",
+   "출혈열 유발 바이러스",
+   "절지동물매개 바이러스",
+   "설치동물매개 바이러스"
+  ],
+  "35": [
+   "Rhizopus oryzae",
+   "Aspergillus flavus",
+   "Malassezia furfur",
+   "Sporothrix schenkii",
+   "Pneumocystis jiroveci"
+  ]
+ },
+ "2022_3": {
+  "11": [
+   "뼈대근육 수축 · 뼈대근육의 적정 수축력 보조",
+   "뼈대근육 수축 · 폄반사의 활성화",
+   "근방추 수축 · 뼈대근육의 빠른 수축",
+   "근방추 수축 · 폄반사의 민감도 유지",
+   "근방추 수축 · 폄반사의 활성화"
+  ],
+  "13": [
+   "노안 · 렌즈의 조절력 약화 · 볼록렌즈",
+   "난시 · 렌즈의 조절력 약화 · 오목렌즈",
+   "근시 · 망막의 뒤에 초점 맺음 · 볼록렌즈",
+   "원시 · 망막의 뒤에 초점 맺음 · 오목렌즈",
+   "백내장 · 렌즈의 굴절력 고정 · 볼록렌즈"
+  ],
+  "19": [
+   "증가 증가 증가",
+   "증가 감소 증가",
+   "감소 감소 증가",
+   "감소 증가 감소",
+   "감소 감소 감소"
+  ],
+  "35": [
+   "0.1",
+   "0.2",
+   "0.3",
+   "0.4",
+   "0.5"
+  ]
+ },
+ "2023_1": {
+  "18": [
+   "엄마가 태동을 감지함",
+   "바깥생식기관으로 남녀 구분이 가능함",
+   "표면활성물질(surfactant)의 분비가 시작됨",
+   "동공빛반사(pupillary light reflex)가 나타남",
+   "피부가 태아기름막(vernix caseosa)으로 모두 덮임"
+  ],
+  "31": [
+   "오른모서리가지(right marginal branch)",
+   "왼심장동맥의 휘돌이가지(circumflex branch)",
+   "앞심실사이가지(anterior interventricular branch)",
+   "뒤심실사이가지(posterior interventricular branch)",
+   "오른심장동맥의 굴심방결절가지(sinuatrial nodal branch)"
+  ],
+  "42": [
+   "5-10 μm",
+   "15-20 μm",
+   "25-30 μm",
+   "35-40 μm",
+   "45-50 μm"
+  ],
+  "44": [
+   "배벽이 형성되지 못함",
+   "신경관이 융합되지 않음",
+   "배설강막(cloacal membrane)이 열리지 않음",
+   "요로곧창자사이벽(urorectal septum)이 형성되지 않음",
+   "생리적배꼽탈장(physiological umbilical hernia)이 지속됨"
+  ],
+  "47": [
+   "'1'과 '4' 사이에 승모판막이 있다",
+   "'6'과 '7'은 온몸순환과 관련된다",
+   "'2'의 벽은 '1'의 벽보다 더 두껍다",
+   "'5'의 왼쪽에 사이막모서리기둥이 있다",
+   "'4'의 빗살근육은 '3'의 빗살근육에 비해 더 뚜렷하다"
+  ],
+  "58": [
+   "오른콩팥동맥은 왼콩팥동맥보다 짧음",
+   "왼콩팥은 오른콩팥보다 조금 아래 있음",
+   "왼콩팥정맥은 대동맥과 왼콩팥동맥의 앞을 지남",
+   "콩팥근막(renal fascia)은 부신을 둘러싸지 않음",
+   "콩팥주위지방피막(perirenal fat capsule)은 콩팥근막의 바깥쪽에 있음"
+  ]
+ },
+ "2024_3": {
+  "9": [
+   "혈장의 HCO3-",
+   "혈장의 H2CO3",
+   "적혈구 내 HCO3-",
+   "혈장의 카바미노화합물",
+   "적혈구 내 카바미노 화합물"
+  ]
+ },
+ "2023_2": {
+  "4": [
+   "공간적 정보",
+   "단백질 서열",
+   "알파 나선 구조(α-helix)",
+   "베타 판 구조(β-sheet)",
+   "3차 구조와 1차 구조의 병합"
+  ],
+  "6": [
+   "HIV의 단백질분해효소(protease)",
+   "HIV의 DNA 삽입효소(DNA integrase)",
+   "숙주세포의 단백질분해효소(protease)",
+   "HIV의 역전사효소(reverse transcriptase)",
+   "숙주세포의 DNA 중합효소(DNA polymerase)"
+  ],
+  "8": [
+   "IMP 탈수소효소(IMP dehydrogenase)",
+   "리보뉴클레오타이드 환원효소(ribonucleotide reductase)",
+   "다이하이드로폴레이트 환원효소(dihydrofolate reductase)",
+   "아데닌 포스포리보실기 전달효소(adenine phosphoribosyltransferase)",
+   "하이포잔틴-구아닌 포스포리보실기 전달효소(hypoxanthine-guanine phosphoribosyltransferase)"
+  ],
+  "9": [
+   "DNA 중합효소 알파(DNA polymerase α)",
+   "DNA 중합효소 베타(DNA polymerase β)",
+   "DNA 중합효소 감마(DNA polymerase γ)",
+   "DNA 중합효소 델타(DNA polymerase δ)",
+   "DNA 중합효소 엡실론(DNA polymerase ε)"
+  ],
+  "11": [
+   "산소가 충분한 상황에서도 해당과정이 활성화되어 있다.",
+   "빠른 세포 분열을 위해 산화적 인산화 반응이 항진되어 있다.",
+   "인산오탄당대사의 활성화는 암세포에서 필요한 에너지를 공급한다.",
+   "해당과정의 활성은 시트르산회로 활성화를 유도하여 많은 에너지를 얻는다.",
+   "종양 세포의 산화적 인산화 반응의 억제는 미토콘드리아 유전자의 돌연변이를 증가시킨다."
+  ],
+  "12": [
+   "적혈구 ATP의 결핍",
+   "적혈구 NADPH의 결핍",
+   "적혈구 젖산(lactate)의 축적",
+   "적혈구 6-인산 포도당(glucose 6-phosphate)의 축적",
+   "적혈구 5-인산 라이보스(ribose 5-phosphate)의 결핍"
+  ],
+  "14": [
+   "시트르산(citrate)",
+   "석신산(succinate)",
+   "아이소시트르산(isocitrate)",
+   "옥살아세트산(oxaloacetate)",
+   "알파케토글루타르산(α-ketoglutarate)"
+  ],
+  "18": [
+   "포화 지방산은 불포화 지방산보다 녹는점이 높다.",
+   "포화 지방산은 불포화 지방산보다 이중결합이 더 많다.",
+   "포화 지방산은 이중결합 위치에서 꺾어진 구조를 갖고 있다.",
+   "포화 및 불포화 지방산은 탄소 수가 많을수록 용해도가 높다.",
+   "포화 및 불포화 지방산은 탄소가 대부분 홀수 개 이다."
+  ],
+  "20": [
+   "복합체 I(complex I)",
+   "복합체 II(complex II)",
+   "복합체 III(complex III)",
+   "복합체 IV(complex IV)",
+   "ATP 합성효소(ATP synthase)"
+  ],
+  "25": [
+   "류신(leucine)",
+   "글루탐산(glutamic acid)",
+   "석시닐CoA(succinyl CoA)",
+   "아세토아세트산(acetoacetic acid)",
+   "알파케토글루타르산(α-ketoglutarate)"
+  ],
+  "26": [
+   "지방분해효소(lipase)",
+   "녹말분해효소(amylase)",
+   "알파포도당화물분해효소(α-glucosidase)",
+   "알칼리성 인산염분해효소(alkaline phosphatase)",
+   "크레아틴 인산화효소 동종효소(creatine kinase isoenzyme)"
+  ],
+  "27": [
+   "Gain-of-function 돌연변이다.",
+   "Gαs 단량체의 GTPase 활성을 감소시킨다.",
+   "PTH에 대한 반응으로 IP3 생성이 증가하지 않는다.",
+   "PTH에 대한 반응으로 PIP2 생성이 증가하지 않는다.",
+   "PTH에 대한 반응으로 cAMP 생성이 증가하지 않는다."
+  ],
+  "29": [
+   "pH",
+   "소듐(Na+)",
+   "인슐린(insulin)",
+   "중탄산염(HCO3-)",
+   "베타하이드록시부티르산(β-hydroxybutyrate)"
+  ],
+  "31": [
+   "잘라이음(splicing)",
+   "RNA 편집(RNA editing)",
+   "5' 모자씌우기(5' capping)",
+   "RNA 간섭(RNA interference)",
+   "3' 폴리아데닐화(3' polyadenylation)"
+  ],
+  "32": [
+   "KRAS mRNA 생성속도를 낮춘다.",
+   "KRAS 단백질 분해속도를 높인다.",
+   "생체에서 해당 종류의 RNA 생성은 핵에서 Dicer를 요구한다.",
+   "생체에서 해당 종류의 RNA 생성은 세포질에서 Drosha를 요구한다.",
+   "KRAS 발현을 억제하기 위해 RISC(RNA-induced silencing complex)가 필요하다."
+  ],
+  "33": [
+   "헤모글로빈 A",
+   "헤모글로빈 A1c",
+   "헤모글로빈 A2",
+   "헤모글로빈 F",
+   "헤모글로빈 S"
+  ]
+ },
+ "2023_5": {
+  "14": [
+   "Escherichia coli",
+   "Enterococcus faecalis",
+   "Pseudomonas aeruginosa",
+   "viridans group streptococci",
+   "Staphylococcus epidermidis"
+  ]
+ },
+ "2023_6": {
+  "1": [
+   "sulfotransferase",
+   "cytochrome P450",
+   "N-acetyltransferase",
+   "thiopurine methyltransferase",
+   "UDP-glucuronosyltransferase"
+  ]
+ },
+ "2024_4": {
+  "43": [
+   "ER positive",
+   "t(9;22)(q34;q11)",
+   "BRCA gene mutation",
+   "HER-2 gene amplification",
+   "DNMT3A gene DNA methylation"
+  ]
+ }
 }

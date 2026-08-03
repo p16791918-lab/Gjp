@@ -349,6 +349,76 @@
 ],
 "image": false
 },
+"4": {
+"opts": [
+"공간적 정보",
+"단백질 서열",
+"알파 나선 구조(α-helix)",
+"베타 판 구조(β-sheet)",
+"3차 구조와 1차 구조의 병합"
+],
+"image": false
+},
+"6": {
+"opts": [
+"HIV의 단백질분해효소(protease)",
+"HIV의 DNA 삽입효소(DNA integrase)",
+"숙주세포의 단백질분해효소(protease)",
+"HIV의 역전사효소(reverse transcriptase)",
+"숙주세포의 DNA 중합효소(DNA polymerase)"
+],
+"image": false
+},
+"8": {
+"opts": [
+"IMP 탈수소효소(IMP dehydrogenase)",
+"리보뉴클레오타이드 환원효소(ribonucleotide reductase)",
+"다이하이드로폴레이트 환원효소(dihydrofolate reductase)",
+"아데닌 포스포리보실기 전달효소(adenine phosphoribosyltransferase)",
+"하이포잔틴-구아닌 포스포리보실기 전달효소(hypoxanthine-guanine phosphoribosyltransferase)"
+],
+"image": false
+},
+"9": {
+"opts": [
+"DNA 중합효소 알파(DNA polymerase α)",
+"DNA 중합효소 베타(DNA polymerase β)",
+"DNA 중합효소 감마(DNA polymerase γ)",
+"DNA 중합효소 델타(DNA polymerase δ)",
+"DNA 중합효소 엡실론(DNA polymerase ε)"
+],
+"image": false
+},
+"11": {
+"opts": [
+"산소가 충분한 상황에서도 해당과정이 활성화되어 있다.",
+"빠른 세포 분열을 위해 산화적 인산화 반응이 항진되어 있다.",
+"인산오탄당대사의 활성화는 암세포에서 필요한 에너지를 공급한다.",
+"해당과정의 활성은 시트르산회로 활성화를 유도하여 많은 에너지를 얻는다.",
+"종양 세포의 산화적 인산화 반응의 억제는 미토콘드리아 유전자의 돌연변이를 증가시킨다."
+],
+"image": false
+},
+"12": {
+"opts": [
+"적혈구 ATP의 결핍",
+"적혈구 NADPH의 결핍",
+"적혈구 젖산(lactate)의 축적",
+"적혈구 6-인산 포도당(glucose 6-phosphate)의 축적",
+"적혈구 5-인산 라이보스(ribose 5-phosphate)의 결핍"
+],
+"image": false
+},
+"14": {
+"opts": [
+"시트르산(citrate)",
+"석신산(succinate)",
+"아이소시트르산(isocitrate)",
+"옥살아세트산(oxaloacetate)",
+"알파케토글루타르산(α-ketoglutarate)"
+],
+"image": false
+},
 "18": {
 "opts": [
 "포화 지방산은 불포화 지방산보다 녹는점이 높다.",
@@ -356,6 +426,86 @@
 "포화 지방산은 이중결합 위치에서 꺾어진 구조를 갖고 있다.",
 "포화 및 불포화 지방산은 탄소 수가 많을수록 용해도가 높다.",
 "포화 및 불포화 지방산은 탄소가 대부분 홀수 개 이다."
+],
+"image": false
+},
+"20": {
+"opts": [
+"복합체 I(complex I)",
+"복합체 II(complex II)",
+"복합체 III(complex III)",
+"복합체 IV(complex IV)",
+"ATP 합성효소(ATP synthase)"
+],
+"image": false
+},
+"25": {
+"opts": [
+"류신(leucine)",
+"글루탐산(glutamic acid)",
+"석시닐CoA(succinyl CoA)",
+"아세토아세트산(acetoacetic acid)",
+"알파케토글루타르산(α-ketoglutarate)"
+],
+"image": false
+},
+"26": {
+"opts": [
+"지방분해효소(lipase)",
+"녹말분해효소(amylase)",
+"알파포도당화물분해효소(α-glucosidase)",
+"알칼리성 인산염분해효소(alkaline phosphatase)",
+"크레아틴 인산화효소 동종효소(creatine kinase isoenzyme)"
+],
+"image": false
+},
+"27": {
+"opts": [
+"Gain-of-function 돌연변이다.",
+"Gαs 단량체의 GTPase 활성을 감소시킨다.",
+"PTH에 대한 반응으로 IP3 생성이 증가하지 않는다.",
+"PTH에 대한 반응으로 PIP2 생성이 증가하지 않는다.",
+"PTH에 대한 반응으로 cAMP 생성이 증가하지 않는다."
+],
+"image": false
+},
+"29": {
+"opts": [
+"pH",
+"소듐(Na+)",
+"인슐린(insulin)",
+"중탄산염(HCO3-)",
+"베타하이드록시부티르산(β-hydroxybutyrate)"
+],
+"image": false
+},
+"31": {
+"opts": [
+"잘라이음(splicing)",
+"RNA 편집(RNA editing)",
+"5' 모자씌우기(5' capping)",
+"RNA 간섭(RNA interference)",
+"3' 폴리아데닐화(3' polyadenylation)"
+],
+"image": false
+},
+"32": {
+"opts": [
+"KRAS mRNA 생성속도를 낮춘다.",
+"KRAS 단백질 분해속도를 높인다.",
+"생체에서 해당 종류의 RNA 생성은 핵에서 Dicer를 요구한다.",
+"생체에서 해당 종류의 RNA 생성은 세포질에서 Drosha를 요구한다.",
+"KRAS 발현을 억제하기 위해 RISC(RNA-induced silencing complex)가 필요하다."
+],
+"image": false
+},
+"33": {
+"opts": [
+"헤모글로빈 A",
+"헤모글로빈 A1c",
+"헤모글로빈 A2",
+"헤모글로빈 F",
+"헤모글로빈 S"
 ],
 "image": false
 }
